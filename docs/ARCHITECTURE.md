@@ -3,6 +3,8 @@
 Déduite du [cahier des charges](CAHIER_DES_CHARGES.md). Une seule base de code web, installable
 comme application (PWA), sert les trois espaces ; les apps des stores viendront en V2 autour du même front.
 
+![Parcours d'une campagne](../design/diagrammes/parcours-campagne.png)
+
 ## Vue d'ensemble
 
 ```
@@ -51,7 +53,7 @@ comme application (PWA), sert les trois espaces ; les apps des stores viendront 
 
 - Toutes les sommes sont des **entiers FCFA** (`bigint` en base, `Fcfa` dans le code).
 - Tout mouvement est une ligne de `ledger_entries` ; les soldes sont **calculés** (vue `soldes`,
-  fonction `soldes()` de `src/lib/ledger.ts`), jamais stockés.
+  fonction `soldes()` de `apps/web/src/lib/ledger.ts`), jamais stockés.
 - Les gains passent `disponible = false` (en attente) puis `true` après validation.
 - Chaque opération agrégateur a une référence unique ; un échec opérateur crée une écriture `retrait_annule`.
 
@@ -63,16 +65,16 @@ comme application (PWA), sert les trois espaces ; les apps des stores viendront 
 - Un trigger empêche un utilisateur de modifier lui-même son rôle, son niveau, son statut KYC ou sa suspension.
 - Pièces d'identité, selfies et captures : buckets privés.
 - IP des clics hachées avec un sel secret (`SEL_HACHAGE_IP`).
-- Clés API uniquement dans les variables d'environnement (voir `.env.example`).
+- Clés API uniquement dans les variables d'environnement (voir `apps/web/.env.example`).
 
 ## Où se trouve quoi dans le code
 
 | Règle du cahier des charges | Fichier |
 | --- | --- |
-| Montants en FCFA entiers, affichage | `src/lib/argent.ts` |
-| Réseaux, phases, pays et opérateurs | `src/lib/reseaux.ts` |
-| Tarifs, budget minimum, estimation, marge | `src/lib/tarifs.ts` |
-| Anti-fraude des preuves et des clics | `src/lib/antifraude.ts` |
-| Soldes et règles de retrait | `src/lib/ledger.ts` |
-| Codes courts (visuel, lien) | `src/lib/codes.ts` |
+| Montants en FCFA entiers, affichage | `apps/web/src/lib/argent.ts` |
+| Réseaux, phases, pays et opérateurs | `apps/web/src/lib/reseaux.ts` |
+| Tarifs, budget minimum, estimation, marge | `apps/web/src/lib/tarifs.ts` |
+| Anti-fraude des preuves et des clics | `apps/web/src/lib/antifraude.ts` |
+| Soldes et règles de retrait | `apps/web/src/lib/ledger.ts` |
+| Codes courts (visuel, lien) | `apps/web/src/lib/codes.ts` |
 | Tables, enums et RLS | `supabase/migrations/0001_schema_initial.sql` |

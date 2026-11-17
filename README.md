@@ -17,51 +17,52 @@ Snapchat et Telegram. Le diffuseur est payé **à la vue et au clic validés** e
 
 ## État
 
-**Architecture posée, lot 1 (socle) à démarrer.** Ce qui existe :
+**Lot 0 (architecture) terminé — le développement n'a pas commencé.** Voir [`docs/FEUILLE_DE_ROUTE.md`](docs/FEUILLE_DE_ROUTE.md)
+et les [décisions à prendre](docs/DECISIONS.md).
 
-- les trois espaces (diffuseur, annonceur, admin) avec tous leurs écrans en place, marqués « à construire » avec leur lot ;
-- les règles métier testées dans `src/lib` : montants en FCFA entiers, tarifs et estimation de campagne,
-  anti-fraude des preuves et des clics, soldes calculés depuis le journal, règles de retrait ;
-- le schéma Supabase complet avec la sécurité RLS sur chaque table (`supabase/migrations`) ;
-- les squelettes de la route des liens courts `/c/[code]`, du webhook de paiement et des Edge Functions.
+![Parcours d'une campagne](design/diagrammes/parcours-campagne.png)
 
 ## Organisation
 
-| Dossier | Contenu |
-| --- | --- |
-| `src/app/(auth)` | Connexion par numéro WhatsApp + code OTP |
-| `src/app/diffuseur` | Espace diffuseur : campagnes, preuves, gains, retraits, profil, KYC |
-| `src/app/annonceur` | Espace annonceur : campagnes, création, portefeuille, entreprise |
-| `src/app/admin` | Back-office : preuves, KYC, modération, retraits, utilisateurs, paramètres, journal |
-| `src/app/c/[code]` | Lien court personnel du diffuseur (mesure des clics) |
-| `src/app/api/webhooks` | Webhooks de l'agrégateur Mobile Money |
-| `src/lib` | Règles métier pures et testées + clients Supabase |
-| `src/components` | Composants d'interface partagés |
-| `supabase/migrations` | Schéma de la base (Postgres) et règles RLS |
-| `supabase/functions` | Edge Functions : vérification des preuves (OCR), retraits |
-| `public` | Manifeste PWA, icônes |
-| `docs` | Cahier des charges, architecture |
+```
+vupay/
+├── apps/
+│   └── web/                  Application Next.js (PWA) : les 3 espaces
+│       ├── src/app/
+│       │   ├── (auth)/         Connexion par numéro + code OTP
+│       │   ├── diffuseur/      Campagnes, preuves, gains, retraits, profil, KYC
+│       │   ├── annonceur/      Campagnes, création, portefeuille, entreprise
+│       │   ├── admin/          Preuves, KYC, modération, retraits, utilisateurs, paramètres, journal
+│       │   ├── c/[code]/       Lien court du diffuseur (mesure des clics)
+│       │   └── api/webhooks/   Webhooks de l'agrégateur Mobile Money
+│       ├── src/lib/          Règles métier testées + clients Supabase
+│       ├── src/components/   Composants d'interface
+│       └── public/           Manifeste PWA, icônes
+├── supabase/
+│   ├── migrations/           Schéma de la base et règles de sécurité (RLS)
+│   └── functions/            Edge Functions : vérification des preuves, retraits
+├── design/
+│   ├── diagrammes/           Parcours d'une campagne (SVG + PNG)
+│   ├── charte/               Palette provisoire
+│   ├── maquettes/            Écrans (à produire)
+│   ├── logos/                Logo (à produire)
+│   └── icones/               Icônes (à produire)
+├── docs/
+│   ├── CAHIER_DES_CHARGES.md
+│   ├── ARCHITECTURE.md
+│   ├── FEUILLE_DE_ROUTE.md
+│   └── DECISIONS.md
+└── AGENTS.md                 Consignes pour Claude Code
+```
 
-## Démarrer
+## Démarrer (développeurs)
 
 ```bash
+cd apps/web
 npm install
 cp .env.example .env.local   # renseigner les clés Supabase (jamais commitées)
 npm test                     # règles métier
 npm run dev                  # http://localhost:3000
 ```
 
-Base de données : créer un projet Supabase, puis appliquer `supabase/migrations/0001_schema_initial.sql`
-(`supabase db push` avec la CLI, ou l'éditeur SQL du tableau de bord).
-
-## Feuille de route du MVP
-
-| Lot | Contenu | Durée estimée |
-| --- | --- | --- |
-| 1. Socle | Next.js + Supabase, auth OTP, rôles, profils, schéma, déploiement Vercel | ≈ 1 semaine |
-| 2. Campagnes | Création annonceur, modération admin, liste et acceptation diffuseur, code unique et lien court | ≈ 1 semaine |
-| 3. Preuves et clics | Upload de capture, OCR, score de fraude, file admin, comptage des clics, journal | ≈ 1 à 2 semaines |
-| 4. Argent | Portefeuille annonceur, retraits via l'agrégateur (sandbox), webhooks, KYC | ≈ 1 à 2 semaines |
-| 5. Pilote | 3 à 5 annonceurs, 100 à 300 diffuseurs dans un pays, ajustement des seuils | ≈ 2 semaines |
-
-V2 après le pilote : niveaux et badges, parrainage, apps Play Store / App Store, rapports PDF, pays supplémentaires.
+Base de données : créer un projet Supabase, puis appliquer `supabase/migrations/0001_schema_initial.sql`.
