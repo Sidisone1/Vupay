@@ -1,19 +1,25 @@
 import type { Config } from "tailwindcss";
 
-// Identité propre à Vupay (aucune reprise des couleurs de WhatsPay ni des réseaux sociaux).
-// Palette provisoire, à remplacer par la charte définitive.
+// Charte v2 (design/charte/PALETTE.md). Aucune couleur de WhatsPay ni des réseaux sociaux.
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
         vupay: {
-          encre: "#1B1640",
-          primaire: "#6C3BF5",
-          accent: "#FFB020",
-          fond: "#F7F5FF",
-          succes: "#14915F",
-          erreur: "#C8302B",
+          encre: "#15162B",
+          indigo: "#3533B8",
+          safran: "#F6A609",
+          corail: "#EE5A3B",
+          fond: "#F4F4EF",
+          trait: "#E3E2DA",
+          doux: "#66677D",
+          succes: "#12825A",
+          alerte: "#A86400",
+          erreur: "#C9362C",
+          // alias des anciens noms utilisés dans le code
+          primaire: "#3533B8",
+          accent: "#F6A609",
         },
       },
     },

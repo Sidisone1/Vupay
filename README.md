@@ -43,8 +43,8 @@ vupay/
 │   └── functions/            Edge Functions : vérification des preuves, retraits
 ├── design/
 │   ├── diagrammes/           Parcours d'une campagne (SVG + PNG)
-│   ├── charte/               Palette provisoire
-│   ├── maquettes/            Écrans diffuseur (8) ; annonceur et admin à produire
+│   ├── charte/               Charte visuelle v2
+│   ├── maquettes/            22 écrans : diffuseur, annonceur, admin (v2)
 │   ├── logos/                Logo (à produire)
 │   └── icones/               Icônes (à produire)
 ├── docs/

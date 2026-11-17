@@ -1,373 +1,198 @@
 <!doctype html>
-<html lang="fr">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vupay — Maquettes diffuseur</title>
-<style>
-  :root {
-    --encre: #1B1640; --primaire: #6C3BF5; --primaire-clair: #EEE8FF; --accent: #FFB020; --accent-clair: #FFF4DC;
-    --fond: #F7F5FF; --carte: #FFFFFF; --bord: #E4DFF5; --doux: #6B6788; --succes: #14915F; --succes-clair: #E3F5EC;
-    --erreur: #C8302B; --erreur-clair: #FBE7E6;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif; background: #E9E6F5; color: var(--encre); padding: 32px 16px; }
-  header.planche { max-width: 1600px; margin: 0 auto 28px; }
-  header.planche h1 { font-size: 26px; }
-  header.planche p { color: var(--doux); margin-top: 6px; font-size: 14px; }
-  .grille { display: flex; flex-wrap: wrap; gap: 36px 28px; justify-content: center; max-width: 1600px; margin: 0 auto; }
-  figure { display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  figcaption { font-size: 14px; font-weight: 600; }
-  figcaption span { display: block; font-weight: 400; color: var(--doux); font-size: 12px; text-align: center; }
-
-  .tel { width: 360px; height: 760px; background: var(--fond); border-radius: 36px; border: 10px solid #15122B; overflow: hidden; position: relative; display: flex; flex-direction: column; box-shadow: 0 12px 30px rgba(27,22,64,.18); }
-  .statut { height: 28px; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; font-size: 12px; font-weight: 600; flex-shrink: 0; }
-  .contenu { flex: 1; overflow: hidden; padding: 4px 18px 16px; display: flex; flex-direction: column; gap: 12px; }
-  .barre { display: flex; align-items: center; gap: 10px; padding: 6px 18px 10px; flex-shrink: 0; }
-  .barre h2 { font-size: 18px; }
-  .retour { width: 32px; height: 32px; border-radius: 50%; background: var(--carte); display: grid; place-items: center; border: 1px solid var(--bord); font-size: 16px; }
-  .nav { height: 64px; background: var(--carte); border-top: 1px solid var(--bord); display: flex; justify-content: space-around; align-items: center; flex-shrink: 0; }
-  .nav div { display: flex; flex-direction: column; align-items: center; gap: 3px; font-size: 11px; color: var(--doux); }
-  .nav div.actif { color: var(--primaire); font-weight: 600; }
-  .nav svg { width: 22px; height: 22px; }
-
-  .carte { background: var(--carte); border-radius: 16px; padding: 14px; border: 1px solid var(--bord); }
-  .titre-section { font-size: 13px; font-weight: 600; color: var(--doux); text-transform: uppercase; letter-spacing: .04em; }
-  .btn { display: block; width: 100%; padding: 14px; border-radius: 14px; border: none; font-size: 15px; font-weight: 600; text-align: center; background: var(--primaire); color: #fff; }
-  .btn.second { background: var(--carte); color: var(--primaire); border: 1.5px solid var(--primaire); }
-  .btn.inactif { background: #CFC8EA; }
-  .champ { background: var(--carte); border: 1.5px solid var(--bord); border-radius: 12px; padding: 12px 14px; font-size: 15px; display: flex; justify-content: space-between; align-items: center; }
-  .champ.focus { border-color: var(--primaire); }
-  .etiquette { font-size: 12px; color: var(--doux); margin-bottom: 6px; font-weight: 600; }
-  .puce { display: inline-flex; align-items: center; gap: 4px; padding: 6px 11px; border-radius: 999px; font-size: 12px; font-weight: 600; background: var(--carte); border: 1px solid var(--bord); color: var(--encre); }
-  .puce.on { background: var(--primaire-clair); border-color: var(--primaire); color: var(--primaire); }
-  .puces { display: flex; flex-wrap: wrap; gap: 6px; }
-  .ligne { display: flex; justify-content: space-between; align-items: center; }
-  .doux { color: var(--doux); font-size: 12px; }
-  .gros { font-size: 30px; font-weight: 700; letter-spacing: -.02em; }
-  .badge { white-space: nowrap; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; }
-  .badge.ok { background: var(--succes-clair); color: var(--succes); }
-  .badge.att { background: var(--accent-clair); color: #9A6400; }
-  .badge.ko { background: var(--erreur-clair); color: var(--erreur); }
-  .badge.violet { background: var(--primaire-clair); color: var(--primaire); }
-  .reseau { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font-size: 11px; font-weight: 700; background: var(--primaire-clair); color: var(--primaire); flex-shrink: 0; }
-  .logo { font-size: 30px; font-weight: 800; color: var(--primaire); letter-spacing: -.03em; }
-  .logo b { color: var(--accent); }
-  .sep { height: 1px; background: var(--bord); }
-  .note { font-size: 12px; color: var(--doux); line-height: 1.45; }
-  .alerte { border-radius: 12px; padding: 10px 12px; font-size: 12.5px; line-height: 1.4; }
-  .alerte.info { background: var(--primaire-clair); color: #3D1FA8; }
-  .alerte.att { background: var(--accent-clair); color: #7A4F00; }
-  .alerte.ok { background: var(--succes-clair); color: #0D6B45; }
-</style>
-</head>
-<body>
-<header class="planche">
-  <h1>Vupay — Maquettes de l'espace diffuseur</h1>
-  <p>8 écrans mobiles · palette provisoire (design/charte/PALETTE.md) · données d'exemple · aucun logo de réseau social (mention texte seulement)</p>
-</header>
-
-<div class="grille">
-
-<!-- 1. Connexion OTP -->
-<figure id="e1">
-<div class="tel">
-  <div class="statut"><span>9:41</span><span>4G ▮▮▮</span></div>
-  <div class="contenu" style="padding-top:28px; gap:16px">
-    <div class="logo">vu<b>pay</b></div>
-    <div>
-      <h2 style="font-size:24px; line-height:1.2">Gagnez de l'argent avec vos statuts et stories</h2>
-      <p class="note" style="margin-top:8px">Vupay est une plateforme publicitaire : les marques paient, vous diffusez, chaque vue validée vous rapporte.</p>
-    </div>
-    <div>
-      <div class="etiquette">Votre numéro WhatsApp</div>
-      <div style="display:flex; gap:8px">
-        <div class="champ" style="width:104px">🇲🇱 +223 <span class="doux">▾</span></div>
-        <div class="champ focus" style="flex:1">76 12 34 56</div>
-      </div>
-    </div>
-    <div class="carte" style="display:flex; flex-direction:column; gap:10px">
-      <div class="ligne"><span style="font-weight:600; font-size:14px">Code reçu sur WhatsApp</span><span class="doux">0:42</span></div>
-      <div style="display:flex; gap:8px; justify-content:space-between">
-        <div class="champ focus" style="width:42px; justify-content:center; font-weight:700">4</div>
-        <div class="champ focus" style="width:42px; justify-content:center; font-weight:700">8</div>
-        <div class="champ focus" style="width:42px; justify-content:center; font-weight:700">1</div>
-        <div class="champ" style="width:42px; justify-content:center"> </div>
-        <div class="champ" style="width:42px; justify-content:center"> </div>
-        <div class="champ" style="width:42px; justify-content:center"> </div>
-      </div>
-      <span class="doux">Pas reçu ? <b style="color:var(--primaire)">Renvoyer par SMS</b></span>
-    </div>
-    <div class="etiquette" style="margin:0">Code parrain (facultatif)</div>
-    <div class="champ" style="margin-top:-10px"><span class="doux">Ex. AMI-7Q2</span></div>
-    <div style="margin-top:auto; display:flex; flex-direction:column; gap:8px">
-      <button class="btn">Continuer</button>
-      <p class="note" style="text-align:center">En continuant, vous acceptez les conditions d'utilisation et la politique de confidentialité.</p>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espace diffuseur</title><link rel="stylesheet" href="../vupay-ui.css"></head>
+<body><header class="planche"><div><div class="marque"><i></i>vupay</div><h1>Espace diffuseur</h1><p>Accueil public et 8 écrans mobiles : de l'inscription au premier retrait.</p></div>
+<p class="doux">Maquettes v2 · données d'exemple · aucun logo de réseau social (nom écrit seulement)</p></header>
+<div class="grille"><figure id="e0"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="corps" style="padding-top:14px; gap:18px">
+  <div class="ligne"><div class="marque"><i></i>vupay</div><span class="btn fantome" style="padding:0">Se connecter</span></div>
+  <div>
+    <h1 style="font-family:var(--titre); font-size:38px; line-height:1.02; letter-spacing:-.035em; font-weight:800">Vos statuts sont vus.<br>Faites-les <span style="background:var(--safran); padding:0 6px; border-radius:8px">payer.</span></h1>
+    <p class="note" style="margin-top:12px; font-size:14px">Les marques paient pour apparaître dans vos statuts et stories. Chaque vue validée vous rapporte, retrait Mobile Money dès 1 000 F.</p>
+  </div>
+  <div class="carte" style="display:flex; gap:14px; align-items:center">
+    <div class="anneau" style="--p:62; width:58px; height:58px"><b style="width:48px;height:48px;font-size:12px">14 h</b></div>
+    <div class="pile" style="gap:2px"><span class="eyebrow">Exemple réaliste</span><b class="chiffre" style="font-size:20px">180 vues → 180 F</b><span class="doux">par statut, + 10 F par clic</span></div>
+  </div>
+  <div class="pile" style="gap:10px">
+    <div class="ligne" style="justify-content:flex-start; gap:12px"><span class="rx">1</span><span><b>Acceptez</b> une campagne qui vous ressemble</span></div>
+    <div class="ligne" style="justify-content:flex-start; gap:12px"><span class="rx">2</span><span><b>Publiez</b> en statut ou en story</span></div>
+    <div class="ligne" style="justify-content:flex-start; gap:12px"><span class="rx">3</span><span><b>Envoyez</b> la capture des vues, encaissez</span></div>
+  </div>
+  <p class="doux">WhatsApp · Instagram · Facebook, puis TikTok, Snapchat et Telegram</p>
+  <div class="pile" style="gap:10px; margin-top:auto">
+    <button class="btn">Je diffuse et je gagne</button>
+    <button class="btn ligne">Je suis une marque</button>
+    <p class="doux" style="text-align:center">Vupay est une plateforme publicitaire, pas un service de paiement.</p>
+  </div>
+</div></div><figcaption>Accueil public<span>Promesse, gains réalistes, deux entrées</span></figcaption></figure><figure id="e1"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="entete"><div class="retour">←</div></div>
+<div class="corps" style="gap:18px">
+  <div><h2 style="font-family:var(--titre); font-size:28px; letter-spacing:-.02em">Entrez le code</h2><p class="note" style="margin-top:6px; font-size:14px">Envoyé sur WhatsApp au <b style="color:var(--encre)">+223 76 12 34 56</b> · <span style="color:var(--indigo); font-weight:700">Modifier</span></p></div>
+  <div style="display:grid; grid-template-columns:repeat(6,1fr); gap:8px">
+    <div class="champ" style="justify-content:center; font:700 24px var(--titre); padding:14px 0">4</div>
+    <div class="champ" style="justify-content:center; font:700 24px var(--titre); padding:14px 0">8</div>
+    <div class="champ" style="justify-content:center; font:700 24px var(--titre); padding:14px 0">1</div>
+    <div class="champ focus" style="justify-content:center; font:700 24px var(--titre); padding:14px 0; color:var(--indigo)">|</div>
+    <div class="champ" style="padding:14px 0"></div><div class="champ" style="padding:14px 0"></div>
+  </div>
+  <div class="ligne"><span class="doux">Nouveau code dans 0:42</span><span class="doux" style="font-weight:700">Recevoir par SMS</span></div>
+  <div class="sep"></div>
+  <div><span class="lib">Code parrain (facultatif)</span><div class="champ"><span class="doux" style="font-size:15px">Ex. AWA-7Q2</span></div></div>
+  <div class="encart info"><span>🔒</span><span>Votre numéro sert à vous connecter et à recevoir vos gains. Il n'est jamais montré aux marques.</span></div>
+  <div style="margin-top:auto" class="pile"><button class="btn indigo">Valider</button><p class="doux" style="text-align:center">En validant, vous acceptez les conditions d'utilisation.</p></div>
+</div></div><figcaption>1. Connexion<span>Numéro WhatsApp, code à 6 chiffres</span></figcaption></figure><figure id="e2"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="entete"><div class="retour">←</div><div style="flex:1"><span class="eyebrow">Étape 2 sur 3</span><div class="barre-prog" style="margin-top:6px"><i style="width:66%"></i></div></div></div>
+<div class="corps">
+  <h2 style="font-family:var(--titre); font-size:24px; letter-spacing:-.02em">Qui voit vos statuts ?</h2>
+  <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:8px">
+    <div><span class="lib">Ville</span><div class="champ">Bamako<span class="doux">▾</span></div></div>
+    <div><span class="lib">Âge</span><div class="champ">24</div></div>
+    <div><span class="lib">Sexe</span><div class="champ">F<span class="doux">▾</span></div></div>
+  </div>
+  <div><span class="lib">Centres d'intérêt · 3 choisis</span><div class="puces"><span class="puce on">Mode</span><span class="puce on">Beauté</span><span class="puce">Sport</span><span class="puce on">Musique</span><span class="puce">Téléphonie</span><span class="puce">Cuisine</span><span class="puce">Études</span></div></div>
+  <span class="lib" style="margin:4px 0 -6px">Réseaux reliés</span>
+  <div class="carte" style="padding:6px 14px">
+    <div class="ligne" style="padding:10px 0"><div class="ligne" style="gap:10px"><span class="rx">WA</span><div><b>Statut WhatsApp</b><div class="doux">≈ 180 vues par statut</div></div></div><span class="etat ok">Estimé</span></div>
+    <div class="sep"></div>
+    <div class="ligne" style="padding:10px 0"><div class="ligne" style="gap:10px"><span class="rx">IG</span><div><b>@awa.styles</b><div class="doux">Story Instagram · 2/3 captures</div></div></div><span class="etat att">À compléter</span></div>
+    <div class="sep"></div>
+    <div class="ligne" style="padding:10px 0; justify-content:flex-start; gap:10px; color:var(--indigo); font-weight:700"><span class="rx" style="color:var(--indigo)">+</span>Relier Facebook</div>
+  </div>
+  <div class="encart info"><span>ⓘ</span><span>Envoyez la capture des vues de vos <b>3 derniers statuts</b> : c'est ce qui fixe la portée qu'on vous attribue.</span></div>
+  <div style="margin-top:auto"><button class="btn indigo">Continuer</button></div>
+</div></div><figcaption>2. Profil d'audience<span>Étape 2 sur 3 · intérêts et réseaux reliés</span></figcaption></figure><figure id="e3"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="entete" style="justify-content:space-between"><div><span class="doux">Bonjour Awa</span><h2>Campagnes</h2></div><span class="etat ind">Niveau Bronze</span></div>
+<div class="corps" style="gap:12px">
+  <div class="puces"><span class="puce on">Pour moi · 4</span><span class="puce">WhatsApp</span><span class="puce">Instagram</span><span class="puce">Facebook</span></div>
+  <div class="carte" style="padding:12px; display:flex; gap:12px">
+    <div class="visuel v1" style="width:72px; height:108px"><b style="font-size:11px; line-height:1.1">Bissap Nyama</b></div>
+    <div class="pile" style="flex:1; gap:5px">
+      <div class="ligne"><b style="font-size:15.5px">Jus Nyama</b><span class="etat ok">Nouveau</span></div>
+      <span class="doux">Lancement du jus de bissap · Bamako</span>
+      <div class="ligne" style="justify-content:flex-start; gap:8px; margin-top:2px"><span class="chiffre" style="font-size:20px">1 F</span><span class="doux">/ vue</span><span class="chiffre" style="font-size:20px">10 F</span><span class="doux">/ clic</span></div>
+      <div class="barre-prog"><i style="width:58%; background:var(--safran)"></i></div>
+      <span class="doux">42 places sur 100 · WA, IG</span>
     </div>
   </div>
-</div>
-<figcaption>1. Connexion<span>Numéro WhatsApp + code OTP</span></figcaption>
-</figure>
-
-<!-- 2. Profil d'audience -->
-<figure id="e2">
-<div class="tel">
-  <div class="statut"><span>9:41</span><span>4G ▮▮▮</span></div>
-  <div class="barre"><div class="retour">←</div><h2>Mon profil d'audience</h2></div>
-  <div class="contenu">
-    <div style="display:flex; gap:6px">
-      <div style="flex:1; height:5px; border-radius:3px; background:var(--primaire)"></div>
-      <div style="flex:1; height:5px; border-radius:3px; background:var(--primaire)"></div>
-      <div style="flex:1; height:5px; border-radius:3px; background:var(--bord)"></div>
-    </div>
-    <div style="display:flex; gap:8px">
-      <div style="flex:1"><div class="etiquette">Ville</div><div class="champ">Bamako <span class="doux">▾</span></div></div>
-      <div style="width:90px"><div class="etiquette">Âge</div><div class="champ">24</div></div>
-      <div style="width:84px"><div class="etiquette">Sexe</div><div class="champ">F <span class="doux">▾</span></div></div>
-    </div>
-    <div>
-      <div class="etiquette">Centres d'intérêt</div>
-      <div class="puces">
-        <span class="puce on">Mode</span><span class="puce on">Beauté</span><span class="puce">Sport</span><span class="puce on">Musique</span>
-        <span class="puce">Téléphonie</span><span class="puce">Cuisine</span><span class="puce">Études</span><span class="puce">Business</span>
-      </div>
-    </div>
-    <div class="titre-section" style="margin-top:4px">Mes réseaux reliés</div>
-    <div class="carte" style="display:flex; flex-direction:column; gap:12px; padding:12px">
-      <div class="ligne"><div style="display:flex; gap:10px; align-items:center"><div class="reseau">WA</div><div><div style="font-weight:600; font-size:14px">WhatsApp · Statut</div><div class="doux">≈ 180 vues par statut</div></div></div><span class="badge ok">Estimé</span></div>
-      <div class="sep"></div>
-      <div class="ligne"><div style="display:flex; gap:10px; align-items:center"><div class="reseau">IG</div><div><div style="font-weight:600; font-size:14px">Instagram · @awa.styles</div><div class="doux">3 captures envoyées · en analyse</div></div></div><span class="badge att">En cours</span></div>
-      <div class="sep"></div>
-      <div class="ligne"><div style="display:flex; gap:10px; align-items:center"><div class="reseau" style="background:var(--fond); color:var(--doux)">+</div><div style="font-weight:600; font-size:14px; color:var(--primaire)">Relier un autre réseau</div></div></div>
-    </div>
-    <div class="alerte info">Pour estimer votre portée, envoyez la capture des vues de vos <b>3 derniers statuts ou stories</b> sur chaque réseau.</div>
-    <div style="margin-top:auto"><button class="btn">Enregistrer</button></div>
-  </div>
-</div>
-<figcaption>2. Profil d'audience<span>Intérêts, réseaux reliés, portée estimée</span></figcaption>
-</figure>
-
-<!-- 3. Campagnes disponibles -->
-<figure id="e3">
-<div class="tel">
-  <div class="statut"><span>9:41</span><span>4G ▮▮▮</span></div>
-  <div class="barre" style="justify-content:space-between"><div><div class="doux">Bonjour Awa</div><h2>Campagnes pour vous</h2></div><span class="badge violet">Bronze</span></div>
-  <div class="contenu">
-    <div class="puces"><span class="puce on">Tous</span><span class="puce">WhatsApp</span><span class="puce">Instagram</span><span class="puce">Facebook</span></div>
-    <div class="carte" style="display:flex; gap:12px; padding:12px">
-      <div style="width:64px; height:96px; border-radius:10px; background:linear-gradient(160deg,#FFB020,#FF7A45); flex-shrink:0; display:grid; place-items:end center; padding-bottom:6px; color:#fff; font-size:10px; font-weight:700">9:16</div>
-      <div style="flex:1; display:flex; flex-direction:column; gap:5px">
-        <div class="ligne"><b style="font-size:15px">Jus Nyama</b><span class="badge ok">Nouveau</span></div>
-        <div class="doux">Lancement du jus de bissap · Bamako</div>
-        <div style="font-size:13px"><b style="color:var(--primaire)">1 F</b> / vue · <b style="color:var(--primaire)">10 F</b> / clic</div>
-        <div class="ligne"><span class="doux">WA · IG</span><span class="doux">42 places restantes</span></div>
-      </div>
-    </div>
-    <div class="carte" style="display:flex; gap:12px; padding:12px">
-      <div style="width:64px; height:96px; border-radius:10px; background:linear-gradient(160deg,#6C3BF5,#2B1B7A); flex-shrink:0; display:grid; place-items:end center; padding-bottom:6px; color:#fff; font-size:10px; font-weight:700">9:16</div>
-      <div style="flex:1; display:flex; flex-direction:column; gap:5px">
-        <div class="ligne"><b style="font-size:15px">Kalanso Formation</b></div>
-        <div class="doux">Inscriptions cours d'informatique</div>
-        <div style="font-size:13px"><b style="color:var(--primaire)">12 F</b> / clic · objectif clics</div>
-        <div class="ligne"><span class="doux">WA · FB</span><span class="doux">Fin dans 3 jours</span></div>
-      </div>
-    </div>
-    <div class="carte" style="display:flex; gap:12px; padding:12px; opacity:.6">
-      <div style="width:64px; height:96px; border-radius:10px; background:linear-gradient(160deg,#14915F,#0B5236); flex-shrink:0"></div>
-      <div style="flex:1; display:flex; flex-direction:column; gap:5px">
-        <div class="ligne"><b style="font-size:15px">Boutique Sanu</b><span class="badge violet">Argent</span></div>
-        <div class="doux">Réservée aux diffuseurs niveau Argent</div>
-        <div style="font-size:13px"><b>2 F</b> / vue</div>
-      </div>
+  <div class="carte" style="padding:12px; display:flex; gap:12px">
+    <div class="visuel v2" style="width:72px; height:108px"><b style="font-size:11px; line-height:1.1">Kalanso</b></div>
+    <div class="pile" style="flex:1; gap:5px">
+      <div class="ligne"><b style="font-size:15.5px">Kalanso Formation</b><span class="etat att">3 jours</span></div>
+      <span class="doux">Inscriptions · cours d'informatique</span>
+      <div class="ligne" style="justify-content:flex-start; gap:8px; margin-top:2px"><span class="chiffre" style="font-size:20px">12 F</span><span class="doux">/ clic · objectif clics</span></div>
+      <div class="barre-prog"><i style="width:81%; background:var(--safran)"></i></div>
+      <span class="doux">19 places sur 100 · WA, FB</span>
     </div>
   </div>
-  <div class="nav">
-    <div class="actif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Campagnes</div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Gains</div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg>Retrait</div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Profil</div>
-  </div>
-</div>
-<figcaption>3. Campagnes disponibles<span>Liste filtrée selon le profil</span></figcaption>
-</figure>
-
-<!-- 4. Détail et publication -->
-<figure id="e4">
-<div class="tel">
-  <div class="statut"><span>9:41</span><span>4G ▮▮▮</span></div>
-  <div class="barre"><div class="retour">←</div><h2>Jus Nyama</h2></div>
-  <div class="contenu">
-    <div style="display:flex; gap:12px">
-      <div style="width:130px; height:230px; border-radius:14px; background:linear-gradient(160deg,#FFB020,#FF7A45); position:relative; flex-shrink:0; color:#fff; padding:12px; display:flex; flex-direction:column; justify-content:flex-end">
-        <span style="position:absolute; top:8px; right:8px; background:rgba(0,0,0,.55); font-size:10px; font-weight:700; padding:3px 6px; border-radius:5px; letter-spacing:.05em">ST-4K7</span>
-        <b style="font-size:16px; line-height:1.15">Le vrai goût du bissap</b>
-        <span style="font-size:10px; margin-top:4px">Visuel de l'annonceur</span>
-      </div>
-      <div style="display:flex; flex-direction:column; gap:8px; flex:1">
-        <div class="carte" style="padding:10px"><div class="doux">Vous gagnez</div><div style="font-weight:700">1 F / vue</div><div style="font-weight:700">10 F / clic</div></div>
-        <div class="carte" style="padding:10px"><div class="doux">Vues payées max.</div><div style="font-weight:700">500 par story</div></div>
-        <div class="carte" style="padding:10px"><div class="doux">Votre code</div><div style="font-weight:700; color:var(--primaire)">ST-4K7</div></div>
-      </div>
-    </div>
-    <div class="carte" style="padding:12px">
-      <div class="etiquette">Texte à publier</div>
-      <p style="font-size:13px; line-height:1.45">Découvrez le nouveau jus de bissap Nyama 🍹 Fait à Bamako ! 👉 vupay.app/c/k7m2qa <span class="doux">#Pub</span></p>
-      <div style="display:flex; gap:8px; margin-top:10px"><span class="puce">Copier le texte</span><span class="puce">Télécharger le visuel</span></div>
-    </div>
-    <div class="alerte att">Gardez le code <b>ST-4K7</b> visible et publiez avant ce soir 23 h. Envoyez la capture des vues <b>entre 20 et 24 h</b> après publication.</div>
-    <div style="margin-top:auto; display:flex; flex-direction:column; gap:8px">
-      <button class="btn">Publier en statut WhatsApp</button>
-      <button class="btn second">Publier en story Instagram</button>
+  <div class="carte" style="padding:12px; display:flex; gap:12px; background:transparent; border-style:dashed">
+    <div class="visuel v3" style="width:72px; height:108px; opacity:.45"></div>
+    <div class="pile" style="flex:1; gap:5px">
+      <div class="ligne"><b style="font-size:15.5px; color:var(--doux)">Boutique Sanu</b><span class="etat neutre">🔒 Argent</span></div>
+      <span class="doux">2 F / vue · réservée au niveau Argent</span>
+      <span class="doux" style="color:var(--indigo); font-weight:700">Comment passer Argent →</span>
     </div>
   </div>
-</div>
-<figcaption>4. Détail et publication<span>Visuel avec code, texte avec lien personnel</span></figcaption>
-</figure>
-
-<!-- 5. Envoyer la preuve -->
-<figure id="e5">
-<div class="tel">
-  <div class="statut"><span>9:41</span><span>4G ▮▮▮</span></div>
-  <div class="barre"><div class="retour">←</div><h2>Envoyer ma preuve</h2></div>
-  <div class="contenu">
-    <div class="carte ligne" style="padding:12px">
-      <div style="display:flex; gap:10px; align-items:center"><div class="reseau">WA</div><div><b style="font-size:14px">Jus Nyama · Statut</b><div class="doux">Publié hier à 20:14</div></div></div>
-      <span class="badge att">3 h 12 restantes</span>
-    </div>
-    <div class="note">Ouvrez votre statut, affichez la liste <b>« Vu par »</b> et faites une capture où l'on voit le visuel, le code et le nombre de vues.</div>
-    <div style="border:2px dashed var(--primaire); border-radius:16px; background:var(--primaire-clair); padding:18px; display:flex; gap:14px; align-items:center">
-      <div style="width:70px; height:120px; border-radius:10px; background:#fff; border:1px solid var(--bord); display:flex; flex-direction:column; padding:6px; gap:4px">
-        <div style="height:40px; border-radius:6px; background:linear-gradient(160deg,#FFB020,#FF7A45)"></div>
-        <div style="height:5px; width:70%; background:var(--bord); border-radius:3px"></div>
-        <div style="height:5px; width:50%; background:var(--bord); border-radius:3px"></div>
-        <div style="height:5px; width:60%; background:var(--bord); border-radius:3px"></div>
-      </div>
-      <div><b style="font-size:14px">capture_statut.jpg</b><div class="doux">Envoyée · analyse en cours…</div></div>
-    </div>
-    <div class="carte" style="display:flex; flex-direction:column; gap:8px; padding:12px">
-      <div class="titre-section">Résultat de la lecture</div>
-      <div class="ligne"><span style="font-size:14px">Code lu</span><span><b>ST-4K7</b> <span class="badge ok">✓</span></span></div>
-      <div class="ligne"><span style="font-size:14px">Vues lues</span><b>214</b></div>
-      <div class="ligne"><span style="font-size:14px">Clics mesurés</span><b>3</b></div>
-      <div class="sep"></div>
-      <div class="ligne"><span style="font-size:14px">Gain estimé</span><b style="color:var(--primaire)">244 F</b></div>
-    </div>
-    <div class="alerte ok">Preuve validée automatiquement. 244 F passent dans votre solde disponible.</div>
-    <div style="margin-top:auto"><button class="btn">Voir mes gains</button></div>
-  </div>
-</div>
-<figcaption>5. Envoi de la preuve<span>Capture, lecture automatique, validation</span></figcaption>
-</figure>
-
-<!-- 6. Tableau de bord -->
-<figure id="e6">
-<div class="tel">
-  <div class="statut"><span>9:41</span><span>4G ▮▮▮</span></div>
-  <div class="barre"><h2>Mes gains</h2></div>
-  <div class="contenu">
-    <div class="carte" style="background:var(--encre); color:#fff; border:none; padding:16px">
-      <div style="font-size:12px; opacity:.75">Solde disponible</div>
-      <div class="gros">12 450 F</div>
-      <div class="ligne" style="margin-top:10px"><span style="font-size:12px; opacity:.75">En attente de validation</span><b style="color:var(--accent)">1 830 F</b></div>
-      <button class="btn" style="margin-top:12px; background:var(--accent); color:var(--encre)">Retirer</button>
-    </div>
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px">
-      <div class="carte" style="padding:10px"><div class="doux">Vues</div><b style="font-size:17px">9 840</b></div>
-      <div class="carte" style="padding:10px"><div class="doux">Clics</div><b style="font-size:17px">152</b></div>
-      <div class="carte" style="padding:10px"><div class="doux">Taux clic</div><b style="font-size:17px">1,5 %</b></div>
-    </div>
-    <div class="titre-section">Historique</div>
-    <div class="carte" style="display:flex; flex-direction:column; gap:11px; padding:12px">
-      <div class="ligne"><div><b style="font-size:14px">Jus Nyama · WA</b><div class="doux">214 vues · 3 clics</div></div><div style="text-align:right"><b>+244 F</b><div><span class="badge ok">Validé</span></div></div></div>
-      <div class="sep"></div>
-      <div class="ligne"><div><b style="font-size:14px">Jus Nyama · IG</b><div class="doux">Capture envoyée</div></div><div style="text-align:right"><b>+180 F</b><div><span class="badge att">En attente</span></div></div></div>
-      <div class="sep"></div>
-      <div class="ligne"><div><b style="font-size:14px">Retrait Orange Money</b><div class="doux">12 nov.</div></div><div style="text-align:right"><b>−5 000 F</b><div><span class="badge ok">Payé</span></div></div></div>
-      <div class="sep"></div>
-      <div class="ligne"><div><b style="font-size:14px">Kalanso · WA</b><div class="doux">Code absent sur la capture</div></div><div style="text-align:right"><b>0 F</b><div><span class="badge ko">Refusé</span></div></div></div>
+</div><div class="onglets"><div class="actif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>Campagnes</div><div class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19V11M10 19V5M16 19v-6M21 19H3"/></svg>Gains</div><div class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg>Retrait</div><div class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Profil</div></div></div><figcaption>3. Campagnes<span>Liste filtrée selon le profil</span></figcaption></figure><figure id="e4"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="entete"><div class="retour">←</div><h2>Jus Nyama</h2></div>
+<div class="corps" style="gap:12px">
+  <div style="display:flex; gap:12px">
+    <div class="visuel v1" style="width:138px; height:246px; border-radius:16px; padding:12px"><span class="code">ST-4K7</span><b style="font-family:var(--titre); font-size:20px; line-height:1.05">Le vrai goût du bissap</b><span style="font-size:10px; opacity:.85; margin-top:6px">Visuel fourni par la marque</span></div>
+    <div class="pile" style="flex:1; gap:8px">
+      <div class="carte" style="padding:11px"><span class="eyebrow">Vous gagnez</span><div class="chiffre" style="font-size:19px; margin-top:3px">1 F / vue</div><div class="chiffre" style="font-size:19px">10 F / clic</div></div>
+      <div class="carte" style="padding:11px"><span class="eyebrow">Plafond</span><div class="chiffre" style="font-size:16px; margin-top:3px">500 vues / story</div></div>
+      <div class="carte" style="padding:11px; background:var(--encre); color:#fff; border:0"><span class="eyebrow" style="color:rgba(255,255,255,.6)">Votre code</span><div class="chiffre" style="font-size:22px; color:var(--safran); margin-top:2px">ST-4K7</div></div>
     </div>
   </div>
-  <div class="nav">
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Campagnes</div>
-    <div class="actif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Gains</div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg>Retrait</div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Profil</div>
+  <div class="carte" style="padding:13px">
+    <div class="ligne"><span class="lib" style="margin:0">Texte à publier</span><span class="btn fantome" style="padding:0; font-size:13px">Copier</span></div>
+    <p style="font-size:13.5px; line-height:1.5; margin-top:6px">Le nouveau jus de bissap Nyama est arrivé, fait à Bamako 🍹 vupay.app/c/<b>k7m2qa</b> <span class="doux">#Pub</span></p>
   </div>
-</div>
-<figcaption>6. Tableau de bord<span>Solde disponible, en attente, historique</span></figcaption>
-</figure>
-
-<!-- 7. Retrait -->
-<figure id="e7">
-<div class="tel">
-  <div class="statut"><span>9:41</span><span>4G ▮▮▮</span></div>
-  <div class="barre"><div class="retour">←</div><h2>Retirer mon argent</h2></div>
-  <div class="contenu">
-    <div class="carte" style="text-align:center; padding:10px">
-      <div class="doux">Montant</div>
-      <div class="gros" style="color:var(--primaire)">10 000 F</div>
-      <div class="doux">Disponible : 12 450 F · minimum 1 000 F</div>
-    </div>
-    <div>
-      <div class="etiquette">Opérateur</div>
-      <div style="display:flex; flex-direction:column; gap:8px">
-        <div class="champ focus"><span><b>Orange Money</b></span><span style="width:18px; height:18px; border-radius:50%; border:5px solid var(--primaire)"></span></div>
-        <div class="champ"><span>Moov Money</span><span style="width:18px; height:18px; border-radius:50%; border:1.5px solid var(--bord)"></span></div>
-        <div class="champ"><span>Wave</span><span style="width:18px; height:18px; border-radius:50%; border:1.5px solid var(--bord)"></span></div>
-      </div>
-    </div>
-    <div><div class="etiquette">Numéro (à votre nom)</div><div class="champ">+223 76 12 34 56 <span class="badge ok">Vérifié</span></div></div>
-    <div class="carte" style="display:flex; flex-direction:column; gap:7px; padding:12px">
-      <div class="ligne"><span style="font-size:14px">Montant</span><span>10 000 F</span></div>
-      <div class="ligne"><span style="font-size:14px">Frais opérateur</span><span>−100 F</span></div>
-      <div class="sep"></div>
-      <div class="ligne"><b style="font-size:14px">Vous recevez</b><b>9 900 F</b></div>
-    </div>
-    <div class="note">Instantané jusqu'à 25 000 F par jour. En cas d'échec, solde recrédité automatiquement.</div>
-    <div style="margin-top:auto"><button class="btn">Confirmer le retrait</button></div>
+  <div class="encart att"><span>⏱</span><span>Publiez avant <b>23 h</b>, laissez le code visible, puis envoyez la capture <b>entre 20 et 24 h</b> après.</span></div>
+  <div class="pile" style="gap:8px; margin-top:auto">
+    <button class="btn">Publier en statut WhatsApp</button>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px"><button class="btn ligne petit" style="width:100%">Story Instagram</button><button class="btn ligne petit" style="width:100%">Télécharger</button></div>
   </div>
-  <div class="nav">
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Campagnes</div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Gains</div>
-    <div class="actif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h4"/></svg>Retrait</div>
-    <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Profil</div>
+</div></div><figcaption>4. Détail et publication<span>Visuel codé, texte avec lien personnel</span></figcaption></figure><figure id="e5"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="entete"><div class="retour">←</div><h2>Ma preuve</h2></div>
+<div class="corps" style="gap:12px">
+  <div class="carte ligne" style="padding:12px">
+    <div class="ligne" style="gap:12px"><div class="anneau" style="--p:87"><b>3 h</b></div><div><b>Statut · Jus Nyama</b><div class="doux">Publié hier à 20:14 · expire à 20:14</div></div></div>
   </div>
-</div>
-<figcaption>7. Retrait Mobile Money<span>Opérateur, frais affichés, confirmation</span></figcaption>
-</figure>
-
-<!-- 8. KYC -->
-<figure id="e8">
-<div class="tel">
-  <div class="statut"><span>9:41</span><span>4G ▮▮▮</span></div>
-  <div class="barre"><div class="retour">←</div><h2>Vérifier mon identité</h2></div>
-  <div class="contenu">
-    <div class="alerte info">Obligatoire avant votre <b>premier retrait</b>. Vos documents restent privés et ne sont vus que par l'équipe de vérification.</div>
-    <div class="carte" style="display:flex; gap:12px; align-items:center">
-      <div style="width:40px; height:40px; border-radius:50%; background:var(--succes-clair); color:var(--succes); display:grid; place-items:center; font-weight:700">✓</div>
-      <div style="flex:1"><b style="font-size:14px">1. Pièce d'identité</b><div class="doux">Carte NINA · recto et verso</div></div>
-      <span class="badge ok">Envoyée</span>
-    </div>
-    <div class="carte" style="display:flex; flex-direction:column; gap:12px; border-color:var(--primaire)">
-      <div style="display:flex; gap:12px; align-items:center">
-        <div style="width:40px; height:40px; border-radius:50%; background:var(--primaire-clair); color:var(--primaire); display:grid; place-items:center; font-weight:700">2</div>
-        <div style="flex:1"><b style="font-size:14px">2. Selfie</b><div class="doux">Visage bien éclairé, sans lunettes</div></div>
-      </div>
-      <div style="height:200px; border-radius:14px; background:#1B1640; display:grid; place-items:center; position:relative">
-        <div style="width:120px; height:145px; margin-bottom:22px; border-radius:50%; border:3px dashed rgba(255,255,255,.7)"></div>
-        <span style="position:absolute; bottom:10px; color:#fff; font-size:12px">Placez votre visage dans l'ovale</span>
-      </div>
-      <button class="btn">Prendre le selfie</button>
-    </div>
-    <div class="carte" style="display:flex; gap:12px; align-items:center; opacity:.6">
-      <div style="width:40px; height:40px; border-radius:50%; background:var(--fond); display:grid; place-items:center; font-weight:700">3</div>
-      <div style="flex:1"><b style="font-size:14px">3. Vérification</b><div class="doux">Réponse sous 24 h en général</div></div>
-    </div>
+  <p class="note" style="font-size:13.5px">Ouvrez votre statut, affichez « <b style="color:var(--encre)">Vu par</b> », puis capturez l'écran avec le visuel, le code et le nombre de vues.</p>
+  <div style="border:2px dashed var(--indigo); background:var(--indigo-pale); border-radius:18px; padding:14px; display:flex; gap:14px; align-items:center">
+    <div style="width:64px; height:112px; border-radius:10px; background:#fff; border:1px solid var(--trait); padding:5px; display:flex; flex-direction:column; gap:4px"><div class="v1" style="height:44px; border-radius:6px"></div><i style="height:5px; width:80%; background:var(--trait); border-radius:3px"></i><i style="height:5px; width:55%; background:var(--trait); border-radius:3px"></i><i style="height:5px; width:65%; background:var(--trait); border-radius:3px"></i></div>
+    <div class="pile" style="gap:4px"><b>capture_statut.jpg</b><span class="doux">Analysée en 4 s</span><span class="btn fantome" style="padding:0; font-size:13px">Remplacer</span></div>
   </div>
-</div>
-<figcaption>8. Vérification d'identité<span>Pièce + selfie avant le premier retrait</span></figcaption>
-</figure>
-
-</div>
-</body>
-</html>
+  <div class="carte pile" style="gap:9px; padding:14px">
+    <span class="eyebrow">Lu sur votre capture</span>
+    <div class="ligne"><span>Code</span><span class="ligne" style="gap:6px"><b>ST-4K7</b><span class="etat ok">Conforme</span></span></div>
+    <div class="ligne"><span>Vues</span><b class="chiffre" style="font-size:17px">214</b></div>
+    <div class="ligne"><span>Clics sur votre lien</span><b class="chiffre" style="font-size:17px">3</b></div>
+    <div class="sep"></div>
+    <div class="ligne"><b>Gain</b><b class="chiffre" style="font-size:22px; background:var(--safran-pale); padding:0 8px; border-radius:8px">+244 F</b></div>
+  </div>
+  <div class="encart ok"><span>✓</span><span>Validée automatiquement. Les 244 F sont dans votre solde disponible.</span></div>
+  <div style="margin-top:auto"><button class="btn indigo">Voir mes gains</button></div>
+</div></div><figcaption>5. Envoi de la preuve<span>Compte à rebours, lecture automatique</span></figcaption></figure><figure id="e6"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="entete"><h2>Mes gains</h2></div>
+<div class="corps" style="gap:12px">
+  <div class="solde">
+    <span style="font-size:12.5px; opacity:.7">Disponible</span>
+    <div class="gros" style="font-size:40px">12 450 F</div>
+    <div class="ligne" style="margin-top:12px; position:relative; z-index:1"><span style="font-size:12.5px; opacity:.7">En validation</span><b class="chiffre" style="color:var(--safran); font-size:17px">1 830 F</b></div>
+    <button class="btn" style="margin-top:14px; position:relative; z-index:1">Retirer mon argent</button>
+  </div>
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px">
+    <div class="carte" style="padding:11px"><span class="doux">Vues</span><div class="chiffre" style="font-size:19px">9 840</div></div>
+    <div class="carte" style="padding:11px"><span class="doux">Clics</span><div class="chiffre" style="font-size:19px">152</div></div>
+    <div class="carte" style="padding:11px"><span class="doux">Taux clic</span><div class="chiffre" style="font-size:19px">1,5 %</div></div>
+  </div>
+  <div class="ligne"><span class="eyebrow">Historique</span><span class="doux" style="font-weight:700">Novembre ▾</span></div>
+  <div class="carte" style="padding:4px 14px">
+    <div class="ligne" style="padding:11px 0"><div><b>Jus Nyama · Statut</b><div class="doux">214 vues · 3 clics</div></div><div style="text-align:right"><b class="chiffre">+244 F</b><div><span class="etat ok">Validé</span></div></div></div><div class="sep"></div>
+    <div class="ligne" style="padding:11px 0"><div><b>Jus Nyama · Story</b><div class="doux">Capture en analyse</div></div><div style="text-align:right"><b class="chiffre">+180 F</b><div><span class="etat att">En validation</span></div></div></div><div class="sep"></div>
+    <div class="ligne" style="padding:11px 0"><div><b>Retrait Orange Money</b><div class="doux">12 nov. · réf. VP-8812</div></div><div style="text-align:right"><b class="chiffre">−5 000 F</b><div><span class="etat ok">Payé</span></div></div></div><div class="sep"></div>
+    <div class="ligne" style="padding:11px 0"><div><b>Kalanso · Statut</b><div class="doux">Code absent sur la capture</div></div><div style="text-align:right"><b class="chiffre">0 F</b><div><span class="etat ko">Refusé</span></div></div></div>
+  </div>
+</div><div class="onglets"><div class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/></svg>Campagnes</div><div class="actif"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 19V11M10 19V5M16 19v-6M21 19H3"/></svg>Gains</div><div class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg>Retrait</div><div class=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Profil</div></div></div><figcaption>6. Gains<span>Solde, statistiques, historique</span></figcaption></figure><figure id="e7"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="entete"><div class="retour">←</div><h2>Retirer</h2></div>
+<div class="corps" style="gap:12px">
+  <div class="carte" style="text-align:center; padding:16px">
+    <span class="doux">Montant à retirer</span>
+    <div class="gros" style="margin-top:4px">10 000 F</div>
+    <div class="puces" style="justify-content:center; margin-top:10px"><span class="puce">2 000</span><span class="puce">5 000</span><span class="puce on">10 000</span><span class="puce">Tout</span></div>
+    <div class="doux" style="margin-top:8px">Disponible 12 450 F · minimum 1 000 F</div>
+  </div>
+  <span class="lib" style="margin:0 0 -6px">Vers</span>
+  <div class="carte" style="padding:4px 14px">
+    <div class="ligne" style="padding:11px 0"><div class="ligne" style="gap:10px"><span class="rx">OM</span><div><b>Orange Money</b><div class="doux">+223 76 12 34 56 · à votre nom</div></div></div><span class="radio on"></span></div><div class="sep"></div>
+    <div class="ligne" style="padding:11px 0"><div class="ligne" style="gap:10px"><span class="rx">MV</span><b>Moov Money</b></div><span class="radio"></span></div><div class="sep"></div>
+    <div class="ligne" style="padding:11px 0"><div class="ligne" style="gap:10px"><span class="rx">WV</span><b>Wave</b></div><span class="radio"></span></div>
+  </div>
+  <div class="carte pile" style="gap:8px; padding:14px">
+    <div class="ligne"><span>Montant</span><span class="chiffre">10 000 F</span></div>
+    <div class="ligne"><span>Frais opérateur</span><span class="chiffre">−100 F</span></div>
+    <div class="sep"></div>
+    <div class="ligne"><b>Vous recevez</b><b class="chiffre" style="font-size:20px">9 900 F</b></div>
+  </div>
+  <div style="margin-top:auto" class="pile"><button class="btn">Confirmer le retrait</button><p class="doux" style="text-align:center">Instantané jusqu'à 25 000 F par jour</p></div>
+</div></div><figcaption>7. Retrait Mobile Money<span>Opérateur, frais affichés avant confirmation</span></figcaption></figure><figure id="e8"><div class="tel"><div class="statut"><span>9:41</span><span>4G ▮▮▮ 82 %</span></div>
+<div class="entete"><div class="retour">←</div><h2>Mon identité</h2></div>
+<div class="corps" style="gap:12px">
+  <div class="encart info"><span>🔒</span><span>Obligatoire avant votre <b>premier retrait</b>. Vos documents restent privés.</span></div>
+  <div class="carte ligne" style="padding:13px">
+    <div class="ligne" style="gap:12px"><span class="rx" style="background:var(--succes-pale); color:var(--succes); border:0">✓</span><div><b>Pièce d'identité</b><div class="doux">Carte NINA · recto et verso</div></div></div><span class="etat ok">Reçue</span>
+  </div>
+  <div class="carte pile" style="gap:12px; border:2px solid var(--indigo)">
+    <div class="ligne" style="justify-content:flex-start; gap:12px"><span class="rx" style="background:var(--indigo); color:#fff; border:0">2</span><div><b>Selfie</b><div class="doux">Visage bien éclairé, sans lunettes</div></div></div>
+    <div style="height:236px; border-radius:16px; background:var(--encre); display:grid; place-items:center; position:relative">
+      <div style="width:132px; height:168px; border-radius:50%; border:3px dashed var(--safran); margin-bottom:26px"></div>
+      <span style="position:absolute; bottom:14px; color:#fff; font-size:12.5px">Placez votre visage dans l'ovale</span>
+    </div>
+    <button class="btn indigo">Prendre le selfie</button>
+  </div>
+  <div class="carte ligne" style="padding:13px; background:transparent; border-style:dashed">
+    <div class="ligne" style="gap:12px"><span class="rx">3</span><div><b style="color:var(--doux)">Vérification</b><div class="doux">Réponse sous 24 h en général</div></div></div>
+  </div>
+</div></div><figcaption>8. Vérification d'identité<span>Pièce puis selfie, avant le premier retrait</span></figcaption></figure></div></body></html>
