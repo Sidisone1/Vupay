@@ -1,6 +1,6 @@
-# Maquettes v2 — Vupay
+# Maquettes v3 « Bogolan » — Vupay
 
-Refonte complète : **22 écrans** sur les trois espaces, avec la charte v2 (`design/charte/PALETTE.md`).
+**22 écrans** sur les trois espaces, avec les icônes Collection Bogolan (`design/icones/`) et la charte v3 (`design/charte/PALETTE.md`).
 Toutes les maquettes partagent la même feuille de style : `vupay-ui.css`.
 Les fichiers `.html` s'ouvrent dans un navigateur et se modifient directement ; les `.png` sont les exports.
 Données d'exemple uniquement. Aucun logo de réseau social : nom écrit seulement.
@@ -50,5 +50,5 @@ Données d'exemple uniquement. Aucun logo de réseau social : nom écrit seuleme
 
 ## Points à valider
 
-Charte v2 (safran / indigo / encre), logo provisoire (anneau + « vupay ») en attendant la vérification du nom,
+Charte v3 Bogolan (crème, ocre, rouille, brun), logo provisoire (anneau + « vupay ») en attendant la vérification du nom,
 frais de retrait affichés à titre d'exemple (décision ouverte dans `docs/DECISIONS.md`).

@@ -5,11 +5,11 @@ ou des visuels de WhatsPay, ni des logos ou couleurs des réseaux sociaux (règl
 
 | Dossier | Contenu | État |
 | --- | --- | --- |
-| `maquettes/` | 22 écrans : diffuseur (9), annonceur (5), admin (8) | ✅ v2 |
-| `charte/` | Couleurs, typographie, composants | ✅ v2 |
+| `maquettes/` | 22 écrans : diffuseur (9), annonceur (5), admin (8) | ✅ v3 Bogolan |
+| `charte/` | Couleurs, typographie, motif bogolan | ✅ v3 Bogolan |
 | `diagrammes/` | Parcours d'une campagne (SVG + PNG) | ✅ |
 | `logos/` | Logo définitif | À faire (après vérification du nom à l'OAPI) |
-| `icones/` | Icônes de l'app et de la PWA | À faire |
+| `icones/` | 109 icônes Collection Bogolan + planches sources | ✅ |
 
 ## Visuels existants
 
@@ -19,7 +19,7 @@ ou des visuels de WhatsPay, ni des logos ou couleurs des réseaux sociaux (règl
 
 Source : cahier des charges, section « Acteurs et parcours ». Fichier modifiable : `diagrammes/parcours-campagne.svg`.
 
-### Maquettes v2
+### Maquettes v3 « Bogolan »
 
 ![Diffuseur](maquettes/diffuseur/planche-diffuseur.png)
 

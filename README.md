@@ -37,16 +37,16 @@ vupay/
 │       │   └── api/webhooks/   Webhooks de l'agrégateur Mobile Money
 │       ├── src/lib/          Règles métier testées + clients Supabase
 │       ├── src/components/   Composants d'interface
-│       └── public/           Manifeste PWA, icônes
+│       └── public/           Manifeste PWA, icônes Bogolan (public/icones)
 ├── supabase/
 │   ├── migrations/           Schéma de la base et règles de sécurité (RLS)
 │   └── functions/            Edge Functions : vérification des preuves, retraits
 ├── design/
 │   ├── diagrammes/           Parcours d'une campagne (SVG + PNG)
-│   ├── charte/               Charte visuelle v2
-│   ├── maquettes/            22 écrans : diffuseur, annonceur, admin (v2)
+│   ├── charte/               Charte visuelle « Bogolan »
+│   ├── maquettes/            22 écrans : diffuseur, annonceur, admin (v3 Bogolan)
 │   ├── logos/                Logo (à produire)
-│   └── icones/               Icônes (à produire)
+│   └── icones/               Collection Bogolan (109 icônes, planches, découpe)
 ├── docs/
 │   ├── CAHIER_DES_CHARGES.md
 │   ├── ARCHITECTURE.md
