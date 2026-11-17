@@ -12,3 +12,9 @@ Reprises du cahier des charges. À trancher avant ou pendant le lot 1.
 | 6 | Annonceurs pilotes | Trouver 3 à 5 annonceurs avant le développement | À faire |
 | 7 | Structure juridique | Entreprise individuelle ou société (SARL/SAS) pour le multi-pays | Ouvert |
 | 8 | Fournisseur OTP | WhatsApp Business API ou SMS local | Ouvert |
+
+## Décisions prises
+
+| Date | Décision | Conséquence |
+| --- | --- | --- |
+| 17/11/2026 | Couleur de base **verte** (vert feuille `#2E6B34`, encre vert-noir `#16221A`) et icônes 3D **Bogolan** (porteur de projet) | Charte v3 (`design/charte/PALETTE.md`), `vupay-ui.css`, `tailwind.config.ts`, icônes `design/icones/bogolan/vupay/`. Vert distinct du vert WhatsApp |

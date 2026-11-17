@@ -5,8 +5,8 @@ ou des visuels de WhatsPay, ni des logos ou couleurs des réseaux sociaux (règl
 
 | Dossier | Contenu | État |
 | --- | --- | --- |
-| `maquettes/` | 22 écrans : diffuseur (9), annonceur (5), admin (8) | ✅ v2 |
-| `charte/` | Couleurs, typographie, composants | ✅ v2 |
+| `maquettes/` | 22 écrans : diffuseur (9), annonceur (5), admin (8), avec icônes Bogolan | ✅ v3 (vert) |
+| `charte/` | Couleurs (base verte), typographie, composants | ✅ v3 |
 | `diagrammes/` | Parcours d'une campagne (SVG + PNG) | ✅ |
 | `logos/` | Logo définitif | À faire (après vérification du nom à l'OAPI) |
 | `icones/` | Catalogue des icônes bogolan (846) ; icônes de l'app à dessiner | En cours |

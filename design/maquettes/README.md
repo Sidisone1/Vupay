@@ -1,6 +1,10 @@
-# Maquettes v2 — Vupay
+# Maquettes v3 (vert) — Vupay
 
-Refonte complète : **22 écrans** sur les trois espaces, avec la charte v2 (`design/charte/PALETTE.md`).
+**22 écrans** sur les trois espaces, avec la charte v3 : couleur de base **verte** (`design/charte/PALETTE.md`).
+
+- **Avec les icônes 3D Bogolan** : `maquettes-bogolan.html` (les 22 écrans sur une page, plus la galerie des icônes),
+  produite par `python3 design/maquettes/construire_bogolan.py`.
+- **Exports PNG** : régénérés par `node design/maquettes/exporter_png.js` après tout changement de charte.
 Toutes les maquettes partagent la même feuille de style : `vupay-ui.css`.
 Les fichiers `.html` s'ouvrent dans un navigateur et se modifient directement ; les `.png` sont les exports.
 Données d'exemple uniquement. Aucun logo de réseau social : nom écrit seulement.

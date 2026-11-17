@@ -6,23 +6,26 @@
 <title>Maquettes Vupay</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap">
 <style>
-/* Vupay UI — système de maquettes v2
-   Concept : l'anneau de statut (24 h) est la signature. Safran = argent gagné, indigo = actions,
-   encre profonde pour les surfaces de solde. Aucune couleur de réseau social (vert WhatsApp,
+/* Vupay UI — système de maquettes v3 (vert)
+   Concept : l'anneau de statut (24 h) est la signature. Vert feuille = couleur de base (actions, état actif),
+   safran = argent gagné, encre vert-noir pour les surfaces de solde. Le vert reste un vert feuille foncé,
+   jamais le vert WhatsApp. Aucune couleur de réseau social (vert WhatsApp,
    dégradé Instagram, bleu Facebook, jaune Snapchat) ni de WhatsPay. */
 
 :root {
-  --encre: #15162B;        /* textes, surfaces de solde */
-  --encre-2: #2A2C4A;
-  --indigo: #3533B8;       /* actions, liens, état actif */
-  --indigo-pale: #ECEBFF;
+  --encre: #16221A;        /* textes, surfaces de solde (vert-noir) */
+  --encre-2: #2A3A30;
+  --vert: #2E6B34;         /* couleur de base : actions, liens, état actif */
+  --vert-pale: #E6F0E3;
+  --indigo: var(--vert);   /* ancien nom, conservé pour les maquettes existantes */
+  --indigo-pale: var(--vert-pale);
   --safran: #F6A609;       /* gains, CTA principal (texte encre dessus) */
   --safran-pale: #FFF3D6;
   --corail: #EE5A3B;       /* anneau de story, urgence douce */
   --fond: #F4F4EF;         /* pierre claire, légèrement chaude-verte */
   --surface: #FFFFFF;
   --trait: #E3E2DA;
-  --doux: #66677D;
+  --doux: #646B66;
   --succes: #12825A; --succes-pale: #DFF3EA;
   --alerte: #A86400; --alerte-pale: #FFF0CF;
   --erreur: #C9362C; --erreur-pale: #FCE6E3;
@@ -41,8 +44,8 @@ figcaption { font-weight: 700; font-size: 14px; text-align: center; }
 figcaption span { display: block; font-weight: 400; color: var(--doux); font-size: 12.5px; margin-top: 2px; }
 
 /* ---------- Cadres ---------- */
-.tel { width: 375px; height: 800px; background: var(--fond); border-radius: 44px; border: 11px solid #0E0F1E; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 18px 40px rgba(21,22,43,.22); position: relative; }
-.ecran { width: 1280px; height: 800px; background: var(--fond); border-radius: 14px; overflow: hidden; display: flex; box-shadow: 0 18px 40px rgba(21,22,43,.18); border: 1px solid #C9C8BE; }
+.tel { width: 375px; height: 800px; background: var(--fond); border-radius: 44px; border: 11px solid #0F1912; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 18px 40px rgba(22,34,26,.22); position: relative; }
+.ecran { width: 1280px; height: 800px; background: var(--fond); border-radius: 14px; overflow: hidden; display: flex; box-shadow: 0 18px 40px rgba(22,34,26,.18); border: 1px solid #C9C8BE; }
 .statut { height: 30px; flex-shrink: 0; display: flex; justify-content: space-between; align-items: center; padding: 0 22px; font-size: 12px; font-weight: 700; }
 .corps { flex: 1; overflow: hidden; display: flex; flex-direction: column; gap: 14px; padding: 6px 18px 18px; }
 .entete { display: flex; align-items: center; gap: 12px; padding: 6px 18px 12px; flex-shrink: 0; }
@@ -127,12 +130,11 @@ tr:last-child td { border-bottom: 0; }
 .case.on { background: var(--indigo); border-color: var(--indigo); }
 .num { white-space: nowrap; }
 
-
 .sommaire{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;max-width:1720px;margin:0 auto 34px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:rgba(220,220,211,.92);backdrop-filter:blur(8px);padding:12px 0;border-bottom:1px solid var(--trait)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:#DCDCD3}
 .sommaire .marque{margin-right:12px}
 .sommaire a{display:flex;flex-direction:column;text-decoration:none;color:var(--encre);background:var(--surface);border:1px solid var(--trait);border-radius:var(--r-m);padding:8px 14px;line-height:1.25}
-.sommaire a:hover,.sommaire a:focus-visible{border-color:var(--indigo);outline:none;box-shadow:0 0 0 3px var(--indigo-pale)}
+.sommaire a:hover,.sommaire a:focus-visible{border-color:var(--vert);outline:none;box-shadow:0 0 0 3px var(--vert-pale)}
 .sommaire a b{font-family:var(--titre);font-size:14px}
 .sommaire a small{color:var(--doux);font-size:11.5px}
 .espace{scroll-margin-top:90px;margin-bottom:64px}
@@ -140,9 +142,6 @@ body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset
 .grille>figure{max-width:100%;min-width:0;overflow-x:auto;padding-bottom:6px;align-items:safe center}
 .ecran,.tel{flex:none}
 .grille>figure>figcaption{align-self:stretch;position:sticky;left:0}
-
-
-/* Icônes 3D Bogolan Vupay */
 .onglets img.io{width:28px;height:28px;border-radius:7px;opacity:.5;filter:grayscale(.7)}
 .onglets div.actif img.io{opacity:1;filter:none}
 .lateral a img.il{width:26px;height:26px;border-radius:7px;flex:none}
@@ -154,10 +153,10 @@ img.is{width:34px;height:34px;border-radius:9px;flex:none}
 .galerie-ico img{width:92px;height:92px}
 .galerie-ico figcaption{font-size:12.5px;font-weight:600;line-height:1.3}
 .galerie-ico code{display:block;font-size:10.5px;font-weight:500;color:var(--doux)}
+
 </style>
 </head>
 <body>
-
 <nav class="sommaire" aria-label="Espaces"><div class="marque"><i></i>vupay</div><a href="#diffuseur"><b>Espace diffuseur</b><small>9 écrans mobiles</small></a><a href="#annonceur"><b>Espace annonceur</b><small>5 écrans web</small></a><a href="#admin"><b>Back-office</b><small>8 écrans web</small></a><a href="#icones"><b>Icônes Bogolan</b><small>32 icônes 3D</small></a></nav>
 <section class="espace" id="diffuseur">
 <header class="planche"><div><div class="marque"><i></i>vupay</div><h1>Espace diffuseur</h1><p>Accueil public et 8 écrans mobiles : de l'inscription au premier retrait.</p></div>
@@ -528,7 +527,7 @@ img.is{width:34px;height:34px;border-radius:9px;flex:none}
    <div class="ligne"><span>Code absent ou faux</span><span class="etat neutre">14 refus auto</span></div>
   </div>
  </div>
-<div class="carte"><div class="ligne"><b style="font-size:15px">Vues validées par jour · 14 jours</b><span class="doux">61 300 aujourd'hui · +61 % depuis le 5 nov.</span></div><div style="margin-top:10px"><svg viewBox="0 -6 1100 180" width="100%" height="148" preserveAspectRatio="xMidYMid meet"><line x1="0" x2="1100" y1="150" y2="150" stroke="#E3E2DA"/><text x="1100" y="146" text-anchor="end" font-size="11" fill="#66677D">0 k</text><line x1="0" x2="1100" y1="107" y2="107" stroke="#E3E2DA"/><text x="1100" y="103" text-anchor="end" font-size="11" fill="#66677D">20 k</text><line x1="0" x2="1100" y1="64" y2="64" stroke="#E3E2DA"/><text x="1100" y="60" text-anchor="end" font-size="11" fill="#66677D">40 k</text><line x1="0" x2="1100" y1="21" y2="21" stroke="#E3E2DA"/><text x="1100" y="17" text-anchor="end" font-size="11" fill="#66677D">60 k</text><polygon points="0,150 0,69 85,62 169,56 254,64 338,49 423,39 508,45 592,32 677,26 762,34 846,21 931,15 1015,24 1100,19 1100,150" fill="#3533B8" fill-opacity=".1"/><polyline points="0,69 85,62 169,56 254,64 338,49 423,39 508,45 592,32 677,26 762,34 846,21 931,15 1015,24 1100,19" fill="none" stroke="#3533B8" stroke-width="2.5"/><circle cx="1100" cy="19" r="5" fill="#F6A609" stroke="#fff" stroke-width="2"/><text x="0" y="170" text-anchor="start" font-size="11" fill="#66677D">5 nov.</text><text x="338" y="170" text-anchor="middle" font-size="11" fill="#66677D">9 nov.</text><text x="677" y="170" text-anchor="middle" font-size="11" fill="#66677D">13 nov.</text><text x="1100" y="170" text-anchor="end" font-size="11" fill="#66677D">18 nov.</text></svg></div></div>
+<div class="carte"><div class="ligne"><b style="font-size:15px">Vues validées par jour · 14 jours</b><span class="doux">61 300 aujourd'hui · +61 % depuis le 5 nov.</span></div><div style="margin-top:10px"><svg viewBox="0 -6 1100 180" width="100%" height="148" preserveAspectRatio="xMidYMid meet"><line x1="0" x2="1100" y1="150" y2="150" stroke="#E3E2DA"/><text x="1100" y="146" text-anchor="end" font-size="11" fill="#66677D">0 k</text><line x1="0" x2="1100" y1="107" y2="107" stroke="#E3E2DA"/><text x="1100" y="103" text-anchor="end" font-size="11" fill="#66677D">20 k</text><line x1="0" x2="1100" y1="64" y2="64" stroke="#E3E2DA"/><text x="1100" y="60" text-anchor="end" font-size="11" fill="#66677D">40 k</text><line x1="0" x2="1100" y1="21" y2="21" stroke="#E3E2DA"/><text x="1100" y="17" text-anchor="end" font-size="11" fill="#66677D">60 k</text><polygon points="0,150 0,69 85,62 169,56 254,64 338,49 423,39 508,45 592,32 677,26 762,34 846,21 931,15 1015,24 1100,19 1100,150" fill="#2E6B34" fill-opacity=".1"/><polyline points="0,69 85,62 169,56 254,64 338,49 423,39 508,45 592,32 677,26 762,34 846,21 931,15 1015,24 1100,19" fill="none" stroke="#2E6B34" stroke-width="2.5"/><circle cx="1100" cy="19" r="5" fill="#F6A609" stroke="#fff" stroke-width="2"/><text x="0" y="170" text-anchor="start" font-size="11" fill="#66677D">5 nov.</text><text x="338" y="170" text-anchor="middle" font-size="11" fill="#66677D">9 nov.</text><text x="677" y="170" text-anchor="middle" font-size="11" fill="#66677D">13 nov.</text><text x="1100" y="170" text-anchor="end" font-size="11" fill="#66677D">18 nov.</text></svg></div></div>
 </div></div></div><figcaption>1. Vue d'ensemble<span>Activité du jour, marge, files d'attente, solde de décaissement</span></figcaption></figure><figure id="admin-e2"><div class="ecran"><aside class="lateral"><div class="marque" style="color:#fff"><i></i>vupay</div><a class=""><img class="il" src="../icones/bogolan/vupay/png/tableau-de-bord.png" alt="">Vue d'ensemble</a><a class="actif"><img class="il" src="../icones/bogolan/vupay/png/preuves.png" alt="">Preuves<span class="compte">27</span></a><a class=""><img class="il" src="../icones/bogolan/vupay/png/identites.png" alt="">Identités (KYC)<span class="compte">9</span></a><a class=""><img class="il" src="../icones/bogolan/vupay/png/moderation.png" alt="">Campagnes<span class="compte">2</span></a><a class=""><img class="il" src="../icones/bogolan/vupay/png/retraits.png" alt="">Retraits<span class="compte">5</span></a><a class=""><img class="il" src="../icones/bogolan/vupay/png/utilisateurs.png" alt="">Utilisateurs</a><a class=""><img class="il" src="../icones/bogolan/vupay/png/parametres.png" alt="">Paramètres</a><a class=""><img class="il" src="../icones/bogolan/vupay/png/journal.png" alt="">Journal</a><div class="bas"><b style="color:#fff">Mariam K.</b><br>Super-admin · Mali</div></aside><div class="principal"><div class="haut"><h2>Preuves à vérifier</h2><div class="ligne" style="gap:14px"><span class="puces"><span class="puce on">À vérifier · 27</span><span class="puce">Validées auto</span><span class="puce">Refusées</span></span><span class="puce">Mali ▾</span><span class="avatar">MK</span></div></div><div class="zone" style="flex-direction:row; gap:20px">
  <div class="carte pile" style="width:300px; flex-shrink:0; padding:8px; gap:4px">
   <div class="carte" style="padding:11px; border:2px solid var(--indigo)"><div class="ligne"><b>Ibrahim S.</b><span class="etat att">Vues anormales</span></div><span class="doux">Bissap Nyama · WA · il y a 3 h</span></div>
@@ -577,7 +576,7 @@ img.is{width:34px;height:34px;border-radius:9px;flex:none}
    <div class="carte pile" style="gap:8px"><span class="eyebrow">Pièce d'identité · Carte NINA</span>
     <div style="height:230px; border-radius:12px; background:linear-gradient(135deg,#E9E3CF,#D8CFB1); padding:16px; display:flex; gap:14px">
      <div style="width:110px; height:140px; border-radius:8px; background:#BFB59A"></div>
-     <div class="pile" style="gap:8px; flex:1"><i style="height:8px; width:70%; background:rgba(21,22,43,.25); border-radius:4px"></i><i style="height:8px; width:90%; background:rgba(21,22,43,.25); border-radius:4px"></i><i style="height:8px; width:55%; background:rgba(21,22,43,.25); border-radius:4px"></i><i style="height:8px; width:80%; background:rgba(21,22,43,.25); border-radius:4px"></i><i style="height:8px; width:60%; background:rgba(21,22,43,.25); border-radius:4px"></i><i style="height:8px; width:75%; background:rgba(21,22,43,.25); border-radius:4px"></i></div>
+     <div class="pile" style="gap:8px; flex:1"><i style="height:8px; width:70%; background:rgba(22,34,26,.25); border-radius:4px"></i><i style="height:8px; width:90%; background:rgba(22,34,26,.25); border-radius:4px"></i><i style="height:8px; width:55%; background:rgba(22,34,26,.25); border-radius:4px"></i><i style="height:8px; width:80%; background:rgba(22,34,26,.25); border-radius:4px"></i><i style="height:8px; width:60%; background:rgba(22,34,26,.25); border-radius:4px"></i><i style="height:8px; width:75%; background:rgba(22,34,26,.25); border-radius:4px"></i></div>
     </div><span class="doux">Recto et verso reçus · lisibles</span></div>
    <div class="carte pile" style="gap:8px"><span class="eyebrow">Selfie</span><div style="height:230px; border-radius:12px; background:var(--encre); display:grid; place-items:center"><div style="width:110px; height:140px; border-radius:50%; background:#3A3C5E"></div></div><span class="doux">Correspondance du visage : élevée</span></div>
   </div>
@@ -690,10 +689,9 @@ img.is{width:34px;height:34px;border-radius:9px;flex:none}
 </div></div></div><figcaption>8. Journal des actions<span>Qui a fait quoi, avec quel rôle</span></figcaption></figure></div>
 </section>
 <section class="espace" id="icones">
-<header class="planche"><div><div class="marque"><i></i>vupay</div><h1>Icônes Bogolan</h1><p>32 icônes 3D aux couleurs de Vupay (indigo, safran, corail, encre) avec une bande bogolan brun terre. Utilisées dans la barre d'onglets, les menus latéraux et les encarts ci-dessus.</p></div>
-<p class="doux">Proposition à valider · aucun logo de réseau social</p></header>
+<header class="planche"><div><div class="marque"><i></i>vupay</div><h1>Icônes Bogolan</h1><p>32 icônes 3D aux couleurs de Vupay (vert feuille, safran, corail, encre vert-noir) avec une bande bogolan brun terre.</p></div>
+<p class="doux">Charte v3 · couleur de base verte · aucun logo de réseau social</p></header>
 <div class="galerie-ico"><figure><img src="../icones/bogolan/vupay/png/campagnes.png" alt="" loading="lazy"><figcaption>Campagnes<code>campagnes</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/gains.png" alt="" loading="lazy"><figcaption>Gains<code>gains</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/retrait.png" alt="" loading="lazy"><figcaption>Retrait<code>retrait</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/profil.png" alt="" loading="lazy"><figcaption>Profil<code>profil</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/accepter.png" alt="" loading="lazy"><figcaption>Accepter une campagne<code>accepter</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/publier.png" alt="" loading="lazy"><figcaption>Publier en statut<code>publier</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/preuve.png" alt="" loading="lazy"><figcaption>Envoyer la preuve<code>preuve</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/encaisser.png" alt="" loading="lazy"><figcaption>Encaisser<code>encaisser</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/cadenas.png" alt="" loading="lazy"><figcaption>Sécurité<code>cadenas</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/info.png" alt="" loading="lazy"><figcaption>Information<code>info</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/chrono.png" alt="" loading="lazy"><figcaption>Compte à rebours<code>chrono</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/copier.png" alt="" loading="lazy"><figcaption>Copier<code>copier</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/telecharger.png" alt="" loading="lazy"><figcaption>Télécharger<code>telecharger</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/selfie.png" alt="" loading="lazy"><figcaption>Selfie<code>selfie</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/piece-identite.png" alt="" loading="lazy"><figcaption>Pièce d'identité<code>piece-identite</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/mobile-money.png" alt="" loading="lazy"><figcaption>Mobile Money<code>mobile-money</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/tableau-de-bord.png" alt="" loading="lazy"><figcaption>Tableau de bord<code>tableau-de-bord</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/nouvelle-campagne.png" alt="" loading="lazy"><figcaption>Nouvelle campagne<code>nouvelle-campagne</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/portefeuille.png" alt="" loading="lazy"><figcaption>Portefeuille<code>portefeuille</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/factures.png" alt="" loading="lazy"><figcaption>Factures<code>factures</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/entreprise.png" alt="" loading="lazy"><figcaption>Entreprise<code>entreprise</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/preuves.png" alt="" loading="lazy"><figcaption>Preuves<code>preuves</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/identites.png" alt="" loading="lazy"><figcaption>Identités<code>identites</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/moderation.png" alt="" loading="lazy"><figcaption>Modération<code>moderation</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/retraits.png" alt="" loading="lazy"><figcaption>Retraits<code>retraits</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/utilisateurs.png" alt="" loading="lazy"><figcaption>Utilisateurs<code>utilisateurs</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/parametres.png" alt="" loading="lazy"><figcaption>Paramètres<code>parametres</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/journal.png" alt="" loading="lazy"><figcaption>Journal<code>journal</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/recherche.png" alt="" loading="lazy"><figcaption>Recherche<code>recherche</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/audience.png" alt="" loading="lazy"><figcaption>Audience<code>audience</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/vues.png" alt="" loading="lazy"><figcaption>Vues<code>vues</code></figcaption></figure><figure><img src="../icones/bogolan/vupay/png/fraude.png" alt="" loading="lazy"><figcaption>Alerte fraude<code>fraude</code></figcaption></figure></div>
 </section>
-
 </body>
 </html>

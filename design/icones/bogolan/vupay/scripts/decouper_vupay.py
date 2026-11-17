@@ -9,7 +9,7 @@ src, n, out = sys.argv[1], int(sys.argv[2]), sys.argv[3]
 icones = json.load(open(os.path.join(ICI, 'icones_vupay.json')))[(n-1)*16:n*16]
 im = Image.open(src).convert('RGB'); a = np.asarray(im).astype(int); H, W = a.shape[:2]
 fond = np.median(a[5:30, 5:30].reshape(-1, 3), axis=0)
-masque = np.abs(a - fond).sum(2) > 9          # tuiles et objets, distincts du fond de page
+masque = (a.min(2) >= 251) | (a.max(2) - a.min(2) > 40) | (a.max(2) < 170)   # tuiles blanc pur, objets colorés ou foncés (fond pierre en dégradé exclu)
 masque[:int(H*0.11)] = 0; masque[int(H*0.93):] = 0
 def plages(v, seuil, mini):
     r, d = [], None
@@ -27,7 +27,7 @@ for k, (slug, nom) in enumerate(icones):
     (y0, y1), (x0, x1) = rows[k//4], cols[k%4]
     prof = masque[y0:y1, x0:x1].mean(1)
     for yy in range(int((y1-y0)*0.55), y1-y0):   # couper avant le libellé
-        if prof[yy] < 0.7: y1 = y0 + yy; break
+        if prof[yy] < 0.08: y1 = y0 + yy; break   # bande vide entre la tuile et le libellé
     c = im.crop((x0+2, y0+2, x1-2, y1-2)).convert('RGBA'); w, h = c.size; s = max(w, h)
     m = Image.new('L', (w, h), 0); ImageDraw.Draw(m).rounded_rectangle((0, 0, w-1, h-1), radius=int(min(w, h)*0.2), fill=255)
     c.putalpha(m)
