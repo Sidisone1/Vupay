@@ -1,0 +1,4570 @@
+{
+ "nom": "Bogolan Icons — catalogue",
+ "version": "0.1.0",
+ "grille": "24x24",
+ "trait": "1.75 à 2 px, extrémités arrondies",
+ "motifs": [
+  {
+   "id": "koli-so",
+   "nom": "Cercle pointé",
+   "sens": "Unité, famille, communauté autour d'un centre",
+   "usages": "profil, groupe, cible, enregistrement, point central"
+  },
+  {
+   "id": "bantoron",
+   "nom": "Sabot de chèvre (triangles)",
+   "sens": "Avertissement et protection",
+   "usages": "alerte, sécurité, bouclier, attention"
+  },
+  {
+   "id": "kaana-nonkon",
+   "nom": "Coude de l'iguane (double zigzag)",
+   "sens": "Protection contre le mal",
+   "usages": "signal, réseau, onde, son, électricité"
+  },
+  {
+   "id": "donkonkolo",
+   "nom": "Tambour",
+   "sens": "Appel, courage",
+   "usages": "notification, cloche, haut-parleur, annonce"
+  },
+  {
+   "id": "bara-feere",
+   "nom": "Fleur de calebasse",
+   "sens": "Prospérité",
+   "usages": "argent, gains, bonus, favoris, succès"
+  },
+  {
+   "id": "turusina",
+   "nom": "Pilon des coépouses",
+   "sens": "Coopération, partage des tâches",
+   "usages": "collaboration, équipe, partage, tontine"
+  },
+  {
+   "id": "dantigimari",
+   "nom": "Trace du crocodile",
+   "sens": "Maître des conflits : équilibre, paix",
+   "usages": "support, médiation, litige, équilibre, balance"
+  },
+  {
+   "id": "sasira",
+   "nom": "Chemin du serpent (ondulation)",
+   "sens": "Parcours, route",
+   "usages": "itinéraire, carte, parcours, suivi, livraison"
+  },
+  {
+   "id": "sa-kurulen",
+   "nom": "Serpent enroulé (spirale)",
+   "sens": "Cycle, retour",
+   "usages": "actualiser, synchroniser, chargement, historique"
+  },
+  {
+   "id": "konosen",
+   "nom": "Empreinte d'oiseau (chevron à 3 doigts)",
+   "sens": "Passage, message",
+   "usages": "envoyer, partager, publier, flèches"
+  },
+  {
+   "id": "sungurun-sen",
+   "nom": "Chevron simple",
+   "sens": "Jeunesse, passage",
+   "usages": "chevrons de navigation, déplier, suivant"
+  },
+  {
+   "id": "juru-sarabali",
+   "nom": "Chemin du mauvais payeur (ligne brisée)",
+   "sens": "Dette non payée",
+   "usages": "impayé, retard, échec de paiement"
+  },
+  {
+   "id": "dankalan-ko",
+   "nom": "Dos du python (losanges)",
+   "sens": "Force",
+   "usages": "grille, catégories, tableau de bord"
+  },
+  {
+   "id": "sogosen",
+   "nom": "Traces de gibier (points en ligne)",
+   "sens": "Piste, présence",
+   "usages": "pointillés, étapes, progression, plus d'options"
+  },
+  {
+   "id": "points",
+   "nom": "Semis de points",
+   "sens": "Remplissage traditionnel",
+   "usages": "texture de fond, états vides, décor"
+  },
+  {
+   "id": "croisillon",
+   "nom": "Croisillons / quadrillage",
+   "sens": "Champ cultivé, ordre",
+   "usages": "calendrier, tableau, filtres"
+  }
+ ],
+ "categories": [
+  {
+   "id": "navigation",
+   "titre": "Navigation et interface",
+   "priorite": "P1",
+   "motif_defaut": "sungurun-sen",
+   "note": "",
+   "icones": [
+    {
+     "slug": "home",
+     "nom": "Accueil",
+     "motif": null
+    },
+    {
+     "slug": "menu",
+     "nom": "Menu (hamburger)",
+     "motif": null
+    },
+    {
+     "slug": "close",
+     "nom": "Fermer",
+     "motif": null
+    },
+    {
+     "slug": "back",
+     "nom": "Retour",
+     "motif": null
+    },
+    {
+     "slug": "forward",
+     "nom": "Suivant",
+     "motif": null
+    },
+    {
+     "slug": "chevron-up",
+     "nom": "Chevron haut",
+     "motif": null
+    },
+    {
+     "slug": "chevron-down",
+     "nom": "Chevron bas",
+     "motif": null
+    },
+    {
+     "slug": "chevron-left",
+     "nom": "Chevron gauche",
+     "motif": null
+    },
+    {
+     "slug": "chevron-right",
+     "nom": "Chevron droite",
+     "motif": null
+    },
+    {
+     "slug": "arrow-up",
+     "nom": "Flèche haut",
+     "motif": "konosen"
+    },
+    {
+     "slug": "arrow-down",
+     "nom": "Flèche bas",
+     "motif": "konosen"
+    },
+    {
+     "slug": "arrow-left",
+     "nom": "Flèche gauche",
+     "motif": "konosen"
+    },
+    {
+     "slug": "arrow-right",
+     "nom": "Flèche droite",
+     "motif": "konosen"
+    },
+    {
+     "slug": "arrow-up-right",
+     "nom": "Lien sortant",
+     "motif": "konosen"
+    },
+    {
+     "slug": "external-link",
+     "nom": "Ouvrir à l'extérieur",
+     "motif": null
+    },
+    {
+     "slug": "more-horizontal",
+     "nom": "Plus d'options (horizontal)",
+     "motif": "sogosen"
+    },
+    {
+     "slug": "more-vertical",
+     "nom": "Plus d'options (vertical)",
+     "motif": "sogosen"
+    },
+    {
+     "slug": "search",
+     "nom": "Rechercher",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "filter",
+     "nom": "Filtrer",
+     "motif": "croisillon"
+    },
+    {
+     "slug": "sort",
+     "nom": "Trier",
+     "motif": null
+    },
+    {
+     "slug": "sort-asc",
+     "nom": "Tri croissant",
+     "motif": null
+    },
+    {
+     "slug": "sort-desc",
+     "nom": "Tri décroissant",
+     "motif": null
+    },
+    {
+     "slug": "grid",
+     "nom": "Vue grille",
+     "motif": "dankalan-ko"
+    },
+    {
+     "slug": "list",
+     "nom": "Vue liste",
+     "motif": null
+    },
+    {
+     "slug": "dashboard",
+     "nom": "Tableau de bord",
+     "motif": "dankalan-ko"
+    },
+    {
+     "slug": "sidebar",
+     "nom": "Panneau latéral",
+     "motif": null
+    },
+    {
+     "slug": "expand",
+     "nom": "Agrandir",
+     "motif": null
+    },
+    {
+     "slug": "collapse",
+     "nom": "Réduire",
+     "motif": null
+    },
+    {
+     "slug": "fullscreen",
+     "nom": "Plein écran",
+     "motif": null
+    },
+    {
+     "slug": "exit-fullscreen",
+     "nom": "Quitter le plein écran",
+     "motif": null
+    },
+    {
+     "slug": "maximize",
+     "nom": "Maximiser",
+     "motif": null
+    },
+    {
+     "slug": "minimize",
+     "nom": "Minimiser",
+     "motif": null
+    },
+    {
+     "slug": "settings",
+     "nom": "Paramètres",
+     "motif": null
+    },
+    {
+     "slug": "sliders",
+     "nom": "Réglages",
+     "motif": null
+    },
+    {
+     "slug": "tune",
+     "nom": "Ajuster",
+     "motif": null
+    },
+    {
+     "slug": "apps",
+     "nom": "Applications",
+     "motif": "dankalan-ko"
+    },
+    {
+     "slug": "layers",
+     "nom": "Calques",
+     "motif": null
+    },
+    {
+     "slug": "tabs",
+     "nom": "Onglets",
+     "motif": null
+    },
+    {
+     "slug": "drag-handle",
+     "nom": "Poignée de glisser",
+     "motif": "points"
+    },
+    {
+     "slug": "pin",
+     "nom": "Épingler",
+     "motif": null
+    },
+    {
+     "slug": "unpin",
+     "nom": "Désépingler",
+     "motif": null
+    },
+    {
+     "slug": "bookmark",
+     "nom": "Signet",
+     "motif": null
+    },
+    {
+     "slug": "bookmark-filled",
+     "nom": "Signet actif",
+     "motif": null
+    },
+    {
+     "slug": "help",
+     "nom": "Aide",
+     "motif": null
+    },
+    {
+     "slug": "info",
+     "nom": "Information",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "language",
+     "nom": "Langue",
+     "motif": null
+    },
+    {
+     "slug": "translate",
+     "nom": "Traduire",
+     "motif": null
+    },
+    {
+     "slug": "zoom-in",
+     "nom": "Zoom avant",
+     "motif": null
+    },
+    {
+     "slug": "zoom-out",
+     "nom": "Zoom arrière",
+     "motif": null
+    },
+    {
+     "slug": "refresh",
+     "nom": "Actualiser",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "loader",
+     "nom": "Chargement",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "first-page",
+     "nom": "Première page",
+     "motif": null
+    },
+    {
+     "slug": "last-page",
+     "nom": "Dernière page",
+     "motif": null
+    },
+    {
+     "slug": "scroll-top",
+     "nom": "Remonter en haut",
+     "motif": null
+    },
+    {
+     "slug": "breadcrumb",
+     "nom": "Fil d'Ariane",
+     "motif": "sogosen"
+    },
+    {
+     "slug": "command",
+     "nom": "Commande / raccourci",
+     "motif": null
+    },
+    {
+     "slug": "keyboard",
+     "nom": "Clavier",
+     "motif": null
+    },
+    {
+     "slug": "toggle-on",
+     "nom": "Interrupteur activé",
+     "motif": null
+    },
+    {
+     "slug": "toggle-off",
+     "nom": "Interrupteur désactivé",
+     "motif": null
+    },
+    {
+     "slug": "radio-button",
+     "nom": "Bouton radio",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "checkbox",
+     "nom": "Case à cocher",
+     "motif": null
+    },
+    {
+     "slug": "checkbox-checked",
+     "nom": "Case cochée",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "actions",
+   "titre": "Actions",
+   "priorite": "P1",
+   "motif_defaut": "konosen",
+   "note": "",
+   "icones": [
+    {
+     "slug": "add",
+     "nom": "Ajouter",
+     "motif": null
+    },
+    {
+     "slug": "add-circle",
+     "nom": "Ajouter (cercle)",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "remove",
+     "nom": "Retirer",
+     "motif": null
+    },
+    {
+     "slug": "edit",
+     "nom": "Modifier",
+     "motif": null
+    },
+    {
+     "slug": "pencil",
+     "nom": "Crayon (calame)",
+     "motif": null
+    },
+    {
+     "slug": "delete",
+     "nom": "Supprimer",
+     "motif": null
+    },
+    {
+     "slug": "trash",
+     "nom": "Corbeille",
+     "motif": null
+    },
+    {
+     "slug": "archive",
+     "nom": "Archiver",
+     "motif": null
+    },
+    {
+     "slug": "unarchive",
+     "nom": "Désarchiver",
+     "motif": null
+    },
+    {
+     "slug": "save",
+     "nom": "Enregistrer",
+     "motif": null
+    },
+    {
+     "slug": "copy",
+     "nom": "Copier",
+     "motif": null
+    },
+    {
+     "slug": "paste",
+     "nom": "Coller",
+     "motif": null
+    },
+    {
+     "slug": "cut",
+     "nom": "Couper",
+     "motif": null
+    },
+    {
+     "slug": "duplicate",
+     "nom": "Dupliquer",
+     "motif": null
+    },
+    {
+     "slug": "undo",
+     "nom": "Annuler",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "redo",
+     "nom": "Rétablir",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "download",
+     "nom": "Télécharger",
+     "motif": null
+    },
+    {
+     "slug": "upload",
+     "nom": "Téléverser",
+     "motif": null
+    },
+    {
+     "slug": "import",
+     "nom": "Importer",
+     "motif": null
+    },
+    {
+     "slug": "export",
+     "nom": "Exporter",
+     "motif": null
+    },
+    {
+     "slug": "share",
+     "nom": "Partager",
+     "motif": "konosen"
+    },
+    {
+     "slug": "send",
+     "nom": "Envoyer",
+     "motif": "konosen"
+    },
+    {
+     "slug": "print",
+     "nom": "Imprimer",
+     "motif": null
+    },
+    {
+     "slug": "scan",
+     "nom": "Scanner",
+     "motif": null
+    },
+    {
+     "slug": "qr-code",
+     "nom": "QR code",
+     "motif": "croisillon"
+    },
+    {
+     "slug": "qr-scan",
+     "nom": "Scanner un QR code",
+     "motif": null
+    },
+    {
+     "slug": "barcode",
+     "nom": "Code-barres",
+     "motif": null
+    },
+    {
+     "slug": "link",
+     "nom": "Lien",
+     "motif": null
+    },
+    {
+     "slug": "unlink",
+     "nom": "Supprimer le lien",
+     "motif": null
+    },
+    {
+     "slug": "attach",
+     "nom": "Joindre un fichier",
+     "motif": null
+    },
+    {
+     "slug": "lock",
+     "nom": "Verrouiller",
+     "motif": null
+    },
+    {
+     "slug": "unlock",
+     "nom": "Déverrouiller",
+     "motif": null
+    },
+    {
+     "slug": "eye",
+     "nom": "Afficher",
+     "motif": null
+    },
+    {
+     "slug": "eye-off",
+     "nom": "Masquer",
+     "motif": null
+    },
+    {
+     "slug": "login",
+     "nom": "Se connecter",
+     "motif": null
+    },
+    {
+     "slug": "logout",
+     "nom": "Se déconnecter",
+     "motif": null
+    },
+    {
+     "slug": "sync",
+     "nom": "Synchroniser",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "reply",
+     "nom": "Répondre",
+     "motif": null
+    },
+    {
+     "slug": "reply-all",
+     "nom": "Répondre à tous",
+     "motif": null
+    },
+    {
+     "slug": "forward-msg",
+     "nom": "Transférer",
+     "motif": null
+    },
+    {
+     "slug": "flag",
+     "nom": "Signaler",
+     "motif": null
+    },
+    {
+     "slug": "report",
+     "nom": "Signaler un abus",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "block",
+     "nom": "Bloquer",
+     "motif": null
+    },
+    {
+     "slug": "mute",
+     "nom": "Couper le son",
+     "motif": null
+    },
+    {
+     "slug": "unmute",
+     "nom": "Rétablir le son",
+     "motif": null
+    },
+    {
+     "slug": "play",
+     "nom": "Lecture",
+     "motif": null
+    },
+    {
+     "slug": "pause",
+     "nom": "Pause",
+     "motif": null
+    },
+    {
+     "slug": "stop",
+     "nom": "Arrêt",
+     "motif": null
+    },
+    {
+     "slug": "record",
+     "nom": "Enregistrer (rec)",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "skip-next",
+     "nom": "Suivant",
+     "motif": null
+    },
+    {
+     "slug": "skip-previous",
+     "nom": "Précédent",
+     "motif": null
+    },
+    {
+     "slug": "shuffle",
+     "nom": "Aléatoire",
+     "motif": null
+    },
+    {
+     "slug": "repeat",
+     "nom": "Répéter",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "volume",
+     "nom": "Volume",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "rotate",
+     "nom": "Pivoter",
+     "motif": null
+    },
+    {
+     "slug": "crop",
+     "nom": "Recadrer",
+     "motif": null
+    },
+    {
+     "slug": "magic",
+     "nom": "Retouche automatique",
+     "motif": null
+    },
+    {
+     "slug": "select-all",
+     "nom": "Tout sélectionner",
+     "motif": null
+    },
+    {
+     "slug": "drag",
+     "nom": "Glisser-déposer",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "statuts",
+   "titre": "Statuts et retours",
+   "priorite": "P1",
+   "motif_defaut": "bantoron",
+   "note": "",
+   "icones": [
+    {
+     "slug": "check",
+     "nom": "Validé",
+     "motif": null
+    },
+    {
+     "slug": "check-circle",
+     "nom": "Succès",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "check-double",
+     "nom": "Lu / double coche",
+     "motif": null
+    },
+    {
+     "slug": "x-circle",
+     "nom": "Erreur",
+     "motif": null
+    },
+    {
+     "slug": "alert-triangle",
+     "nom": "Attention",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "alert-circle",
+     "nom": "Alerte",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "info-circle",
+     "nom": "Info",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "help-circle",
+     "nom": "Question",
+     "motif": null
+    },
+    {
+     "slug": "clock",
+     "nom": "En attente",
+     "motif": null
+    },
+    {
+     "slug": "hourglass",
+     "nom": "Sablier / délai",
+     "motif": null
+    },
+    {
+     "slug": "pending",
+     "nom": "En cours",
+     "motif": "sogosen"
+    },
+    {
+     "slug": "verified",
+     "nom": "Vérifié / certifié",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "badge",
+     "nom": "Badge",
+     "motif": null
+    },
+    {
+     "slug": "shield-check",
+     "nom": "Protégé",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "ban",
+     "nom": "Interdit",
+     "motif": null
+    },
+    {
+     "slug": "new",
+     "nom": "Nouveau",
+     "motif": null
+    },
+    {
+     "slug": "star",
+     "nom": "Favori",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "star-filled",
+     "nom": "Favori actif",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "heart",
+     "nom": "J'aime",
+     "motif": null
+    },
+    {
+     "slug": "heart-filled",
+     "nom": "J'aime actif",
+     "motif": null
+    },
+    {
+     "slug": "sparkle",
+     "nom": "Mise en avant",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "fire",
+     "nom": "Tendance",
+     "motif": null
+    },
+    {
+     "slug": "trending-up",
+     "nom": "Hausse",
+     "motif": null
+    },
+    {
+     "slug": "trending-down",
+     "nom": "Baisse",
+     "motif": null
+    },
+    {
+     "slug": "offline",
+     "nom": "Hors ligne",
+     "motif": null
+    },
+    {
+     "slug": "online",
+     "nom": "En ligne",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "wifi-off",
+     "nom": "Pas de connexion",
+     "motif": null
+    },
+    {
+     "slug": "empty",
+     "nom": "État vide",
+     "motif": "points"
+    },
+    {
+     "slug": "construction",
+     "nom": "En travaux",
+     "motif": null
+    },
+    {
+     "slug": "maintenance",
+     "nom": "Maintenance",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "social-generique",
+   "titre": "Actions sociales génériques (sans marque)",
+   "priorite": "P1",
+   "motif_defaut": "konosen",
+   "note": "",
+   "icones": [
+    {
+     "slug": "like",
+     "nom": "J'aime",
+     "motif": null
+    },
+    {
+     "slug": "dislike",
+     "nom": "Je n'aime pas",
+     "motif": null
+    },
+    {
+     "slug": "comment",
+     "nom": "Commentaire",
+     "motif": null
+    },
+    {
+     "slug": "comments",
+     "nom": "Discussion",
+     "motif": null
+    },
+    {
+     "slug": "chat",
+     "nom": "Messagerie",
+     "motif": null
+    },
+    {
+     "slug": "chat-bubble",
+     "nom": "Bulle de message",
+     "motif": null
+    },
+    {
+     "slug": "chat-group",
+     "nom": "Groupe de discussion",
+     "motif": "turusina"
+    },
+    {
+     "slug": "mention",
+     "nom": "Mention (@)",
+     "motif": null
+    },
+    {
+     "slug": "hashtag",
+     "nom": "Hashtag (#)",
+     "motif": "croisillon"
+    },
+    {
+     "slug": "story",
+     "nom": "Story / statut (anneau 24 h)",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "status-ring",
+     "nom": "Anneau de statut qui se vide",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "reel",
+     "nom": "Vidéo courte",
+     "motif": null
+    },
+    {
+     "slug": "live",
+     "nom": "Direct",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "follow",
+     "nom": "Suivre",
+     "motif": null
+    },
+    {
+     "slug": "unfollow",
+     "nom": "Ne plus suivre",
+     "motif": null
+    },
+    {
+     "slug": "followers",
+     "nom": "Abonnés",
+     "motif": "turusina"
+    },
+    {
+     "slug": "subscribe",
+     "nom": "S'abonner",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "repost",
+     "nom": "Republier",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "quote",
+     "nom": "Citer",
+     "motif": null
+    },
+    {
+     "slug": "views",
+     "nom": "Vues",
+     "motif": null
+    },
+    {
+     "slug": "reach",
+     "nom": "Portée",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "engagement",
+     "nom": "Engagement",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "audience",
+     "nom": "Audience",
+     "motif": "turusina"
+    },
+    {
+     "slug": "influencer",
+     "nom": "Influenceur / diffuseur",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "campaign",
+     "nom": "Campagne",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "megaphone",
+     "nom": "Mégaphone / annonce",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "broadcast",
+     "nom": "Diffusion",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "post",
+     "nom": "Publication",
+     "motif": null
+    },
+    {
+     "slug": "feed",
+     "nom": "Fil d'actualité",
+     "motif": null
+    },
+    {
+     "slug": "poll",
+     "nom": "Sondage",
+     "motif": null
+    },
+    {
+     "slug": "emoji",
+     "nom": "Émoji",
+     "motif": null
+    },
+    {
+     "slug": "sticker",
+     "nom": "Autocollant",
+     "motif": null
+    },
+    {
+     "slug": "gif",
+     "nom": "GIF",
+     "motif": null
+    },
+    {
+     "slug": "voice-note",
+     "nom": "Note vocale",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "read-receipt",
+     "nom": "Accusé de lecture",
+     "motif": null
+    },
+    {
+     "slug": "typing",
+     "nom": "En train d'écrire",
+     "motif": "sogosen"
+    },
+    {
+     "slug": "community",
+     "nom": "Communauté",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "invite",
+     "nom": "Inviter",
+     "motif": "konosen"
+    },
+    {
+     "slug": "referral",
+     "nom": "Parrainage",
+     "motif": "turusina"
+    },
+    {
+     "slug": "leaderboard",
+     "nom": "Classement",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "reseaux",
+   "titre": "Réseaux sociaux et plateformes (marques)",
+   "priorite": "P2",
+   "motif_defaut": "",
+   "note": "Ces logos sont des marques déposées : on les utilise tels quels (fichiers officiels ou Simple Icons, CC0), sans les « bogolaniser » ni les recolorer, et seulement pour désigner le service (bouton « Se connecter avec », « Partager sur »). Dans le dépôt, les ranger à part dans brands/ avec la source de chaque fichier. Pour Vupay, le cahier des charges interdit tout logo de réseau dans l'identité : préférer les pictos génériques ci-dessus (bulle, anneau de story, appareil photo).",
+   "icones": [
+    {
+     "slug": "whatsapp",
+     "nom": "WhatsApp",
+     "motif": null
+    },
+    {
+     "slug": "whatsapp-business",
+     "nom": "WhatsApp Business",
+     "motif": null
+    },
+    {
+     "slug": "facebook",
+     "nom": "Facebook",
+     "motif": null
+    },
+    {
+     "slug": "messenger",
+     "nom": "Messenger",
+     "motif": null
+    },
+    {
+     "slug": "instagram",
+     "nom": "Instagram",
+     "motif": null
+    },
+    {
+     "slug": "threads",
+     "nom": "Threads",
+     "motif": null
+    },
+    {
+     "slug": "tiktok",
+     "nom": "TikTok",
+     "motif": null
+    },
+    {
+     "slug": "snapchat",
+     "nom": "Snapchat",
+     "motif": null
+    },
+    {
+     "slug": "telegram",
+     "nom": "Telegram",
+     "motif": null
+    },
+    {
+     "slug": "x-twitter",
+     "nom": "X (Twitter)",
+     "motif": null
+    },
+    {
+     "slug": "youtube",
+     "nom": "YouTube",
+     "motif": null
+    },
+    {
+     "slug": "linkedin",
+     "nom": "LinkedIn",
+     "motif": null
+    },
+    {
+     "slug": "pinterest",
+     "nom": "Pinterest",
+     "motif": null
+    },
+    {
+     "slug": "discord",
+     "nom": "Discord",
+     "motif": null
+    },
+    {
+     "slug": "signal-app",
+     "nom": "Signal",
+     "motif": null
+    },
+    {
+     "slug": "wechat",
+     "nom": "WeChat",
+     "motif": null
+    },
+    {
+     "slug": "reddit",
+     "nom": "Reddit",
+     "motif": null
+    },
+    {
+     "slug": "twitch",
+     "nom": "Twitch",
+     "motif": null
+    },
+    {
+     "slug": "bluesky",
+     "nom": "Bluesky",
+     "motif": null
+    },
+    {
+     "slug": "mastodon",
+     "nom": "Mastodon",
+     "motif": null
+    },
+    {
+     "slug": "tumblr",
+     "nom": "Tumblr",
+     "motif": null
+    },
+    {
+     "slug": "vimeo",
+     "nom": "Vimeo",
+     "motif": null
+    },
+    {
+     "slug": "spotify",
+     "nom": "Spotify",
+     "motif": null
+    },
+    {
+     "slug": "apple-music",
+     "nom": "Apple Music",
+     "motif": null
+    },
+    {
+     "slug": "deezer",
+     "nom": "Deezer",
+     "motif": null
+    },
+    {
+     "slug": "boomplay",
+     "nom": "Boomplay",
+     "motif": null
+    },
+    {
+     "slug": "audiomack",
+     "nom": "Audiomack",
+     "motif": null
+    },
+    {
+     "slug": "soundcloud",
+     "nom": "SoundCloud",
+     "motif": null
+    },
+    {
+     "slug": "google",
+     "nom": "Google",
+     "motif": null
+    },
+    {
+     "slug": "apple",
+     "nom": "Apple",
+     "motif": null
+    },
+    {
+     "slug": "microsoft",
+     "nom": "Microsoft",
+     "motif": null
+    },
+    {
+     "slug": "github",
+     "nom": "GitHub",
+     "motif": null
+    },
+    {
+     "slug": "gitlab",
+     "nom": "GitLab",
+     "motif": null
+    },
+    {
+     "slug": "gmail",
+     "nom": "Gmail",
+     "motif": null
+    },
+    {
+     "slug": "outlook",
+     "nom": "Outlook",
+     "motif": null
+    },
+    {
+     "slug": "zoom",
+     "nom": "Zoom",
+     "motif": null
+    },
+    {
+     "slug": "google-meet",
+     "nom": "Google Meet",
+     "motif": null
+    },
+    {
+     "slug": "teams",
+     "nom": "Microsoft Teams",
+     "motif": null
+    },
+    {
+     "slug": "play-store",
+     "nom": "Google Play",
+     "motif": null
+    },
+    {
+     "slug": "app-store",
+     "nom": "App Store",
+     "motif": null
+    },
+    {
+     "slug": "truecaller",
+     "nom": "Truecaller",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "paiement",
+   "titre": "Paiement, argent et mobile money",
+   "priorite": "P1",
+   "motif_defaut": "bara-feere",
+   "note": "Logos d'opérateurs (Orange Money, MTN MoMo, Wave, Moov Money, Free Money, Airtel Money, M-Pesa, Visa, Mastercard, GIM-UEMOA) : marques déposées, à ranger dans brands/ et à utiliser sans modification, avec l'accord ou la charte de chaque opérateur.",
+   "icones": [
+    {
+     "slug": "wallet",
+     "nom": "Portefeuille",
+     "motif": null
+    },
+    {
+     "slug": "money",
+     "nom": "Billets FCFA",
+     "motif": null
+    },
+    {
+     "slug": "coins",
+     "nom": "Pièces",
+     "motif": null
+    },
+    {
+     "slug": "cash",
+     "nom": "Espèces",
+     "motif": null
+    },
+    {
+     "slug": "fcfa",
+     "nom": "Symbole FCFA",
+     "motif": null
+    },
+    {
+     "slug": "balance",
+     "nom": "Solde",
+     "motif": null
+    },
+    {
+     "slug": "earnings",
+     "nom": "Gains",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "payout",
+     "nom": "Retrait",
+     "motif": null
+    },
+    {
+     "slug": "withdraw",
+     "nom": "Retrait au guichet",
+     "motif": null
+    },
+    {
+     "slug": "deposit",
+     "nom": "Dépôt",
+     "motif": null
+    },
+    {
+     "slug": "transfer",
+     "nom": "Transfert",
+     "motif": null
+    },
+    {
+     "slug": "send-money",
+     "nom": "Envoyer de l'argent",
+     "motif": "konosen"
+    },
+    {
+     "slug": "receive-money",
+     "nom": "Recevoir de l'argent",
+     "motif": null
+    },
+    {
+     "slug": "request-money",
+     "nom": "Demander de l'argent",
+     "motif": null
+    },
+    {
+     "slug": "mobile-money",
+     "nom": "Mobile money (téléphone + billet)",
+     "motif": null
+    },
+    {
+     "slug": "agent-point",
+     "nom": "Point marchand / agent",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "card",
+     "nom": "Carte bancaire",
+     "motif": null
+    },
+    {
+     "slug": "card-contactless",
+     "nom": "Paiement sans contact",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "bank",
+     "nom": "Banque",
+     "motif": null
+    },
+    {
+     "slug": "atm",
+     "nom": "Guichet automatique",
+     "motif": null
+    },
+    {
+     "slug": "receipt",
+     "nom": "Reçu",
+     "motif": null
+    },
+    {
+     "slug": "invoice",
+     "nom": "Facture",
+     "motif": null
+    },
+    {
+     "slug": "bill",
+     "nom": "Note à payer",
+     "motif": null
+    },
+    {
+     "slug": "unpaid",
+     "nom": "Impayé",
+     "motif": "juru-sarabali"
+    },
+    {
+     "slug": "debt",
+     "nom": "Dette",
+     "motif": "juru-sarabali"
+    },
+    {
+     "slug": "credit",
+     "nom": "Crédit",
+     "motif": null
+    },
+    {
+     "slug": "loan",
+     "nom": "Prêt",
+     "motif": null
+    },
+    {
+     "slug": "savings",
+     "nom": "Épargne (canari / tirelire)",
+     "motif": null
+    },
+    {
+     "slug": "tontine",
+     "nom": "Tontine",
+     "motif": "turusina"
+    },
+    {
+     "slug": "piggy-bank",
+     "nom": "Tirelire",
+     "motif": null
+    },
+    {
+     "slug": "calculator",
+     "nom": "Calculatrice",
+     "motif": null
+    },
+    {
+     "slug": "percent",
+     "nom": "Pourcentage / commission",
+     "motif": null
+    },
+    {
+     "slug": "discount",
+     "nom": "Réduction",
+     "motif": null
+    },
+    {
+     "slug": "coupon",
+     "nom": "Bon de réduction",
+     "motif": null
+    },
+    {
+     "slug": "gift-card",
+     "nom": "Carte cadeau",
+     "motif": null
+    },
+    {
+     "slug": "bonus",
+     "nom": "Bonus",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "cashback",
+     "nom": "Remboursement partiel",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "refund",
+     "nom": "Remboursement",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "exchange",
+     "nom": "Change de devises",
+     "motif": null
+    },
+    {
+     "slug": "price-tag",
+     "nom": "Prix",
+     "motif": null
+    },
+    {
+     "slug": "ledger",
+     "nom": "Grand livre / journal",
+     "motif": null
+    },
+    {
+     "slug": "history",
+     "nom": "Historique des transactions",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "escrow",
+     "nom": "Séquestre",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "secure-payment",
+     "nom": "Paiement sécurisé",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "pin-code",
+     "nom": "Code PIN",
+     "motif": null
+    },
+    {
+     "slug": "otp",
+     "nom": "Code à usage unique (SMS)",
+     "motif": null
+    },
+    {
+     "slug": "chart-bar",
+     "nom": "Graphique en barres",
+     "motif": null
+    },
+    {
+     "slug": "chart-line",
+     "nom": "Courbe",
+     "motif": null
+    },
+    {
+     "slug": "chart-pie",
+     "nom": "Camembert",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "budget",
+     "nom": "Budget",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "commerce",
+   "titre": "Commerce et marché",
+   "priorite": "P2",
+   "motif_defaut": "bara-feere",
+   "note": "",
+   "icones": [
+    {
+     "slug": "shop",
+     "nom": "Boutique",
+     "motif": null
+    },
+    {
+     "slug": "market-stall",
+     "nom": "Étal de marché",
+     "motif": null
+    },
+    {
+     "slug": "cart",
+     "nom": "Panier",
+     "motif": null
+    },
+    {
+     "slug": "cart-add",
+     "nom": "Ajouter au panier",
+     "motif": null
+    },
+    {
+     "slug": "bag",
+     "nom": "Sac de courses",
+     "motif": null
+    },
+    {
+     "slug": "basket",
+     "nom": "Panier tressé",
+     "motif": null
+    },
+    {
+     "slug": "package",
+     "nom": "Colis",
+     "motif": null
+    },
+    {
+     "slug": "delivery",
+     "nom": "Livraison",
+     "motif": "sasira"
+    },
+    {
+     "slug": "delivery-moto",
+     "nom": "Livraison à moto",
+     "motif": "sasira"
+    },
+    {
+     "slug": "order",
+     "nom": "Commande",
+     "motif": null
+    },
+    {
+     "slug": "orders",
+     "nom": "Commandes",
+     "motif": null
+    },
+    {
+     "slug": "stock",
+     "nom": "Stock",
+     "motif": null
+    },
+    {
+     "slug": "warehouse",
+     "nom": "Entrepôt",
+     "motif": null
+    },
+    {
+     "slug": "scale",
+     "nom": "Balance du marchand",
+     "motif": "dantigimari"
+    },
+    {
+     "slug": "bargain",
+     "nom": "Marchandage (mains)",
+     "motif": null
+    },
+    {
+     "slug": "catalog",
+     "nom": "Catalogue",
+     "motif": null
+    },
+    {
+     "slug": "product",
+     "nom": "Produit",
+     "motif": null
+    },
+    {
+     "slug": "category",
+     "nom": "Catégorie",
+     "motif": "dankalan-ko"
+    },
+    {
+     "slug": "tag",
+     "nom": "Étiquette",
+     "motif": null
+    },
+    {
+     "slug": "store-front",
+     "nom": "Devanture",
+     "motif": null
+    },
+    {
+     "slug": "kiosk",
+     "nom": "Kiosque / cabine",
+     "motif": null
+    },
+    {
+     "slug": "boutique-phone",
+     "nom": "Kiosque de recharge téléphonique",
+     "motif": null
+    },
+    {
+     "slug": "fabric",
+     "nom": "Tissu / pagne",
+     "motif": null
+    },
+    {
+     "slug": "sewing",
+     "nom": "Couture",
+     "motif": null
+    },
+    {
+     "slug": "tailor",
+     "nom": "Tailleur",
+     "motif": null
+    },
+    {
+     "slug": "hairdresser",
+     "nom": "Coiffure / tresses",
+     "motif": null
+    },
+    {
+     "slug": "handshake",
+     "nom": "Accord conclu",
+     "motif": "turusina"
+    },
+    {
+     "slug": "customer",
+     "nom": "Client",
+     "motif": null
+    },
+    {
+     "slug": "seller",
+     "nom": "Vendeur",
+     "motif": null
+    },
+    {
+     "slug": "review",
+     "nom": "Avis client",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "return",
+     "nom": "Retour produit",
+     "motif": "sa-kurulen"
+    }
+   ]
+  },
+  {
+   "id": "quotidien",
+   "titre": "Vie quotidienne et maison",
+   "priorite": "P2",
+   "motif_defaut": "points",
+   "note": "",
+   "icones": [
+    {
+     "slug": "house",
+     "nom": "Maison",
+     "motif": null
+    },
+    {
+     "slug": "hut",
+     "nom": "Case ronde",
+     "motif": null
+    },
+    {
+     "slug": "compound",
+     "nom": "Concession / cour familiale",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "door",
+     "nom": "Porte",
+     "motif": null
+    },
+    {
+     "slug": "key",
+     "nom": "Clé",
+     "motif": null
+    },
+    {
+     "slug": "bed",
+     "nom": "Lit",
+     "motif": null
+    },
+    {
+     "slug": "mat",
+     "nom": "Natte",
+     "motif": null
+    },
+    {
+     "slug": "chair",
+     "nom": "Chaise",
+     "motif": null
+    },
+    {
+     "slug": "stool",
+     "nom": "Tabouret",
+     "motif": null
+    },
+    {
+     "slug": "table",
+     "nom": "Table",
+     "motif": null
+    },
+    {
+     "slug": "lamp",
+     "nom": "Lampe",
+     "motif": null
+    },
+    {
+     "slug": "lantern",
+     "nom": "Lampe-tempête",
+     "motif": null
+    },
+    {
+     "slug": "candle",
+     "nom": "Bougie",
+     "motif": null
+    },
+    {
+     "slug": "bulb",
+     "nom": "Ampoule",
+     "motif": null
+    },
+    {
+     "slug": "fan",
+     "nom": "Ventilateur",
+     "motif": null
+    },
+    {
+     "slug": "ac",
+     "nom": "Climatiseur",
+     "motif": null
+    },
+    {
+     "slug": "tv",
+     "nom": "Télévision",
+     "motif": null
+    },
+    {
+     "slug": "radio",
+     "nom": "Poste de radio",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "fridge",
+     "nom": "Réfrigérateur",
+     "motif": null
+    },
+    {
+     "slug": "stove",
+     "nom": "Réchaud à gaz",
+     "motif": null
+    },
+    {
+     "slug": "charcoal-stove",
+     "nom": "Fourneau à charbon",
+     "motif": null
+    },
+    {
+     "slug": "gas-bottle",
+     "nom": "Bouteille de gaz",
+     "motif": null
+    },
+    {
+     "slug": "water-tap",
+     "nom": "Robinet",
+     "motif": null
+    },
+    {
+     "slug": "water-drop",
+     "nom": "Goutte d'eau",
+     "motif": null
+    },
+    {
+     "slug": "jerrycan",
+     "nom": "Bidon d'eau",
+     "motif": null
+    },
+    {
+     "slug": "bucket",
+     "nom": "Seau",
+     "motif": null
+    },
+    {
+     "slug": "kettle",
+     "nom": "Bouilloire (bouilloire à ablutions)",
+     "motif": null
+    },
+    {
+     "slug": "broom",
+     "nom": "Balai",
+     "motif": null
+    },
+    {
+     "slug": "laundry",
+     "nom": "Lessive",
+     "motif": null
+    },
+    {
+     "slug": "iron",
+     "nom": "Fer à repasser",
+     "motif": null
+    },
+    {
+     "slug": "soap",
+     "nom": "Savon",
+     "motif": null
+    },
+    {
+     "slug": "shower",
+     "nom": "Douche",
+     "motif": null
+    },
+    {
+     "slug": "toilet",
+     "nom": "Toilettes",
+     "motif": null
+    },
+    {
+     "slug": "mosquito-net",
+     "nom": "Moustiquaire",
+     "motif": null
+    },
+    {
+     "slug": "generator",
+     "nom": "Groupe électrogène",
+     "motif": null
+    },
+    {
+     "slug": "solar-panel",
+     "nom": "Panneau solaire",
+     "motif": null
+    },
+    {
+     "slug": "battery",
+     "nom": "Batterie",
+     "motif": null
+    },
+    {
+     "slug": "battery-low",
+     "nom": "Batterie faible",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "plug",
+     "nom": "Prise",
+     "motif": null
+    },
+    {
+     "slug": "power-cut",
+     "nom": "Coupure de courant",
+     "motif": "juru-sarabali"
+    },
+    {
+     "slug": "electricity",
+     "nom": "Électricité",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "trash-bin",
+     "nom": "Poubelle",
+     "motif": null
+    },
+    {
+     "slug": "umbrella",
+     "nom": "Parapluie",
+     "motif": null
+    },
+    {
+     "slug": "glasses",
+     "nom": "Lunettes",
+     "motif": null
+    },
+    {
+     "slug": "watch",
+     "nom": "Montre",
+     "motif": null
+    },
+    {
+     "slug": "clothes",
+     "nom": "Vêtements",
+     "motif": null
+    },
+    {
+     "slug": "boubou",
+     "nom": "Boubou",
+     "motif": null
+    },
+    {
+     "slug": "shoes",
+     "nom": "Chaussures",
+     "motif": null
+    },
+    {
+     "slug": "sandals",
+     "nom": "Sandales",
+     "motif": null
+    },
+    {
+     "slug": "hat",
+     "nom": "Chapeau / bonnet",
+     "motif": null
+    },
+    {
+     "slug": "headwrap",
+     "nom": "Foulard / attaché",
+     "motif": null
+    },
+    {
+     "slug": "jewelry",
+     "nom": "Bijoux",
+     "motif": null
+    },
+    {
+     "slug": "mirror",
+     "nom": "Miroir",
+     "motif": null
+    },
+    {
+     "slug": "comb",
+     "nom": "Peigne",
+     "motif": null
+    },
+    {
+     "slug": "baby",
+     "nom": "Bébé",
+     "motif": null
+    },
+    {
+     "slug": "pet",
+     "nom": "Animal de compagnie",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "cuisine",
+   "titre": "Nourriture et cuisine",
+   "priorite": "P2",
+   "motif_defaut": "turusina",
+   "note": "",
+   "icones": [
+    {
+     "slug": "food",
+     "nom": "Repas",
+     "motif": null
+    },
+    {
+     "slug": "plate",
+     "nom": "Assiette",
+     "motif": null
+    },
+    {
+     "slug": "bowl",
+     "nom": "Bol",
+     "motif": null
+    },
+    {
+     "slug": "calabash",
+     "nom": "Calebasse",
+     "motif": null
+    },
+    {
+     "slug": "mortar-pestle",
+     "nom": "Mortier et pilon",
+     "motif": "turusina"
+    },
+    {
+     "slug": "pot",
+     "nom": "Marmite",
+     "motif": null
+    },
+    {
+     "slug": "canari",
+     "nom": "Canari (jarre à eau)",
+     "motif": null
+    },
+    {
+     "slug": "grill",
+     "nom": "Grillade / dibiterie",
+     "motif": null
+    },
+    {
+     "slug": "brochette",
+     "nom": "Brochettes",
+     "motif": null
+    },
+    {
+     "slug": "fish",
+     "nom": "Poisson",
+     "motif": null
+    },
+    {
+     "slug": "fish-grilled",
+     "nom": "Poisson braisé",
+     "motif": null
+    },
+    {
+     "slug": "chicken",
+     "nom": "Poulet",
+     "motif": null
+    },
+    {
+     "slug": "meat",
+     "nom": "Viande",
+     "motif": null
+    },
+    {
+     "slug": "rice",
+     "nom": "Riz",
+     "motif": null
+    },
+    {
+     "slug": "millet",
+     "nom": "Mil",
+     "motif": null
+    },
+    {
+     "slug": "maize",
+     "nom": "Maïs",
+     "motif": null
+    },
+    {
+     "slug": "cassava",
+     "nom": "Manioc",
+     "motif": null
+    },
+    {
+     "slug": "yam",
+     "nom": "Igname",
+     "motif": null
+    },
+    {
+     "slug": "plantain",
+     "nom": "Banane plantain",
+     "motif": null
+    },
+    {
+     "slug": "attieke",
+     "nom": "Attiéké",
+     "motif": null
+    },
+    {
+     "slug": "peanut",
+     "nom": "Arachide",
+     "motif": null
+    },
+    {
+     "slug": "shea",
+     "nom": "Karité",
+     "motif": null
+    },
+    {
+     "slug": "baobab-fruit",
+     "nom": "Pain de singe (baobab)",
+     "motif": null
+    },
+    {
+     "slug": "mango",
+     "nom": "Mangue",
+     "motif": null
+    },
+    {
+     "slug": "orange",
+     "nom": "Orange",
+     "motif": null
+    },
+    {
+     "slug": "coconut",
+     "nom": "Noix de coco",
+     "motif": null
+    },
+    {
+     "slug": "pepper",
+     "nom": "Piment",
+     "motif": null
+    },
+    {
+     "slug": "onion",
+     "nom": "Oignon",
+     "motif": null
+    },
+    {
+     "slug": "tomato",
+     "nom": "Tomate",
+     "motif": null
+    },
+    {
+     "slug": "bread",
+     "nom": "Pain / baguette",
+     "motif": null
+    },
+    {
+     "slug": "tea",
+     "nom": "Thé à la menthe (ataya)",
+     "motif": null
+    },
+    {
+     "slug": "teapot",
+     "nom": "Théière",
+     "motif": null
+    },
+    {
+     "slug": "coffee",
+     "nom": "Café",
+     "motif": null
+    },
+    {
+     "slug": "bissap",
+     "nom": "Bissap / jus",
+     "motif": null
+    },
+    {
+     "slug": "water-sachet",
+     "nom": "Sachet d'eau",
+     "motif": null
+    },
+    {
+     "slug": "bottle",
+     "nom": "Bouteille",
+     "motif": null
+    },
+    {
+     "slug": "soda",
+     "nom": "Boisson",
+     "motif": null
+    },
+    {
+     "slug": "milk",
+     "nom": "Lait",
+     "motif": null
+    },
+    {
+     "slug": "egg",
+     "nom": "Œuf",
+     "motif": null
+    },
+    {
+     "slug": "restaurant",
+     "nom": "Restaurant / maquis",
+     "motif": null
+    },
+    {
+     "slug": "cutlery",
+     "nom": "Couverts",
+     "motif": null
+    },
+    {
+     "slug": "cook",
+     "nom": "Cuisinier",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "transport",
+   "titre": "Transport et mobilité",
+   "priorite": "P2",
+   "motif_defaut": "sasira",
+   "note": "",
+   "icones": [
+    {
+     "slug": "car",
+     "nom": "Voiture",
+     "motif": null
+    },
+    {
+     "slug": "taxi",
+     "nom": "Taxi",
+     "motif": null
+    },
+    {
+     "slug": "moto",
+     "nom": "Moto",
+     "motif": null
+    },
+    {
+     "slug": "moto-taxi",
+     "nom": "Moto-taxi (zémidjan, djakarta, oléyia)",
+     "motif": null
+    },
+    {
+     "slug": "tricycle",
+     "nom": "Tricycle",
+     "motif": null
+    },
+    {
+     "slug": "bus",
+     "nom": "Bus",
+     "motif": null
+    },
+    {
+     "slug": "minibus",
+     "nom": "Minibus (gbaka, sotrama, car rapide)",
+     "motif": null
+    },
+    {
+     "slug": "bush-taxi",
+     "nom": "Taxi-brousse",
+     "motif": null
+    },
+    {
+     "slug": "truck",
+     "nom": "Camion",
+     "motif": null
+    },
+    {
+     "slug": "bicycle",
+     "nom": "Vélo",
+     "motif": null
+    },
+    {
+     "slug": "walk",
+     "nom": "À pied",
+     "motif": null
+    },
+    {
+     "slug": "pirogue",
+     "nom": "Pirogue",
+     "motif": null
+    },
+    {
+     "slug": "boat",
+     "nom": "Bateau",
+     "motif": null
+    },
+    {
+     "slug": "ferry",
+     "nom": "Bac",
+     "motif": null
+    },
+    {
+     "slug": "train",
+     "nom": "Train",
+     "motif": null
+    },
+    {
+     "slug": "plane",
+     "nom": "Avion",
+     "motif": null
+    },
+    {
+     "slug": "fuel",
+     "nom": "Carburant",
+     "motif": null
+    },
+    {
+     "slug": "fuel-bottle",
+     "nom": "Essence en bouteille (bord de route)",
+     "motif": null
+    },
+    {
+     "slug": "parking",
+     "nom": "Stationnement",
+     "motif": null
+    },
+    {
+     "slug": "road",
+     "nom": "Route",
+     "motif": null
+    },
+    {
+     "slug": "dirt-road",
+     "nom": "Piste",
+     "motif": "sasira"
+    },
+    {
+     "slug": "traffic-light",
+     "nom": "Feu tricolore",
+     "motif": null
+    },
+    {
+     "slug": "roundabout",
+     "nom": "Rond-point",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "checkpoint",
+     "nom": "Barrage / contrôle",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "ticket",
+     "nom": "Billet",
+     "motif": null
+    },
+    {
+     "slug": "luggage",
+     "nom": "Bagages",
+     "motif": null
+    },
+    {
+     "slug": "map-route",
+     "nom": "Trajet",
+     "motif": "sasira"
+    },
+    {
+     "slug": "gps",
+     "nom": "Position GPS",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "ride",
+     "nom": "Course",
+     "motif": null
+    },
+    {
+     "slug": "driver",
+     "nom": "Chauffeur",
+     "motif": null
+    },
+    {
+     "slug": "helmet",
+     "nom": "Casque",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "lieux",
+   "titre": "Lieux, carte et localisation",
+   "priorite": "P2",
+   "motif_defaut": "sasira",
+   "note": "",
+   "icones": [
+    {
+     "slug": "map",
+     "nom": "Carte",
+     "motif": null
+    },
+    {
+     "slug": "map-pin",
+     "nom": "Repère",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "location",
+     "nom": "Ma position",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "navigation",
+     "nom": "Navigation",
+     "motif": null
+    },
+    {
+     "slug": "compass",
+     "nom": "Boussole",
+     "motif": null
+    },
+    {
+     "slug": "globe",
+     "nom": "Monde",
+     "motif": null
+    },
+    {
+     "slug": "africa",
+     "nom": "Afrique",
+     "motif": null
+    },
+    {
+     "slug": "country",
+     "nom": "Pays",
+     "motif": null
+    },
+    {
+     "slug": "city",
+     "nom": "Ville",
+     "motif": null
+    },
+    {
+     "slug": "village",
+     "nom": "Village",
+     "motif": null
+    },
+    {
+     "slug": "neighborhood",
+     "nom": "Quartier",
+     "motif": null
+    },
+    {
+     "slug": "market",
+     "nom": "Marché",
+     "motif": null
+    },
+    {
+     "slug": "mosque",
+     "nom": "Mosquée en banco",
+     "motif": null
+    },
+    {
+     "slug": "church",
+     "nom": "Église",
+     "motif": null
+    },
+    {
+     "slug": "school",
+     "nom": "École",
+     "motif": null
+    },
+    {
+     "slug": "hospital",
+     "nom": "Hôpital",
+     "motif": null
+    },
+    {
+     "slug": "pharmacy",
+     "nom": "Pharmacie",
+     "motif": null
+    },
+    {
+     "slug": "bank-building",
+     "nom": "Agence bancaire",
+     "motif": null
+    },
+    {
+     "slug": "post-office",
+     "nom": "Poste",
+     "motif": null
+    },
+    {
+     "slug": "police",
+     "nom": "Police",
+     "motif": null
+    },
+    {
+     "slug": "town-hall",
+     "nom": "Mairie",
+     "motif": null
+    },
+    {
+     "slug": "court",
+     "nom": "Tribunal",
+     "motif": "dantigimari"
+    },
+    {
+     "slug": "stadium",
+     "nom": "Stade",
+     "motif": null
+    },
+    {
+     "slug": "office",
+     "nom": "Bureau",
+     "motif": null
+    },
+    {
+     "slug": "factory",
+     "nom": "Usine",
+     "motif": null
+    },
+    {
+     "slug": "hotel",
+     "nom": "Hôtel",
+     "motif": null
+    },
+    {
+     "slug": "granary",
+     "nom": "Grenier",
+     "motif": null
+    },
+    {
+     "slug": "well",
+     "nom": "Puits",
+     "motif": null
+    },
+    {
+     "slug": "river",
+     "nom": "Fleuve",
+     "motif": null
+    },
+    {
+     "slug": "bridge",
+     "nom": "Pont",
+     "motif": null
+    },
+    {
+     "slug": "beach",
+     "nom": "Plage",
+     "motif": null
+    },
+    {
+     "slug": "mountain",
+     "nom": "Falaise / montagne",
+     "motif": null
+    },
+    {
+     "slug": "desert",
+     "nom": "Désert / dune",
+     "motif": null
+    },
+    {
+     "slug": "home-address",
+     "nom": "Adresse",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "communication",
+   "titre": "Communication et appareils",
+   "priorite": "P1",
+   "motif_defaut": "kaana-nonkon",
+   "note": "",
+   "icones": [
+    {
+     "slug": "phone",
+     "nom": "Téléphone",
+     "motif": null
+    },
+    {
+     "slug": "phone-call",
+     "nom": "Appel",
+     "motif": null
+    },
+    {
+     "slug": "phone-incoming",
+     "nom": "Appel entrant",
+     "motif": null
+    },
+    {
+     "slug": "phone-outgoing",
+     "nom": "Appel sortant",
+     "motif": null
+    },
+    {
+     "slug": "phone-missed",
+     "nom": "Appel manqué",
+     "motif": "juru-sarabali"
+    },
+    {
+     "slug": "video-call",
+     "nom": "Appel vidéo",
+     "motif": null
+    },
+    {
+     "slug": "smartphone",
+     "nom": "Smartphone",
+     "motif": null
+    },
+    {
+     "slug": "feature-phone",
+     "nom": "Téléphone à touches",
+     "motif": null
+    },
+    {
+     "slug": "sms",
+     "nom": "SMS",
+     "motif": null
+    },
+    {
+     "slug": "ussd",
+     "nom": "Code USSD (*144#)",
+     "motif": null
+    },
+    {
+     "slug": "mail",
+     "nom": "Courriel",
+     "motif": null
+    },
+    {
+     "slug": "inbox",
+     "nom": "Boîte de réception",
+     "motif": null
+    },
+    {
+     "slug": "notification",
+     "nom": "Notification",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "bell",
+     "nom": "Cloche",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "bell-off",
+     "nom": "Notifications coupées",
+     "motif": null
+    },
+    {
+     "slug": "contact",
+     "nom": "Contact",
+     "motif": null
+    },
+    {
+     "slug": "contacts",
+     "nom": "Répertoire",
+     "motif": null
+    },
+    {
+     "slug": "sim",
+     "nom": "Carte SIM",
+     "motif": null
+    },
+    {
+     "slug": "airtime",
+     "nom": "Crédit téléphonique / recharge",
+     "motif": null
+    },
+    {
+     "slug": "data",
+     "nom": "Forfait internet",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "wifi",
+     "nom": "Wi-Fi",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "signal",
+     "nom": "Réseau mobile",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "no-signal",
+     "nom": "Pas de réseau",
+     "motif": null
+    },
+    {
+     "slug": "bluetooth",
+     "nom": "Bluetooth",
+     "motif": null
+    },
+    {
+     "slug": "nfc",
+     "nom": "NFC",
+     "motif": null
+    },
+    {
+     "slug": "antenna",
+     "nom": "Antenne relais",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "laptop",
+     "nom": "Ordinateur portable",
+     "motif": null
+    },
+    {
+     "slug": "desktop",
+     "nom": "Ordinateur",
+     "motif": null
+    },
+    {
+     "slug": "tablet",
+     "nom": "Tablette",
+     "motif": null
+    },
+    {
+     "slug": "printer",
+     "nom": "Imprimante",
+     "motif": null
+    },
+    {
+     "slug": "camera",
+     "nom": "Appareil photo",
+     "motif": null
+    },
+    {
+     "slug": "microphone",
+     "nom": "Microphone",
+     "motif": null
+    },
+    {
+     "slug": "headphones",
+     "nom": "Écouteurs",
+     "motif": null
+    },
+    {
+     "slug": "speaker",
+     "nom": "Haut-parleur",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "charger",
+     "nom": "Chargeur",
+     "motif": null
+    },
+    {
+     "slug": "power-bank",
+     "nom": "Batterie externe",
+     "motif": null
+    },
+    {
+     "slug": "usb",
+     "nom": "USB",
+     "motif": null
+    },
+    {
+     "slug": "cloud",
+     "nom": "Nuage",
+     "motif": null
+    },
+    {
+     "slug": "cloud-upload",
+     "nom": "Envoyer vers le nuage",
+     "motif": null
+    },
+    {
+     "slug": "cloud-off",
+     "nom": "Nuage indisponible",
+     "motif": null
+    },
+    {
+     "slug": "server",
+     "nom": "Serveur",
+     "motif": null
+    },
+    {
+     "slug": "database",
+     "nom": "Base de données",
+     "motif": null
+    },
+    {
+     "slug": "code",
+     "nom": "Code",
+     "motif": null
+    },
+    {
+     "slug": "terminal",
+     "nom": "Terminal",
+     "motif": null
+    },
+    {
+     "slug": "api",
+     "nom": "API",
+     "motif": null
+    },
+    {
+     "slug": "bug",
+     "nom": "Bogue",
+     "motif": null
+    },
+    {
+     "slug": "robot",
+     "nom": "Robot / IA",
+     "motif": null
+    },
+    {
+     "slug": "sparkles-ai",
+     "nom": "Assistant IA",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "qr-pay",
+     "nom": "Paiement par QR",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "medias",
+   "titre": "Médias et fichiers",
+   "priorite": "P1",
+   "motif_defaut": "points",
+   "note": "",
+   "icones": [
+    {
+     "slug": "image",
+     "nom": "Image",
+     "motif": null
+    },
+    {
+     "slug": "gallery",
+     "nom": "Galerie",
+     "motif": null
+    },
+    {
+     "slug": "photo-add",
+     "nom": "Ajouter une photo",
+     "motif": null
+    },
+    {
+     "slug": "screenshot",
+     "nom": "Capture d'écran",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "video",
+     "nom": "Vidéo",
+     "motif": null
+    },
+    {
+     "slug": "film",
+     "nom": "Film",
+     "motif": null
+    },
+    {
+     "slug": "music",
+     "nom": "Musique",
+     "motif": null
+    },
+    {
+     "slug": "audio",
+     "nom": "Audio",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "podcast",
+     "nom": "Podcast",
+     "motif": null
+    },
+    {
+     "slug": "file",
+     "nom": "Fichier",
+     "motif": null
+    },
+    {
+     "slug": "file-text",
+     "nom": "Document",
+     "motif": null
+    },
+    {
+     "slug": "file-pdf",
+     "nom": "PDF",
+     "motif": null
+    },
+    {
+     "slug": "file-image",
+     "nom": "Fichier image",
+     "motif": null
+    },
+    {
+     "slug": "file-audio",
+     "nom": "Fichier audio",
+     "motif": null
+    },
+    {
+     "slug": "file-video",
+     "nom": "Fichier vidéo",
+     "motif": null
+    },
+    {
+     "slug": "file-zip",
+     "nom": "Archive",
+     "motif": null
+    },
+    {
+     "slug": "file-spreadsheet",
+     "nom": "Tableur",
+     "motif": null
+    },
+    {
+     "slug": "folder",
+     "nom": "Dossier",
+     "motif": null
+    },
+    {
+     "slug": "folder-open",
+     "nom": "Dossier ouvert",
+     "motif": null
+    },
+    {
+     "slug": "clipboard",
+     "nom": "Presse-papiers",
+     "motif": null
+    },
+    {
+     "slug": "note",
+     "nom": "Note",
+     "motif": null
+    },
+    {
+     "slug": "book",
+     "nom": "Livre",
+     "motif": null
+    },
+    {
+     "slug": "newspaper",
+     "nom": "Journal",
+     "motif": null
+    },
+    {
+     "slug": "proof",
+     "nom": "Preuve de publication",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "watermark",
+     "nom": "Filigrane",
+     "motif": null
+    },
+    {
+     "slug": "text",
+     "nom": "Texte",
+     "motif": null
+    },
+    {
+     "slug": "font",
+     "nom": "Police",
+     "motif": null
+    },
+    {
+     "slug": "bold",
+     "nom": "Gras",
+     "motif": null
+    },
+    {
+     "slug": "italic",
+     "nom": "Italique",
+     "motif": null
+    },
+    {
+     "slug": "align-left",
+     "nom": "Aligner à gauche",
+     "motif": null
+    },
+    {
+     "slug": "list-bullet",
+     "nom": "Liste à puces",
+     "motif": "sogosen"
+    },
+    {
+     "slug": "list-number",
+     "nom": "Liste numérotée",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "temps",
+   "titre": "Temps et calendrier",
+   "priorite": "P1",
+   "motif_defaut": "croisillon",
+   "note": "",
+   "icones": [
+    {
+     "slug": "calendar",
+     "nom": "Calendrier",
+     "motif": null
+    },
+    {
+     "slug": "calendar-check",
+     "nom": "Date confirmée",
+     "motif": null
+    },
+    {
+     "slug": "calendar-add",
+     "nom": "Ajouter un événement",
+     "motif": null
+    },
+    {
+     "slug": "event",
+     "nom": "Événement",
+     "motif": null
+    },
+    {
+     "slug": "clock-alt",
+     "nom": "Horloge",
+     "motif": null
+    },
+    {
+     "slug": "timer",
+     "nom": "Minuteur",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "countdown",
+     "nom": "Compte à rebours (anneau)",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "alarm",
+     "nom": "Réveil",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "stopwatch",
+     "nom": "Chronomètre",
+     "motif": null
+    },
+    {
+     "slug": "history-time",
+     "nom": "Historique",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "schedule",
+     "nom": "Planifier",
+     "motif": null
+    },
+    {
+     "slug": "day",
+     "nom": "Jour",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "night",
+     "nom": "Nuit",
+     "motif": null
+    },
+    {
+     "slug": "sunrise",
+     "nom": "Lever du soleil",
+     "motif": null
+    },
+    {
+     "slug": "sunset",
+     "nom": "Coucher du soleil",
+     "motif": null
+    },
+    {
+     "slug": "week",
+     "nom": "Semaine",
+     "motif": null
+    },
+    {
+     "slug": "month",
+     "nom": "Mois",
+     "motif": null
+    },
+    {
+     "slug": "deadline",
+     "nom": "Échéance",
+     "motif": "bantoron"
+    }
+   ]
+  },
+  {
+   "id": "personnes",
+   "titre": "Personnes, comptes et famille",
+   "priorite": "P1",
+   "motif_defaut": "koli-so",
+   "note": "",
+   "icones": [
+    {
+     "slug": "user",
+     "nom": "Utilisateur",
+     "motif": null
+    },
+    {
+     "slug": "users",
+     "nom": "Utilisateurs",
+     "motif": "turusina"
+    },
+    {
+     "slug": "user-add",
+     "nom": "Ajouter un utilisateur",
+     "motif": null
+    },
+    {
+     "slug": "user-remove",
+     "nom": "Retirer un utilisateur",
+     "motif": null
+    },
+    {
+     "slug": "user-check",
+     "nom": "Utilisateur vérifié",
+     "motif": null
+    },
+    {
+     "slug": "user-circle",
+     "nom": "Avatar",
+     "motif": null
+    },
+    {
+     "slug": "profile",
+     "nom": "Profil",
+     "motif": null
+    },
+    {
+     "slug": "id-card",
+     "nom": "Pièce d'identité",
+     "motif": null
+    },
+    {
+     "slug": "selfie",
+     "nom": "Selfie de vérification",
+     "motif": null
+    },
+    {
+     "slug": "family",
+     "nom": "Famille",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "couple",
+     "nom": "Couple",
+     "motif": null
+    },
+    {
+     "slug": "child",
+     "nom": "Enfant",
+     "motif": null
+    },
+    {
+     "slug": "elder",
+     "nom": "Ancien / sage",
+     "motif": null
+    },
+    {
+     "slug": "woman",
+     "nom": "Femme",
+     "motif": null
+    },
+    {
+     "slug": "man",
+     "nom": "Homme",
+     "motif": null
+    },
+    {
+     "slug": "group",
+     "nom": "Groupe",
+     "motif": "turusina"
+    },
+    {
+     "slug": "team",
+     "nom": "Équipe",
+     "motif": "turusina"
+    },
+    {
+     "slug": "admin",
+     "nom": "Administrateur",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "moderator",
+     "nom": "Modérateur",
+     "motif": "dantigimari"
+    },
+    {
+     "slug": "advertiser",
+     "nom": "Annonceur",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "publisher",
+     "nom": "Diffuseur",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "agent",
+     "nom": "Agent / conseiller",
+     "motif": null
+    },
+    {
+     "slug": "support",
+     "nom": "Assistance",
+     "motif": "dantigimari"
+    },
+    {
+     "slug": "wave-hand",
+     "nom": "Salutation",
+     "motif": null
+    },
+    {
+     "slug": "griot",
+     "nom": "Griot / conteur",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "chief",
+     "nom": "Chef de village",
+     "motif": null
+    },
+    {
+     "slug": "accessibility",
+     "nom": "Accessibilité",
+     "motif": null
+    },
+    {
+     "slug": "wheelchair",
+     "nom": "Fauteuil roulant",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "securite",
+   "titre": "Sécurité et confiance",
+   "priorite": "P1",
+   "motif_defaut": "bantoron",
+   "note": "",
+   "icones": [
+    {
+     "slug": "shield",
+     "nom": "Bouclier",
+     "motif": null
+    },
+    {
+     "slug": "shield-alert",
+     "nom": "Menace",
+     "motif": null
+    },
+    {
+     "slug": "lock-closed",
+     "nom": "Cadenas fermé",
+     "motif": null
+    },
+    {
+     "slug": "lock-open",
+     "nom": "Cadenas ouvert",
+     "motif": null
+    },
+    {
+     "slug": "key-alt",
+     "nom": "Clé d'accès",
+     "motif": null
+    },
+    {
+     "slug": "password",
+     "nom": "Mot de passe",
+     "motif": null
+    },
+    {
+     "slug": "fingerprint",
+     "nom": "Empreinte digitale",
+     "motif": null
+    },
+    {
+     "slug": "face-id",
+     "nom": "Reconnaissance faciale",
+     "motif": null
+    },
+    {
+     "slug": "two-factor",
+     "nom": "Double authentification",
+     "motif": null
+    },
+    {
+     "slug": "kyc",
+     "nom": "Vérification d'identité (KYC)",
+     "motif": null
+    },
+    {
+     "slug": "fraud",
+     "nom": "Fraude",
+     "motif": "juru-sarabali"
+    },
+    {
+     "slug": "spam",
+     "nom": "Indésirable",
+     "motif": null
+    },
+    {
+     "slug": "privacy",
+     "nom": "Confidentialité",
+     "motif": null
+    },
+    {
+     "slug": "eye-watch",
+     "nom": "Surveillance",
+     "motif": null
+    },
+    {
+     "slug": "legal",
+     "nom": "Mentions légales",
+     "motif": "dantigimari"
+    },
+    {
+     "slug": "terms",
+     "nom": "Conditions",
+     "motif": null
+    },
+    {
+     "slug": "contract",
+     "nom": "Contrat",
+     "motif": null
+    },
+    {
+     "slug": "signature",
+     "nom": "Signature",
+     "motif": null
+    },
+    {
+     "slug": "stamp",
+     "nom": "Cachet / tampon",
+     "motif": null
+    },
+    {
+     "slug": "dispute",
+     "nom": "Litige",
+     "motif": "dantigimari"
+    },
+    {
+     "slug": "gavel",
+     "nom": "Décision / arbitrage",
+     "motif": "dantigimari"
+    }
+   ]
+  },
+  {
+   "id": "administration",
+   "titre": "Administration et documents officiels",
+   "priorite": "P3",
+   "motif_defaut": "croisillon",
+   "note": "",
+   "icones": [
+    {
+     "slug": "passport",
+     "nom": "Passeport",
+     "motif": null
+    },
+    {
+     "slug": "birth-certificate",
+     "nom": "Acte de naissance",
+     "motif": null
+    },
+    {
+     "slug": "certificate",
+     "nom": "Certificat / diplôme",
+     "motif": null
+    },
+    {
+     "slug": "residence",
+     "nom": "Certificat de résidence",
+     "motif": null
+    },
+    {
+     "slug": "tax",
+     "nom": "Impôts",
+     "motif": null
+    },
+    {
+     "slug": "business-reg",
+     "nom": "Registre du commerce (RCCM)",
+     "motif": null
+    },
+    {
+     "slug": "nif",
+     "nom": "Numéro fiscal",
+     "motif": null
+    },
+    {
+     "slug": "vote",
+     "nom": "Vote",
+     "motif": null
+    },
+    {
+     "slug": "ballot-box",
+     "nom": "Urne",
+     "motif": null
+    },
+    {
+     "slug": "law",
+     "nom": "Loi",
+     "motif": null
+    },
+    {
+     "slug": "government",
+     "nom": "Gouvernement",
+     "motif": null
+    },
+    {
+     "slug": "form",
+     "nom": "Formulaire",
+     "motif": null
+    },
+    {
+     "slug": "queue",
+     "nom": "File d'attente",
+     "motif": "sogosen"
+    },
+    {
+     "slug": "appointment",
+     "nom": "Rendez-vous",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "sante",
+   "titre": "Santé",
+   "priorite": "P3",
+   "motif_defaut": "bantoron",
+   "note": "",
+   "icones": [
+    {
+     "slug": "health",
+     "nom": "Santé",
+     "motif": null
+    },
+    {
+     "slug": "heart-pulse",
+     "nom": "Pouls",
+     "motif": null
+    },
+    {
+     "slug": "stethoscope",
+     "nom": "Stéthoscope",
+     "motif": null
+    },
+    {
+     "slug": "doctor",
+     "nom": "Médecin",
+     "motif": null
+    },
+    {
+     "slug": "nurse",
+     "nom": "Infirmier·e",
+     "motif": null
+    },
+    {
+     "slug": "pill",
+     "nom": "Médicament",
+     "motif": null
+    },
+    {
+     "slug": "syringe",
+     "nom": "Vaccin",
+     "motif": null
+    },
+    {
+     "slug": "thermometer",
+     "nom": "Température",
+     "motif": null
+    },
+    {
+     "slug": "first-aid",
+     "nom": "Premiers secours",
+     "motif": null
+    },
+    {
+     "slug": "ambulance",
+     "nom": "Ambulance",
+     "motif": null
+    },
+    {
+     "slug": "mosquito",
+     "nom": "Moustique / paludisme",
+     "motif": null
+    },
+    {
+     "slug": "pregnancy",
+     "nom": "Grossesse",
+     "motif": null
+    },
+    {
+     "slug": "baby-care",
+     "nom": "Santé de l'enfant",
+     "motif": null
+    },
+    {
+     "slug": "traditional-medicine",
+     "nom": "Plantes médicinales",
+     "motif": null
+    },
+    {
+     "slug": "hand-wash",
+     "nom": "Lavage des mains",
+     "motif": null
+    },
+    {
+     "slug": "face-mask",
+     "nom": "Masque sanitaire",
+     "motif": null
+    },
+    {
+     "slug": "blood",
+     "nom": "Don de sang",
+     "motif": null
+    },
+    {
+     "slug": "tooth",
+     "nom": "Dentiste",
+     "motif": null
+    },
+    {
+     "slug": "eye-care",
+     "nom": "Ophtalmologie",
+     "motif": null
+    },
+    {
+     "slug": "mental-health",
+     "nom": "Santé mentale",
+     "motif": null
+    },
+    {
+     "slug": "insurance",
+     "nom": "Assurance santé / mutuelle",
+     "motif": "turusina"
+    }
+   ]
+  },
+  {
+   "id": "education",
+   "titre": "Éducation et savoir",
+   "priorite": "P3",
+   "motif_defaut": "croisillon",
+   "note": "",
+   "icones": [
+    {
+     "slug": "education",
+     "nom": "Éducation",
+     "motif": null
+    },
+    {
+     "slug": "graduation",
+     "nom": "Diplômé",
+     "motif": null
+    },
+    {
+     "slug": "book-open",
+     "nom": "Livre ouvert",
+     "motif": null
+    },
+    {
+     "slug": "notebook",
+     "nom": "Cahier",
+     "motif": null
+    },
+    {
+     "slug": "pen",
+     "nom": "Stylo",
+     "motif": null
+    },
+    {
+     "slug": "slate",
+     "nom": "Ardoise",
+     "motif": null
+    },
+    {
+     "slug": "chalkboard",
+     "nom": "Tableau noir",
+     "motif": null
+    },
+    {
+     "slug": "backpack",
+     "nom": "Cartable",
+     "motif": null
+    },
+    {
+     "slug": "teacher",
+     "nom": "Enseignant",
+     "motif": null
+    },
+    {
+     "slug": "student",
+     "nom": "Élève",
+     "motif": null
+    },
+    {
+     "slug": "quran-school",
+     "nom": "École coranique / tablette",
+     "motif": null
+    },
+    {
+     "slug": "library",
+     "nom": "Bibliothèque",
+     "motif": null
+    },
+    {
+     "slug": "exam",
+     "nom": "Examen",
+     "motif": null
+    },
+    {
+     "slug": "certificate-edu",
+     "nom": "Attestation",
+     "motif": null
+    },
+    {
+     "slug": "lightbulb",
+     "nom": "Idée",
+     "motif": null
+    },
+    {
+     "slug": "alphabet",
+     "nom": "Alphabétisation (N'Ko, ajami, latin)",
+     "motif": null
+    },
+    {
+     "slug": "quiz",
+     "nom": "Quiz",
+     "motif": null
+    },
+    {
+     "slug": "course",
+     "nom": "Formation en ligne",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "travail",
+   "titre": "Travail, métiers et artisanat",
+   "priorite": "P3",
+   "motif_defaut": "turusina",
+   "note": "",
+   "icones": [
+    {
+     "slug": "briefcase",
+     "nom": "Mallette / emploi",
+     "motif": null
+    },
+    {
+     "slug": "job",
+     "nom": "Offre d'emploi",
+     "motif": null
+    },
+    {
+     "slug": "tools",
+     "nom": "Outils",
+     "motif": null
+    },
+    {
+     "slug": "hammer",
+     "nom": "Marteau",
+     "motif": null
+    },
+    {
+     "slug": "wrench",
+     "nom": "Clé à molette",
+     "motif": null
+    },
+    {
+     "slug": "mechanic",
+     "nom": "Mécanicien",
+     "motif": null
+    },
+    {
+     "slug": "welder",
+     "nom": "Soudeur",
+     "motif": null
+    },
+    {
+     "slug": "mason",
+     "nom": "Maçon",
+     "motif": null
+    },
+    {
+     "slug": "carpenter",
+     "nom": "Menuisier",
+     "motif": null
+    },
+    {
+     "slug": "blacksmith",
+     "nom": "Forgeron",
+     "motif": null
+    },
+    {
+     "slug": "potter",
+     "nom": "Potière",
+     "motif": null
+    },
+    {
+     "slug": "weaver",
+     "nom": "Tisserand / métier à tisser",
+     "motif": null
+    },
+    {
+     "slug": "dyer",
+     "nom": "Teinturière (bogolan, indigo)",
+     "motif": null
+    },
+    {
+     "slug": "calame",
+     "nom": "Calame (outil du bogolan)",
+     "motif": null
+    },
+    {
+     "slug": "basket-weaver",
+     "nom": "Vannerie",
+     "motif": null
+    },
+    {
+     "slug": "jeweler",
+     "nom": "Bijoutier",
+     "motif": null
+    },
+    {
+     "slug": "farmer-job",
+     "nom": "Agriculteur",
+     "motif": null
+    },
+    {
+     "slug": "fisher",
+     "nom": "Pêcheur",
+     "motif": null
+    },
+    {
+     "slug": "herder",
+     "nom": "Éleveur",
+     "motif": null
+    },
+    {
+     "slug": "driver-job",
+     "nom": "Chauffeur",
+     "motif": null
+    },
+    {
+     "slug": "vendor",
+     "nom": "Vendeuse ambulante",
+     "motif": null
+    },
+    {
+     "slug": "domestic",
+     "nom": "Employé·e de maison",
+     "motif": null
+    },
+    {
+     "slug": "security-guard",
+     "nom": "Gardien",
+     "motif": null
+    },
+    {
+     "slug": "freelance",
+     "nom": "Indépendant",
+     "motif": null
+    },
+    {
+     "slug": "meeting",
+     "nom": "Réunion",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "presentation",
+     "nom": "Présentation",
+     "motif": null
+    },
+    {
+     "slug": "target",
+     "nom": "Objectif",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "rocket",
+     "nom": "Lancement",
+     "motif": null
+    },
+    {
+     "slug": "trophy",
+     "nom": "Trophée",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "medal",
+     "nom": "Médaille",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "agriculture",
+   "titre": "Agriculture, élevage et nature",
+   "priorite": "P3",
+   "motif_defaut": "croisillon",
+   "note": "",
+   "icones": [
+    {
+     "slug": "field",
+     "nom": "Champ",
+     "motif": "croisillon"
+    },
+    {
+     "slug": "seed",
+     "nom": "Semence",
+     "motif": null
+    },
+    {
+     "slug": "sprout",
+     "nom": "Pousse",
+     "motif": null
+    },
+    {
+     "slug": "hoe",
+     "nom": "Daba (houe)",
+     "motif": null
+    },
+    {
+     "slug": "machete",
+     "nom": "Machette",
+     "motif": null
+    },
+    {
+     "slug": "tractor",
+     "nom": "Tracteur",
+     "motif": null
+    },
+    {
+     "slug": "irrigation",
+     "nom": "Irrigation",
+     "motif": null
+    },
+    {
+     "slug": "harvest",
+     "nom": "Récolte",
+     "motif": null
+    },
+    {
+     "slug": "cotton",
+     "nom": "Coton",
+     "motif": null
+    },
+    {
+     "slug": "cocoa",
+     "nom": "Cacao",
+     "motif": null
+    },
+    {
+     "slug": "coffee-plant",
+     "nom": "Caféier",
+     "motif": null
+    },
+    {
+     "slug": "cashew",
+     "nom": "Anacarde",
+     "motif": null
+    },
+    {
+     "slug": "sesame",
+     "nom": "Sésame",
+     "motif": null
+    },
+    {
+     "slug": "sorghum",
+     "nom": "Sorgho",
+     "motif": null
+    },
+    {
+     "slug": "onion-field",
+     "nom": "Maraîchage",
+     "motif": null
+    },
+    {
+     "slug": "cow",
+     "nom": "Vache / zébu",
+     "motif": null
+    },
+    {
+     "slug": "goat",
+     "nom": "Chèvre",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "sheep",
+     "nom": "Mouton",
+     "motif": null
+    },
+    {
+     "slug": "chicken-farm",
+     "nom": "Poule",
+     "motif": null
+    },
+    {
+     "slug": "donkey",
+     "nom": "Âne",
+     "motif": null
+    },
+    {
+     "slug": "camel",
+     "nom": "Dromadaire",
+     "motif": null
+    },
+    {
+     "slug": "horse",
+     "nom": "Cheval",
+     "motif": null
+    },
+    {
+     "slug": "fishnet",
+     "nom": "Filet de pêche",
+     "motif": null
+    },
+    {
+     "slug": "bee",
+     "nom": "Abeille / miel",
+     "motif": null
+    },
+    {
+     "slug": "baobab",
+     "nom": "Baobab",
+     "motif": null
+    },
+    {
+     "slug": "palm",
+     "nom": "Palmier",
+     "motif": null
+    },
+    {
+     "slug": "tree",
+     "nom": "Arbre",
+     "motif": null
+    },
+    {
+     "slug": "leaf",
+     "nom": "Feuille",
+     "motif": null
+    },
+    {
+     "slug": "flower",
+     "nom": "Fleur",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "calabash-plant",
+     "nom": "Calebassier",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "crocodile",
+     "nom": "Crocodile",
+     "motif": "dantigimari"
+    },
+    {
+     "slug": "snake",
+     "nom": "Serpent",
+     "motif": "sasira"
+    },
+    {
+     "slug": "chameleon",
+     "nom": "Caméléon",
+     "motif": null
+    },
+    {
+     "slug": "bird",
+     "nom": "Oiseau",
+     "motif": "konosen"
+    },
+    {
+     "slug": "lizard",
+     "nom": "Margouillat",
+     "motif": null
+    },
+    {
+     "slug": "lion",
+     "nom": "Lion",
+     "motif": null
+    },
+    {
+     "slug": "elephant",
+     "nom": "Éléphant",
+     "motif": null
+    },
+    {
+     "slug": "recycle",
+     "nom": "Recyclage",
+     "motif": "sa-kurulen"
+    },
+    {
+     "slug": "eco",
+     "nom": "Écologie",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "meteo",
+   "titre": "Météo et environnement",
+   "priorite": "P3",
+   "motif_defaut": "points",
+   "note": "",
+   "icones": [
+    {
+     "slug": "sun",
+     "nom": "Soleil",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "moon",
+     "nom": "Lune",
+     "motif": null
+    },
+    {
+     "slug": "cloud-sun",
+     "nom": "Éclaircies",
+     "motif": null
+    },
+    {
+     "slug": "rain",
+     "nom": "Pluie",
+     "motif": null
+    },
+    {
+     "slug": "storm",
+     "nom": "Orage",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "lightning",
+     "nom": "Éclair",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "wind",
+     "nom": "Vent",
+     "motif": null
+    },
+    {
+     "slug": "harmattan",
+     "nom": "Harmattan (vent de poussière)",
+     "motif": null
+    },
+    {
+     "slug": "dust",
+     "nom": "Poussière / brume sèche",
+     "motif": null
+    },
+    {
+     "slug": "heat",
+     "nom": "Forte chaleur",
+     "motif": null
+    },
+    {
+     "slug": "temperature",
+     "nom": "Température",
+     "motif": null
+    },
+    {
+     "slug": "humidity",
+     "nom": "Humidité",
+     "motif": null
+    },
+    {
+     "slug": "flood",
+     "nom": "Inondation",
+     "motif": null
+    },
+    {
+     "slug": "drought",
+     "nom": "Sécheresse",
+     "motif": null
+    },
+    {
+     "slug": "rainbow",
+     "nom": "Arc-en-ciel",
+     "motif": null
+    },
+    {
+     "slug": "rainy-season",
+     "nom": "Saison des pluies",
+     "motif": null
+    },
+    {
+     "slug": "dry-season",
+     "nom": "Saison sèche",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "culture",
+   "titre": "Culture, fêtes et loisirs",
+   "priorite": "P3",
+   "motif_defaut": "donkonkolo",
+   "note": "",
+   "icones": [
+    {
+     "slug": "djembe",
+     "nom": "Djembé",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "tama",
+     "nom": "Tama (tambour d'aisselle)",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "kora",
+     "nom": "Kora",
+     "motif": null
+    },
+    {
+     "slug": "balafon",
+     "nom": "Balafon",
+     "motif": null
+    },
+    {
+     "slug": "ngoni",
+     "nom": "N'goni",
+     "motif": null
+    },
+    {
+     "slug": "flute",
+     "nom": "Flûte peule",
+     "motif": null
+    },
+    {
+     "slug": "dance",
+     "nom": "Danse",
+     "motif": null
+    },
+    {
+     "slug": "ritual-mask",
+     "nom": "Masque traditionnel",
+     "motif": null
+    },
+    {
+     "slug": "statue",
+     "nom": "Statuette",
+     "motif": null
+    },
+    {
+     "slug": "mudcloth",
+     "nom": "Tissu bogolan",
+     "motif": null
+    },
+    {
+     "slug": "kente-strip",
+     "nom": "Bande tissée",
+     "motif": null
+    },
+    {
+     "slug": "cowrie",
+     "nom": "Cauri",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "calabash-deco",
+     "nom": "Calebasse décorée",
+     "motif": null
+    },
+    {
+     "slug": "griot-alt",
+     "nom": "Récit / conte",
+     "motif": null
+    },
+    {
+     "slug": "wedding",
+     "nom": "Mariage",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "baptism",
+     "nom": "Baptême",
+     "motif": null
+    },
+    {
+     "slug": "funeral",
+     "nom": "Deuil",
+     "motif": null
+    },
+    {
+     "slug": "tabaski",
+     "nom": "Tabaski (mouton)",
+     "motif": null
+    },
+    {
+     "slug": "ramadan",
+     "nom": "Ramadan (croissant)",
+     "motif": null
+    },
+    {
+     "slug": "korite",
+     "nom": "Korité / fin du jeûne",
+     "motif": null
+    },
+    {
+     "slug": "christmas",
+     "nom": "Noël",
+     "motif": null
+    },
+    {
+     "slug": "new-year",
+     "nom": "Nouvel an",
+     "motif": null
+    },
+    {
+     "slug": "independence",
+     "nom": "Fête de l'indépendance",
+     "motif": null
+    },
+    {
+     "slug": "party",
+     "nom": "Fête",
+     "motif": null
+    },
+    {
+     "slug": "gift",
+     "nom": "Cadeau",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "cake",
+     "nom": "Gâteau",
+     "motif": null
+    },
+    {
+     "slug": "photo-booth",
+     "nom": "Photo souvenir",
+     "motif": null
+    },
+    {
+     "slug": "cinema",
+     "nom": "Cinéma",
+     "motif": null
+    },
+    {
+     "slug": "theatre",
+     "nom": "Théâtre",
+     "motif": null
+    },
+    {
+     "slug": "festival",
+     "nom": "Festival",
+     "motif": null
+    },
+    {
+     "slug": "prayer",
+     "nom": "Prière",
+     "motif": null
+    },
+    {
+     "slug": "prayer-mat",
+     "nom": "Tapis de prière",
+     "motif": null
+    },
+    {
+     "slug": "rosary",
+     "nom": "Chapelet",
+     "motif": null
+    },
+    {
+     "slug": "awale",
+     "nom": "Awalé (jeu)",
+     "motif": null
+    },
+    {
+     "slug": "cards",
+     "nom": "Jeu de cartes",
+     "motif": null
+    },
+    {
+     "slug": "game",
+     "nom": "Jeu vidéo",
+     "motif": null
+    },
+    {
+     "slug": "dice",
+     "nom": "Dés",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "sport",
+   "titre": "Sport",
+   "priorite": "P3",
+   "motif_defaut": "koli-so",
+   "note": "",
+   "icones": [
+    {
+     "slug": "football",
+     "nom": "Football",
+     "motif": null
+    },
+    {
+     "slug": "ball",
+     "nom": "Ballon",
+     "motif": null
+    },
+    {
+     "slug": "goal",
+     "nom": "But",
+     "motif": null
+    },
+    {
+     "slug": "basketball",
+     "nom": "Basketball",
+     "motif": null
+    },
+    {
+     "slug": "running",
+     "nom": "Course",
+     "motif": null
+    },
+    {
+     "slug": "wrestling",
+     "nom": "Lutte traditionnelle",
+     "motif": null
+    },
+    {
+     "slug": "boxing",
+     "nom": "Boxe",
+     "motif": null
+    },
+    {
+     "slug": "cycling",
+     "nom": "Cyclisme",
+     "motif": null
+    },
+    {
+     "slug": "swimming",
+     "nom": "Natation",
+     "motif": null
+    },
+    {
+     "slug": "gym",
+     "nom": "Musculation",
+     "motif": null
+    },
+    {
+     "slug": "whistle",
+     "nom": "Sifflet",
+     "motif": null
+    },
+    {
+     "slug": "jersey",
+     "nom": "Maillot",
+     "motif": null
+    },
+    {
+     "slug": "tournament",
+     "nom": "Tournoi",
+     "motif": "dankalan-ko"
+    },
+    {
+     "slug": "podium",
+     "nom": "Podium",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "emotions",
+   "titre": "Émotions et réactions",
+   "priorite": "P2",
+   "motif_defaut": "koli-so",
+   "note": "",
+   "icones": [
+    {
+     "slug": "smile",
+     "nom": "Sourire",
+     "motif": null
+    },
+    {
+     "slug": "laugh",
+     "nom": "Rire",
+     "motif": null
+    },
+    {
+     "slug": "love",
+     "nom": "Amour",
+     "motif": null
+    },
+    {
+     "slug": "sad",
+     "nom": "Triste",
+     "motif": null
+    },
+    {
+     "slug": "angry",
+     "nom": "En colère",
+     "motif": null
+    },
+    {
+     "slug": "surprised",
+     "nom": "Surpris",
+     "motif": null
+    },
+    {
+     "slug": "thinking",
+     "nom": "Réflexion",
+     "motif": null
+    },
+    {
+     "slug": "thumbs-up",
+     "nom": "Pouce levé",
+     "motif": null
+    },
+    {
+     "slug": "thumbs-down",
+     "nom": "Pouce baissé",
+     "motif": null
+    },
+    {
+     "slug": "clap",
+     "nom": "Applaudir",
+     "motif": null
+    },
+    {
+     "slug": "pray-hands",
+     "nom": "Merci / prière",
+     "motif": null
+    },
+    {
+     "slug": "celebrate",
+     "nom": "Bravo",
+     "motif": null
+    },
+    {
+     "slug": "ok-hand",
+     "nom": "D'accord",
+     "motif": null
+    },
+    {
+     "slug": "hundred",
+     "nom": "100 %",
+     "motif": null
+    },
+    {
+     "slug": "eyes",
+     "nom": "Regard",
+     "motif": null
+    }
+   ]
+  },
+  {
+   "id": "vupay",
+   "titre": "Spécifiques Vupay",
+   "priorite": "P1",
+   "motif_defaut": "koli-so",
+   "note": "",
+   "icones": [
+    {
+     "slug": "vupay-ring",
+     "nom": "Anneau de statut Vupay (signature)",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "proof-upload",
+     "nom": "Envoyer une preuve",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "proof-pending",
+     "nom": "Preuve en vérification",
+     "motif": "sogosen"
+    },
+    {
+     "slug": "proof-approved",
+     "nom": "Preuve validée",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "proof-rejected",
+     "nom": "Preuve refusée",
+     "motif": "juru-sarabali"
+    },
+    {
+     "slug": "campaign-create",
+     "nom": "Créer une campagne",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "campaign-live",
+     "nom": "Campagne active",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "campaign-ended",
+     "nom": "Campagne terminée",
+     "motif": null
+    },
+    {
+     "slug": "diffuseur",
+     "nom": "Espace diffuseur",
+     "motif": "kaana-nonkon"
+    },
+    {
+     "slug": "annonceur",
+     "nom": "Espace annonceur",
+     "motif": "donkonkolo"
+    },
+    {
+     "slug": "audience-size",
+     "nom": "Taille d'audience",
+     "motif": "turusina"
+    },
+    {
+     "slug": "views-24h",
+     "nom": "Vues sur 24 h",
+     "motif": "koli-so"
+    },
+    {
+     "slug": "gains-fcfa",
+     "nom": "Gains en FCFA",
+     "motif": "bara-feere"
+    },
+    {
+     "slug": "withdraw-mm",
+     "nom": "Retrait mobile money",
+     "motif": null
+    },
+    {
+     "slug": "moderation",
+     "nom": "Modération",
+     "motif": "dantigimari"
+    },
+    {
+     "slug": "identity-check",
+     "nom": "Vérification d'identité",
+     "motif": "bantoron"
+    },
+    {
+     "slug": "journal",
+     "nom": "Journal d'audit (ledger)",
+     "motif": "croisillon"
+    }
+   ]
+  }
+ ]
+}

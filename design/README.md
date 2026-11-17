@@ -9,7 +9,7 @@ ou des visuels de WhatsPay, ni des logos ou couleurs des réseaux sociaux (règl
 | `charte/` | Couleurs, typographie, composants | ✅ v2 |
 | `diagrammes/` | Parcours d'une campagne (SVG + PNG) | ✅ |
 | `logos/` | Logo définitif | À faire (après vérification du nom à l'OAPI) |
-| `icones/` | Icônes de l'app et de la PWA | À faire |
+| `icones/` | Catalogue des icônes bogolan (846) ; icônes de l'app à dessiner | En cours |
 
 ## Visuels existants
 
