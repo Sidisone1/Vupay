@@ -46,7 +46,7 @@ vupay/
 │   ├── charte/               Charte visuelle « Bogolan »
 │   ├── maquettes/            22 écrans : diffuseur, annonceur, admin (v3 Bogolan)
 │   ├── logos/                Logo (à produire)
-│   └── icones/               Collection Bogolan (109 icônes, planches, découpe)
+│   └── icones/               Icônes Vupay (18, style Bogolan) + Collection Bogolan (109)
 ├── docs/
 │   ├── CAHIER_DES_CHARGES.md
 │   ├── ARCHITECTURE.md

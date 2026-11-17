@@ -9,7 +9,7 @@ ou des visuels de WhatsPay, ni des logos ou couleurs des réseaux sociaux (règl
 | `charte/` | Couleurs, typographie, motif bogolan | ✅ v3 Bogolan |
 | `diagrammes/` | Parcours d'une campagne (SVG + PNG) | ✅ |
 | `logos/` | Logo définitif | À faire (après vérification du nom à l'OAPI) |
-| `icones/` | 109 icônes Collection Bogolan + planches sources | ✅ |
+| `icones/` | 18 icônes Vupay créées dans le style Bogolan + 109 icônes Collection Bogolan + icône de l'app | ✅ |
 
 ## Visuels existants
 

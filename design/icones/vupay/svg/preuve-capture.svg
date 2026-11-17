@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120"><defs>
+ <linearGradient id="tuile" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FDEFD6"/><stop offset="1" stop-color="#F4D9AC"/></linearGradient>
+ <radialGradient id="ocre" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#FAC65A"/><stop offset=".55" stop-color="#EDA626"/><stop offset="1" stop-color="#C9800C"/></radialGradient>
+ <radialGradient id="rouille" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#D9703F"/><stop offset=".6" stop-color="#B34A20"/><stop offset="1" stop-color="#8E3414"/></radialGradient>
+ <radialGradient id="brun" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#7D4A31"/><stop offset=".6" stop-color="#55301F"/><stop offset="1" stop-color="#3A1E13"/></radialGradient>
+ <radialGradient id="creme" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#FFFAF0"/><stop offset=".7" stop-color="#F8E7C8"/><stop offset="1" stop-color="#E9CFA2"/></radialGradient>
+ <radialGradient id="peau" cx=".35" cy=".3" r=".9"><stop offset="0" stop-color="#A86A45"/><stop offset="1" stop-color="#6E3E25"/></radialGradient>
+ <radialGradient id="bronze" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#E6A46A"/><stop offset=".6" stop-color="#C07438"/><stop offset="1" stop-color="#8F4E1F"/></radialGradient>
+ <radialGradient id="argent" cx=".35" cy=".3" r=".85"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#D9D3C8"/><stop offset="1" stop-color="#A9A196"/></radialGradient>
+ <filter id="argile" x="-20%" y="-20%" width="140%" height="150%">
+  <feGaussianBlur in="SourceAlpha" stdDeviation="1.6" result="b"/>
+  <feOffset in="b" dx="0" dy="2.6" result="o"/>
+  <feComponentTransfer in="o" result="s"><feFuncA type="linear" slope=".38"/></feComponentTransfer>
+  <feFlood flood-color="#6B3A1E"/><feComposite in2="s" operator="in" result="ombre"/>
+  <feMerge><feMergeNode in="ombre"/><feMergeNode in="SourceGraphic"/></feMerge>
+ </filter>
+ <pattern id="motif" width="20" height="10" patternUnits="userSpaceOnUse">
+  <path d="M1 7.5 L4.5 2.5 L8 7.5 L11.5 2.5 L15 7.5" fill="none" stroke="#FBE9CB" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="18" cy="5" r="1.05" fill="#FBE9CB"/>
+ </pattern>
+</defs><rect x="2" y="2" width="116" height="116" rx="28" fill="url(#tuile)"/><rect x="2" y="2" width="116" height="116" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="1.5"/><g transform="translate(60 61) scale(1.13) translate(-60 -60)"><g filter="url(#argile)">
+<rect x="34" y="18" width="52" height="84" rx="11" fill="url(#brun)"/>
+<rect x="40" y="27" width="40" height="62" rx="5" fill="url(#creme)"/>
+<rect x="40" y="27" width="40" height="22" rx="5" fill="url(#ocre)"/>
+<path d="M45 61 Q60 50 75 61 Q60 72 45 61Z" fill="#FFFFFF" stroke="#8E3414" stroke-width="2"/>
+<circle cx="60" cy="61" r="5.5" fill="url(#rouille)"/>
+<path d="M44 81 l3 -4 3 4 3 -4 3 4 3 -4 3 4 3 -4 3 4 3 -4 3 4" fill="none" stroke="#B34A20" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 30 V22 Q24 18 28 18 H34 M96 30 V22 Q96 18 92 18 H86 M24 90 V98 Q24 102 28 102 H34 M96 90 V98 Q96 102 92 102 H86" fill="none" stroke="url(#rouille)" stroke-width="4.5" stroke-linecap="round"/>
+<ellipse cx="48" cy="23" rx="8" ry="2.5" fill="#FFFFFF" opacity="0.3"/></g></g></svg>

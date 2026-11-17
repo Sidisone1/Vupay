@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Vupay — plateforme publicitaire",
   description: "Gagnez de l'argent en diffusant des pubs sur vos statuts et stories. Retrait Mobile Money.",
   manifest: "/manifest.webmanifest",
+  icons: { icon: "/favicon.png", apple: "/apple-touch-icon.png" },
 };
 
 export const viewport: Viewport = { themeColor: "#3D2116", width: "device-width", initialScale: 1 };
