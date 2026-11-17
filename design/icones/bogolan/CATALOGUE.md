@@ -1,6 +1,8 @@
-# Catalogue des icônes Bogolan
+# Catalogue des icônes Bogolan complémentaires
 
-**846 icônes** réparties en **26 catégories**, plus **16 motifs** traditionnels qui servent de briques graphiques.
+Ce catalogue complète la **Collection Bogolan** déjà dessinée (109 icônes 3D, dépôt Tchi-TELIMAN, `design/icons/bogolan/`).
+
+**846 icônes** en **26 catégories** : **763 à créer** et 83 qui existent déjà dans la collection (marquées ✅, à ne pas redessiner). Plus **16 motifs** traditionnels qui servent de briques graphiques.
 
 Version machine : [`icones.json`](icones.json) (même contenu, pour générer les dossiers, un sprite SVG ou des composants React).
 
@@ -35,6 +37,18 @@ Priorités : **P1** = indispensable dans presque toute app ; **P2** = fréquent 
 - [Émotions et réactions](#emotions) — 15 icônes, P2
 - [Spécifiques Vupay](#vupay) — 17 icônes, P1
 
+## Les 109 icônes déjà dessinées (Collection Bogolan)
+
+- **principale** : moto-taxi, voiture, livraison, accueil, destination, assistance, compte, paiement, securite
+- **actions** : accepter, annuler, demarrer, terminer, partager-trajet, ajouter-etape, favoris, recu, signaler, photo-vehicule, hors-ligne, en-ligne
+- **utilitaires** : rechercher, me-localiser, langue, ecouter, ajouter-photo, importer-document, reprendre-photo, agrandir, actualiser, informations, verrouiller, deconnexion
+- **confiance** : client, chauffeur, selfie, telephone, code-sms, e-mail, confidentialite, conditions, contact-urgence, objet-oublie, guide-audio, tutoriel
+- **statuts** : recherche-chauffeur, chauffeur-trouve, chauffeur-en-route, chauffeur-arrive, client-attendu, course-en-cours, validation-en-cours, document-valide, document-a-corriger, operation-reussie, erreur, connexion-perdue
+- **commandes** : modifier, enregistrer, supprimer, telecharger, filtrer, trier, retour, suivant, fermer, menu, afficher, masquer
+- **lieux** : domicile, travail, marche, aeroport, gare-routiere, hopital, ecole, hotel, restaurant, station-service, pont, point-de-rencontre
+- **trajets** : depart, arrivee, distance, duree-trajet, passagers, bagages, casque, ceinture, accessibilite, especes, monnaie, aller-retour
+- **suite** : apparence, navigation, temps-attente, parametres, appel, messages, message-vocal, notifications, identite, permis-conduire, assurance, carte-grise, historique, avis, course-planifiee, sos
+
 ## Motifs traditionnels → usages en icône
 
 Motifs relevés sur les bogolanfini bamanan (Mali). Chaque icône du catalogue indique le motif à réutiliser.
@@ -63,272 +77,272 @@ Motifs relevés sur les bogolanfini bamanan (Mali). Chaque icône du catalogue i
 
 Motif par défaut : `sungurun-sen` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `home.svg` | Accueil |  |
-| `menu.svg` | Menu (hamburger) |  |
-| `close.svg` | Fermer |  |
-| `back.svg` | Retour |  |
-| `forward.svg` | Suivant |  |
-| `chevron-up.svg` | Chevron haut |  |
-| `chevron-down.svg` | Chevron bas |  |
-| `chevron-left.svg` | Chevron gauche |  |
-| `chevron-right.svg` | Chevron droite |  |
-| `arrow-up.svg` | Flèche haut | `konosen` |
-| `arrow-down.svg` | Flèche bas | `konosen` |
-| `arrow-left.svg` | Flèche gauche | `konosen` |
-| `arrow-right.svg` | Flèche droite | `konosen` |
-| `arrow-up-right.svg` | Lien sortant | `konosen` |
-| `external-link.svg` | Ouvrir à l'extérieur |  |
-| `more-horizontal.svg` | Plus d'options (horizontal) | `sogosen` |
-| `more-vertical.svg` | Plus d'options (vertical) | `sogosen` |
-| `search.svg` | Rechercher | `koli-so` |
-| `filter.svg` | Filtrer | `croisillon` |
-| `sort.svg` | Trier |  |
-| `sort-asc.svg` | Tri croissant |  |
-| `sort-desc.svg` | Tri décroissant |  |
-| `grid.svg` | Vue grille | `dankalan-ko` |
-| `list.svg` | Vue liste |  |
-| `dashboard.svg` | Tableau de bord | `dankalan-ko` |
-| `sidebar.svg` | Panneau latéral |  |
-| `expand.svg` | Agrandir |  |
-| `collapse.svg` | Réduire |  |
-| `fullscreen.svg` | Plein écran |  |
-| `exit-fullscreen.svg` | Quitter le plein écran |  |
-| `maximize.svg` | Maximiser |  |
-| `minimize.svg` | Minimiser |  |
-| `settings.svg` | Paramètres |  |
-| `sliders.svg` | Réglages |  |
-| `tune.svg` | Ajuster |  |
-| `apps.svg` | Applications | `dankalan-ko` |
-| `layers.svg` | Calques |  |
-| `tabs.svg` | Onglets |  |
-| `drag-handle.svg` | Poignée de glisser | `points` |
-| `pin.svg` | Épingler |  |
-| `unpin.svg` | Désépingler |  |
-| `bookmark.svg` | Signet |  |
-| `bookmark-filled.svg` | Signet actif |  |
-| `help.svg` | Aide |  |
-| `info.svg` | Information | `koli-so` |
-| `language.svg` | Langue |  |
-| `translate.svg` | Traduire |  |
-| `zoom-in.svg` | Zoom avant |  |
-| `zoom-out.svg` | Zoom arrière |  |
-| `refresh.svg` | Actualiser | `sa-kurulen` |
-| `loader.svg` | Chargement | `sa-kurulen` |
-| `first-page.svg` | Première page |  |
-| `last-page.svg` | Dernière page |  |
-| `scroll-top.svg` | Remonter en haut |  |
-| `breadcrumb.svg` | Fil d'Ariane | `sogosen` |
-| `command.svg` | Commande / raccourci |  |
-| `keyboard.svg` | Clavier |  |
-| `toggle-on.svg` | Interrupteur activé |  |
-| `toggle-off.svg` | Interrupteur désactivé |  |
-| `radio-button.svg` | Bouton radio | `koli-so` |
-| `checkbox.svg` | Case à cocher |  |
-| `checkbox-checked.svg` | Case cochée |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `home` | Accueil |  | ✅ existe : `accueil` |
+| `menu` | Menu (hamburger) |  | ✅ existe : `menu` |
+| `close` | Fermer |  | ✅ existe : `fermer` |
+| `back` | Retour |  | ✅ existe : `retour` |
+| `forward` | Suivant |  | ✅ existe : `suivant` |
+| `chevron-up` | Chevron haut |  | à créer |
+| `chevron-down` | Chevron bas |  | à créer |
+| `chevron-left` | Chevron gauche |  | à créer |
+| `chevron-right` | Chevron droite |  | à créer |
+| `arrow-up` | Flèche haut | `konosen` | à créer |
+| `arrow-down` | Flèche bas | `konosen` | à créer |
+| `arrow-left` | Flèche gauche | `konosen` | à créer |
+| `arrow-right` | Flèche droite | `konosen` | à créer |
+| `arrow-up-right` | Lien sortant | `konosen` | à créer |
+| `external-link` | Ouvrir à l'extérieur |  | à créer |
+| `more-horizontal` | Plus d'options (horizontal) | `sogosen` | à créer |
+| `more-vertical` | Plus d'options (vertical) | `sogosen` | à créer |
+| `search` | Rechercher | `koli-so` | ✅ existe : `rechercher` |
+| `filter` | Filtrer | `croisillon` | ✅ existe : `filtrer` |
+| `sort` | Trier |  | ✅ existe : `trier` |
+| `sort-asc` | Tri croissant |  | à créer |
+| `sort-desc` | Tri décroissant |  | à créer |
+| `grid` | Vue grille | `dankalan-ko` | à créer |
+| `list` | Vue liste |  | à créer |
+| `dashboard` | Tableau de bord | `dankalan-ko` | à créer |
+| `sidebar` | Panneau latéral |  | à créer |
+| `expand` | Agrandir |  | à créer |
+| `collapse` | Réduire |  | à créer |
+| `fullscreen` | Plein écran |  | à créer |
+| `exit-fullscreen` | Quitter le plein écran |  | à créer |
+| `maximize` | Maximiser |  | à créer |
+| `minimize` | Minimiser |  | à créer |
+| `settings` | Paramètres |  | ✅ existe : `parametres` |
+| `sliders` | Réglages |  | à créer |
+| `tune` | Ajuster |  | à créer |
+| `apps` | Applications | `dankalan-ko` | à créer |
+| `layers` | Calques |  | à créer |
+| `tabs` | Onglets |  | à créer |
+| `drag-handle` | Poignée de glisser | `points` | à créer |
+| `pin` | Épingler |  | à créer |
+| `unpin` | Désépingler |  | à créer |
+| `bookmark` | Signet |  | à créer |
+| `bookmark-filled` | Signet actif |  | à créer |
+| `help` | Aide |  | à créer |
+| `info` | Information | `koli-so` | ✅ existe : `informations` |
+| `language` | Langue |  | ✅ existe : `langue` |
+| `translate` | Traduire |  | à créer |
+| `zoom-in` | Zoom avant |  | ✅ existe : `agrandir` |
+| `zoom-out` | Zoom arrière |  | à créer |
+| `refresh` | Actualiser | `sa-kurulen` | ✅ existe : `actualiser` |
+| `loader` | Chargement | `sa-kurulen` | à créer |
+| `first-page` | Première page |  | à créer |
+| `last-page` | Dernière page |  | à créer |
+| `scroll-top` | Remonter en haut |  | à créer |
+| `breadcrumb` | Fil d'Ariane | `sogosen` | à créer |
+| `command` | Commande / raccourci |  | à créer |
+| `keyboard` | Clavier |  | à créer |
+| `toggle-on` | Interrupteur activé |  | à créer |
+| `toggle-off` | Interrupteur désactivé |  | à créer |
+| `radio-button` | Bouton radio | `koli-so` | à créer |
+| `checkbox` | Case à cocher |  | à créer |
+| `checkbox-checked` | Case cochée |  | à créer |
 
 <a id="actions"></a>
 ## Actions (59, P1)
 
 Motif par défaut : `konosen` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `add.svg` | Ajouter |  |
-| `add-circle.svg` | Ajouter (cercle) | `koli-so` |
-| `remove.svg` | Retirer |  |
-| `edit.svg` | Modifier |  |
-| `pencil.svg` | Crayon (calame) |  |
-| `delete.svg` | Supprimer |  |
-| `trash.svg` | Corbeille |  |
-| `archive.svg` | Archiver |  |
-| `unarchive.svg` | Désarchiver |  |
-| `save.svg` | Enregistrer |  |
-| `copy.svg` | Copier |  |
-| `paste.svg` | Coller |  |
-| `cut.svg` | Couper |  |
-| `duplicate.svg` | Dupliquer |  |
-| `undo.svg` | Annuler | `sa-kurulen` |
-| `redo.svg` | Rétablir | `sa-kurulen` |
-| `download.svg` | Télécharger |  |
-| `upload.svg` | Téléverser |  |
-| `import.svg` | Importer |  |
-| `export.svg` | Exporter |  |
-| `share.svg` | Partager | `konosen` |
-| `send.svg` | Envoyer | `konosen` |
-| `print.svg` | Imprimer |  |
-| `scan.svg` | Scanner |  |
-| `qr-code.svg` | QR code | `croisillon` |
-| `qr-scan.svg` | Scanner un QR code |  |
-| `barcode.svg` | Code-barres |  |
-| `link.svg` | Lien |  |
-| `unlink.svg` | Supprimer le lien |  |
-| `attach.svg` | Joindre un fichier |  |
-| `lock.svg` | Verrouiller |  |
-| `unlock.svg` | Déverrouiller |  |
-| `eye.svg` | Afficher |  |
-| `eye-off.svg` | Masquer |  |
-| `login.svg` | Se connecter |  |
-| `logout.svg` | Se déconnecter |  |
-| `sync.svg` | Synchroniser | `sa-kurulen` |
-| `reply.svg` | Répondre |  |
-| `reply-all.svg` | Répondre à tous |  |
-| `forward-msg.svg` | Transférer |  |
-| `flag.svg` | Signaler |  |
-| `report.svg` | Signaler un abus | `bantoron` |
-| `block.svg` | Bloquer |  |
-| `mute.svg` | Couper le son |  |
-| `unmute.svg` | Rétablir le son |  |
-| `play.svg` | Lecture |  |
-| `pause.svg` | Pause |  |
-| `stop.svg` | Arrêt |  |
-| `record.svg` | Enregistrer (rec) | `koli-so` |
-| `skip-next.svg` | Suivant |  |
-| `skip-previous.svg` | Précédent |  |
-| `shuffle.svg` | Aléatoire |  |
-| `repeat.svg` | Répéter | `sa-kurulen` |
-| `volume.svg` | Volume | `kaana-nonkon` |
-| `rotate.svg` | Pivoter |  |
-| `crop.svg` | Recadrer |  |
-| `magic.svg` | Retouche automatique |  |
-| `select-all.svg` | Tout sélectionner |  |
-| `drag.svg` | Glisser-déposer |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `add` | Ajouter |  | à créer |
+| `add-circle` | Ajouter (cercle) | `koli-so` | à créer |
+| `remove` | Retirer |  | à créer |
+| `edit` | Modifier |  | ✅ existe : `modifier` |
+| `pencil` | Crayon (calame) |  | à créer |
+| `delete` | Supprimer |  | ✅ existe : `supprimer` |
+| `trash` | Corbeille |  | à créer |
+| `archive` | Archiver |  | à créer |
+| `unarchive` | Désarchiver |  | à créer |
+| `save` | Enregistrer |  | ✅ existe : `enregistrer` |
+| `copy` | Copier |  | à créer |
+| `paste` | Coller |  | à créer |
+| `cut` | Couper |  | à créer |
+| `duplicate` | Dupliquer |  | à créer |
+| `undo` | Annuler | `sa-kurulen` | à créer |
+| `redo` | Rétablir | `sa-kurulen` | à créer |
+| `download` | Télécharger |  | ✅ existe : `telecharger` |
+| `upload` | Téléverser |  | ✅ existe : `importer-document` |
+| `import` | Importer |  | à créer |
+| `export` | Exporter |  | à créer |
+| `share` | Partager | `konosen` | ✅ existe : `partager-trajet` |
+| `send` | Envoyer | `konosen` | à créer |
+| `print` | Imprimer |  | à créer |
+| `scan` | Scanner |  | à créer |
+| `qr-code` | QR code | `croisillon` | à créer |
+| `qr-scan` | Scanner un QR code |  | à créer |
+| `barcode` | Code-barres |  | à créer |
+| `link` | Lien |  | à créer |
+| `unlink` | Supprimer le lien |  | à créer |
+| `attach` | Joindre un fichier |  | à créer |
+| `lock` | Verrouiller |  | ✅ existe : `verrouiller` |
+| `unlock` | Déverrouiller |  | à créer |
+| `eye` | Afficher |  | ✅ existe : `afficher` |
+| `eye-off` | Masquer |  | ✅ existe : `masquer` |
+| `login` | Se connecter |  | à créer |
+| `logout` | Se déconnecter |  | ✅ existe : `deconnexion` |
+| `sync` | Synchroniser | `sa-kurulen` | à créer |
+| `reply` | Répondre |  | à créer |
+| `reply-all` | Répondre à tous |  | à créer |
+| `forward-msg` | Transférer |  | à créer |
+| `flag` | Signaler |  | à créer |
+| `report` | Signaler un abus | `bantoron` | ✅ existe : `signaler` |
+| `block` | Bloquer |  | à créer |
+| `mute` | Couper le son |  | à créer |
+| `unmute` | Rétablir le son |  | à créer |
+| `play` | Lecture |  | ✅ existe : `demarrer` |
+| `pause` | Pause |  | à créer |
+| `stop` | Arrêt |  | à créer |
+| `record` | Enregistrer (rec) | `koli-so` | à créer |
+| `skip-next` | Suivant |  | à créer |
+| `skip-previous` | Précédent |  | à créer |
+| `shuffle` | Aléatoire |  | à créer |
+| `repeat` | Répéter | `sa-kurulen` | à créer |
+| `volume` | Volume | `kaana-nonkon` | ✅ existe : `ecouter` |
+| `rotate` | Pivoter |  | à créer |
+| `crop` | Recadrer |  | à créer |
+| `magic` | Retouche automatique |  | à créer |
+| `select-all` | Tout sélectionner |  | à créer |
+| `drag` | Glisser-déposer |  | à créer |
 
 <a id="statuts"></a>
 ## Statuts et retours (30, P1)
 
 Motif par défaut : `bantoron` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `check.svg` | Validé |  |
-| `check-circle.svg` | Succès | `koli-so` |
-| `check-double.svg` | Lu / double coche |  |
-| `x-circle.svg` | Erreur |  |
-| `alert-triangle.svg` | Attention | `bantoron` |
-| `alert-circle.svg` | Alerte | `bantoron` |
-| `info-circle.svg` | Info | `koli-so` |
-| `help-circle.svg` | Question |  |
-| `clock.svg` | En attente |  |
-| `hourglass.svg` | Sablier / délai |  |
-| `pending.svg` | En cours | `sogosen` |
-| `verified.svg` | Vérifié / certifié | `bara-feere` |
-| `badge.svg` | Badge |  |
-| `shield-check.svg` | Protégé | `bantoron` |
-| `ban.svg` | Interdit |  |
-| `new.svg` | Nouveau |  |
-| `star.svg` | Favori | `bara-feere` |
-| `star-filled.svg` | Favori actif | `bara-feere` |
-| `heart.svg` | J'aime |  |
-| `heart-filled.svg` | J'aime actif |  |
-| `sparkle.svg` | Mise en avant | `bara-feere` |
-| `fire.svg` | Tendance |  |
-| `trending-up.svg` | Hausse |  |
-| `trending-down.svg` | Baisse |  |
-| `offline.svg` | Hors ligne |  |
-| `online.svg` | En ligne | `koli-so` |
-| `wifi-off.svg` | Pas de connexion |  |
-| `empty.svg` | État vide | `points` |
-| `construction.svg` | En travaux |  |
-| `maintenance.svg` | Maintenance |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `check` | Validé |  | ✅ existe : `accepter` |
+| `check-circle` | Succès | `koli-so` | ✅ existe : `operation-reussie` |
+| `check-double` | Lu / double coche |  | à créer |
+| `x-circle` | Erreur |  | ✅ existe : `annuler` |
+| `alert-triangle` | Attention | `bantoron` | à créer |
+| `alert-circle` | Alerte | `bantoron` | ✅ existe : `erreur` |
+| `info-circle` | Info | `koli-so` | à créer |
+| `help-circle` | Question |  | à créer |
+| `clock` | En attente |  | à créer |
+| `hourglass` | Sablier / délai |  | ✅ existe : `temps-attente` |
+| `pending` | En cours | `sogosen` | à créer |
+| `verified` | Vérifié / certifié | `bara-feere` | ✅ existe : `document-valide` |
+| `badge` | Badge |  | à créer |
+| `shield-check` | Protégé | `bantoron` | ✅ existe : `securite` |
+| `ban` | Interdit |  | à créer |
+| `new` | Nouveau |  | à créer |
+| `star` | Favori | `bara-feere` | ✅ existe : `favoris` |
+| `star-filled` | Favori actif | `bara-feere` | à créer |
+| `heart` | J'aime |  | à créer |
+| `heart-filled` | J'aime actif |  | à créer |
+| `sparkle` | Mise en avant | `bara-feere` | à créer |
+| `fire` | Tendance |  | à créer |
+| `trending-up` | Hausse |  | à créer |
+| `trending-down` | Baisse |  | à créer |
+| `offline` | Hors ligne |  | ✅ existe : `hors-ligne` |
+| `online` | En ligne | `koli-so` | ✅ existe : `en-ligne` |
+| `wifi-off` | Pas de connexion |  | ✅ existe : `connexion-perdue` |
+| `empty` | État vide | `points` | à créer |
+| `construction` | En travaux |  | à créer |
+| `maintenance` | Maintenance |  | à créer |
 
 <a id="social-generique"></a>
 ## Actions sociales génériques (sans marque) (40, P1)
 
 Motif par défaut : `konosen` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `like.svg` | J'aime |  |
-| `dislike.svg` | Je n'aime pas |  |
-| `comment.svg` | Commentaire |  |
-| `comments.svg` | Discussion |  |
-| `chat.svg` | Messagerie |  |
-| `chat-bubble.svg` | Bulle de message |  |
-| `chat-group.svg` | Groupe de discussion | `turusina` |
-| `mention.svg` | Mention (@) |  |
-| `hashtag.svg` | Hashtag (#) | `croisillon` |
-| `story.svg` | Story / statut (anneau 24 h) | `koli-so` |
-| `status-ring.svg` | Anneau de statut qui se vide | `koli-so` |
-| `reel.svg` | Vidéo courte |  |
-| `live.svg` | Direct | `donkonkolo` |
-| `follow.svg` | Suivre |  |
-| `unfollow.svg` | Ne plus suivre |  |
-| `followers.svg` | Abonnés | `turusina` |
-| `subscribe.svg` | S'abonner | `donkonkolo` |
-| `repost.svg` | Republier | `sa-kurulen` |
-| `quote.svg` | Citer |  |
-| `views.svg` | Vues |  |
-| `reach.svg` | Portée | `kaana-nonkon` |
-| `engagement.svg` | Engagement | `bara-feere` |
-| `audience.svg` | Audience | `turusina` |
-| `influencer.svg` | Influenceur / diffuseur | `koli-so` |
-| `campaign.svg` | Campagne | `donkonkolo` |
-| `megaphone.svg` | Mégaphone / annonce | `donkonkolo` |
-| `broadcast.svg` | Diffusion | `kaana-nonkon` |
-| `post.svg` | Publication |  |
-| `feed.svg` | Fil d'actualité |  |
-| `poll.svg` | Sondage |  |
-| `emoji.svg` | Émoji |  |
-| `sticker.svg` | Autocollant |  |
-| `gif.svg` | GIF |  |
-| `voice-note.svg` | Note vocale | `kaana-nonkon` |
-| `read-receipt.svg` | Accusé de lecture |  |
-| `typing.svg` | En train d'écrire | `sogosen` |
-| `community.svg` | Communauté | `koli-so` |
-| `invite.svg` | Inviter | `konosen` |
-| `referral.svg` | Parrainage | `turusina` |
-| `leaderboard.svg` | Classement |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `like` | J'aime |  | à créer |
+| `dislike` | Je n'aime pas |  | à créer |
+| `comment` | Commentaire |  | à créer |
+| `comments` | Discussion |  | à créer |
+| `chat` | Messagerie |  | ✅ existe : `messages` |
+| `chat-bubble` | Bulle de message |  | à créer |
+| `chat-group` | Groupe de discussion | `turusina` | à créer |
+| `mention` | Mention (@) |  | à créer |
+| `hashtag` | Hashtag (#) | `croisillon` | à créer |
+| `story` | Story / statut (anneau 24 h) | `koli-so` | à créer |
+| `status-ring` | Anneau de statut qui se vide | `koli-so` | à créer |
+| `reel` | Vidéo courte |  | à créer |
+| `live` | Direct | `donkonkolo` | à créer |
+| `follow` | Suivre |  | à créer |
+| `unfollow` | Ne plus suivre |  | à créer |
+| `followers` | Abonnés | `turusina` | à créer |
+| `subscribe` | S'abonner | `donkonkolo` | à créer |
+| `repost` | Republier | `sa-kurulen` | à créer |
+| `quote` | Citer |  | à créer |
+| `views` | Vues |  | à créer |
+| `reach` | Portée | `kaana-nonkon` | à créer |
+| `engagement` | Engagement | `bara-feere` | à créer |
+| `audience` | Audience | `turusina` | à créer |
+| `influencer` | Influenceur / diffuseur | `koli-so` | à créer |
+| `campaign` | Campagne | `donkonkolo` | à créer |
+| `megaphone` | Mégaphone / annonce | `donkonkolo` | à créer |
+| `broadcast` | Diffusion | `kaana-nonkon` | à créer |
+| `post` | Publication |  | à créer |
+| `feed` | Fil d'actualité |  | à créer |
+| `poll` | Sondage |  | à créer |
+| `emoji` | Émoji |  | à créer |
+| `sticker` | Autocollant |  | à créer |
+| `gif` | GIF |  | à créer |
+| `voice-note` | Note vocale | `kaana-nonkon` | ✅ existe : `message-vocal` |
+| `read-receipt` | Accusé de lecture |  | à créer |
+| `typing` | En train d'écrire | `sogosen` | à créer |
+| `community` | Communauté | `koli-so` | à créer |
+| `invite` | Inviter | `konosen` | à créer |
+| `referral` | Parrainage | `turusina` | à créer |
+| `leaderboard` | Classement |  | à créer |
 
 <a id="reseaux"></a>
 ## Réseaux sociaux et plateformes (marques) (41, P2)
 
 > ⚠️ Ces logos sont des marques déposées : on les utilise tels quels (fichiers officiels ou Simple Icons, CC0), sans les « bogolaniser » ni les recolorer, et seulement pour désigner le service (bouton « Se connecter avec », « Partager sur »). Dans le dépôt, les ranger à part dans brands/ avec la source de chaque fichier. Pour Vupay, le cahier des charges interdit tout logo de réseau dans l'identité : préférer les pictos génériques ci-dessus (bulle, anneau de story, appareil photo).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `whatsapp.svg` | WhatsApp |  |
-| `whatsapp-business.svg` | WhatsApp Business |  |
-| `facebook.svg` | Facebook |  |
-| `messenger.svg` | Messenger |  |
-| `instagram.svg` | Instagram |  |
-| `threads.svg` | Threads |  |
-| `tiktok.svg` | TikTok |  |
-| `snapchat.svg` | Snapchat |  |
-| `telegram.svg` | Telegram |  |
-| `x-twitter.svg` | X (Twitter) |  |
-| `youtube.svg` | YouTube |  |
-| `linkedin.svg` | LinkedIn |  |
-| `pinterest.svg` | Pinterest |  |
-| `discord.svg` | Discord |  |
-| `signal-app.svg` | Signal |  |
-| `wechat.svg` | WeChat |  |
-| `reddit.svg` | Reddit |  |
-| `twitch.svg` | Twitch |  |
-| `bluesky.svg` | Bluesky |  |
-| `mastodon.svg` | Mastodon |  |
-| `tumblr.svg` | Tumblr |  |
-| `vimeo.svg` | Vimeo |  |
-| `spotify.svg` | Spotify |  |
-| `apple-music.svg` | Apple Music |  |
-| `deezer.svg` | Deezer |  |
-| `boomplay.svg` | Boomplay |  |
-| `audiomack.svg` | Audiomack |  |
-| `soundcloud.svg` | SoundCloud |  |
-| `google.svg` | Google |  |
-| `apple.svg` | Apple |  |
-| `microsoft.svg` | Microsoft |  |
-| `github.svg` | GitHub |  |
-| `gitlab.svg` | GitLab |  |
-| `gmail.svg` | Gmail |  |
-| `outlook.svg` | Outlook |  |
-| `zoom.svg` | Zoom |  |
-| `google-meet.svg` | Google Meet |  |
-| `teams.svg` | Microsoft Teams |  |
-| `play-store.svg` | Google Play |  |
-| `app-store.svg` | App Store |  |
-| `truecaller.svg` | Truecaller |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `whatsapp` | WhatsApp |  | à créer |
+| `whatsapp-business` | WhatsApp Business |  | à créer |
+| `facebook` | Facebook |  | à créer |
+| `messenger` | Messenger |  | à créer |
+| `instagram` | Instagram |  | à créer |
+| `threads` | Threads |  | à créer |
+| `tiktok` | TikTok |  | à créer |
+| `snapchat` | Snapchat |  | à créer |
+| `telegram` | Telegram |  | à créer |
+| `x-twitter` | X (Twitter) |  | à créer |
+| `youtube` | YouTube |  | à créer |
+| `linkedin` | LinkedIn |  | à créer |
+| `pinterest` | Pinterest |  | à créer |
+| `discord` | Discord |  | à créer |
+| `signal-app` | Signal |  | à créer |
+| `wechat` | WeChat |  | à créer |
+| `reddit` | Reddit |  | à créer |
+| `twitch` | Twitch |  | à créer |
+| `bluesky` | Bluesky |  | à créer |
+| `mastodon` | Mastodon |  | à créer |
+| `tumblr` | Tumblr |  | à créer |
+| `vimeo` | Vimeo |  | à créer |
+| `spotify` | Spotify |  | à créer |
+| `apple-music` | Apple Music |  | à créer |
+| `deezer` | Deezer |  | à créer |
+| `boomplay` | Boomplay |  | à créer |
+| `audiomack` | Audiomack |  | à créer |
+| `soundcloud` | SoundCloud |  | à créer |
+| `google` | Google |  | à créer |
+| `apple` | Apple |  | à créer |
+| `microsoft` | Microsoft |  | à créer |
+| `github` | GitHub |  | à créer |
+| `gitlab` | GitLab |  | à créer |
+| `gmail` | Gmail |  | à créer |
+| `outlook` | Outlook |  | à créer |
+| `zoom` | Zoom |  | à créer |
+| `google-meet` | Google Meet |  | à créer |
+| `teams` | Microsoft Teams |  | à créer |
+| `play-store` | Google Play |  | à créer |
+| `app-store` | App Store |  | à créer |
+| `truecaller` | Truecaller |  | à créer |
 
 <a id="paiement"></a>
 ## Paiement, argent et mobile money (50, P1)
@@ -337,779 +351,779 @@ Motif par défaut : `bara-feere` (sauf indication contraire).
 
 > ⚠️ Logos d'opérateurs (Orange Money, MTN MoMo, Wave, Moov Money, Free Money, Airtel Money, M-Pesa, Visa, Mastercard, GIM-UEMOA) : marques déposées, à ranger dans brands/ et à utiliser sans modification, avec l'accord ou la charte de chaque opérateur.
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `wallet.svg` | Portefeuille |  |
-| `money.svg` | Billets FCFA |  |
-| `coins.svg` | Pièces |  |
-| `cash.svg` | Espèces |  |
-| `fcfa.svg` | Symbole FCFA |  |
-| `balance.svg` | Solde |  |
-| `earnings.svg` | Gains | `bara-feere` |
-| `payout.svg` | Retrait |  |
-| `withdraw.svg` | Retrait au guichet |  |
-| `deposit.svg` | Dépôt |  |
-| `transfer.svg` | Transfert |  |
-| `send-money.svg` | Envoyer de l'argent | `konosen` |
-| `receive-money.svg` | Recevoir de l'argent |  |
-| `request-money.svg` | Demander de l'argent |  |
-| `mobile-money.svg` | Mobile money (téléphone + billet) |  |
-| `agent-point.svg` | Point marchand / agent | `koli-so` |
-| `card.svg` | Carte bancaire |  |
-| `card-contactless.svg` | Paiement sans contact | `kaana-nonkon` |
-| `bank.svg` | Banque |  |
-| `atm.svg` | Guichet automatique |  |
-| `receipt.svg` | Reçu |  |
-| `invoice.svg` | Facture |  |
-| `bill.svg` | Note à payer |  |
-| `unpaid.svg` | Impayé | `juru-sarabali` |
-| `debt.svg` | Dette | `juru-sarabali` |
-| `credit.svg` | Crédit |  |
-| `loan.svg` | Prêt |  |
-| `savings.svg` | Épargne (canari / tirelire) |  |
-| `tontine.svg` | Tontine | `turusina` |
-| `piggy-bank.svg` | Tirelire |  |
-| `calculator.svg` | Calculatrice |  |
-| `percent.svg` | Pourcentage / commission |  |
-| `discount.svg` | Réduction |  |
-| `coupon.svg` | Bon de réduction |  |
-| `gift-card.svg` | Carte cadeau |  |
-| `bonus.svg` | Bonus | `bara-feere` |
-| `cashback.svg` | Remboursement partiel | `sa-kurulen` |
-| `refund.svg` | Remboursement | `sa-kurulen` |
-| `exchange.svg` | Change de devises |  |
-| `price-tag.svg` | Prix |  |
-| `ledger.svg` | Grand livre / journal |  |
-| `history.svg` | Historique des transactions | `sa-kurulen` |
-| `escrow.svg` | Séquestre | `bantoron` |
-| `secure-payment.svg` | Paiement sécurisé | `bantoron` |
-| `pin-code.svg` | Code PIN |  |
-| `otp.svg` | Code à usage unique (SMS) |  |
-| `chart-bar.svg` | Graphique en barres |  |
-| `chart-line.svg` | Courbe |  |
-| `chart-pie.svg` | Camembert | `koli-so` |
-| `budget.svg` | Budget |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `wallet` | Portefeuille |  | à créer |
+| `money` | Billets FCFA |  | à créer |
+| `coins` | Pièces |  | ✅ existe : `monnaie` |
+| `cash` | Espèces |  | ✅ existe : `especes` |
+| `fcfa` | Symbole FCFA |  | à créer |
+| `balance` | Solde |  | à créer |
+| `earnings` | Gains | `bara-feere` | à créer |
+| `payout` | Retrait |  | à créer |
+| `withdraw` | Retrait au guichet |  | à créer |
+| `deposit` | Dépôt |  | à créer |
+| `transfer` | Transfert |  | à créer |
+| `send-money` | Envoyer de l'argent | `konosen` | à créer |
+| `receive-money` | Recevoir de l'argent |  | à créer |
+| `request-money` | Demander de l'argent |  | à créer |
+| `mobile-money` | Mobile money (téléphone + billet) |  | à créer |
+| `agent-point` | Point marchand / agent | `koli-so` | à créer |
+| `card` | Carte bancaire |  | ✅ existe : `paiement` |
+| `card-contactless` | Paiement sans contact | `kaana-nonkon` | à créer |
+| `bank` | Banque |  | à créer |
+| `atm` | Guichet automatique |  | à créer |
+| `receipt` | Reçu |  | ✅ existe : `recu` |
+| `invoice` | Facture |  | à créer |
+| `bill` | Note à payer |  | à créer |
+| `unpaid` | Impayé | `juru-sarabali` | à créer |
+| `debt` | Dette | `juru-sarabali` | à créer |
+| `credit` | Crédit |  | à créer |
+| `loan` | Prêt |  | à créer |
+| `savings` | Épargne (canari / tirelire) |  | à créer |
+| `tontine` | Tontine | `turusina` | à créer |
+| `piggy-bank` | Tirelire |  | à créer |
+| `calculator` | Calculatrice |  | à créer |
+| `percent` | Pourcentage / commission |  | à créer |
+| `discount` | Réduction |  | à créer |
+| `coupon` | Bon de réduction |  | à créer |
+| `gift-card` | Carte cadeau |  | à créer |
+| `bonus` | Bonus | `bara-feere` | à créer |
+| `cashback` | Remboursement partiel | `sa-kurulen` | à créer |
+| `refund` | Remboursement | `sa-kurulen` | à créer |
+| `exchange` | Change de devises |  | à créer |
+| `price-tag` | Prix |  | à créer |
+| `ledger` | Grand livre / journal |  | à créer |
+| `history` | Historique des transactions | `sa-kurulen` | ✅ existe : `historique` |
+| `escrow` | Séquestre | `bantoron` | à créer |
+| `secure-payment` | Paiement sécurisé | `bantoron` | à créer |
+| `pin-code` | Code PIN |  | à créer |
+| `otp` | Code à usage unique (SMS) |  | ✅ existe : `code-sms` |
+| `chart-bar` | Graphique en barres |  | à créer |
+| `chart-line` | Courbe |  | à créer |
+| `chart-pie` | Camembert | `koli-so` | à créer |
+| `budget` | Budget |  | à créer |
 
 <a id="commerce"></a>
 ## Commerce et marché (31, P2)
 
 Motif par défaut : `bara-feere` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `shop.svg` | Boutique |  |
-| `market-stall.svg` | Étal de marché |  |
-| `cart.svg` | Panier |  |
-| `cart-add.svg` | Ajouter au panier |  |
-| `bag.svg` | Sac de courses |  |
-| `basket.svg` | Panier tressé |  |
-| `package.svg` | Colis |  |
-| `delivery.svg` | Livraison | `sasira` |
-| `delivery-moto.svg` | Livraison à moto | `sasira` |
-| `order.svg` | Commande |  |
-| `orders.svg` | Commandes |  |
-| `stock.svg` | Stock |  |
-| `warehouse.svg` | Entrepôt |  |
-| `scale.svg` | Balance du marchand | `dantigimari` |
-| `bargain.svg` | Marchandage (mains) |  |
-| `catalog.svg` | Catalogue |  |
-| `product.svg` | Produit |  |
-| `category.svg` | Catégorie | `dankalan-ko` |
-| `tag.svg` | Étiquette |  |
-| `store-front.svg` | Devanture |  |
-| `kiosk.svg` | Kiosque / cabine |  |
-| `boutique-phone.svg` | Kiosque de recharge téléphonique |  |
-| `fabric.svg` | Tissu / pagne |  |
-| `sewing.svg` | Couture |  |
-| `tailor.svg` | Tailleur |  |
-| `hairdresser.svg` | Coiffure / tresses |  |
-| `handshake.svg` | Accord conclu | `turusina` |
-| `customer.svg` | Client |  |
-| `seller.svg` | Vendeur |  |
-| `review.svg` | Avis client | `bara-feere` |
-| `return.svg` | Retour produit | `sa-kurulen` |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `shop` | Boutique |  | à créer |
+| `market-stall` | Étal de marché |  | à créer |
+| `cart` | Panier |  | à créer |
+| `cart-add` | Ajouter au panier |  | à créer |
+| `bag` | Sac de courses |  | à créer |
+| `basket` | Panier tressé |  | à créer |
+| `package` | Colis |  | à créer |
+| `delivery` | Livraison | `sasira` | ✅ existe : `livraison` |
+| `delivery-moto` | Livraison à moto | `sasira` | à créer |
+| `order` | Commande |  | à créer |
+| `orders` | Commandes |  | à créer |
+| `stock` | Stock |  | à créer |
+| `warehouse` | Entrepôt |  | à créer |
+| `scale` | Balance du marchand | `dantigimari` | à créer |
+| `bargain` | Marchandage (mains) |  | à créer |
+| `catalog` | Catalogue |  | à créer |
+| `product` | Produit |  | à créer |
+| `category` | Catégorie | `dankalan-ko` | à créer |
+| `tag` | Étiquette |  | à créer |
+| `store-front` | Devanture |  | à créer |
+| `kiosk` | Kiosque / cabine |  | à créer |
+| `boutique-phone` | Kiosque de recharge téléphonique |  | à créer |
+| `fabric` | Tissu / pagne |  | à créer |
+| `sewing` | Couture |  | à créer |
+| `tailor` | Tailleur |  | à créer |
+| `hairdresser` | Coiffure / tresses |  | à créer |
+| `handshake` | Accord conclu | `turusina` | à créer |
+| `customer` | Client |  | ✅ existe : `client` |
+| `seller` | Vendeur |  | à créer |
+| `review` | Avis client | `bara-feere` | ✅ existe : `avis` |
+| `return` | Retour produit | `sa-kurulen` | à créer |
 
 <a id="quotidien"></a>
 ## Vie quotidienne et maison (56, P2)
 
 Motif par défaut : `points` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `house.svg` | Maison |  |
-| `hut.svg` | Case ronde |  |
-| `compound.svg` | Concession / cour familiale | `koli-so` |
-| `door.svg` | Porte |  |
-| `key.svg` | Clé |  |
-| `bed.svg` | Lit |  |
-| `mat.svg` | Natte |  |
-| `chair.svg` | Chaise |  |
-| `stool.svg` | Tabouret |  |
-| `table.svg` | Table |  |
-| `lamp.svg` | Lampe |  |
-| `lantern.svg` | Lampe-tempête |  |
-| `candle.svg` | Bougie |  |
-| `bulb.svg` | Ampoule |  |
-| `fan.svg` | Ventilateur |  |
-| `ac.svg` | Climatiseur |  |
-| `tv.svg` | Télévision |  |
-| `radio.svg` | Poste de radio | `kaana-nonkon` |
-| `fridge.svg` | Réfrigérateur |  |
-| `stove.svg` | Réchaud à gaz |  |
-| `charcoal-stove.svg` | Fourneau à charbon |  |
-| `gas-bottle.svg` | Bouteille de gaz |  |
-| `water-tap.svg` | Robinet |  |
-| `water-drop.svg` | Goutte d'eau |  |
-| `jerrycan.svg` | Bidon d'eau |  |
-| `bucket.svg` | Seau |  |
-| `kettle.svg` | Bouilloire (bouilloire à ablutions) |  |
-| `broom.svg` | Balai |  |
-| `laundry.svg` | Lessive |  |
-| `iron.svg` | Fer à repasser |  |
-| `soap.svg` | Savon |  |
-| `shower.svg` | Douche |  |
-| `toilet.svg` | Toilettes |  |
-| `mosquito-net.svg` | Moustiquaire |  |
-| `generator.svg` | Groupe électrogène |  |
-| `solar-panel.svg` | Panneau solaire |  |
-| `battery.svg` | Batterie |  |
-| `battery-low.svg` | Batterie faible | `bantoron` |
-| `plug.svg` | Prise |  |
-| `power-cut.svg` | Coupure de courant | `juru-sarabali` |
-| `electricity.svg` | Électricité | `kaana-nonkon` |
-| `trash-bin.svg` | Poubelle |  |
-| `umbrella.svg` | Parapluie |  |
-| `glasses.svg` | Lunettes |  |
-| `watch.svg` | Montre |  |
-| `clothes.svg` | Vêtements |  |
-| `boubou.svg` | Boubou |  |
-| `shoes.svg` | Chaussures |  |
-| `sandals.svg` | Sandales |  |
-| `hat.svg` | Chapeau / bonnet |  |
-| `headwrap.svg` | Foulard / attaché |  |
-| `jewelry.svg` | Bijoux |  |
-| `mirror.svg` | Miroir |  |
-| `comb.svg` | Peigne |  |
-| `baby.svg` | Bébé |  |
-| `pet.svg` | Animal de compagnie |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `house` | Maison |  | ✅ existe : `domicile` |
+| `hut` | Case ronde |  | à créer |
+| `compound` | Concession / cour familiale | `koli-so` | à créer |
+| `door` | Porte |  | à créer |
+| `key` | Clé |  | à créer |
+| `bed` | Lit |  | à créer |
+| `mat` | Natte |  | à créer |
+| `chair` | Chaise |  | à créer |
+| `stool` | Tabouret |  | à créer |
+| `table` | Table |  | à créer |
+| `lamp` | Lampe |  | à créer |
+| `lantern` | Lampe-tempête |  | à créer |
+| `candle` | Bougie |  | à créer |
+| `bulb` | Ampoule |  | à créer |
+| `fan` | Ventilateur |  | à créer |
+| `ac` | Climatiseur |  | à créer |
+| `tv` | Télévision |  | à créer |
+| `radio` | Poste de radio | `kaana-nonkon` | à créer |
+| `fridge` | Réfrigérateur |  | à créer |
+| `stove` | Réchaud à gaz |  | à créer |
+| `charcoal-stove` | Fourneau à charbon |  | à créer |
+| `gas-bottle` | Bouteille de gaz |  | à créer |
+| `water-tap` | Robinet |  | à créer |
+| `water-drop` | Goutte d'eau |  | à créer |
+| `jerrycan` | Bidon d'eau |  | à créer |
+| `bucket` | Seau |  | à créer |
+| `kettle` | Bouilloire (bouilloire à ablutions) |  | à créer |
+| `broom` | Balai |  | à créer |
+| `laundry` | Lessive |  | à créer |
+| `iron` | Fer à repasser |  | à créer |
+| `soap` | Savon |  | à créer |
+| `shower` | Douche |  | à créer |
+| `toilet` | Toilettes |  | à créer |
+| `mosquito-net` | Moustiquaire |  | à créer |
+| `generator` | Groupe électrogène |  | à créer |
+| `solar-panel` | Panneau solaire |  | à créer |
+| `battery` | Batterie |  | à créer |
+| `battery-low` | Batterie faible | `bantoron` | à créer |
+| `plug` | Prise |  | à créer |
+| `power-cut` | Coupure de courant | `juru-sarabali` | à créer |
+| `electricity` | Électricité | `kaana-nonkon` | à créer |
+| `trash-bin` | Poubelle |  | à créer |
+| `umbrella` | Parapluie |  | à créer |
+| `glasses` | Lunettes |  | à créer |
+| `watch` | Montre |  | à créer |
+| `clothes` | Vêtements |  | à créer |
+| `boubou` | Boubou |  | à créer |
+| `shoes` | Chaussures |  | à créer |
+| `sandals` | Sandales |  | à créer |
+| `hat` | Chapeau / bonnet |  | à créer |
+| `headwrap` | Foulard / attaché |  | à créer |
+| `jewelry` | Bijoux |  | à créer |
+| `mirror` | Miroir |  | à créer |
+| `comb` | Peigne |  | à créer |
+| `baby` | Bébé |  | à créer |
+| `pet` | Animal de compagnie |  | à créer |
 
 <a id="cuisine"></a>
 ## Nourriture et cuisine (42, P2)
 
 Motif par défaut : `turusina` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `food.svg` | Repas |  |
-| `plate.svg` | Assiette |  |
-| `bowl.svg` | Bol |  |
-| `calabash.svg` | Calebasse |  |
-| `mortar-pestle.svg` | Mortier et pilon | `turusina` |
-| `pot.svg` | Marmite |  |
-| `canari.svg` | Canari (jarre à eau) |  |
-| `grill.svg` | Grillade / dibiterie |  |
-| `brochette.svg` | Brochettes |  |
-| `fish.svg` | Poisson |  |
-| `fish-grilled.svg` | Poisson braisé |  |
-| `chicken.svg` | Poulet |  |
-| `meat.svg` | Viande |  |
-| `rice.svg` | Riz |  |
-| `millet.svg` | Mil |  |
-| `maize.svg` | Maïs |  |
-| `cassava.svg` | Manioc |  |
-| `yam.svg` | Igname |  |
-| `plantain.svg` | Banane plantain |  |
-| `attieke.svg` | Attiéké |  |
-| `peanut.svg` | Arachide |  |
-| `shea.svg` | Karité |  |
-| `baobab-fruit.svg` | Pain de singe (baobab) |  |
-| `mango.svg` | Mangue |  |
-| `orange.svg` | Orange |  |
-| `coconut.svg` | Noix de coco |  |
-| `pepper.svg` | Piment |  |
-| `onion.svg` | Oignon |  |
-| `tomato.svg` | Tomate |  |
-| `bread.svg` | Pain / baguette |  |
-| `tea.svg` | Thé à la menthe (ataya) |  |
-| `teapot.svg` | Théière |  |
-| `coffee.svg` | Café |  |
-| `bissap.svg` | Bissap / jus |  |
-| `water-sachet.svg` | Sachet d'eau |  |
-| `bottle.svg` | Bouteille |  |
-| `soda.svg` | Boisson |  |
-| `milk.svg` | Lait |  |
-| `egg.svg` | Œuf |  |
-| `restaurant.svg` | Restaurant / maquis |  |
-| `cutlery.svg` | Couverts |  |
-| `cook.svg` | Cuisinier |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `food` | Repas |  | à créer |
+| `plate` | Assiette |  | à créer |
+| `bowl` | Bol |  | à créer |
+| `calabash` | Calebasse |  | à créer |
+| `mortar-pestle` | Mortier et pilon | `turusina` | à créer |
+| `pot` | Marmite |  | à créer |
+| `canari` | Canari (jarre à eau) |  | à créer |
+| `grill` | Grillade / dibiterie |  | à créer |
+| `brochette` | Brochettes |  | à créer |
+| `fish` | Poisson |  | à créer |
+| `fish-grilled` | Poisson braisé |  | à créer |
+| `chicken` | Poulet |  | à créer |
+| `meat` | Viande |  | à créer |
+| `rice` | Riz |  | à créer |
+| `millet` | Mil |  | à créer |
+| `maize` | Maïs |  | à créer |
+| `cassava` | Manioc |  | à créer |
+| `yam` | Igname |  | à créer |
+| `plantain` | Banane plantain |  | à créer |
+| `attieke` | Attiéké |  | à créer |
+| `peanut` | Arachide |  | à créer |
+| `shea` | Karité |  | à créer |
+| `baobab-fruit` | Pain de singe (baobab) |  | à créer |
+| `mango` | Mangue |  | à créer |
+| `orange` | Orange |  | à créer |
+| `coconut` | Noix de coco |  | à créer |
+| `pepper` | Piment |  | à créer |
+| `onion` | Oignon |  | à créer |
+| `tomato` | Tomate |  | à créer |
+| `bread` | Pain / baguette |  | à créer |
+| `tea` | Thé à la menthe (ataya) |  | à créer |
+| `teapot` | Théière |  | à créer |
+| `coffee` | Café |  | à créer |
+| `bissap` | Bissap / jus |  | à créer |
+| `water-sachet` | Sachet d'eau |  | à créer |
+| `bottle` | Bouteille |  | à créer |
+| `soda` | Boisson |  | à créer |
+| `milk` | Lait |  | à créer |
+| `egg` | Œuf |  | à créer |
+| `restaurant` | Restaurant / maquis |  | ✅ existe : `restaurant` |
+| `cutlery` | Couverts |  | à créer |
+| `cook` | Cuisinier |  | à créer |
 
 <a id="transport"></a>
 ## Transport et mobilité (31, P2)
 
 Motif par défaut : `sasira` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `car.svg` | Voiture |  |
-| `taxi.svg` | Taxi |  |
-| `moto.svg` | Moto |  |
-| `moto-taxi.svg` | Moto-taxi (zémidjan, djakarta, oléyia) |  |
-| `tricycle.svg` | Tricycle |  |
-| `bus.svg` | Bus |  |
-| `minibus.svg` | Minibus (gbaka, sotrama, car rapide) |  |
-| `bush-taxi.svg` | Taxi-brousse |  |
-| `truck.svg` | Camion |  |
-| `bicycle.svg` | Vélo |  |
-| `walk.svg` | À pied |  |
-| `pirogue.svg` | Pirogue |  |
-| `boat.svg` | Bateau |  |
-| `ferry.svg` | Bac |  |
-| `train.svg` | Train |  |
-| `plane.svg` | Avion |  |
-| `fuel.svg` | Carburant |  |
-| `fuel-bottle.svg` | Essence en bouteille (bord de route) |  |
-| `parking.svg` | Stationnement |  |
-| `road.svg` | Route |  |
-| `dirt-road.svg` | Piste | `sasira` |
-| `traffic-light.svg` | Feu tricolore |  |
-| `roundabout.svg` | Rond-point | `koli-so` |
-| `checkpoint.svg` | Barrage / contrôle | `bantoron` |
-| `ticket.svg` | Billet |  |
-| `luggage.svg` | Bagages |  |
-| `map-route.svg` | Trajet | `sasira` |
-| `gps.svg` | Position GPS | `koli-so` |
-| `ride.svg` | Course |  |
-| `driver.svg` | Chauffeur |  |
-| `helmet.svg` | Casque |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `car` | Voiture |  | ✅ existe : `voiture` |
+| `taxi` | Taxi |  | à créer |
+| `moto` | Moto |  | à créer |
+| `moto-taxi` | Moto-taxi (zémidjan, djakarta, oléyia) |  | ✅ existe : `moto-taxi` |
+| `tricycle` | Tricycle |  | à créer |
+| `bus` | Bus |  | à créer |
+| `minibus` | Minibus (gbaka, sotrama, car rapide) |  | à créer |
+| `bush-taxi` | Taxi-brousse |  | ✅ existe : `gare-routiere` |
+| `truck` | Camion |  | à créer |
+| `bicycle` | Vélo |  | à créer |
+| `walk` | À pied |  | à créer |
+| `pirogue` | Pirogue |  | à créer |
+| `boat` | Bateau |  | à créer |
+| `ferry` | Bac |  | à créer |
+| `train` | Train |  | à créer |
+| `plane` | Avion |  | ✅ existe : `aeroport` |
+| `fuel` | Carburant |  | ✅ existe : `station-service` |
+| `fuel-bottle` | Essence en bouteille (bord de route) |  | à créer |
+| `parking` | Stationnement |  | à créer |
+| `road` | Route |  | à créer |
+| `dirt-road` | Piste | `sasira` | à créer |
+| `traffic-light` | Feu tricolore |  | à créer |
+| `roundabout` | Rond-point | `koli-so` | à créer |
+| `checkpoint` | Barrage / contrôle | `bantoron` | à créer |
+| `ticket` | Billet |  | à créer |
+| `luggage` | Bagages |  | ✅ existe : `bagages` |
+| `map-route` | Trajet | `sasira` | ✅ existe : `distance` |
+| `gps` | Position GPS | `koli-so` | à créer |
+| `ride` | Course |  | à créer |
+| `driver` | Chauffeur |  | ✅ existe : `chauffeur` |
+| `helmet` | Casque |  | ✅ existe : `casque` |
 
 <a id="lieux"></a>
 ## Lieux, carte et localisation (34, P2)
 
 Motif par défaut : `sasira` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `map.svg` | Carte |  |
-| `map-pin.svg` | Repère | `koli-so` |
-| `location.svg` | Ma position | `koli-so` |
-| `navigation.svg` | Navigation |  |
-| `compass.svg` | Boussole |  |
-| `globe.svg` | Monde |  |
-| `africa.svg` | Afrique |  |
-| `country.svg` | Pays |  |
-| `city.svg` | Ville |  |
-| `village.svg` | Village |  |
-| `neighborhood.svg` | Quartier |  |
-| `market.svg` | Marché |  |
-| `mosque.svg` | Mosquée en banco |  |
-| `church.svg` | Église |  |
-| `school.svg` | École |  |
-| `hospital.svg` | Hôpital |  |
-| `pharmacy.svg` | Pharmacie |  |
-| `bank-building.svg` | Agence bancaire |  |
-| `post-office.svg` | Poste |  |
-| `police.svg` | Police |  |
-| `town-hall.svg` | Mairie |  |
-| `court.svg` | Tribunal | `dantigimari` |
-| `stadium.svg` | Stade |  |
-| `office.svg` | Bureau |  |
-| `factory.svg` | Usine |  |
-| `hotel.svg` | Hôtel |  |
-| `granary.svg` | Grenier |  |
-| `well.svg` | Puits |  |
-| `river.svg` | Fleuve |  |
-| `bridge.svg` | Pont |  |
-| `beach.svg` | Plage |  |
-| `mountain.svg` | Falaise / montagne |  |
-| `desert.svg` | Désert / dune |  |
-| `home-address.svg` | Adresse |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `map` | Carte |  | à créer |
+| `map-pin` | Repère | `koli-so` | ✅ existe : `destination` |
+| `location` | Ma position | `koli-so` | ✅ existe : `me-localiser` |
+| `navigation` | Navigation |  | ✅ existe : `navigation` |
+| `compass` | Boussole |  | à créer |
+| `globe` | Monde |  | à créer |
+| `africa` | Afrique |  | à créer |
+| `country` | Pays |  | à créer |
+| `city` | Ville |  | à créer |
+| `village` | Village |  | à créer |
+| `neighborhood` | Quartier |  | à créer |
+| `market` | Marché |  | ✅ existe : `marche` |
+| `mosque` | Mosquée en banco |  | à créer |
+| `church` | Église |  | à créer |
+| `school` | École |  | ✅ existe : `ecole` |
+| `hospital` | Hôpital |  | ✅ existe : `hopital` |
+| `pharmacy` | Pharmacie |  | à créer |
+| `bank-building` | Agence bancaire |  | à créer |
+| `post-office` | Poste |  | à créer |
+| `police` | Police |  | à créer |
+| `town-hall` | Mairie |  | à créer |
+| `court` | Tribunal | `dantigimari` | à créer |
+| `stadium` | Stade |  | à créer |
+| `office` | Bureau |  | ✅ existe : `travail` |
+| `factory` | Usine |  | à créer |
+| `hotel` | Hôtel |  | ✅ existe : `hotel` |
+| `granary` | Grenier |  | à créer |
+| `well` | Puits |  | à créer |
+| `river` | Fleuve |  | à créer |
+| `bridge` | Pont |  | ✅ existe : `pont` |
+| `beach` | Plage |  | à créer |
+| `mountain` | Falaise / montagne |  | à créer |
+| `desert` | Désert / dune |  | à créer |
+| `home-address` | Adresse |  | à créer |
 
 <a id="communication"></a>
 ## Communication et appareils (49, P1)
 
 Motif par défaut : `kaana-nonkon` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `phone.svg` | Téléphone |  |
-| `phone-call.svg` | Appel |  |
-| `phone-incoming.svg` | Appel entrant |  |
-| `phone-outgoing.svg` | Appel sortant |  |
-| `phone-missed.svg` | Appel manqué | `juru-sarabali` |
-| `video-call.svg` | Appel vidéo |  |
-| `smartphone.svg` | Smartphone |  |
-| `feature-phone.svg` | Téléphone à touches |  |
-| `sms.svg` | SMS |  |
-| `ussd.svg` | Code USSD (*144#) |  |
-| `mail.svg` | Courriel |  |
-| `inbox.svg` | Boîte de réception |  |
-| `notification.svg` | Notification | `donkonkolo` |
-| `bell.svg` | Cloche | `donkonkolo` |
-| `bell-off.svg` | Notifications coupées |  |
-| `contact.svg` | Contact |  |
-| `contacts.svg` | Répertoire |  |
-| `sim.svg` | Carte SIM |  |
-| `airtime.svg` | Crédit téléphonique / recharge |  |
-| `data.svg` | Forfait internet | `kaana-nonkon` |
-| `wifi.svg` | Wi-Fi | `kaana-nonkon` |
-| `signal.svg` | Réseau mobile | `kaana-nonkon` |
-| `no-signal.svg` | Pas de réseau |  |
-| `bluetooth.svg` | Bluetooth |  |
-| `nfc.svg` | NFC |  |
-| `antenna.svg` | Antenne relais | `kaana-nonkon` |
-| `laptop.svg` | Ordinateur portable |  |
-| `desktop.svg` | Ordinateur |  |
-| `tablet.svg` | Tablette |  |
-| `printer.svg` | Imprimante |  |
-| `camera.svg` | Appareil photo |  |
-| `microphone.svg` | Microphone |  |
-| `headphones.svg` | Écouteurs |  |
-| `speaker.svg` | Haut-parleur | `donkonkolo` |
-| `charger.svg` | Chargeur |  |
-| `power-bank.svg` | Batterie externe |  |
-| `usb.svg` | USB |  |
-| `cloud.svg` | Nuage |  |
-| `cloud-upload.svg` | Envoyer vers le nuage |  |
-| `cloud-off.svg` | Nuage indisponible |  |
-| `server.svg` | Serveur |  |
-| `database.svg` | Base de données |  |
-| `code.svg` | Code |  |
-| `terminal.svg` | Terminal |  |
-| `api.svg` | API |  |
-| `bug.svg` | Bogue |  |
-| `robot.svg` | Robot / IA |  |
-| `sparkles-ai.svg` | Assistant IA | `bara-feere` |
-| `qr-pay.svg` | Paiement par QR |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `phone` | Téléphone |  | ✅ existe : `telephone` |
+| `phone-call` | Appel |  | ✅ existe : `appel` |
+| `phone-incoming` | Appel entrant |  | à créer |
+| `phone-outgoing` | Appel sortant |  | à créer |
+| `phone-missed` | Appel manqué | `juru-sarabali` | à créer |
+| `video-call` | Appel vidéo |  | à créer |
+| `smartphone` | Smartphone |  | à créer |
+| `feature-phone` | Téléphone à touches |  | à créer |
+| `sms` | SMS |  | à créer |
+| `ussd` | Code USSD (*144#) |  | à créer |
+| `mail` | Courriel |  | ✅ existe : `e-mail` |
+| `inbox` | Boîte de réception |  | à créer |
+| `notification` | Notification | `donkonkolo` | ✅ existe : `notifications` |
+| `bell` | Cloche | `donkonkolo` | à créer |
+| `bell-off` | Notifications coupées |  | à créer |
+| `contact` | Contact |  | à créer |
+| `contacts` | Répertoire |  | à créer |
+| `sim` | Carte SIM |  | à créer |
+| `airtime` | Crédit téléphonique / recharge |  | à créer |
+| `data` | Forfait internet | `kaana-nonkon` | à créer |
+| `wifi` | Wi-Fi | `kaana-nonkon` | à créer |
+| `signal` | Réseau mobile | `kaana-nonkon` | à créer |
+| `no-signal` | Pas de réseau |  | à créer |
+| `bluetooth` | Bluetooth |  | à créer |
+| `nfc` | NFC |  | à créer |
+| `antenna` | Antenne relais | `kaana-nonkon` | à créer |
+| `laptop` | Ordinateur portable |  | à créer |
+| `desktop` | Ordinateur |  | à créer |
+| `tablet` | Tablette |  | à créer |
+| `printer` | Imprimante |  | à créer |
+| `camera` | Appareil photo |  | à créer |
+| `microphone` | Microphone |  | à créer |
+| `headphones` | Écouteurs |  | à créer |
+| `speaker` | Haut-parleur | `donkonkolo` | à créer |
+| `charger` | Chargeur |  | à créer |
+| `power-bank` | Batterie externe |  | à créer |
+| `usb` | USB |  | à créer |
+| `cloud` | Nuage |  | à créer |
+| `cloud-upload` | Envoyer vers le nuage |  | à créer |
+| `cloud-off` | Nuage indisponible |  | à créer |
+| `server` | Serveur |  | à créer |
+| `database` | Base de données |  | à créer |
+| `code` | Code |  | à créer |
+| `terminal` | Terminal |  | à créer |
+| `api` | API |  | à créer |
+| `bug` | Bogue |  | à créer |
+| `robot` | Robot / IA |  | à créer |
+| `sparkles-ai` | Assistant IA | `bara-feere` | à créer |
+| `qr-pay` | Paiement par QR |  | à créer |
 
 <a id="medias"></a>
 ## Médias et fichiers (32, P1)
 
 Motif par défaut : `points` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `image.svg` | Image |  |
-| `gallery.svg` | Galerie |  |
-| `photo-add.svg` | Ajouter une photo |  |
-| `screenshot.svg` | Capture d'écran | `bantoron` |
-| `video.svg` | Vidéo |  |
-| `film.svg` | Film |  |
-| `music.svg` | Musique |  |
-| `audio.svg` | Audio | `kaana-nonkon` |
-| `podcast.svg` | Podcast |  |
-| `file.svg` | Fichier |  |
-| `file-text.svg` | Document |  |
-| `file-pdf.svg` | PDF |  |
-| `file-image.svg` | Fichier image |  |
-| `file-audio.svg` | Fichier audio |  |
-| `file-video.svg` | Fichier vidéo |  |
-| `file-zip.svg` | Archive |  |
-| `file-spreadsheet.svg` | Tableur |  |
-| `folder.svg` | Dossier |  |
-| `folder-open.svg` | Dossier ouvert |  |
-| `clipboard.svg` | Presse-papiers |  |
-| `note.svg` | Note |  |
-| `book.svg` | Livre |  |
-| `newspaper.svg` | Journal |  |
-| `proof.svg` | Preuve de publication | `bantoron` |
-| `watermark.svg` | Filigrane |  |
-| `text.svg` | Texte |  |
-| `font.svg` | Police |  |
-| `bold.svg` | Gras |  |
-| `italic.svg` | Italique |  |
-| `align-left.svg` | Aligner à gauche |  |
-| `list-bullet.svg` | Liste à puces | `sogosen` |
-| `list-number.svg` | Liste numérotée |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `image` | Image |  | à créer |
+| `gallery` | Galerie |  | à créer |
+| `photo-add` | Ajouter une photo |  | ✅ existe : `ajouter-photo` |
+| `screenshot` | Capture d'écran | `bantoron` | à créer |
+| `video` | Vidéo |  | à créer |
+| `film` | Film |  | à créer |
+| `music` | Musique |  | à créer |
+| `audio` | Audio | `kaana-nonkon` | à créer |
+| `podcast` | Podcast |  | à créer |
+| `file` | Fichier |  | à créer |
+| `file-text` | Document |  | à créer |
+| `file-pdf` | PDF |  | à créer |
+| `file-image` | Fichier image |  | à créer |
+| `file-audio` | Fichier audio |  | à créer |
+| `file-video` | Fichier vidéo |  | à créer |
+| `file-zip` | Archive |  | à créer |
+| `file-spreadsheet` | Tableur |  | à créer |
+| `folder` | Dossier |  | à créer |
+| `folder-open` | Dossier ouvert |  | à créer |
+| `clipboard` | Presse-papiers |  | à créer |
+| `note` | Note |  | à créer |
+| `book` | Livre |  | à créer |
+| `newspaper` | Journal |  | à créer |
+| `proof` | Preuve de publication | `bantoron` | à créer |
+| `watermark` | Filigrane |  | à créer |
+| `text` | Texte |  | à créer |
+| `font` | Police |  | à créer |
+| `bold` | Gras |  | à créer |
+| `italic` | Italique |  | à créer |
+| `align-left` | Aligner à gauche |  | à créer |
+| `list-bullet` | Liste à puces | `sogosen` | à créer |
+| `list-number` | Liste numérotée |  | à créer |
 
 <a id="temps"></a>
 ## Temps et calendrier (18, P1)
 
 Motif par défaut : `croisillon` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `calendar.svg` | Calendrier |  |
-| `calendar-check.svg` | Date confirmée |  |
-| `calendar-add.svg` | Ajouter un événement |  |
-| `event.svg` | Événement |  |
-| `clock-alt.svg` | Horloge |  |
-| `timer.svg` | Minuteur | `koli-so` |
-| `countdown.svg` | Compte à rebours (anneau) | `koli-so` |
-| `alarm.svg` | Réveil | `donkonkolo` |
-| `stopwatch.svg` | Chronomètre |  |
-| `history-time.svg` | Historique | `sa-kurulen` |
-| `schedule.svg` | Planifier |  |
-| `day.svg` | Jour | `koli-so` |
-| `night.svg` | Nuit |  |
-| `sunrise.svg` | Lever du soleil |  |
-| `sunset.svg` | Coucher du soleil |  |
-| `week.svg` | Semaine |  |
-| `month.svg` | Mois |  |
-| `deadline.svg` | Échéance | `bantoron` |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `calendar` | Calendrier |  | à créer |
+| `calendar-check` | Date confirmée |  | à créer |
+| `calendar-add` | Ajouter un événement |  | à créer |
+| `event` | Événement |  | à créer |
+| `clock-alt` | Horloge |  | à créer |
+| `timer` | Minuteur | `koli-so` | ✅ existe : `duree-trajet` |
+| `countdown` | Compte à rebours (anneau) | `koli-so` | à créer |
+| `alarm` | Réveil | `donkonkolo` | à créer |
+| `stopwatch` | Chronomètre |  | à créer |
+| `history-time` | Historique | `sa-kurulen` | à créer |
+| `schedule` | Planifier |  | ✅ existe : `course-planifiee` |
+| `day` | Jour | `koli-so` | à créer |
+| `night` | Nuit |  | à créer |
+| `sunrise` | Lever du soleil |  | à créer |
+| `sunset` | Coucher du soleil |  | à créer |
+| `week` | Semaine |  | à créer |
+| `month` | Mois |  | à créer |
+| `deadline` | Échéance | `bantoron` | à créer |
 
 <a id="personnes"></a>
 ## Personnes, comptes et famille (28, P1)
 
 Motif par défaut : `koli-so` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `user.svg` | Utilisateur |  |
-| `users.svg` | Utilisateurs | `turusina` |
-| `user-add.svg` | Ajouter un utilisateur |  |
-| `user-remove.svg` | Retirer un utilisateur |  |
-| `user-check.svg` | Utilisateur vérifié |  |
-| `user-circle.svg` | Avatar |  |
-| `profile.svg` | Profil |  |
-| `id-card.svg` | Pièce d'identité |  |
-| `selfie.svg` | Selfie de vérification |  |
-| `family.svg` | Famille | `koli-so` |
-| `couple.svg` | Couple |  |
-| `child.svg` | Enfant |  |
-| `elder.svg` | Ancien / sage |  |
-| `woman.svg` | Femme |  |
-| `man.svg` | Homme |  |
-| `group.svg` | Groupe | `turusina` |
-| `team.svg` | Équipe | `turusina` |
-| `admin.svg` | Administrateur | `bantoron` |
-| `moderator.svg` | Modérateur | `dantigimari` |
-| `advertiser.svg` | Annonceur | `donkonkolo` |
-| `publisher.svg` | Diffuseur | `kaana-nonkon` |
-| `agent.svg` | Agent / conseiller |  |
-| `support.svg` | Assistance | `dantigimari` |
-| `wave-hand.svg` | Salutation |  |
-| `griot.svg` | Griot / conteur | `donkonkolo` |
-| `chief.svg` | Chef de village |  |
-| `accessibility.svg` | Accessibilité |  |
-| `wheelchair.svg` | Fauteuil roulant |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `user` | Utilisateur |  | à créer |
+| `users` | Utilisateurs | `turusina` | à créer |
+| `user-add` | Ajouter un utilisateur |  | à créer |
+| `user-remove` | Retirer un utilisateur |  | à créer |
+| `user-check` | Utilisateur vérifié |  | à créer |
+| `user-circle` | Avatar |  | à créer |
+| `profile` | Profil |  | ✅ existe : `compte` |
+| `id-card` | Pièce d'identité |  | ✅ existe : `identite` |
+| `selfie` | Selfie de vérification |  | ✅ existe : `selfie` |
+| `family` | Famille | `koli-so` | à créer |
+| `couple` | Couple |  | à créer |
+| `child` | Enfant |  | à créer |
+| `elder` | Ancien / sage |  | à créer |
+| `woman` | Femme |  | à créer |
+| `man` | Homme |  | à créer |
+| `group` | Groupe | `turusina` | à créer |
+| `team` | Équipe | `turusina` | à créer |
+| `admin` | Administrateur | `bantoron` | à créer |
+| `moderator` | Modérateur | `dantigimari` | à créer |
+| `advertiser` | Annonceur | `donkonkolo` | à créer |
+| `publisher` | Diffuseur | `kaana-nonkon` | à créer |
+| `agent` | Agent / conseiller |  | à créer |
+| `support` | Assistance | `dantigimari` | ✅ existe : `assistance` |
+| `wave-hand` | Salutation |  | à créer |
+| `griot` | Griot / conteur | `donkonkolo` | à créer |
+| `chief` | Chef de village |  | à créer |
+| `accessibility` | Accessibilité |  | ✅ existe : `accessibilite` |
+| `wheelchair` | Fauteuil roulant |  | à créer |
 
 <a id="securite"></a>
 ## Sécurité et confiance (21, P1)
 
 Motif par défaut : `bantoron` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `shield.svg` | Bouclier |  |
-| `shield-alert.svg` | Menace |  |
-| `lock-closed.svg` | Cadenas fermé |  |
-| `lock-open.svg` | Cadenas ouvert |  |
-| `key-alt.svg` | Clé d'accès |  |
-| `password.svg` | Mot de passe |  |
-| `fingerprint.svg` | Empreinte digitale |  |
-| `face-id.svg` | Reconnaissance faciale |  |
-| `two-factor.svg` | Double authentification |  |
-| `kyc.svg` | Vérification d'identité (KYC) |  |
-| `fraud.svg` | Fraude | `juru-sarabali` |
-| `spam.svg` | Indésirable |  |
-| `privacy.svg` | Confidentialité |  |
-| `eye-watch.svg` | Surveillance |  |
-| `legal.svg` | Mentions légales | `dantigimari` |
-| `terms.svg` | Conditions |  |
-| `contract.svg` | Contrat |  |
-| `signature.svg` | Signature |  |
-| `stamp.svg` | Cachet / tampon |  |
-| `dispute.svg` | Litige | `dantigimari` |
-| `gavel.svg` | Décision / arbitrage | `dantigimari` |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `shield` | Bouclier |  | à créer |
+| `shield-alert` | Menace |  | à créer |
+| `lock-closed` | Cadenas fermé |  | à créer |
+| `lock-open` | Cadenas ouvert |  | à créer |
+| `key-alt` | Clé d'accès |  | à créer |
+| `password` | Mot de passe |  | à créer |
+| `fingerprint` | Empreinte digitale |  | à créer |
+| `face-id` | Reconnaissance faciale |  | à créer |
+| `two-factor` | Double authentification |  | à créer |
+| `kyc` | Vérification d'identité (KYC) |  | à créer |
+| `fraud` | Fraude | `juru-sarabali` | à créer |
+| `spam` | Indésirable |  | à créer |
+| `privacy` | Confidentialité |  | ✅ existe : `confidentialite` |
+| `eye-watch` | Surveillance |  | à créer |
+| `legal` | Mentions légales | `dantigimari` | à créer |
+| `terms` | Conditions |  | ✅ existe : `conditions` |
+| `contract` | Contrat |  | à créer |
+| `signature` | Signature |  | à créer |
+| `stamp` | Cachet / tampon |  | à créer |
+| `dispute` | Litige | `dantigimari` | à créer |
+| `gavel` | Décision / arbitrage | `dantigimari` | à créer |
 
 <a id="administration"></a>
 ## Administration et documents officiels (14, P3)
 
 Motif par défaut : `croisillon` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `passport.svg` | Passeport |  |
-| `birth-certificate.svg` | Acte de naissance |  |
-| `certificate.svg` | Certificat / diplôme |  |
-| `residence.svg` | Certificat de résidence |  |
-| `tax.svg` | Impôts |  |
-| `business-reg.svg` | Registre du commerce (RCCM) |  |
-| `nif.svg` | Numéro fiscal |  |
-| `vote.svg` | Vote |  |
-| `ballot-box.svg` | Urne |  |
-| `law.svg` | Loi |  |
-| `government.svg` | Gouvernement |  |
-| `form.svg` | Formulaire |  |
-| `queue.svg` | File d'attente | `sogosen` |
-| `appointment.svg` | Rendez-vous |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `passport` | Passeport |  | à créer |
+| `birth-certificate` | Acte de naissance |  | à créer |
+| `certificate` | Certificat / diplôme |  | à créer |
+| `residence` | Certificat de résidence |  | à créer |
+| `tax` | Impôts |  | à créer |
+| `business-reg` | Registre du commerce (RCCM) |  | à créer |
+| `nif` | Numéro fiscal |  | à créer |
+| `vote` | Vote |  | à créer |
+| `ballot-box` | Urne |  | à créer |
+| `law` | Loi |  | à créer |
+| `government` | Gouvernement |  | à créer |
+| `form` | Formulaire |  | à créer |
+| `queue` | File d'attente | `sogosen` | à créer |
+| `appointment` | Rendez-vous |  | à créer |
 
 <a id="sante"></a>
 ## Santé (21, P3)
 
 Motif par défaut : `bantoron` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `health.svg` | Santé |  |
-| `heart-pulse.svg` | Pouls |  |
-| `stethoscope.svg` | Stéthoscope |  |
-| `doctor.svg` | Médecin |  |
-| `nurse.svg` | Infirmier·e |  |
-| `pill.svg` | Médicament |  |
-| `syringe.svg` | Vaccin |  |
-| `thermometer.svg` | Température |  |
-| `first-aid.svg` | Premiers secours |  |
-| `ambulance.svg` | Ambulance |  |
-| `mosquito.svg` | Moustique / paludisme |  |
-| `pregnancy.svg` | Grossesse |  |
-| `baby-care.svg` | Santé de l'enfant |  |
-| `traditional-medicine.svg` | Plantes médicinales |  |
-| `hand-wash.svg` | Lavage des mains |  |
-| `face-mask.svg` | Masque sanitaire |  |
-| `blood.svg` | Don de sang |  |
-| `tooth.svg` | Dentiste |  |
-| `eye-care.svg` | Ophtalmologie |  |
-| `mental-health.svg` | Santé mentale |  |
-| `insurance.svg` | Assurance santé / mutuelle | `turusina` |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `health` | Santé |  | à créer |
+| `heart-pulse` | Pouls |  | à créer |
+| `stethoscope` | Stéthoscope |  | à créer |
+| `doctor` | Médecin |  | à créer |
+| `nurse` | Infirmier·e |  | à créer |
+| `pill` | Médicament |  | à créer |
+| `syringe` | Vaccin |  | à créer |
+| `thermometer` | Température |  | à créer |
+| `first-aid` | Premiers secours |  | à créer |
+| `ambulance` | Ambulance |  | à créer |
+| `mosquito` | Moustique / paludisme |  | à créer |
+| `pregnancy` | Grossesse |  | à créer |
+| `baby-care` | Santé de l'enfant |  | à créer |
+| `traditional-medicine` | Plantes médicinales |  | à créer |
+| `hand-wash` | Lavage des mains |  | à créer |
+| `face-mask` | Masque sanitaire |  | à créer |
+| `blood` | Don de sang |  | à créer |
+| `tooth` | Dentiste |  | à créer |
+| `eye-care` | Ophtalmologie |  | à créer |
+| `mental-health` | Santé mentale |  | à créer |
+| `insurance` | Assurance santé / mutuelle | `turusina` | ✅ existe : `assurance` |
 
 <a id="education"></a>
 ## Éducation et savoir (18, P3)
 
 Motif par défaut : `croisillon` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `education.svg` | Éducation |  |
-| `graduation.svg` | Diplômé |  |
-| `book-open.svg` | Livre ouvert |  |
-| `notebook.svg` | Cahier |  |
-| `pen.svg` | Stylo |  |
-| `slate.svg` | Ardoise |  |
-| `chalkboard.svg` | Tableau noir |  |
-| `backpack.svg` | Cartable |  |
-| `teacher.svg` | Enseignant |  |
-| `student.svg` | Élève |  |
-| `quran-school.svg` | École coranique / tablette |  |
-| `library.svg` | Bibliothèque |  |
-| `exam.svg` | Examen |  |
-| `certificate-edu.svg` | Attestation |  |
-| `lightbulb.svg` | Idée |  |
-| `alphabet.svg` | Alphabétisation (N'Ko, ajami, latin) |  |
-| `quiz.svg` | Quiz |  |
-| `course.svg` | Formation en ligne |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `education` | Éducation |  | à créer |
+| `graduation` | Diplômé |  | à créer |
+| `book-open` | Livre ouvert |  | à créer |
+| `notebook` | Cahier |  | à créer |
+| `pen` | Stylo |  | à créer |
+| `slate` | Ardoise |  | à créer |
+| `chalkboard` | Tableau noir |  | à créer |
+| `backpack` | Cartable |  | à créer |
+| `teacher` | Enseignant |  | à créer |
+| `student` | Élève |  | à créer |
+| `quran-school` | École coranique / tablette |  | à créer |
+| `library` | Bibliothèque |  | à créer |
+| `exam` | Examen |  | à créer |
+| `certificate-edu` | Attestation |  | à créer |
+| `lightbulb` | Idée |  | à créer |
+| `alphabet` | Alphabétisation (N'Ko, ajami, latin) |  | à créer |
+| `quiz` | Quiz |  | à créer |
+| `course` | Formation en ligne |  | à créer |
 
 <a id="travail"></a>
 ## Travail, métiers et artisanat (30, P3)
 
 Motif par défaut : `turusina` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `briefcase.svg` | Mallette / emploi |  |
-| `job.svg` | Offre d'emploi |  |
-| `tools.svg` | Outils |  |
-| `hammer.svg` | Marteau |  |
-| `wrench.svg` | Clé à molette |  |
-| `mechanic.svg` | Mécanicien |  |
-| `welder.svg` | Soudeur |  |
-| `mason.svg` | Maçon |  |
-| `carpenter.svg` | Menuisier |  |
-| `blacksmith.svg` | Forgeron |  |
-| `potter.svg` | Potière |  |
-| `weaver.svg` | Tisserand / métier à tisser |  |
-| `dyer.svg` | Teinturière (bogolan, indigo) |  |
-| `calame.svg` | Calame (outil du bogolan) |  |
-| `basket-weaver.svg` | Vannerie |  |
-| `jeweler.svg` | Bijoutier |  |
-| `farmer-job.svg` | Agriculteur |  |
-| `fisher.svg` | Pêcheur |  |
-| `herder.svg` | Éleveur |  |
-| `driver-job.svg` | Chauffeur |  |
-| `vendor.svg` | Vendeuse ambulante |  |
-| `domestic.svg` | Employé·e de maison |  |
-| `security-guard.svg` | Gardien |  |
-| `freelance.svg` | Indépendant |  |
-| `meeting.svg` | Réunion | `koli-so` |
-| `presentation.svg` | Présentation |  |
-| `target.svg` | Objectif | `koli-so` |
-| `rocket.svg` | Lancement |  |
-| `trophy.svg` | Trophée | `bara-feere` |
-| `medal.svg` | Médaille |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `briefcase` | Mallette / emploi |  | à créer |
+| `job` | Offre d'emploi |  | à créer |
+| `tools` | Outils |  | à créer |
+| `hammer` | Marteau |  | à créer |
+| `wrench` | Clé à molette |  | à créer |
+| `mechanic` | Mécanicien |  | à créer |
+| `welder` | Soudeur |  | à créer |
+| `mason` | Maçon |  | à créer |
+| `carpenter` | Menuisier |  | à créer |
+| `blacksmith` | Forgeron |  | à créer |
+| `potter` | Potière |  | à créer |
+| `weaver` | Tisserand / métier à tisser |  | à créer |
+| `dyer` | Teinturière (bogolan, indigo) |  | à créer |
+| `calame` | Calame (outil du bogolan) |  | à créer |
+| `basket-weaver` | Vannerie |  | à créer |
+| `jeweler` | Bijoutier |  | à créer |
+| `farmer-job` | Agriculteur |  | à créer |
+| `fisher` | Pêcheur |  | à créer |
+| `herder` | Éleveur |  | à créer |
+| `driver-job` | Chauffeur |  | à créer |
+| `vendor` | Vendeuse ambulante |  | à créer |
+| `domestic` | Employé·e de maison |  | à créer |
+| `security-guard` | Gardien |  | à créer |
+| `freelance` | Indépendant |  | à créer |
+| `meeting` | Réunion | `koli-so` | à créer |
+| `presentation` | Présentation |  | à créer |
+| `target` | Objectif | `koli-so` | à créer |
+| `rocket` | Lancement |  | à créer |
+| `trophy` | Trophée | `bara-feere` | à créer |
+| `medal` | Médaille |  | à créer |
 
 <a id="agriculture"></a>
 ## Agriculture, élevage et nature (39, P3)
 
 Motif par défaut : `croisillon` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `field.svg` | Champ | `croisillon` |
-| `seed.svg` | Semence |  |
-| `sprout.svg` | Pousse |  |
-| `hoe.svg` | Daba (houe) |  |
-| `machete.svg` | Machette |  |
-| `tractor.svg` | Tracteur |  |
-| `irrigation.svg` | Irrigation |  |
-| `harvest.svg` | Récolte |  |
-| `cotton.svg` | Coton |  |
-| `cocoa.svg` | Cacao |  |
-| `coffee-plant.svg` | Caféier |  |
-| `cashew.svg` | Anacarde |  |
-| `sesame.svg` | Sésame |  |
-| `sorghum.svg` | Sorgho |  |
-| `onion-field.svg` | Maraîchage |  |
-| `cow.svg` | Vache / zébu |  |
-| `goat.svg` | Chèvre | `bantoron` |
-| `sheep.svg` | Mouton |  |
-| `chicken-farm.svg` | Poule |  |
-| `donkey.svg` | Âne |  |
-| `camel.svg` | Dromadaire |  |
-| `horse.svg` | Cheval |  |
-| `fishnet.svg` | Filet de pêche |  |
-| `bee.svg` | Abeille / miel |  |
-| `baobab.svg` | Baobab |  |
-| `palm.svg` | Palmier |  |
-| `tree.svg` | Arbre |  |
-| `leaf.svg` | Feuille |  |
-| `flower.svg` | Fleur | `bara-feere` |
-| `calabash-plant.svg` | Calebassier | `bara-feere` |
-| `crocodile.svg` | Crocodile | `dantigimari` |
-| `snake.svg` | Serpent | `sasira` |
-| `chameleon.svg` | Caméléon |  |
-| `bird.svg` | Oiseau | `konosen` |
-| `lizard.svg` | Margouillat |  |
-| `lion.svg` | Lion |  |
-| `elephant.svg` | Éléphant |  |
-| `recycle.svg` | Recyclage | `sa-kurulen` |
-| `eco.svg` | Écologie |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `field` | Champ | `croisillon` | à créer |
+| `seed` | Semence |  | à créer |
+| `sprout` | Pousse |  | à créer |
+| `hoe` | Daba (houe) |  | à créer |
+| `machete` | Machette |  | à créer |
+| `tractor` | Tracteur |  | à créer |
+| `irrigation` | Irrigation |  | à créer |
+| `harvest` | Récolte |  | à créer |
+| `cotton` | Coton |  | à créer |
+| `cocoa` | Cacao |  | à créer |
+| `coffee-plant` | Caféier |  | à créer |
+| `cashew` | Anacarde |  | à créer |
+| `sesame` | Sésame |  | à créer |
+| `sorghum` | Sorgho |  | à créer |
+| `onion-field` | Maraîchage |  | à créer |
+| `cow` | Vache / zébu |  | à créer |
+| `goat` | Chèvre | `bantoron` | à créer |
+| `sheep` | Mouton |  | à créer |
+| `chicken-farm` | Poule |  | à créer |
+| `donkey` | Âne |  | à créer |
+| `camel` | Dromadaire |  | à créer |
+| `horse` | Cheval |  | à créer |
+| `fishnet` | Filet de pêche |  | à créer |
+| `bee` | Abeille / miel |  | à créer |
+| `baobab` | Baobab |  | à créer |
+| `palm` | Palmier |  | à créer |
+| `tree` | Arbre |  | à créer |
+| `leaf` | Feuille |  | à créer |
+| `flower` | Fleur | `bara-feere` | à créer |
+| `calabash-plant` | Calebassier | `bara-feere` | à créer |
+| `crocodile` | Crocodile | `dantigimari` | à créer |
+| `snake` | Serpent | `sasira` | à créer |
+| `chameleon` | Caméléon |  | à créer |
+| `bird` | Oiseau | `konosen` | à créer |
+| `lizard` | Margouillat |  | à créer |
+| `lion` | Lion |  | à créer |
+| `elephant` | Éléphant |  | à créer |
+| `recycle` | Recyclage | `sa-kurulen` | à créer |
+| `eco` | Écologie |  | à créer |
 
 <a id="meteo"></a>
 ## Météo et environnement (17, P3)
 
 Motif par défaut : `points` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `sun.svg` | Soleil | `koli-so` |
-| `moon.svg` | Lune |  |
-| `cloud-sun.svg` | Éclaircies |  |
-| `rain.svg` | Pluie |  |
-| `storm.svg` | Orage | `kaana-nonkon` |
-| `lightning.svg` | Éclair | `kaana-nonkon` |
-| `wind.svg` | Vent |  |
-| `harmattan.svg` | Harmattan (vent de poussière) |  |
-| `dust.svg` | Poussière / brume sèche |  |
-| `heat.svg` | Forte chaleur |  |
-| `temperature.svg` | Température |  |
-| `humidity.svg` | Humidité |  |
-| `flood.svg` | Inondation |  |
-| `drought.svg` | Sécheresse |  |
-| `rainbow.svg` | Arc-en-ciel |  |
-| `rainy-season.svg` | Saison des pluies |  |
-| `dry-season.svg` | Saison sèche |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `sun` | Soleil | `koli-so` | à créer |
+| `moon` | Lune |  | à créer |
+| `cloud-sun` | Éclaircies |  | à créer |
+| `rain` | Pluie |  | à créer |
+| `storm` | Orage | `kaana-nonkon` | à créer |
+| `lightning` | Éclair | `kaana-nonkon` | à créer |
+| `wind` | Vent |  | à créer |
+| `harmattan` | Harmattan (vent de poussière) |  | à créer |
+| `dust` | Poussière / brume sèche |  | à créer |
+| `heat` | Forte chaleur |  | à créer |
+| `temperature` | Température |  | à créer |
+| `humidity` | Humidité |  | à créer |
+| `flood` | Inondation |  | à créer |
+| `drought` | Sécheresse |  | à créer |
+| `rainbow` | Arc-en-ciel |  | à créer |
+| `rainy-season` | Saison des pluies |  | à créer |
+| `dry-season` | Saison sèche |  | à créer |
 
 <a id="culture"></a>
 ## Culture, fêtes et loisirs (37, P3)
 
 Motif par défaut : `donkonkolo` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `djembe.svg` | Djembé | `donkonkolo` |
-| `tama.svg` | Tama (tambour d'aisselle) | `donkonkolo` |
-| `kora.svg` | Kora |  |
-| `balafon.svg` | Balafon |  |
-| `ngoni.svg` | N'goni |  |
-| `flute.svg` | Flûte peule |  |
-| `dance.svg` | Danse |  |
-| `ritual-mask.svg` | Masque traditionnel |  |
-| `statue.svg` | Statuette |  |
-| `mudcloth.svg` | Tissu bogolan |  |
-| `kente-strip.svg` | Bande tissée |  |
-| `cowrie.svg` | Cauri | `bara-feere` |
-| `calabash-deco.svg` | Calebasse décorée |  |
-| `griot-alt.svg` | Récit / conte |  |
-| `wedding.svg` | Mariage | `koli-so` |
-| `baptism.svg` | Baptême |  |
-| `funeral.svg` | Deuil |  |
-| `tabaski.svg` | Tabaski (mouton) |  |
-| `ramadan.svg` | Ramadan (croissant) |  |
-| `korite.svg` | Korité / fin du jeûne |  |
-| `christmas.svg` | Noël |  |
-| `new-year.svg` | Nouvel an |  |
-| `independence.svg` | Fête de l'indépendance |  |
-| `party.svg` | Fête |  |
-| `gift.svg` | Cadeau | `bara-feere` |
-| `cake.svg` | Gâteau |  |
-| `photo-booth.svg` | Photo souvenir |  |
-| `cinema.svg` | Cinéma |  |
-| `theatre.svg` | Théâtre |  |
-| `festival.svg` | Festival |  |
-| `prayer.svg` | Prière |  |
-| `prayer-mat.svg` | Tapis de prière |  |
-| `rosary.svg` | Chapelet |  |
-| `awale.svg` | Awalé (jeu) |  |
-| `cards.svg` | Jeu de cartes |  |
-| `game.svg` | Jeu vidéo |  |
-| `dice.svg` | Dés |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `djembe` | Djembé | `donkonkolo` | à créer |
+| `tama` | Tama (tambour d'aisselle) | `donkonkolo` | à créer |
+| `kora` | Kora |  | à créer |
+| `balafon` | Balafon |  | à créer |
+| `ngoni` | N'goni |  | à créer |
+| `flute` | Flûte peule |  | à créer |
+| `dance` | Danse |  | à créer |
+| `ritual-mask` | Masque traditionnel |  | à créer |
+| `statue` | Statuette |  | à créer |
+| `mudcloth` | Tissu bogolan |  | à créer |
+| `kente-strip` | Bande tissée |  | à créer |
+| `cowrie` | Cauri | `bara-feere` | à créer |
+| `calabash-deco` | Calebasse décorée |  | à créer |
+| `griot-alt` | Récit / conte |  | à créer |
+| `wedding` | Mariage | `koli-so` | à créer |
+| `baptism` | Baptême |  | à créer |
+| `funeral` | Deuil |  | à créer |
+| `tabaski` | Tabaski (mouton) |  | à créer |
+| `ramadan` | Ramadan (croissant) |  | à créer |
+| `korite` | Korité / fin du jeûne |  | à créer |
+| `christmas` | Noël |  | à créer |
+| `new-year` | Nouvel an |  | à créer |
+| `independence` | Fête de l'indépendance |  | à créer |
+| `party` | Fête |  | à créer |
+| `gift` | Cadeau | `bara-feere` | à créer |
+| `cake` | Gâteau |  | à créer |
+| `photo-booth` | Photo souvenir |  | à créer |
+| `cinema` | Cinéma |  | à créer |
+| `theatre` | Théâtre |  | à créer |
+| `festival` | Festival |  | à créer |
+| `prayer` | Prière |  | à créer |
+| `prayer-mat` | Tapis de prière |  | à créer |
+| `rosary` | Chapelet |  | à créer |
+| `awale` | Awalé (jeu) |  | à créer |
+| `cards` | Jeu de cartes |  | à créer |
+| `game` | Jeu vidéo |  | à créer |
+| `dice` | Dés |  | à créer |
 
 <a id="sport"></a>
 ## Sport (14, P3)
 
 Motif par défaut : `koli-so` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `football.svg` | Football |  |
-| `ball.svg` | Ballon |  |
-| `goal.svg` | But |  |
-| `basketball.svg` | Basketball |  |
-| `running.svg` | Course |  |
-| `wrestling.svg` | Lutte traditionnelle |  |
-| `boxing.svg` | Boxe |  |
-| `cycling.svg` | Cyclisme |  |
-| `swimming.svg` | Natation |  |
-| `gym.svg` | Musculation |  |
-| `whistle.svg` | Sifflet |  |
-| `jersey.svg` | Maillot |  |
-| `tournament.svg` | Tournoi | `dankalan-ko` |
-| `podium.svg` | Podium |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `football` | Football |  | à créer |
+| `ball` | Ballon |  | à créer |
+| `goal` | But |  | à créer |
+| `basketball` | Basketball |  | à créer |
+| `running` | Course |  | à créer |
+| `wrestling` | Lutte traditionnelle |  | à créer |
+| `boxing` | Boxe |  | à créer |
+| `cycling` | Cyclisme |  | à créer |
+| `swimming` | Natation |  | à créer |
+| `gym` | Musculation |  | à créer |
+| `whistle` | Sifflet |  | à créer |
+| `jersey` | Maillot |  | à créer |
+| `tournament` | Tournoi | `dankalan-ko` | à créer |
+| `podium` | Podium |  | à créer |
 
 <a id="emotions"></a>
 ## Émotions et réactions (15, P2)
 
 Motif par défaut : `koli-so` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `smile.svg` | Sourire |  |
-| `laugh.svg` | Rire |  |
-| `love.svg` | Amour |  |
-| `sad.svg` | Triste |  |
-| `angry.svg` | En colère |  |
-| `surprised.svg` | Surpris |  |
-| `thinking.svg` | Réflexion |  |
-| `thumbs-up.svg` | Pouce levé |  |
-| `thumbs-down.svg` | Pouce baissé |  |
-| `clap.svg` | Applaudir |  |
-| `pray-hands.svg` | Merci / prière |  |
-| `celebrate.svg` | Bravo |  |
-| `ok-hand.svg` | D'accord |  |
-| `hundred.svg` | 100 % |  |
-| `eyes.svg` | Regard |  |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `smile` | Sourire |  | à créer |
+| `laugh` | Rire |  | à créer |
+| `love` | Amour |  | à créer |
+| `sad` | Triste |  | à créer |
+| `angry` | En colère |  | à créer |
+| `surprised` | Surpris |  | à créer |
+| `thinking` | Réflexion |  | à créer |
+| `thumbs-up` | Pouce levé |  | à créer |
+| `thumbs-down` | Pouce baissé |  | à créer |
+| `clap` | Applaudir |  | à créer |
+| `pray-hands` | Merci / prière |  | à créer |
+| `celebrate` | Bravo |  | à créer |
+| `ok-hand` | D'accord |  | à créer |
+| `hundred` | 100 % |  | à créer |
+| `eyes` | Regard |  | à créer |
 
 <a id="vupay"></a>
 ## Spécifiques Vupay (17, P1)
 
 Motif par défaut : `koli-so` (sauf indication contraire).
 
-| Fichier | Icône | Motif |
-|---|---|---|
-| `vupay-ring.svg` | Anneau de statut Vupay (signature) | `koli-so` |
-| `proof-upload.svg` | Envoyer une preuve | `bantoron` |
-| `proof-pending.svg` | Preuve en vérification | `sogosen` |
-| `proof-approved.svg` | Preuve validée | `bara-feere` |
-| `proof-rejected.svg` | Preuve refusée | `juru-sarabali` |
-| `campaign-create.svg` | Créer une campagne | `donkonkolo` |
-| `campaign-live.svg` | Campagne active | `donkonkolo` |
-| `campaign-ended.svg` | Campagne terminée |  |
-| `diffuseur.svg` | Espace diffuseur | `kaana-nonkon` |
-| `annonceur.svg` | Espace annonceur | `donkonkolo` |
-| `audience-size.svg` | Taille d'audience | `turusina` |
-| `views-24h.svg` | Vues sur 24 h | `koli-so` |
-| `gains-fcfa.svg` | Gains en FCFA | `bara-feere` |
-| `withdraw-mm.svg` | Retrait mobile money |  |
-| `moderation.svg` | Modération | `dantigimari` |
-| `identity-check.svg` | Vérification d'identité | `bantoron` |
-| `journal.svg` | Journal d'audit (ledger) | `croisillon` |
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `vupay-ring` | Anneau de statut Vupay (signature) | `koli-so` | à créer |
+| `proof-upload` | Envoyer une preuve | `bantoron` | à créer |
+| `proof-pending` | Preuve en vérification | `sogosen` | à créer |
+| `proof-approved` | Preuve validée | `bara-feere` | à créer |
+| `proof-rejected` | Preuve refusée | `juru-sarabali` | à créer |
+| `campaign-create` | Créer une campagne | `donkonkolo` | à créer |
+| `campaign-live` | Campagne active | `donkonkolo` | à créer |
+| `campaign-ended` | Campagne terminée |  | à créer |
+| `diffuseur` | Espace diffuseur | `kaana-nonkon` | à créer |
+| `annonceur` | Espace annonceur | `donkonkolo` | à créer |
+| `audience-size` | Taille d'audience | `turusina` | à créer |
+| `views-24h` | Vues sur 24 h | `koli-so` | à créer |
+| `gains-fcfa` | Gains en FCFA | `bara-feere` | à créer |
+| `withdraw-mm` | Retrait mobile money |  | à créer |
+| `moderation` | Modération | `dantigimari` | à créer |
+| `identity-check` | Vérification d'identité | `bantoron` | à créer |
+| `journal` | Journal d'audit (ledger) | `croisillon` | à créer |

@@ -3,6 +3,135 @@
  "version": "0.1.0",
  "grille": "24x24",
  "trait": "1.75 à 2 px, extrémités arrondies",
+ "collection_existante": {
+  "principale": [
+   "moto-taxi",
+   "voiture",
+   "livraison",
+   "accueil",
+   "destination",
+   "assistance",
+   "compte",
+   "paiement",
+   "securite"
+  ],
+  "actions": [
+   "accepter",
+   "annuler",
+   "demarrer",
+   "terminer",
+   "partager-trajet",
+   "ajouter-etape",
+   "favoris",
+   "recu",
+   "signaler",
+   "photo-vehicule",
+   "hors-ligne",
+   "en-ligne"
+  ],
+  "utilitaires": [
+   "rechercher",
+   "me-localiser",
+   "langue",
+   "ecouter",
+   "ajouter-photo",
+   "importer-document",
+   "reprendre-photo",
+   "agrandir",
+   "actualiser",
+   "informations",
+   "verrouiller",
+   "deconnexion"
+  ],
+  "confiance": [
+   "client",
+   "chauffeur",
+   "selfie",
+   "telephone",
+   "code-sms",
+   "e-mail",
+   "confidentialite",
+   "conditions",
+   "contact-urgence",
+   "objet-oublie",
+   "guide-audio",
+   "tutoriel"
+  ],
+  "statuts": [
+   "recherche-chauffeur",
+   "chauffeur-trouve",
+   "chauffeur-en-route",
+   "chauffeur-arrive",
+   "client-attendu",
+   "course-en-cours",
+   "validation-en-cours",
+   "document-valide",
+   "document-a-corriger",
+   "operation-reussie",
+   "erreur",
+   "connexion-perdue"
+  ],
+  "commandes": [
+   "modifier",
+   "enregistrer",
+   "supprimer",
+   "telecharger",
+   "filtrer",
+   "trier",
+   "retour",
+   "suivant",
+   "fermer",
+   "menu",
+   "afficher",
+   "masquer"
+  ],
+  "lieux": [
+   "domicile",
+   "travail",
+   "marche",
+   "aeroport",
+   "gare-routiere",
+   "hopital",
+   "ecole",
+   "hotel",
+   "restaurant",
+   "station-service",
+   "pont",
+   "point-de-rencontre"
+  ],
+  "trajets": [
+   "depart",
+   "arrivee",
+   "distance",
+   "duree-trajet",
+   "passagers",
+   "bagages",
+   "casque",
+   "ceinture",
+   "accessibilite",
+   "especes",
+   "monnaie",
+   "aller-retour"
+  ],
+  "suite": [
+   "apparence",
+   "navigation",
+   "temps-attente",
+   "parametres",
+   "appel",
+   "messages",
+   "message-vocal",
+   "notifications",
+   "identite",
+   "permis-conduire",
+   "assurance",
+   "carte-grise",
+   "historique",
+   "avis",
+   "course-planifiee",
+   "sos"
+  ]
+ },
  "motifs": [
   {
    "id": "koli-so",
@@ -112,312 +241,374 @@
     {
      "slug": "home",
      "nom": "Accueil",
-     "motif": null
+     "motif": null,
+     "existe": "accueil"
     },
     {
      "slug": "menu",
      "nom": "Menu (hamburger)",
-     "motif": null
+     "motif": null,
+     "existe": "menu"
     },
     {
      "slug": "close",
      "nom": "Fermer",
-     "motif": null
+     "motif": null,
+     "existe": "fermer"
     },
     {
      "slug": "back",
      "nom": "Retour",
-     "motif": null
+     "motif": null,
+     "existe": "retour"
     },
     {
      "slug": "forward",
      "nom": "Suivant",
-     "motif": null
+     "motif": null,
+     "existe": "suivant"
     },
     {
      "slug": "chevron-up",
      "nom": "Chevron haut",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chevron-down",
      "nom": "Chevron bas",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chevron-left",
      "nom": "Chevron gauche",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chevron-right",
      "nom": "Chevron droite",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "arrow-up",
      "nom": "Flèche haut",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "arrow-down",
      "nom": "Flèche bas",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "arrow-left",
      "nom": "Flèche gauche",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "arrow-right",
      "nom": "Flèche droite",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "arrow-up-right",
      "nom": "Lien sortant",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "external-link",
      "nom": "Ouvrir à l'extérieur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "more-horizontal",
      "nom": "Plus d'options (horizontal)",
-     "motif": "sogosen"
+     "motif": "sogosen",
+     "existe": null
     },
     {
      "slug": "more-vertical",
      "nom": "Plus d'options (vertical)",
-     "motif": "sogosen"
+     "motif": "sogosen",
+     "existe": null
     },
     {
      "slug": "search",
      "nom": "Rechercher",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": "rechercher"
     },
     {
      "slug": "filter",
      "nom": "Filtrer",
-     "motif": "croisillon"
+     "motif": "croisillon",
+     "existe": "filtrer"
     },
     {
      "slug": "sort",
      "nom": "Trier",
-     "motif": null
+     "motif": null,
+     "existe": "trier"
     },
     {
      "slug": "sort-asc",
      "nom": "Tri croissant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sort-desc",
      "nom": "Tri décroissant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "grid",
      "nom": "Vue grille",
-     "motif": "dankalan-ko"
+     "motif": "dankalan-ko",
+     "existe": null
     },
     {
      "slug": "list",
      "nom": "Vue liste",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dashboard",
      "nom": "Tableau de bord",
-     "motif": "dankalan-ko"
+     "motif": "dankalan-ko",
+     "existe": null
     },
     {
      "slug": "sidebar",
      "nom": "Panneau latéral",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "expand",
      "nom": "Agrandir",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "collapse",
      "nom": "Réduire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fullscreen",
      "nom": "Plein écran",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "exit-fullscreen",
      "nom": "Quitter le plein écran",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "maximize",
      "nom": "Maximiser",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "minimize",
      "nom": "Minimiser",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "settings",
      "nom": "Paramètres",
-     "motif": null
+     "motif": null,
+     "existe": "parametres"
     },
     {
      "slug": "sliders",
      "nom": "Réglages",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tune",
      "nom": "Ajuster",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "apps",
      "nom": "Applications",
-     "motif": "dankalan-ko"
+     "motif": "dankalan-ko",
+     "existe": null
     },
     {
      "slug": "layers",
      "nom": "Calques",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tabs",
      "nom": "Onglets",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "drag-handle",
      "nom": "Poignée de glisser",
-     "motif": "points"
+     "motif": "points",
+     "existe": null
     },
     {
      "slug": "pin",
      "nom": "Épingler",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "unpin",
      "nom": "Désépingler",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bookmark",
      "nom": "Signet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bookmark-filled",
      "nom": "Signet actif",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "help",
      "nom": "Aide",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "info",
      "nom": "Information",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": "informations"
     },
     {
      "slug": "language",
      "nom": "Langue",
-     "motif": null
+     "motif": null,
+     "existe": "langue"
     },
     {
      "slug": "translate",
      "nom": "Traduire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "zoom-in",
      "nom": "Zoom avant",
-     "motif": null
+     "motif": null,
+     "existe": "agrandir"
     },
     {
      "slug": "zoom-out",
      "nom": "Zoom arrière",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "refresh",
      "nom": "Actualiser",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": "actualiser"
     },
     {
      "slug": "loader",
      "nom": "Chargement",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "first-page",
      "nom": "Première page",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "last-page",
      "nom": "Dernière page",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "scroll-top",
      "nom": "Remonter en haut",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "breadcrumb",
      "nom": "Fil d'Ariane",
-     "motif": "sogosen"
+     "motif": "sogosen",
+     "existe": null
     },
     {
      "slug": "command",
      "nom": "Commande / raccourci",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "keyboard",
      "nom": "Clavier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "toggle-on",
      "nom": "Interrupteur activé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "toggle-off",
      "nom": "Interrupteur désactivé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "radio-button",
      "nom": "Bouton radio",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "checkbox",
      "nom": "Case à cocher",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "checkbox-checked",
      "nom": "Case cochée",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -431,297 +622,356 @@
     {
      "slug": "add",
      "nom": "Ajouter",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "add-circle",
      "nom": "Ajouter (cercle)",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "remove",
      "nom": "Retirer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "edit",
      "nom": "Modifier",
-     "motif": null
+     "motif": null,
+     "existe": "modifier"
     },
     {
      "slug": "pencil",
      "nom": "Crayon (calame)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "delete",
      "nom": "Supprimer",
-     "motif": null
+     "motif": null,
+     "existe": "supprimer"
     },
     {
      "slug": "trash",
      "nom": "Corbeille",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "archive",
      "nom": "Archiver",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "unarchive",
      "nom": "Désarchiver",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "save",
      "nom": "Enregistrer",
-     "motif": null
+     "motif": null,
+     "existe": "enregistrer"
     },
     {
      "slug": "copy",
      "nom": "Copier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "paste",
      "nom": "Coller",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cut",
      "nom": "Couper",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "duplicate",
      "nom": "Dupliquer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "undo",
      "nom": "Annuler",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "redo",
      "nom": "Rétablir",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "download",
      "nom": "Télécharger",
-     "motif": null
+     "motif": null,
+     "existe": "telecharger"
     },
     {
      "slug": "upload",
      "nom": "Téléverser",
-     "motif": null
+     "motif": null,
+     "existe": "importer-document"
     },
     {
      "slug": "import",
      "nom": "Importer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "export",
      "nom": "Exporter",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "share",
      "nom": "Partager",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": "partager-trajet"
     },
     {
      "slug": "send",
      "nom": "Envoyer",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "print",
      "nom": "Imprimer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "scan",
      "nom": "Scanner",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "qr-code",
      "nom": "QR code",
-     "motif": "croisillon"
+     "motif": "croisillon",
+     "existe": null
     },
     {
      "slug": "qr-scan",
      "nom": "Scanner un QR code",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "barcode",
      "nom": "Code-barres",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "link",
      "nom": "Lien",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "unlink",
      "nom": "Supprimer le lien",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "attach",
      "nom": "Joindre un fichier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "lock",
      "nom": "Verrouiller",
-     "motif": null
+     "motif": null,
+     "existe": "verrouiller"
     },
     {
      "slug": "unlock",
      "nom": "Déverrouiller",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "eye",
      "nom": "Afficher",
-     "motif": null
+     "motif": null,
+     "existe": "afficher"
     },
     {
      "slug": "eye-off",
      "nom": "Masquer",
-     "motif": null
+     "motif": null,
+     "existe": "masquer"
     },
     {
      "slug": "login",
      "nom": "Se connecter",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "logout",
      "nom": "Se déconnecter",
-     "motif": null
+     "motif": null,
+     "existe": "deconnexion"
     },
     {
      "slug": "sync",
      "nom": "Synchroniser",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "reply",
      "nom": "Répondre",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "reply-all",
      "nom": "Répondre à tous",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "forward-msg",
      "nom": "Transférer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "flag",
      "nom": "Signaler",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "report",
      "nom": "Signaler un abus",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": "signaler"
     },
     {
      "slug": "block",
      "nom": "Bloquer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mute",
      "nom": "Couper le son",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "unmute",
      "nom": "Rétablir le son",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "play",
      "nom": "Lecture",
-     "motif": null
+     "motif": null,
+     "existe": "demarrer"
     },
     {
      "slug": "pause",
      "nom": "Pause",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "stop",
      "nom": "Arrêt",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "record",
      "nom": "Enregistrer (rec)",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "skip-next",
      "nom": "Suivant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "skip-previous",
      "nom": "Précédent",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "shuffle",
      "nom": "Aléatoire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "repeat",
      "nom": "Répéter",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "volume",
      "nom": "Volume",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": "ecouter"
     },
     {
      "slug": "rotate",
      "nom": "Pivoter",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "crop",
      "nom": "Recadrer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "magic",
      "nom": "Retouche automatique",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "select-all",
      "nom": "Tout sélectionner",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "drag",
      "nom": "Glisser-déposer",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -735,152 +985,182 @@
     {
      "slug": "check",
      "nom": "Validé",
-     "motif": null
+     "motif": null,
+     "existe": "accepter"
     },
     {
      "slug": "check-circle",
      "nom": "Succès",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": "operation-reussie"
     },
     {
      "slug": "check-double",
      "nom": "Lu / double coche",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "x-circle",
      "nom": "Erreur",
-     "motif": null
+     "motif": null,
+     "existe": "annuler"
     },
     {
      "slug": "alert-triangle",
      "nom": "Attention",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "alert-circle",
      "nom": "Alerte",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": "erreur"
     },
     {
      "slug": "info-circle",
      "nom": "Info",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "help-circle",
      "nom": "Question",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "clock",
      "nom": "En attente",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hourglass",
      "nom": "Sablier / délai",
-     "motif": null
+     "motif": null,
+     "existe": "temps-attente"
     },
     {
      "slug": "pending",
      "nom": "En cours",
-     "motif": "sogosen"
+     "motif": "sogosen",
+     "existe": null
     },
     {
      "slug": "verified",
      "nom": "Vérifié / certifié",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": "document-valide"
     },
     {
      "slug": "badge",
      "nom": "Badge",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "shield-check",
      "nom": "Protégé",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": "securite"
     },
     {
      "slug": "ban",
      "nom": "Interdit",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "new",
      "nom": "Nouveau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "star",
      "nom": "Favori",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": "favoris"
     },
     {
      "slug": "star-filled",
      "nom": "Favori actif",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "heart",
      "nom": "J'aime",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "heart-filled",
      "nom": "J'aime actif",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sparkle",
      "nom": "Mise en avant",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "fire",
      "nom": "Tendance",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "trending-up",
      "nom": "Hausse",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "trending-down",
      "nom": "Baisse",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "offline",
      "nom": "Hors ligne",
-     "motif": null
+     "motif": null,
+     "existe": "hors-ligne"
     },
     {
      "slug": "online",
      "nom": "En ligne",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": "en-ligne"
     },
     {
      "slug": "wifi-off",
      "nom": "Pas de connexion",
-     "motif": null
+     "motif": null,
+     "existe": "connexion-perdue"
     },
     {
      "slug": "empty",
      "nom": "État vide",
-     "motif": "points"
+     "motif": "points",
+     "existe": null
     },
     {
      "slug": "construction",
      "nom": "En travaux",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "maintenance",
      "nom": "Maintenance",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -894,202 +1174,242 @@
     {
      "slug": "like",
      "nom": "J'aime",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dislike",
      "nom": "Je n'aime pas",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "comment",
      "nom": "Commentaire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "comments",
      "nom": "Discussion",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chat",
      "nom": "Messagerie",
-     "motif": null
+     "motif": null,
+     "existe": "messages"
     },
     {
      "slug": "chat-bubble",
      "nom": "Bulle de message",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chat-group",
      "nom": "Groupe de discussion",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "mention",
      "nom": "Mention (@)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hashtag",
      "nom": "Hashtag (#)",
-     "motif": "croisillon"
+     "motif": "croisillon",
+     "existe": null
     },
     {
      "slug": "story",
      "nom": "Story / statut (anneau 24 h)",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "status-ring",
      "nom": "Anneau de statut qui se vide",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "reel",
      "nom": "Vidéo courte",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "live",
      "nom": "Direct",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "follow",
      "nom": "Suivre",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "unfollow",
      "nom": "Ne plus suivre",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "followers",
      "nom": "Abonnés",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "subscribe",
      "nom": "S'abonner",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "repost",
      "nom": "Republier",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "quote",
      "nom": "Citer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "views",
      "nom": "Vues",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "reach",
      "nom": "Portée",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "engagement",
      "nom": "Engagement",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "audience",
      "nom": "Audience",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "influencer",
      "nom": "Influenceur / diffuseur",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "campaign",
      "nom": "Campagne",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "megaphone",
      "nom": "Mégaphone / annonce",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "broadcast",
      "nom": "Diffusion",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "post",
      "nom": "Publication",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "feed",
      "nom": "Fil d'actualité",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "poll",
      "nom": "Sondage",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "emoji",
      "nom": "Émoji",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sticker",
      "nom": "Autocollant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "gif",
      "nom": "GIF",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "voice-note",
      "nom": "Note vocale",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": "message-vocal"
     },
     {
      "slug": "read-receipt",
      "nom": "Accusé de lecture",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "typing",
      "nom": "En train d'écrire",
-     "motif": "sogosen"
+     "motif": "sogosen",
+     "existe": null
     },
     {
      "slug": "community",
      "nom": "Communauté",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "invite",
      "nom": "Inviter",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "referral",
      "nom": "Parrainage",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "leaderboard",
      "nom": "Classement",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -1103,207 +1423,248 @@
     {
      "slug": "whatsapp",
      "nom": "WhatsApp",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "whatsapp-business",
      "nom": "WhatsApp Business",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "facebook",
      "nom": "Facebook",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "messenger",
      "nom": "Messenger",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "instagram",
      "nom": "Instagram",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "threads",
      "nom": "Threads",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tiktok",
      "nom": "TikTok",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "snapchat",
      "nom": "Snapchat",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "telegram",
      "nom": "Telegram",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "x-twitter",
      "nom": "X (Twitter)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "youtube",
      "nom": "YouTube",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "linkedin",
      "nom": "LinkedIn",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "pinterest",
      "nom": "Pinterest",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "discord",
      "nom": "Discord",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "signal-app",
      "nom": "Signal",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "wechat",
      "nom": "WeChat",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "reddit",
      "nom": "Reddit",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "twitch",
      "nom": "Twitch",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bluesky",
      "nom": "Bluesky",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mastodon",
      "nom": "Mastodon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tumblr",
      "nom": "Tumblr",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "vimeo",
      "nom": "Vimeo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "spotify",
      "nom": "Spotify",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "apple-music",
      "nom": "Apple Music",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "deezer",
      "nom": "Deezer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "boomplay",
      "nom": "Boomplay",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "audiomack",
      "nom": "Audiomack",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "soundcloud",
      "nom": "SoundCloud",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "google",
      "nom": "Google",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "apple",
      "nom": "Apple",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "microsoft",
      "nom": "Microsoft",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "github",
      "nom": "GitHub",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "gitlab",
      "nom": "GitLab",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "gmail",
      "nom": "Gmail",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "outlook",
      "nom": "Outlook",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "zoom",
      "nom": "Zoom",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "google-meet",
      "nom": "Google Meet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "teams",
      "nom": "Microsoft Teams",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "play-store",
      "nom": "Google Play",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "app-store",
      "nom": "App Store",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "truecaller",
      "nom": "Truecaller",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -1317,252 +1678,302 @@
     {
      "slug": "wallet",
      "nom": "Portefeuille",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "money",
      "nom": "Billets FCFA",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "coins",
      "nom": "Pièces",
-     "motif": null
+     "motif": null,
+     "existe": "monnaie"
     },
     {
      "slug": "cash",
      "nom": "Espèces",
-     "motif": null
+     "motif": null,
+     "existe": "especes"
     },
     {
      "slug": "fcfa",
      "nom": "Symbole FCFA",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "balance",
      "nom": "Solde",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "earnings",
      "nom": "Gains",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "payout",
      "nom": "Retrait",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "withdraw",
      "nom": "Retrait au guichet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "deposit",
      "nom": "Dépôt",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "transfer",
      "nom": "Transfert",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "send-money",
      "nom": "Envoyer de l'argent",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "receive-money",
      "nom": "Recevoir de l'argent",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "request-money",
      "nom": "Demander de l'argent",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mobile-money",
      "nom": "Mobile money (téléphone + billet)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "agent-point",
      "nom": "Point marchand / agent",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "card",
      "nom": "Carte bancaire",
-     "motif": null
+     "motif": null,
+     "existe": "paiement"
     },
     {
      "slug": "card-contactless",
      "nom": "Paiement sans contact",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "bank",
      "nom": "Banque",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "atm",
      "nom": "Guichet automatique",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "receipt",
      "nom": "Reçu",
-     "motif": null
+     "motif": null,
+     "existe": "recu"
     },
     {
      "slug": "invoice",
      "nom": "Facture",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bill",
      "nom": "Note à payer",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "unpaid",
      "nom": "Impayé",
-     "motif": "juru-sarabali"
+     "motif": "juru-sarabali",
+     "existe": null
     },
     {
      "slug": "debt",
      "nom": "Dette",
-     "motif": "juru-sarabali"
+     "motif": "juru-sarabali",
+     "existe": null
     },
     {
      "slug": "credit",
      "nom": "Crédit",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "loan",
      "nom": "Prêt",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "savings",
      "nom": "Épargne (canari / tirelire)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tontine",
      "nom": "Tontine",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "piggy-bank",
      "nom": "Tirelire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "calculator",
      "nom": "Calculatrice",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "percent",
      "nom": "Pourcentage / commission",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "discount",
      "nom": "Réduction",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "coupon",
      "nom": "Bon de réduction",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "gift-card",
      "nom": "Carte cadeau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bonus",
      "nom": "Bonus",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "cashback",
      "nom": "Remboursement partiel",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "refund",
      "nom": "Remboursement",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "exchange",
      "nom": "Change de devises",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "price-tag",
      "nom": "Prix",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ledger",
      "nom": "Grand livre / journal",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "history",
      "nom": "Historique des transactions",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": "historique"
     },
     {
      "slug": "escrow",
      "nom": "Séquestre",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "secure-payment",
      "nom": "Paiement sécurisé",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "pin-code",
      "nom": "Code PIN",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "otp",
      "nom": "Code à usage unique (SMS)",
-     "motif": null
+     "motif": null,
+     "existe": "code-sms"
     },
     {
      "slug": "chart-bar",
      "nom": "Graphique en barres",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chart-line",
      "nom": "Courbe",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chart-pie",
      "nom": "Camembert",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "budget",
      "nom": "Budget",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -1576,157 +1987,188 @@
     {
      "slug": "shop",
      "nom": "Boutique",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "market-stall",
      "nom": "Étal de marché",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cart",
      "nom": "Panier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cart-add",
      "nom": "Ajouter au panier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bag",
      "nom": "Sac de courses",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "basket",
      "nom": "Panier tressé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "package",
      "nom": "Colis",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "delivery",
      "nom": "Livraison",
-     "motif": "sasira"
+     "motif": "sasira",
+     "existe": "livraison"
     },
     {
      "slug": "delivery-moto",
      "nom": "Livraison à moto",
-     "motif": "sasira"
+     "motif": "sasira",
+     "existe": null
     },
     {
      "slug": "order",
      "nom": "Commande",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "orders",
      "nom": "Commandes",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "stock",
      "nom": "Stock",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "warehouse",
      "nom": "Entrepôt",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "scale",
      "nom": "Balance du marchand",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": null
     },
     {
      "slug": "bargain",
      "nom": "Marchandage (mains)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "catalog",
      "nom": "Catalogue",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "product",
      "nom": "Produit",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "category",
      "nom": "Catégorie",
-     "motif": "dankalan-ko"
+     "motif": "dankalan-ko",
+     "existe": null
     },
     {
      "slug": "tag",
      "nom": "Étiquette",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "store-front",
      "nom": "Devanture",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "kiosk",
      "nom": "Kiosque / cabine",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "boutique-phone",
      "nom": "Kiosque de recharge téléphonique",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fabric",
      "nom": "Tissu / pagne",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sewing",
      "nom": "Couture",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tailor",
      "nom": "Tailleur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hairdresser",
      "nom": "Coiffure / tresses",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "handshake",
      "nom": "Accord conclu",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "customer",
      "nom": "Client",
-     "motif": null
+     "motif": null,
+     "existe": "client"
     },
     {
      "slug": "seller",
      "nom": "Vendeur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "review",
      "nom": "Avis client",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": "avis"
     },
     {
      "slug": "return",
      "nom": "Retour produit",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     }
    ]
   },
@@ -1740,282 +2182,338 @@
     {
      "slug": "house",
      "nom": "Maison",
-     "motif": null
+     "motif": null,
+     "existe": "domicile"
     },
     {
      "slug": "hut",
      "nom": "Case ronde",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "compound",
      "nom": "Concession / cour familiale",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "door",
      "nom": "Porte",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "key",
      "nom": "Clé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bed",
      "nom": "Lit",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mat",
      "nom": "Natte",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chair",
      "nom": "Chaise",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "stool",
      "nom": "Tabouret",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "table",
      "nom": "Table",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "lamp",
      "nom": "Lampe",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "lantern",
      "nom": "Lampe-tempête",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "candle",
      "nom": "Bougie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bulb",
      "nom": "Ampoule",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fan",
      "nom": "Ventilateur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ac",
      "nom": "Climatiseur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tv",
      "nom": "Télévision",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "radio",
      "nom": "Poste de radio",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "fridge",
      "nom": "Réfrigérateur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "stove",
      "nom": "Réchaud à gaz",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "charcoal-stove",
      "nom": "Fourneau à charbon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "gas-bottle",
      "nom": "Bouteille de gaz",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "water-tap",
      "nom": "Robinet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "water-drop",
      "nom": "Goutte d'eau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "jerrycan",
      "nom": "Bidon d'eau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bucket",
      "nom": "Seau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "kettle",
      "nom": "Bouilloire (bouilloire à ablutions)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "broom",
      "nom": "Balai",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "laundry",
      "nom": "Lessive",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "iron",
      "nom": "Fer à repasser",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "soap",
      "nom": "Savon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "shower",
      "nom": "Douche",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "toilet",
      "nom": "Toilettes",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mosquito-net",
      "nom": "Moustiquaire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "generator",
      "nom": "Groupe électrogène",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "solar-panel",
      "nom": "Panneau solaire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "battery",
      "nom": "Batterie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "battery-low",
      "nom": "Batterie faible",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "plug",
      "nom": "Prise",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "power-cut",
      "nom": "Coupure de courant",
-     "motif": "juru-sarabali"
+     "motif": "juru-sarabali",
+     "existe": null
     },
     {
      "slug": "electricity",
      "nom": "Électricité",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "trash-bin",
      "nom": "Poubelle",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "umbrella",
      "nom": "Parapluie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "glasses",
      "nom": "Lunettes",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "watch",
      "nom": "Montre",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "clothes",
      "nom": "Vêtements",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "boubou",
      "nom": "Boubou",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "shoes",
      "nom": "Chaussures",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sandals",
      "nom": "Sandales",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hat",
      "nom": "Chapeau / bonnet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "headwrap",
      "nom": "Foulard / attaché",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "jewelry",
      "nom": "Bijoux",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mirror",
      "nom": "Miroir",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "comb",
      "nom": "Peigne",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "baby",
      "nom": "Bébé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "pet",
      "nom": "Animal de compagnie",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -2029,212 +2527,254 @@
     {
      "slug": "food",
      "nom": "Repas",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "plate",
      "nom": "Assiette",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bowl",
      "nom": "Bol",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "calabash",
      "nom": "Calebasse",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mortar-pestle",
      "nom": "Mortier et pilon",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "pot",
      "nom": "Marmite",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "canari",
      "nom": "Canari (jarre à eau)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "grill",
      "nom": "Grillade / dibiterie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "brochette",
      "nom": "Brochettes",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fish",
      "nom": "Poisson",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fish-grilled",
      "nom": "Poisson braisé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chicken",
      "nom": "Poulet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "meat",
      "nom": "Viande",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "rice",
      "nom": "Riz",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "millet",
      "nom": "Mil",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "maize",
      "nom": "Maïs",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cassava",
      "nom": "Manioc",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "yam",
      "nom": "Igname",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "plantain",
      "nom": "Banane plantain",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "attieke",
      "nom": "Attiéké",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "peanut",
      "nom": "Arachide",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "shea",
      "nom": "Karité",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "baobab-fruit",
      "nom": "Pain de singe (baobab)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mango",
      "nom": "Mangue",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "orange",
      "nom": "Orange",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "coconut",
      "nom": "Noix de coco",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "pepper",
      "nom": "Piment",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "onion",
      "nom": "Oignon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tomato",
      "nom": "Tomate",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bread",
      "nom": "Pain / baguette",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tea",
      "nom": "Thé à la menthe (ataya)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "teapot",
      "nom": "Théière",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "coffee",
      "nom": "Café",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bissap",
      "nom": "Bissap / jus",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "water-sachet",
      "nom": "Sachet d'eau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bottle",
      "nom": "Bouteille",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "soda",
      "nom": "Boisson",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "milk",
      "nom": "Lait",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "egg",
      "nom": "Œuf",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "restaurant",
      "nom": "Restaurant / maquis",
-     "motif": null
+     "motif": null,
+     "existe": "restaurant"
     },
     {
      "slug": "cutlery",
      "nom": "Couverts",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cook",
      "nom": "Cuisinier",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -2248,157 +2788,188 @@
     {
      "slug": "car",
      "nom": "Voiture",
-     "motif": null
+     "motif": null,
+     "existe": "voiture"
     },
     {
      "slug": "taxi",
      "nom": "Taxi",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "moto",
      "nom": "Moto",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "moto-taxi",
      "nom": "Moto-taxi (zémidjan, djakarta, oléyia)",
-     "motif": null
+     "motif": null,
+     "existe": "moto-taxi"
     },
     {
      "slug": "tricycle",
      "nom": "Tricycle",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bus",
      "nom": "Bus",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "minibus",
      "nom": "Minibus (gbaka, sotrama, car rapide)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bush-taxi",
      "nom": "Taxi-brousse",
-     "motif": null
+     "motif": null,
+     "existe": "gare-routiere"
     },
     {
      "slug": "truck",
      "nom": "Camion",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bicycle",
      "nom": "Vélo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "walk",
      "nom": "À pied",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "pirogue",
      "nom": "Pirogue",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "boat",
      "nom": "Bateau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ferry",
      "nom": "Bac",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "train",
      "nom": "Train",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "plane",
      "nom": "Avion",
-     "motif": null
+     "motif": null,
+     "existe": "aeroport"
     },
     {
      "slug": "fuel",
      "nom": "Carburant",
-     "motif": null
+     "motif": null,
+     "existe": "station-service"
     },
     {
      "slug": "fuel-bottle",
      "nom": "Essence en bouteille (bord de route)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "parking",
      "nom": "Stationnement",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "road",
      "nom": "Route",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dirt-road",
      "nom": "Piste",
-     "motif": "sasira"
+     "motif": "sasira",
+     "existe": null
     },
     {
      "slug": "traffic-light",
      "nom": "Feu tricolore",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "roundabout",
      "nom": "Rond-point",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "checkpoint",
      "nom": "Barrage / contrôle",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "ticket",
      "nom": "Billet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "luggage",
      "nom": "Bagages",
-     "motif": null
+     "motif": null,
+     "existe": "bagages"
     },
     {
      "slug": "map-route",
      "nom": "Trajet",
-     "motif": "sasira"
+     "motif": "sasira",
+     "existe": "distance"
     },
     {
      "slug": "gps",
      "nom": "Position GPS",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "ride",
      "nom": "Course",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "driver",
      "nom": "Chauffeur",
-     "motif": null
+     "motif": null,
+     "existe": "chauffeur"
     },
     {
      "slug": "helmet",
      "nom": "Casque",
-     "motif": null
+     "motif": null,
+     "existe": "casque"
     }
    ]
   },
@@ -2412,172 +2983,206 @@
     {
      "slug": "map",
      "nom": "Carte",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "map-pin",
      "nom": "Repère",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": "destination"
     },
     {
      "slug": "location",
      "nom": "Ma position",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": "me-localiser"
     },
     {
      "slug": "navigation",
      "nom": "Navigation",
-     "motif": null
+     "motif": null,
+     "existe": "navigation"
     },
     {
      "slug": "compass",
      "nom": "Boussole",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "globe",
      "nom": "Monde",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "africa",
      "nom": "Afrique",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "country",
      "nom": "Pays",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "city",
      "nom": "Ville",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "village",
      "nom": "Village",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "neighborhood",
      "nom": "Quartier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "market",
      "nom": "Marché",
-     "motif": null
+     "motif": null,
+     "existe": "marche"
     },
     {
      "slug": "mosque",
      "nom": "Mosquée en banco",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "church",
      "nom": "Église",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "school",
      "nom": "École",
-     "motif": null
+     "motif": null,
+     "existe": "ecole"
     },
     {
      "slug": "hospital",
      "nom": "Hôpital",
-     "motif": null
+     "motif": null,
+     "existe": "hopital"
     },
     {
      "slug": "pharmacy",
      "nom": "Pharmacie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bank-building",
      "nom": "Agence bancaire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "post-office",
      "nom": "Poste",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "police",
      "nom": "Police",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "town-hall",
      "nom": "Mairie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "court",
      "nom": "Tribunal",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": null
     },
     {
      "slug": "stadium",
      "nom": "Stade",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "office",
      "nom": "Bureau",
-     "motif": null
+     "motif": null,
+     "existe": "travail"
     },
     {
      "slug": "factory",
      "nom": "Usine",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hotel",
      "nom": "Hôtel",
-     "motif": null
+     "motif": null,
+     "existe": "hotel"
     },
     {
      "slug": "granary",
      "nom": "Grenier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "well",
      "nom": "Puits",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "river",
      "nom": "Fleuve",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bridge",
      "nom": "Pont",
-     "motif": null
+     "motif": null,
+     "existe": "pont"
     },
     {
      "slug": "beach",
      "nom": "Plage",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mountain",
      "nom": "Falaise / montagne",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "desert",
      "nom": "Désert / dune",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "home-address",
      "nom": "Adresse",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -2591,247 +3196,296 @@
     {
      "slug": "phone",
      "nom": "Téléphone",
-     "motif": null
+     "motif": null,
+     "existe": "telephone"
     },
     {
      "slug": "phone-call",
      "nom": "Appel",
-     "motif": null
+     "motif": null,
+     "existe": "appel"
     },
     {
      "slug": "phone-incoming",
      "nom": "Appel entrant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "phone-outgoing",
      "nom": "Appel sortant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "phone-missed",
      "nom": "Appel manqué",
-     "motif": "juru-sarabali"
+     "motif": "juru-sarabali",
+     "existe": null
     },
     {
      "slug": "video-call",
      "nom": "Appel vidéo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "smartphone",
      "nom": "Smartphone",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "feature-phone",
      "nom": "Téléphone à touches",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sms",
      "nom": "SMS",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ussd",
      "nom": "Code USSD (*144#)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mail",
      "nom": "Courriel",
-     "motif": null
+     "motif": null,
+     "existe": "e-mail"
     },
     {
      "slug": "inbox",
      "nom": "Boîte de réception",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "notification",
      "nom": "Notification",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": "notifications"
     },
     {
      "slug": "bell",
      "nom": "Cloche",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "bell-off",
      "nom": "Notifications coupées",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "contact",
      "nom": "Contact",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "contacts",
      "nom": "Répertoire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sim",
      "nom": "Carte SIM",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "airtime",
      "nom": "Crédit téléphonique / recharge",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "data",
      "nom": "Forfait internet",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "wifi",
      "nom": "Wi-Fi",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "signal",
      "nom": "Réseau mobile",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "no-signal",
      "nom": "Pas de réseau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bluetooth",
      "nom": "Bluetooth",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "nfc",
      "nom": "NFC",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "antenna",
      "nom": "Antenne relais",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "laptop",
      "nom": "Ordinateur portable",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "desktop",
      "nom": "Ordinateur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tablet",
      "nom": "Tablette",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "printer",
      "nom": "Imprimante",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "camera",
      "nom": "Appareil photo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "microphone",
      "nom": "Microphone",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "headphones",
      "nom": "Écouteurs",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "speaker",
      "nom": "Haut-parleur",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "charger",
      "nom": "Chargeur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "power-bank",
      "nom": "Batterie externe",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "usb",
      "nom": "USB",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cloud",
      "nom": "Nuage",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cloud-upload",
      "nom": "Envoyer vers le nuage",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cloud-off",
      "nom": "Nuage indisponible",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "server",
      "nom": "Serveur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "database",
      "nom": "Base de données",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "code",
      "nom": "Code",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "terminal",
      "nom": "Terminal",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "api",
      "nom": "API",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bug",
      "nom": "Bogue",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "robot",
      "nom": "Robot / IA",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sparkles-ai",
      "nom": "Assistant IA",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "qr-pay",
      "nom": "Paiement par QR",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -2845,162 +3499,194 @@
     {
      "slug": "image",
      "nom": "Image",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "gallery",
      "nom": "Galerie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "photo-add",
      "nom": "Ajouter une photo",
-     "motif": null
+     "motif": null,
+     "existe": "ajouter-photo"
     },
     {
      "slug": "screenshot",
      "nom": "Capture d'écran",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "video",
      "nom": "Vidéo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "film",
      "nom": "Film",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "music",
      "nom": "Musique",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "audio",
      "nom": "Audio",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "podcast",
      "nom": "Podcast",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "file",
      "nom": "Fichier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "file-text",
      "nom": "Document",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "file-pdf",
      "nom": "PDF",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "file-image",
      "nom": "Fichier image",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "file-audio",
      "nom": "Fichier audio",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "file-video",
      "nom": "Fichier vidéo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "file-zip",
      "nom": "Archive",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "file-spreadsheet",
      "nom": "Tableur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "folder",
      "nom": "Dossier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "folder-open",
      "nom": "Dossier ouvert",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "clipboard",
      "nom": "Presse-papiers",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "note",
      "nom": "Note",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "book",
      "nom": "Livre",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "newspaper",
      "nom": "Journal",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "proof",
      "nom": "Preuve de publication",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "watermark",
      "nom": "Filigrane",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "text",
      "nom": "Texte",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "font",
      "nom": "Police",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bold",
      "nom": "Gras",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "italic",
      "nom": "Italique",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "align-left",
      "nom": "Aligner à gauche",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "list-bullet",
      "nom": "Liste à puces",
-     "motif": "sogosen"
+     "motif": "sogosen",
+     "existe": null
     },
     {
      "slug": "list-number",
      "nom": "Liste numérotée",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -3014,92 +3700,110 @@
     {
      "slug": "calendar",
      "nom": "Calendrier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "calendar-check",
      "nom": "Date confirmée",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "calendar-add",
      "nom": "Ajouter un événement",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "event",
      "nom": "Événement",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "clock-alt",
      "nom": "Horloge",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "timer",
      "nom": "Minuteur",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": "duree-trajet"
     },
     {
      "slug": "countdown",
      "nom": "Compte à rebours (anneau)",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "alarm",
      "nom": "Réveil",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "stopwatch",
      "nom": "Chronomètre",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "history-time",
      "nom": "Historique",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "schedule",
      "nom": "Planifier",
-     "motif": null
+     "motif": null,
+     "existe": "course-planifiee"
     },
     {
      "slug": "day",
      "nom": "Jour",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "night",
      "nom": "Nuit",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sunrise",
      "nom": "Lever du soleil",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sunset",
      "nom": "Coucher du soleil",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "week",
      "nom": "Semaine",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "month",
      "nom": "Mois",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "deadline",
      "nom": "Échéance",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     }
    ]
   },
@@ -3113,142 +3817,170 @@
     {
      "slug": "user",
      "nom": "Utilisateur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "users",
      "nom": "Utilisateurs",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "user-add",
      "nom": "Ajouter un utilisateur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "user-remove",
      "nom": "Retirer un utilisateur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "user-check",
      "nom": "Utilisateur vérifié",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "user-circle",
      "nom": "Avatar",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "profile",
      "nom": "Profil",
-     "motif": null
+     "motif": null,
+     "existe": "compte"
     },
     {
      "slug": "id-card",
      "nom": "Pièce d'identité",
-     "motif": null
+     "motif": null,
+     "existe": "identite"
     },
     {
      "slug": "selfie",
      "nom": "Selfie de vérification",
-     "motif": null
+     "motif": null,
+     "existe": "selfie"
     },
     {
      "slug": "family",
      "nom": "Famille",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "couple",
      "nom": "Couple",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "child",
      "nom": "Enfant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "elder",
      "nom": "Ancien / sage",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "woman",
      "nom": "Femme",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "man",
      "nom": "Homme",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "group",
      "nom": "Groupe",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "team",
      "nom": "Équipe",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "admin",
      "nom": "Administrateur",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "moderator",
      "nom": "Modérateur",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": null
     },
     {
      "slug": "advertiser",
      "nom": "Annonceur",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "publisher",
      "nom": "Diffuseur",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "agent",
      "nom": "Agent / conseiller",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "support",
      "nom": "Assistance",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": "assistance"
     },
     {
      "slug": "wave-hand",
      "nom": "Salutation",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "griot",
      "nom": "Griot / conteur",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "chief",
      "nom": "Chef de village",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "accessibility",
      "nom": "Accessibilité",
-     "motif": null
+     "motif": null,
+     "existe": "accessibilite"
     },
     {
      "slug": "wheelchair",
      "nom": "Fauteuil roulant",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -3262,107 +3994,128 @@
     {
      "slug": "shield",
      "nom": "Bouclier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "shield-alert",
      "nom": "Menace",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "lock-closed",
      "nom": "Cadenas fermé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "lock-open",
      "nom": "Cadenas ouvert",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "key-alt",
      "nom": "Clé d'accès",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "password",
      "nom": "Mot de passe",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fingerprint",
      "nom": "Empreinte digitale",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "face-id",
      "nom": "Reconnaissance faciale",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "two-factor",
      "nom": "Double authentification",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "kyc",
      "nom": "Vérification d'identité (KYC)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fraud",
      "nom": "Fraude",
-     "motif": "juru-sarabali"
+     "motif": "juru-sarabali",
+     "existe": null
     },
     {
      "slug": "spam",
      "nom": "Indésirable",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "privacy",
      "nom": "Confidentialité",
-     "motif": null
+     "motif": null,
+     "existe": "confidentialite"
     },
     {
      "slug": "eye-watch",
      "nom": "Surveillance",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "legal",
      "nom": "Mentions légales",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": null
     },
     {
      "slug": "terms",
      "nom": "Conditions",
-     "motif": null
+     "motif": null,
+     "existe": "conditions"
     },
     {
      "slug": "contract",
      "nom": "Contrat",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "signature",
      "nom": "Signature",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "stamp",
      "nom": "Cachet / tampon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dispute",
      "nom": "Litige",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": null
     },
     {
      "slug": "gavel",
      "nom": "Décision / arbitrage",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": null
     }
    ]
   },
@@ -3376,72 +4129,86 @@
     {
      "slug": "passport",
      "nom": "Passeport",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "birth-certificate",
      "nom": "Acte de naissance",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "certificate",
      "nom": "Certificat / diplôme",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "residence",
      "nom": "Certificat de résidence",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tax",
      "nom": "Impôts",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "business-reg",
      "nom": "Registre du commerce (RCCM)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "nif",
      "nom": "Numéro fiscal",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "vote",
      "nom": "Vote",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ballot-box",
      "nom": "Urne",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "law",
      "nom": "Loi",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "government",
      "nom": "Gouvernement",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "form",
      "nom": "Formulaire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "queue",
      "nom": "File d'attente",
-     "motif": "sogosen"
+     "motif": "sogosen",
+     "existe": null
     },
     {
      "slug": "appointment",
      "nom": "Rendez-vous",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -3455,107 +4222,128 @@
     {
      "slug": "health",
      "nom": "Santé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "heart-pulse",
      "nom": "Pouls",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "stethoscope",
      "nom": "Stéthoscope",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "doctor",
      "nom": "Médecin",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "nurse",
      "nom": "Infirmier·e",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "pill",
      "nom": "Médicament",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "syringe",
      "nom": "Vaccin",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "thermometer",
      "nom": "Température",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "first-aid",
      "nom": "Premiers secours",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ambulance",
      "nom": "Ambulance",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mosquito",
      "nom": "Moustique / paludisme",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "pregnancy",
      "nom": "Grossesse",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "baby-care",
      "nom": "Santé de l'enfant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "traditional-medicine",
      "nom": "Plantes médicinales",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hand-wash",
      "nom": "Lavage des mains",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "face-mask",
      "nom": "Masque sanitaire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "blood",
      "nom": "Don de sang",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tooth",
      "nom": "Dentiste",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "eye-care",
      "nom": "Ophtalmologie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mental-health",
      "nom": "Santé mentale",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "insurance",
      "nom": "Assurance santé / mutuelle",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": "assurance"
     }
    ]
   },
@@ -3569,92 +4357,110 @@
     {
      "slug": "education",
      "nom": "Éducation",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "graduation",
      "nom": "Diplômé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "book-open",
      "nom": "Livre ouvert",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "notebook",
      "nom": "Cahier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "pen",
      "nom": "Stylo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "slate",
      "nom": "Ardoise",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chalkboard",
      "nom": "Tableau noir",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "backpack",
      "nom": "Cartable",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "teacher",
      "nom": "Enseignant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "student",
      "nom": "Élève",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "quran-school",
      "nom": "École coranique / tablette",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "library",
      "nom": "Bibliothèque",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "exam",
      "nom": "Examen",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "certificate-edu",
      "nom": "Attestation",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "lightbulb",
      "nom": "Idée",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "alphabet",
      "nom": "Alphabétisation (N'Ko, ajami, latin)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "quiz",
      "nom": "Quiz",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "course",
      "nom": "Formation en ligne",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -3668,152 +4474,182 @@
     {
      "slug": "briefcase",
      "nom": "Mallette / emploi",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "job",
      "nom": "Offre d'emploi",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tools",
      "nom": "Outils",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hammer",
      "nom": "Marteau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "wrench",
      "nom": "Clé à molette",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mechanic",
      "nom": "Mécanicien",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "welder",
      "nom": "Soudeur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mason",
      "nom": "Maçon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "carpenter",
      "nom": "Menuisier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "blacksmith",
      "nom": "Forgeron",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "potter",
      "nom": "Potière",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "weaver",
      "nom": "Tisserand / métier à tisser",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dyer",
      "nom": "Teinturière (bogolan, indigo)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "calame",
      "nom": "Calame (outil du bogolan)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "basket-weaver",
      "nom": "Vannerie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "jeweler",
      "nom": "Bijoutier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "farmer-job",
      "nom": "Agriculteur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fisher",
      "nom": "Pêcheur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "herder",
      "nom": "Éleveur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "driver-job",
      "nom": "Chauffeur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "vendor",
      "nom": "Vendeuse ambulante",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "domestic",
      "nom": "Employé·e de maison",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "security-guard",
      "nom": "Gardien",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "freelance",
      "nom": "Indépendant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "meeting",
      "nom": "Réunion",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "presentation",
      "nom": "Présentation",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "target",
      "nom": "Objectif",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "rocket",
      "nom": "Lancement",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "trophy",
      "nom": "Trophée",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "medal",
      "nom": "Médaille",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -3827,197 +4663,236 @@
     {
      "slug": "field",
      "nom": "Champ",
-     "motif": "croisillon"
+     "motif": "croisillon",
+     "existe": null
     },
     {
      "slug": "seed",
      "nom": "Semence",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sprout",
      "nom": "Pousse",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hoe",
      "nom": "Daba (houe)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "machete",
      "nom": "Machette",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tractor",
      "nom": "Tracteur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "irrigation",
      "nom": "Irrigation",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "harvest",
      "nom": "Récolte",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cotton",
      "nom": "Coton",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cocoa",
      "nom": "Cacao",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "coffee-plant",
      "nom": "Caféier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cashew",
      "nom": "Anacarde",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sesame",
      "nom": "Sésame",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sorghum",
      "nom": "Sorgho",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "onion-field",
      "nom": "Maraîchage",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cow",
      "nom": "Vache / zébu",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "goat",
      "nom": "Chèvre",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "sheep",
      "nom": "Mouton",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "chicken-farm",
      "nom": "Poule",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "donkey",
      "nom": "Âne",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "camel",
      "nom": "Dromadaire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "horse",
      "nom": "Cheval",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "fishnet",
      "nom": "Filet de pêche",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bee",
      "nom": "Abeille / miel",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "baobab",
      "nom": "Baobab",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "palm",
      "nom": "Palmier",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tree",
      "nom": "Arbre",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "leaf",
      "nom": "Feuille",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "flower",
      "nom": "Fleur",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "calabash-plant",
      "nom": "Calebassier",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "crocodile",
      "nom": "Crocodile",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": null
     },
     {
      "slug": "snake",
      "nom": "Serpent",
-     "motif": "sasira"
+     "motif": "sasira",
+     "existe": null
     },
     {
      "slug": "chameleon",
      "nom": "Caméléon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "bird",
      "nom": "Oiseau",
-     "motif": "konosen"
+     "motif": "konosen",
+     "existe": null
     },
     {
      "slug": "lizard",
      "nom": "Margouillat",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "lion",
      "nom": "Lion",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "elephant",
      "nom": "Éléphant",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "recycle",
      "nom": "Recyclage",
-     "motif": "sa-kurulen"
+     "motif": "sa-kurulen",
+     "existe": null
     },
     {
      "slug": "eco",
      "nom": "Écologie",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -4031,87 +4906,104 @@
     {
      "slug": "sun",
      "nom": "Soleil",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "moon",
      "nom": "Lune",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cloud-sun",
      "nom": "Éclaircies",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "rain",
      "nom": "Pluie",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "storm",
      "nom": "Orage",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "lightning",
      "nom": "Éclair",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "wind",
      "nom": "Vent",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "harmattan",
      "nom": "Harmattan (vent de poussière)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dust",
      "nom": "Poussière / brume sèche",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "heat",
      "nom": "Forte chaleur",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "temperature",
      "nom": "Température",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "humidity",
      "nom": "Humidité",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "flood",
      "nom": "Inondation",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "drought",
      "nom": "Sécheresse",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "rainbow",
      "nom": "Arc-en-ciel",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "rainy-season",
      "nom": "Saison des pluies",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dry-season",
      "nom": "Saison sèche",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -4125,187 +5017,224 @@
     {
      "slug": "djembe",
      "nom": "Djembé",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "tama",
      "nom": "Tama (tambour d'aisselle)",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "kora",
      "nom": "Kora",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "balafon",
      "nom": "Balafon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ngoni",
      "nom": "N'goni",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "flute",
      "nom": "Flûte peule",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dance",
      "nom": "Danse",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ritual-mask",
      "nom": "Masque traditionnel",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "statue",
      "nom": "Statuette",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "mudcloth",
      "nom": "Tissu bogolan",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "kente-strip",
      "nom": "Bande tissée",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cowrie",
      "nom": "Cauri",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "calabash-deco",
      "nom": "Calebasse décorée",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "griot-alt",
      "nom": "Récit / conte",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "wedding",
      "nom": "Mariage",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "baptism",
      "nom": "Baptême",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "funeral",
      "nom": "Deuil",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tabaski",
      "nom": "Tabaski (mouton)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ramadan",
      "nom": "Ramadan (croissant)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "korite",
      "nom": "Korité / fin du jeûne",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "christmas",
      "nom": "Noël",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "new-year",
      "nom": "Nouvel an",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "independence",
      "nom": "Fête de l'indépendance",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "party",
      "nom": "Fête",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "gift",
      "nom": "Cadeau",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "cake",
      "nom": "Gâteau",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "photo-booth",
      "nom": "Photo souvenir",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cinema",
      "nom": "Cinéma",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "theatre",
      "nom": "Théâtre",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "festival",
      "nom": "Festival",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "prayer",
      "nom": "Prière",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "prayer-mat",
      "nom": "Tapis de prière",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "rosary",
      "nom": "Chapelet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "awale",
      "nom": "Awalé (jeu)",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cards",
      "nom": "Jeu de cartes",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "game",
      "nom": "Jeu vidéo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "dice",
      "nom": "Dés",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -4319,72 +5248,86 @@
     {
      "slug": "football",
      "nom": "Football",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ball",
      "nom": "Ballon",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "goal",
      "nom": "But",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "basketball",
      "nom": "Basketball",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "running",
      "nom": "Course",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "wrestling",
      "nom": "Lutte traditionnelle",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "boxing",
      "nom": "Boxe",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "cycling",
      "nom": "Cyclisme",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "swimming",
      "nom": "Natation",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "gym",
      "nom": "Musculation",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "whistle",
      "nom": "Sifflet",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "jersey",
      "nom": "Maillot",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "tournament",
      "nom": "Tournoi",
-     "motif": "dankalan-ko"
+     "motif": "dankalan-ko",
+     "existe": null
     },
     {
      "slug": "podium",
      "nom": "Podium",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -4398,77 +5341,92 @@
     {
      "slug": "smile",
      "nom": "Sourire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "laugh",
      "nom": "Rire",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "love",
      "nom": "Amour",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "sad",
      "nom": "Triste",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "angry",
      "nom": "En colère",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "surprised",
      "nom": "Surpris",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "thinking",
      "nom": "Réflexion",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "thumbs-up",
      "nom": "Pouce levé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "thumbs-down",
      "nom": "Pouce baissé",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "clap",
      "nom": "Applaudir",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "pray-hands",
      "nom": "Merci / prière",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "celebrate",
      "nom": "Bravo",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "ok-hand",
      "nom": "D'accord",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "hundred",
      "nom": "100 %",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "eyes",
      "nom": "Regard",
-     "motif": null
+     "motif": null,
+     "existe": null
     }
    ]
   },
@@ -4482,87 +5440,104 @@
     {
      "slug": "vupay-ring",
      "nom": "Anneau de statut Vupay (signature)",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "proof-upload",
      "nom": "Envoyer une preuve",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "proof-pending",
      "nom": "Preuve en vérification",
-     "motif": "sogosen"
+     "motif": "sogosen",
+     "existe": null
     },
     {
      "slug": "proof-approved",
      "nom": "Preuve validée",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "proof-rejected",
      "nom": "Preuve refusée",
-     "motif": "juru-sarabali"
+     "motif": "juru-sarabali",
+     "existe": null
     },
     {
      "slug": "campaign-create",
      "nom": "Créer une campagne",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "campaign-live",
      "nom": "Campagne active",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "campaign-ended",
      "nom": "Campagne terminée",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "diffuseur",
      "nom": "Espace diffuseur",
-     "motif": "kaana-nonkon"
+     "motif": "kaana-nonkon",
+     "existe": null
     },
     {
      "slug": "annonceur",
      "nom": "Espace annonceur",
-     "motif": "donkonkolo"
+     "motif": "donkonkolo",
+     "existe": null
     },
     {
      "slug": "audience-size",
      "nom": "Taille d'audience",
-     "motif": "turusina"
+     "motif": "turusina",
+     "existe": null
     },
     {
      "slug": "views-24h",
      "nom": "Vues sur 24 h",
-     "motif": "koli-so"
+     "motif": "koli-so",
+     "existe": null
     },
     {
      "slug": "gains-fcfa",
      "nom": "Gains en FCFA",
-     "motif": "bara-feere"
+     "motif": "bara-feere",
+     "existe": null
     },
     {
      "slug": "withdraw-mm",
      "nom": "Retrait mobile money",
-     "motif": null
+     "motif": null,
+     "existe": null
     },
     {
      "slug": "moderation",
      "nom": "Modération",
-     "motif": "dantigimari"
+     "motif": "dantigimari",
+     "existe": null
     },
     {
      "slug": "identity-check",
      "nom": "Vérification d'identité",
-     "motif": "bantoron"
+     "motif": "bantoron",
+     "existe": null
     },
     {
      "slug": "journal",
      "nom": "Journal d'audit (ledger)",
-     "motif": "croisillon"
+     "motif": "croisillon",
+     "existe": null
     }
    ]
   }

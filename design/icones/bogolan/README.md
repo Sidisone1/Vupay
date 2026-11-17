@@ -3,29 +3,34 @@
 Ce dossier prépare un **dépôt d'icônes réutilisable** pour tous les projets : la liste complète des icônes
 à dessiner dans le style bogolan, les règles de dessin, la structure du dépôt et les sources libres de droits.
 
-- [`CATALOGUE.md`](CATALOGUE.md) : **846 icônes** dans 26 catégories, chacune avec son nom de fichier et le motif bogolan à utiliser.
+- [`CATALOGUE.md`](CATALOGUE.md) : **846 icônes** dans 26 catégories : **763 à créer**, 83 déjà présentes dans la Collection Bogolan (marquées ✅).
+- [`motifs/`](motifs/) : les 16 motifs bogolan en SVG (esquisses au trait).
+- [`apercu/catalogue.html`](apercu/catalogue.html) : page à ouvrir dans un navigateur pour parcourir et filtrer le catalogue.
 - [`icones.json`](icones.json) : le même catalogue en version machine (pour générer dossiers, sprite et composants).
 
 Le dossier peut être copié tel quel à la racine du nouveau dépôt.
 
-## 1. Règles de dessin (pour que toutes les icônes aillent ensemble)
+## 1. Règles de dessin : suivre la Collection Bogolan existante
 
-| Règle | Valeur |
+Ces icônes **complètent** la Collection Bogolan déjà dessinée (109 icônes, dépôt Tchi-TELIMAN,
+`design/icons/bogolan/planches/`). Les nouvelles doivent lui ressembler au point qu'on ne voie pas la différence.
+
+| Règle | Valeur (relevée sur les planches existantes) |
 | --- | --- |
-| Grille | 24 × 24 px, zone utile 20 × 20 (2 px de marge) |
-| Trait | 1,75 à 2 px, extrémités et angles arrondis, comme un trait de calame |
-| Variantes | `outline` (trait), `solid` (plein), `duotone` (fond terre + trait sombre) |
-| Couleur dans le SVG | `currentColor` uniquement : la couleur vient du projet, jamais du fichier |
-| Motif | Un seul détail bogolan par icône (points, chevron, zigzag, cercle pointé) : l'icône doit rester lisible à 16 px |
-| Lisibilité | Tester à 16, 20, 24 et 48 px, sur fond clair et sombre |
-| Fichiers | SVG optimisés (SVGO), `viewBox="0 0 24 24"`, pas de `width`/`height` fixes, noms en `kebab-case` anglais |
+| Rendu | 3D doux « pâte à modeler » : volumes arrondis, ombre portée légère, aucun contour noir |
+| Tuile | Carré crème aux coins très arrondis (rayon ≈ 20 % du côté), objet centré, ~70 % de la tuile |
+| Palette | ocre / safran `#E8A93A`, rouille `#B04A26`, brun foncé `#4A2A1C`, crème `#F6E7CC`, fond `#FBF1E2` |
+| Motif bogolan | Une bande rouille sur l'objet avec zigzag et points crème (voir les 16 motifs du catalogue) |
+| Personnages | Peau brune, vêtements ocre à bande bogolan, visage simplifié sans traits |
+| Libellé | En français, sous l'icône, police grasse arrondie brun foncé |
+| Export | PNG 1024 × 1024 (source), découpé en 144 × 144 pour les apps comme `decouper.py` ; nom en `kebab-case` français |
 
-**Palette de référence bogolan** (pour les aperçus, le duotone et les motifs de fond ; chaque projet garde la sienne) :
-noir de boue `#2B211C`, brun `#5A3A22`, rouille `#9C4A1A`, ocre `#C68A3C`, kaki `#8A7F55`, écru `#EFE6D2`.
-Pour Vupay, appliquer les couleurs de `design/charte/PALETTE.md` via `currentColor`.
+**Variante au trait (optionnelle)** pour les petites tailles (16–20 px, menus web denses) : grille 24 × 24,
+trait 2 px arrondi, `currentColor`, un seul détail bogolan. Les 16 motifs du dossier `motifs/` sont dans ce format.
 
-**Ce qui fait « bogolan »** sans nuire à la lecture : terminaisons légèrement épaisses, petits points alignés
-en remplissage, chevrons et zigzags en détail, cercles pointés pour les éléments « centre » (profil, position, cible).
+**Pour produire vite et pareil** : générer chaque planche avec la même consigne que les planches existantes
+(« Collection Bogolan, icônes 3D pâte à modeler, ocre, rouille, brun, motif bogolan zigzag et points,
+tuiles crème arrondies, 3 colonnes ») en listant 9 à 12 icônes par planche, puis découper avec `decouper.py`.
 
 ## 2. Structure proposée du dépôt
 
@@ -35,9 +40,9 @@ bogolan-icons/
 ├── LICENSE                 # licence de VOS dessins (ex. MIT ou CC BY 4.0)
 ├── CATALOGUE.md / icones.json
 ├── svg/
-│   ├── outline/            # home.svg, wallet.svg…
-│   ├── solid/
-│   └── duotone/
+├── planches/               # planches sources (JPG/PNG), 9 à 12 icônes chacune
+├── png/                    # icônes découpées 144 × 144 (et 1024 × 1024 en source)
+├── svg/                    # variante au trait pour petites tailles (optionnelle)
 ├── motifs/                 # les 16 motifs seuls + motifs répétables (fonds, bordures)
 │   └── patterns/           # tuiles SVG répétables pour fonds d'écran, cartes, emballages
 ├── brands/                 # logos officiels NON modifiés + fichier SOURCES.md (origine, date, charte)
@@ -46,7 +51,7 @@ bogolan-icons/
 └── scripts/                # optimisation SVGO + génération à partir de icones.json
 ```
 
-Une icône = un fichier par variante, même nom partout : `svg/outline/wallet.svg`, `svg/solid/wallet.svg`.
+Une icône = le même nom partout : `png/portefeuille.png`, `svg/portefeuille.svg`.
 
 ## 3. Sources libres pour partir des formes (puis appliquer le style bogolan)
 
@@ -82,10 +87,9 @@ Un motif bogolan en arrière-plan + le pictogramme du projet au centre donne une
 
 ## 5. Ordre de production conseillé
 
-1. Les 16 motifs (`motifs/`) : ils fixent le style.
-2. Les catégories **P1** (≈ 470 icônes) : navigation, actions, statuts, social, paiement, communication, médias, temps, personnes, sécurité, Vupay.
-3. Les **P2** (commerce, quotidien, cuisine, transport, lieux, émotions), puis les **P3** selon les projets.
-4. `brands/` : télécharger les logos officiels au fur et à mesure des besoins, sans les modifier.
+1. Les catégories **P1** encore manquantes (≈ 350 icônes, sans les ✅) : navigation, actions, statuts, social, paiement, communication, médias, temps, personnes, sécurité, Vupay.
+2. Les **P2** (commerce, quotidien, cuisine, transport, lieux, émotions), puis les **P3** selon les projets.
+3. `brands/` : télécharger les logos officiels au fur et à mesure des besoins, sans les modifier.
 
 ## 6. Points d'attention
 
