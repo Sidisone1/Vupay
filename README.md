@@ -44,7 +44,7 @@ vupay/
 ├── design/
 │   ├── diagrammes/           Parcours d'une campagne (SVG + PNG)
 │   ├── charte/               Palette provisoire
-│   ├── maquettes/            Écrans (à produire)
+│   ├── maquettes/            Écrans diffuseur (8) ; annonceur et admin à produire
 │   ├── logos/                Logo (à produire)
 │   └── icones/               Icônes (à produire)
 ├── docs/
