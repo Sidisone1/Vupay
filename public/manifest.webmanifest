@@ -1,0 +1,11 @@
+{
+  "name": "Vupay",
+  "short_name": "Vupay",
+  "description": "Plateforme publicitaire : gagnez de l'argent en diffusant des pubs sur vos statuts et stories.",
+  "lang": "fr",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F7F5FF",
+  "theme_color": "#6C3BF5",
+  "icons": []
+}
