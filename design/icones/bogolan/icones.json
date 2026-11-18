@@ -5540,6 +5540,984 @@
      "existe": null
     }
    ]
+  },
+  {
+   "id": "dropshipping",
+   "titre": "Achat international et dropshipping",
+   "priorite": "P2",
+   "motif_defaut": "sasira",
+   "note": "",
+   "icones": [
+    {
+     "slug": "sourcing",
+     "nom": "Sourcing produit",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "fournisseur-international",
+     "nom": "Fournisseur international",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "conteneur",
+     "nom": "Conteneur",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "dedouanement",
+     "nom": "Dédouanement",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "entrepot-transit",
+     "nom": "Entrepôt de transit",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "suivi-colis",
+     "nom": "Suivi de colis",
+     "motif": "sasira",
+     "existe": null
+    },
+    {
+     "slug": "etiquette-expedition",
+     "nom": "Étiquette d'expédition",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "poids-colis",
+     "nom": "Poids du colis",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "dimensions-colis",
+     "nom": "Dimensions du colis",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "emballage",
+     "nom": "Emballage",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "carton-ferme",
+     "nom": "Carton non ouvert",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "retour-colis",
+     "nom": "Retour de colis",
+     "motif": "sa-kurulen",
+     "existe": null
+    },
+    {
+     "slug": "point-relais",
+     "nom": "Point relais",
+     "motif": "koli-so",
+     "existe": null
+    },
+    {
+     "slug": "casier-colis",
+     "nom": "Casier à colis",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "devis-livraison",
+     "nom": "Devis de livraison",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "transitaire",
+     "nom": "Transitaire",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "fret-aerien",
+     "nom": "Fret aérien",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "fret-maritime",
+     "nom": "Fret maritime",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "camion-livraison",
+     "nom": "Camion de livraison",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "livreur",
+     "nom": "Livreur",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "signature-livraison",
+     "nom": "Signature à la livraison",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "colis-endommage",
+     "nom": "Colis endommagé",
+     "motif": "bantoron",
+     "existe": null
+    },
+    {
+     "slug": "colis-perdu",
+     "nom": "Colis perdu",
+     "motif": "juru-sarabali",
+     "existe": null
+    },
+    {
+     "slug": "assurance-colis",
+     "nom": "Assurance colis",
+     "motif": "bantoron",
+     "existe": null
+    },
+    {
+     "slug": "liste-souhaits",
+     "nom": "Liste de souhaits",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "comparer-prix",
+     "nom": "Comparer les prix",
+     "motif": "dantigimari",
+     "existe": null
+    },
+    {
+     "slug": "negociation-prix",
+     "nom": "Négociation de prix",
+     "motif": "turusina",
+     "existe": null
+    },
+    {
+     "slug": "commande-groupee",
+     "nom": "Commande groupée",
+     "motif": "turusina",
+     "existe": null
+    },
+    {
+     "slug": "lien-produit",
+     "nom": "Lien produit",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "photo-produit",
+     "nom": "Recherche par photo",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "video-produit",
+     "nom": "Vidéo produit",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "note-etoiles",
+     "nom": "Note en étoiles",
+     "motif": "bara-feere",
+     "existe": null
+    },
+    {
+     "slug": "vente-flash",
+     "nom": "Vente flash",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "panier-abandonne",
+     "nom": "Panier abandonné",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "code-promo",
+     "nom": "Code promo",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "facture-proforma",
+     "nom": "Facture proforma",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "paiement-fournisseur",
+     "nom": "Paiement fournisseur",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "taux-change",
+     "nom": "Taux de change",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "marge",
+     "nom": "Marge",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "pays-origine",
+     "nom": "Pays d'origine",
+     "motif": null,
+     "existe": null
+    }
+   ]
+  },
+  {
+   "id": "moto-taxi",
+   "titre": "Moto-taxi et livraison urbaine",
+   "priorite": "P2",
+   "motif_defaut": "sasira",
+   "note": "",
+   "icones": [
+    {
+     "slug": "course-moto",
+     "nom": "Course moto",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "prix-propose",
+     "nom": "Prix proposé par le chauffeur",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "contre-offre",
+     "nom": "Contre-offre",
+     "motif": "dantigimari",
+     "existe": null
+    },
+    {
+     "slug": "note-chauffeur",
+     "nom": "Note du chauffeur",
+     "motif": "bara-feere",
+     "existe": null
+    },
+    {
+     "slug": "trajet-partage",
+     "nom": "Trajet partagé",
+     "motif": "turusina",
+     "existe": null
+    },
+    {
+     "slug": "zone-couverture",
+     "nom": "Zone couverte",
+     "motif": "koli-so",
+     "existe": null
+    },
+    {
+     "slug": "heure-pointe",
+     "nom": "Heure de pointe",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "embouteillage",
+     "nom": "Embouteillage",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "route-abimee",
+     "nom": "Route abîmée",
+     "motif": "juru-sarabali",
+     "existe": null
+    },
+    {
+     "slug": "casque-passager",
+     "nom": "Casque passager",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "permis-moto",
+     "nom": "Permis moto",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "vignette",
+     "nom": "Vignette",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "assurance-moto",
+     "nom": "Assurance moto",
+     "motif": "bantoron",
+     "existe": null
+    },
+    {
+     "slug": "gilet-chauffeur",
+     "nom": "Gilet du chauffeur",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "course-pluie",
+     "nom": "Course sous la pluie",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "course-nuit",
+     "nom": "Course de nuit",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "attente-client",
+     "nom": "Attente du client",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "annulation-course",
+     "nom": "Course annulée",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "pourboire",
+     "nom": "Pourboire",
+     "motif": "bara-feere",
+     "existe": null
+    },
+    {
+     "slug": "recharge-solde",
+     "nom": "Recharge du solde",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "commission",
+     "nom": "Commission",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "classement-chauffeurs",
+     "nom": "Classement des chauffeurs",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "prime-chauffeur",
+     "nom": "Prime chauffeur",
+     "motif": "bara-feere",
+     "existe": null
+    },
+    {
+     "slug": "parrainage-chauffeur",
+     "nom": "Parrainage chauffeur",
+     "motif": "turusina",
+     "existe": null
+    },
+    {
+     "slug": "points-fidelite",
+     "nom": "Points de fidélité",
+     "motif": "bara-feere",
+     "existe": null
+    },
+    {
+     "slug": "monnaie-app",
+     "nom": "Monnaie de l'application (crédit pub)",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "commerce-partenaire",
+     "nom": "Commerce partenaire",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "alerte-proximite",
+     "nom": "Alerte de proximité",
+     "motif": "kaana-nonkon",
+     "existe": null
+    },
+    {
+     "slug": "mode-simple",
+     "nom": "Mode simple",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "mode-complet",
+     "nom": "Mode complet",
+     "motif": null,
+     "existe": null
+    }
+   ]
+  },
+  {
+   "id": "reglages",
+   "titre": "Réglages, accessibilité et appareil",
+   "priorite": "P1",
+   "motif_defaut": "croisillon",
+   "note": "",
+   "icones": [
+    {
+     "slug": "mode-sombre",
+     "nom": "Mode sombre",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "mode-clair",
+     "nom": "Mode clair",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "taille-texte",
+     "nom": "Taille du texte",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "contraste",
+     "nom": "Contraste élevé",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "lecture-vocale",
+     "nom": "Lecture vocale",
+     "motif": "kaana-nonkon",
+     "existe": null
+    },
+    {
+     "slug": "sous-titres",
+     "nom": "Sous-titres",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "langue-bambara",
+     "nom": "Langue bambara",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "langue-wolof",
+     "nom": "Langue wolof",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "mode-hors-ligne",
+     "nom": "Mode hors ligne",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "economie-donnees",
+     "nom": "Économie de données",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "mise-a-jour",
+     "nom": "Mise à jour",
+     "motif": "sa-kurulen",
+     "existe": null
+    },
+    {
+     "slug": "version-app",
+     "nom": "Version de l'application",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "a-propos",
+     "nom": "À propos",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "cookies",
+     "nom": "Cookies",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "notification-push",
+     "nom": "Notification push",
+     "motif": "donkonkolo",
+     "existe": null
+    },
+    {
+     "slug": "vibration",
+     "nom": "Vibration",
+     "motif": "kaana-nonkon",
+     "existe": null
+    },
+    {
+     "slug": "son",
+     "nom": "Son",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "sonnerie",
+     "nom": "Sonnerie",
+     "motif": "donkonkolo",
+     "existe": null
+    },
+    {
+     "slug": "mode-avion",
+     "nom": "Mode avion",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "biometrie",
+     "nom": "Connexion biométrique",
+     "motif": "bantoron",
+     "existe": null
+    }
+   ]
+  },
+  {
+   "id": "faune",
+   "titre": "Faune d'Afrique de l'Ouest",
+   "priorite": "P3",
+   "motif_defaut": "points",
+   "note": "",
+   "icones": [
+    {
+     "slug": "hippopotame",
+     "nom": "Hippopotame",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "hyene",
+     "nom": "Hyène",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "singe",
+     "nom": "Singe",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "aigle",
+     "nom": "Aigle",
+     "motif": "konosen",
+     "existe": null
+    },
+    {
+     "slug": "vautour",
+     "nom": "Vautour",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "pintade",
+     "nom": "Pintade",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "tortue",
+     "nom": "Tortue",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "capitaine",
+     "nom": "Poisson capitaine",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "papillon",
+     "nom": "Papillon",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "fourmi",
+     "nom": "Fourmi",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "scorpion",
+     "nom": "Scorpion",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "araignee",
+     "nom": "Araignée",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "grenouille",
+     "nom": "Grenouille",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "chat-animal",
+     "nom": "Chat",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "chien",
+     "nom": "Chien",
+     "motif": null,
+     "existe": null
+    }
+   ]
+  },
+  {
+   "id": "numerique",
+   "titre": "Outils numériques et collaboration",
+   "priorite": "P2",
+   "motif_defaut": "dankalan-ko",
+   "note": "",
+   "icones": [
+    {
+     "slug": "ia-generation",
+     "nom": "Génération par IA",
+     "motif": "bara-feere",
+     "existe": null
+    },
+    {
+     "slug": "chatbot",
+     "nom": "Assistant conversationnel",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "automatisation",
+     "nom": "Automatisation",
+     "motif": "sa-kurulen",
+     "existe": null
+    },
+    {
+     "slug": "webhook",
+     "nom": "Webhook",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "cle-api",
+     "nom": "Clé d'API",
+     "motif": "bantoron",
+     "existe": null
+    },
+    {
+     "slug": "sauvegarde",
+     "nom": "Sauvegarde",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "restauration",
+     "nom": "Restauration",
+     "motif": "sa-kurulen",
+     "existe": null
+    },
+    {
+     "slug": "export-csv",
+     "nom": "Export CSV",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "import-csv",
+     "nom": "Import CSV",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "partage-ecran",
+     "nom": "Partage d'écran",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "visioconference",
+     "nom": "Visioconférence",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "tableau-blanc",
+     "nom": "Tableau blanc",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "formulaire-en-ligne",
+     "nom": "Formulaire en ligne",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "signature-electronique",
+     "nom": "Signature électronique",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "dossier-partage",
+     "nom": "Dossier partagé",
+     "motif": "turusina",
+     "existe": null
+    },
+    {
+     "slug": "lien-partage",
+     "nom": "Lien de partage",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "historique-versions",
+     "nom": "Historique des versions",
+     "motif": "sa-kurulen",
+     "existe": null
+    },
+    {
+     "slug": "synchronisation-cloud",
+     "nom": "Synchronisation cloud",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "tableur-partage",
+     "nom": "Tableur partagé",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "agenda-partage",
+     "nom": "Agenda partagé",
+     "motif": null,
+     "existe": null
+    }
+   ]
+  },
+  {
+   "id": "entreprise",
+   "titre": "Entreprise, gestion et institutions",
+   "priorite": "P3",
+   "motif_defaut": "turusina",
+   "note": "",
+   "icones": [
+    {
+     "slug": "startup",
+     "nom": "Jeune entreprise",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "investisseur",
+     "nom": "Investisseur",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "pitch",
+     "nom": "Présentation d'affaires",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "plan-affaires",
+     "nom": "Plan d'affaires",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "croissance",
+     "nom": "Croissance",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "indicateurs",
+     "nom": "Indicateurs clés",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "objectif-atteint",
+     "nom": "Objectif atteint",
+     "motif": "bara-feere",
+     "existe": null
+    },
+    {
+     "slug": "contrat-signe",
+     "nom": "Contrat signé",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "partenariat",
+     "nom": "Partenariat",
+     "motif": "turusina",
+     "existe": null
+    },
+    {
+     "slug": "franchise",
+     "nom": "Franchise",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "exportation",
+     "nom": "Exportation",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "importation",
+     "nom": "Importation",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "fiscalite",
+     "nom": "Fiscalité",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "comptable",
+     "nom": "Comptable",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "banque-mobile",
+     "nom": "Banque mobile",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "microcredit",
+     "nom": "Microcrédit",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "cooperative",
+     "nom": "Coopérative",
+     "motif": "turusina",
+     "existe": null
+    },
+    {
+     "slug": "association",
+     "nom": "Association",
+     "motif": "turusina",
+     "existe": null
+    },
+    {
+     "slug": "ong",
+     "nom": "ONG",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "subvention",
+     "nom": "Subvention",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "appel-offres",
+     "nom": "Appel d'offres",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "marche-public",
+     "nom": "Marché public",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "certification",
+     "nom": "Certification",
+     "motif": "bara-feere",
+     "existe": null
+    },
+    {
+     "slug": "qualite",
+     "nom": "Qualité",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "audit",
+     "nom": "Audit",
+     "motif": "dantigimari",
+     "existe": null
+    },
+    {
+     "slug": "conformite",
+     "nom": "Conformité",
+     "motif": "bantoron",
+     "existe": null
+    },
+    {
+     "slug": "rapport",
+     "nom": "Rapport",
+     "motif": null,
+     "existe": null
+    },
+    {
+     "slug": "organigramme",
+     "nom": "Organigramme",
+     "motif": "dankalan-ko",
+     "existe": null
+    },
+    {
+     "slug": "recrutement",
+     "nom": "Recrutement",
+     "motif": null,
+     "existe": null
+    }
+   ]
   }
  ]
 }

@@ -1,6 +1,8 @@
 # Production des icônes P1
 
 347 icônes P1 à créer, réparties en 29 planches de 12 (`scripts/planches_p1.json`).
+Le catalogue est passé à 1000 icônes le 18/11/2026 : 20 icônes P1 de plus (catégorie « Réglages, accessibilité
+et appareil »), soit **367 icônes P1 à créer** au total ; elles feront 2 planches supplémentaires.
 
 | Planche | Contenu | État |
 | --- | --- | --- |

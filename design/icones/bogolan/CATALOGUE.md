@@ -2,7 +2,7 @@
 
 Ce catalogue complète la **Collection Bogolan** déjà dessinée (109 icônes 3D, dépôt Tchi-TELIMAN, `design/icons/bogolan/`).
 
-**846 icônes** en **26 catégories** : **763 à créer** et 83 qui existent déjà dans la collection (marquées ✅, à ne pas redessiner). Plus **16 motifs** traditionnels qui servent de briques graphiques.
+**1000 icônes** en **32 catégories** : **917 à créer** et 83 qui existent déjà dans la collection (marquées ✅, à ne pas redessiner). Plus **16 motifs** traditionnels qui servent de briques graphiques.
 
 Version machine : [`icones.json`](icones.json) (même contenu, pour générer les dossiers, un sprite SVG ou des composants React).
 
@@ -36,6 +36,12 @@ Priorités : **P1** = indispensable dans presque toute app ; **P2** = fréquent 
 - [Sport](#sport) — 14 icônes, P3
 - [Émotions et réactions](#emotions) — 15 icônes, P2
 - [Spécifiques Vupay](#vupay) — 17 icônes, P1
+- [Achat international et dropshipping](#dropshipping) — 40 icônes, P2
+- [Moto-taxi et livraison urbaine](#moto-taxi) — 30 icônes, P2
+- [Réglages, accessibilité et appareil](#reglages) — 20 icônes, P1
+- [Faune d'Afrique de l'Ouest](#faune) — 15 icônes, P3
+- [Outils numériques et collaboration](#numerique) — 20 icônes, P2
+- [Entreprise, gestion et institutions](#entreprise) — 29 icônes, P3
 
 ## Les 109 icônes déjà dessinées (Collection Bogolan)
 
@@ -1127,3 +1133,205 @@ Motif par défaut : `koli-so` (sauf indication contraire).
 | `moderation` | Modération | `dantigimari` | à créer |
 | `identity-check` | Vérification d'identité | `bantoron` | à créer |
 | `journal` | Journal d'audit (ledger) | `croisillon` | à créer |
+
+<a id="dropshipping"></a>
+## Achat international et dropshipping (40, P2)
+
+Motif par défaut : `sasira` (sauf indication contraire).
+
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `sourcing` | Sourcing produit |  | à créer |
+| `fournisseur-international` | Fournisseur international |  | à créer |
+| `conteneur` | Conteneur |  | à créer |
+| `dedouanement` | Dédouanement |  | à créer |
+| `entrepot-transit` | Entrepôt de transit |  | à créer |
+| `suivi-colis` | Suivi de colis | `sasira` | à créer |
+| `etiquette-expedition` | Étiquette d'expédition |  | à créer |
+| `poids-colis` | Poids du colis |  | à créer |
+| `dimensions-colis` | Dimensions du colis |  | à créer |
+| `emballage` | Emballage |  | à créer |
+| `carton-ferme` | Carton non ouvert |  | à créer |
+| `retour-colis` | Retour de colis | `sa-kurulen` | à créer |
+| `point-relais` | Point relais | `koli-so` | à créer |
+| `casier-colis` | Casier à colis |  | à créer |
+| `devis-livraison` | Devis de livraison |  | à créer |
+| `transitaire` | Transitaire |  | à créer |
+| `fret-aerien` | Fret aérien |  | à créer |
+| `fret-maritime` | Fret maritime |  | à créer |
+| `camion-livraison` | Camion de livraison |  | à créer |
+| `livreur` | Livreur |  | à créer |
+| `signature-livraison` | Signature à la livraison |  | à créer |
+| `colis-endommage` | Colis endommagé | `bantoron` | à créer |
+| `colis-perdu` | Colis perdu | `juru-sarabali` | à créer |
+| `assurance-colis` | Assurance colis | `bantoron` | à créer |
+| `liste-souhaits` | Liste de souhaits |  | à créer |
+| `comparer-prix` | Comparer les prix | `dantigimari` | à créer |
+| `negociation-prix` | Négociation de prix | `turusina` | à créer |
+| `commande-groupee` | Commande groupée | `turusina` | à créer |
+| `lien-produit` | Lien produit |  | à créer |
+| `photo-produit` | Recherche par photo |  | à créer |
+| `video-produit` | Vidéo produit |  | à créer |
+| `note-etoiles` | Note en étoiles | `bara-feere` | à créer |
+| `vente-flash` | Vente flash |  | à créer |
+| `panier-abandonne` | Panier abandonné |  | à créer |
+| `code-promo` | Code promo |  | à créer |
+| `facture-proforma` | Facture proforma |  | à créer |
+| `paiement-fournisseur` | Paiement fournisseur |  | à créer |
+| `taux-change` | Taux de change |  | à créer |
+| `marge` | Marge |  | à créer |
+| `pays-origine` | Pays d'origine |  | à créer |
+
+<a id="moto-taxi"></a>
+## Moto-taxi et livraison urbaine (30, P2)
+
+Motif par défaut : `sasira` (sauf indication contraire).
+
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `course-moto` | Course moto |  | à créer |
+| `prix-propose` | Prix proposé par le chauffeur |  | à créer |
+| `contre-offre` | Contre-offre | `dantigimari` | à créer |
+| `note-chauffeur` | Note du chauffeur | `bara-feere` | à créer |
+| `trajet-partage` | Trajet partagé | `turusina` | à créer |
+| `zone-couverture` | Zone couverte | `koli-so` | à créer |
+| `heure-pointe` | Heure de pointe |  | à créer |
+| `embouteillage` | Embouteillage |  | à créer |
+| `route-abimee` | Route abîmée | `juru-sarabali` | à créer |
+| `casque-passager` | Casque passager |  | à créer |
+| `permis-moto` | Permis moto |  | à créer |
+| `vignette` | Vignette |  | à créer |
+| `assurance-moto` | Assurance moto | `bantoron` | à créer |
+| `gilet-chauffeur` | Gilet du chauffeur |  | à créer |
+| `course-pluie` | Course sous la pluie |  | à créer |
+| `course-nuit` | Course de nuit |  | à créer |
+| `attente-client` | Attente du client |  | à créer |
+| `annulation-course` | Course annulée |  | à créer |
+| `pourboire` | Pourboire | `bara-feere` | à créer |
+| `recharge-solde` | Recharge du solde |  | à créer |
+| `commission` | Commission |  | à créer |
+| `classement-chauffeurs` | Classement des chauffeurs |  | à créer |
+| `prime-chauffeur` | Prime chauffeur | `bara-feere` | à créer |
+| `parrainage-chauffeur` | Parrainage chauffeur | `turusina` | à créer |
+| `points-fidelite` | Points de fidélité | `bara-feere` | à créer |
+| `monnaie-app` | Monnaie de l'application (crédit pub) |  | à créer |
+| `commerce-partenaire` | Commerce partenaire |  | à créer |
+| `alerte-proximite` | Alerte de proximité | `kaana-nonkon` | à créer |
+| `mode-simple` | Mode simple |  | à créer |
+| `mode-complet` | Mode complet |  | à créer |
+
+<a id="reglages"></a>
+## Réglages, accessibilité et appareil (20, P1)
+
+Motif par défaut : `croisillon` (sauf indication contraire).
+
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `mode-sombre` | Mode sombre |  | à créer |
+| `mode-clair` | Mode clair |  | à créer |
+| `taille-texte` | Taille du texte |  | à créer |
+| `contraste` | Contraste élevé |  | à créer |
+| `lecture-vocale` | Lecture vocale | `kaana-nonkon` | à créer |
+| `sous-titres` | Sous-titres |  | à créer |
+| `langue-bambara` | Langue bambara |  | à créer |
+| `langue-wolof` | Langue wolof |  | à créer |
+| `mode-hors-ligne` | Mode hors ligne |  | à créer |
+| `economie-donnees` | Économie de données |  | à créer |
+| `mise-a-jour` | Mise à jour | `sa-kurulen` | à créer |
+| `version-app` | Version de l'application |  | à créer |
+| `a-propos` | À propos |  | à créer |
+| `cookies` | Cookies |  | à créer |
+| `notification-push` | Notification push | `donkonkolo` | à créer |
+| `vibration` | Vibration | `kaana-nonkon` | à créer |
+| `son` | Son |  | à créer |
+| `sonnerie` | Sonnerie | `donkonkolo` | à créer |
+| `mode-avion` | Mode avion |  | à créer |
+| `biometrie` | Connexion biométrique | `bantoron` | à créer |
+
+<a id="faune"></a>
+## Faune d'Afrique de l'Ouest (15, P3)
+
+Motif par défaut : `points` (sauf indication contraire).
+
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `hippopotame` | Hippopotame |  | à créer |
+| `hyene` | Hyène |  | à créer |
+| `singe` | Singe |  | à créer |
+| `aigle` | Aigle | `konosen` | à créer |
+| `vautour` | Vautour |  | à créer |
+| `pintade` | Pintade |  | à créer |
+| `tortue` | Tortue |  | à créer |
+| `capitaine` | Poisson capitaine |  | à créer |
+| `papillon` | Papillon |  | à créer |
+| `fourmi` | Fourmi |  | à créer |
+| `scorpion` | Scorpion |  | à créer |
+| `araignee` | Araignée |  | à créer |
+| `grenouille` | Grenouille |  | à créer |
+| `chat-animal` | Chat |  | à créer |
+| `chien` | Chien |  | à créer |
+
+<a id="numerique"></a>
+## Outils numériques et collaboration (20, P2)
+
+Motif par défaut : `dankalan-ko` (sauf indication contraire).
+
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `ia-generation` | Génération par IA | `bara-feere` | à créer |
+| `chatbot` | Assistant conversationnel |  | à créer |
+| `automatisation` | Automatisation | `sa-kurulen` | à créer |
+| `webhook` | Webhook |  | à créer |
+| `cle-api` | Clé d'API | `bantoron` | à créer |
+| `sauvegarde` | Sauvegarde |  | à créer |
+| `restauration` | Restauration | `sa-kurulen` | à créer |
+| `export-csv` | Export CSV |  | à créer |
+| `import-csv` | Import CSV |  | à créer |
+| `partage-ecran` | Partage d'écran |  | à créer |
+| `visioconference` | Visioconférence |  | à créer |
+| `tableau-blanc` | Tableau blanc |  | à créer |
+| `formulaire-en-ligne` | Formulaire en ligne |  | à créer |
+| `signature-electronique` | Signature électronique |  | à créer |
+| `dossier-partage` | Dossier partagé | `turusina` | à créer |
+| `lien-partage` | Lien de partage |  | à créer |
+| `historique-versions` | Historique des versions | `sa-kurulen` | à créer |
+| `synchronisation-cloud` | Synchronisation cloud |  | à créer |
+| `tableur-partage` | Tableur partagé |  | à créer |
+| `agenda-partage` | Agenda partagé |  | à créer |
+
+<a id="entreprise"></a>
+## Entreprise, gestion et institutions (29, P3)
+
+Motif par défaut : `turusina` (sauf indication contraire).
+
+| Fichier | Icône | Motif | Collection Bogolan |
+|---|---|---|---|
+| `startup` | Jeune entreprise |  | à créer |
+| `investisseur` | Investisseur |  | à créer |
+| `pitch` | Présentation d'affaires |  | à créer |
+| `plan-affaires` | Plan d'affaires |  | à créer |
+| `croissance` | Croissance |  | à créer |
+| `indicateurs` | Indicateurs clés |  | à créer |
+| `objectif-atteint` | Objectif atteint | `bara-feere` | à créer |
+| `contrat-signe` | Contrat signé |  | à créer |
+| `partenariat` | Partenariat | `turusina` | à créer |
+| `franchise` | Franchise |  | à créer |
+| `exportation` | Exportation |  | à créer |
+| `importation` | Importation |  | à créer |
+| `fiscalite` | Fiscalité |  | à créer |
+| `comptable` | Comptable |  | à créer |
+| `banque-mobile` | Banque mobile |  | à créer |
+| `microcredit` | Microcrédit |  | à créer |
+| `cooperative` | Coopérative | `turusina` | à créer |
+| `association` | Association | `turusina` | à créer |
+| `ong` | ONG |  | à créer |
+| `subvention` | Subvention |  | à créer |
+| `appel-offres` | Appel d'offres |  | à créer |
+| `marche-public` | Marché public |  | à créer |
+| `certification` | Certification | `bara-feere` | à créer |
+| `qualite` | Qualité |  | à créer |
+| `audit` | Audit | `dantigimari` | à créer |
+| `conformite` | Conformité | `bantoron` | à créer |
+| `rapport` | Rapport |  | à créer |
+| `organigramme` | Organigramme | `dankalan-ko` | à créer |
+| `recrutement` | Recrutement |  | à créer |

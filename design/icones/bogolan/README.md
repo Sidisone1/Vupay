@@ -3,7 +3,7 @@
 Ce dossier prépare un **dépôt d'icônes réutilisable** pour tous les projets : la liste complète des icônes
 à dessiner dans le style bogolan, les règles de dessin, la structure du dépôt et les sources libres de droits.
 
-- [`CATALOGUE.md`](CATALOGUE.md) : **846 icônes** dans 26 catégories : **763 à créer**, 83 déjà présentes dans la Collection Bogolan (marquées ✅).
+- [`CATALOGUE.md`](CATALOGUE.md) : **1000 icônes** dans 32 catégories : **917 à créer**, 83 déjà présentes dans la Collection Bogolan (marquées ✅).
 - [`motifs/`](motifs/) : les 16 motifs bogolan en SVG (esquisses au trait).
 - [`apercu/catalogue.html`](apercu/catalogue.html) : page à ouvrir dans un navigateur pour parcourir et filtrer le catalogue.
 - [`icones.json`](icones.json) : le même catalogue en version machine (pour générer dossiers, sprite et composants).
@@ -87,7 +87,7 @@ Un motif bogolan en arrière-plan + le pictogramme du projet au centre donne une
 
 ## 5. Ordre de production conseillé
 
-1. Les catégories **P1** encore manquantes (≈ 350 icônes, sans les ✅) : navigation, actions, statuts, social, paiement, communication, médias, temps, personnes, sécurité, Vupay.
+1. Les catégories **P1** encore manquantes (≈ 367 icônes, sans les ✅) : navigation, actions, statuts, social, paiement, communication, médias, temps, personnes, sécurité, Vupay.
 2. Les **P2** (commerce, quotidien, cuisine, transport, lieux, émotions), puis les **P3** selon les projets.
 3. `brands/` : télécharger les logos officiels au fur et à mesure des besoins, sans les modifier.
 
