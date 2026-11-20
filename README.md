@@ -1,68 +1,38 @@
-# Vupay
+# Vupay — plateforme publicitaire à clics qualifiés
 
-Vupay est une application qui paie par vue.
+**État : prototype et code en développement, pas de paiements actifs.** Vupay connecte annonceurs et diffuseurs sur WhatsApp et d'autres canaux, avec une page produit intermédiaire et une mesure de contact traçable.
 
-Plateforme publicitaire : des marques (annonceurs) paient pour que des particuliers (diffuseurs)
-publient leurs pubs sur leur **statut WhatsApp** et leurs **stories** Instagram, Facebook, TikTok,
-Snapchat et Telegram. Le diffuseur est payé **à la vue et au clic validés** et retire ses gains en
-**Mobile Money** dans les 8 pays de l'UEMOA.
+## Nouvelle règle produit (20/11/2026)
+La rémunération principale est basée sur des **actions qualifiées sur la page Vupay**, et non sur les vues ni les simples visites. Actions enregistrées séparément : numéro WhatsApp, catalogue WhatsApp, envoyer un message et acheter. L'ouverture d'un lien ne prouve pas un message envoyé ni une vente. Les tarifs ne sont **pas encore validés**.
 
-> Vupay est une plateforme publicitaire, pas un service de paiement. Marque, design et code propres :
-> aucune reprise du nom, des couleurs, du logo ou des visuels de WhatsPay ni des réseaux sociaux.
+## Documentation V2
+- [Cadrage fonctionnel V2](docs/PRODUIT_V2_CLICS_QUALIFIES.md)
+- [Architecture V2 — clics et antifraude](docs/ARCHITECTURE_V2_CLICS.md)
+- [Roadmap V2](docs/ROADMAP_V2.md)
+- [Charte Bogolan verte](design/charte/BOGOLAN_VERT_V4.md)
+- [48 maquettes Canva](design/canva/README.md) — [ouvrir Canva](https://www.canva.com/d/JFygNqJaw1LNavO)
 
-- Cahier des charges : [`docs/CAHIER_DES_CHARGES.md`](docs/CAHIER_DES_CHARGES.md)
-  (référence en ligne : https://claude.ai/code/artifact/88ea2633-767a-4d80-9876-02c6f3c32a76)
-- Architecture : [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
-- Consignes pour Claude Code : [`AGENTS.md`](AGENTS.md)
+## Structure technique
+`apps/web/` : Next.js, Tailwind, application web/PWA (composants et code encore à terminer).
+`supabase/` : base initiale V1 et Edge Functions, **migration V2 non encore appliquée**.
+`design/` : bibliothèque d'icônes et images Bogolan, maquettes V3, lien vers V4 Canva.
+`docs/` : spécifications, architecture, feuille de route et décisions.
 
-## État
+## Historique V1 conservé
+- [Ancien cahier des charges](docs/CAHIER_DES_CHARGES.md)
+- [Ancienne architecture](docs/ARCHITECTURE.md)
+- [Ancienne feuille de route](docs/FEUILLE_DE_ROUTE.md)
+- [Décisions historiques](docs/DECISIONS.md)
 
-**Lot 0 (architecture) terminé — le développement n'a pas commencé.** Voir [`docs/FEUILLE_DE_ROUTE.md`](docs/FEUILLE_DE_ROUTE.md)
-et les [décisions à prendre](docs/DECISIONS.md).
+> Certains anciens écrans, fonctions de tarification et migrations SQL utilisent encore des vues rémunérées et des montants de démonstration. Ne **pas** utiliser ces paramètres pour un paiement réel. Les fonctionnalités V2 nécessitent migration, configuration, contrôle antifraude, tests et approbation de lancement.
 
-![Parcours d'une campagne](design/diagrammes/parcours-campagne.png)
-
-## Organisation
-
-```
-vupay/
-├── apps/
-│   └── web/                  Application Next.js (PWA) : les 3 espaces
-│       ├── src/app/
-│       │   ├── (auth)/         Connexion par numéro + code OTP
-│       │   ├── diffuseur/      Campagnes, preuves, gains, retraits, profil, KYC
-│       │   ├── annonceur/      Campagnes, création, portefeuille, entreprise
-│       │   ├── admin/          Preuves, KYC, modération, retraits, utilisateurs, paramètres, journal
-│       │   ├── c/[code]/       Lien court du diffuseur (mesure des clics)
-│       │   └── api/webhooks/   Webhooks de l'agrégateur Mobile Money
-│       ├── src/lib/          Règles métier testées + clients Supabase
-│       ├── src/components/   Composants d'interface
-│       └── public/           Manifeste PWA, icônes Bogolan (public/icones)
-├── supabase/
-│   ├── migrations/           Schéma de la base et règles de sécurité (RLS)
-│   └── functions/            Edge Functions : vérification des preuves, retraits
-├── design/
-│   ├── diagrammes/           Parcours d'une campagne (SVG + PNG)
-│   ├── charte/               Charte visuelle « Bogolan »
-│   ├── maquettes/            22 écrans : diffuseur, annonceur, admin (v3 Bogolan)
-│   ├── logos/                Logo (à produire)
-│   └── icones/               Icônes Vupay (18, style Bogolan) + Collection Bogolan (109)
-├── docs/
-│   ├── CAHIER_DES_CHARGES.md
-│   ├── ARCHITECTURE.md
-│   ├── FEUILLE_DE_ROUTE.md
-│   └── DECISIONS.md
-└── AGENTS.md                 Consignes pour Claude Code
-```
-
-## Démarrer (développeurs)
-
+## Développement local
 ```bash
 cd apps/web
 npm install
-cp .env.example .env.local   # renseigner les clés Supabase (jamais commitées)
-npm test                     # règles métier
-npm run dev                  # http://localhost:3000
+npm test
+npm run typecheck
+npm run dev
 ```
 
-Base de données : créer un projet Supabase, puis appliquer `supabase/migrations/0001_schema_initial.sql`.
+La connexion Supabase et les paiements demandent des clés et un environnement configurés; voir `apps/web/.env.example`.
