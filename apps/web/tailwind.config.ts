@@ -1,29 +1,29 @@
 import type { Config } from "tailwindcss";
-
-// Charte v3 « Bogolan » (design/charte/PALETTE.md). Aucune couleur de WhatsPay ni des réseaux sociaux.
+// Charte Bogolan verte v4; anciens alias conservés pour les pages non migrées.
 const config: Config = {
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
         vupay: {
-          encre: "#3D2116",
-          rouille: "#A9431E",
-          ocre: "#E3961A",
-          terre: "#C2562A",
-          fond: "#FBF3E4",
+          primaire: "#006B3A",
+          vert: "#14AA4D",
+          ocre: "#F08300",
+          encre: "#092E1B",
+          fond: "#FFF7E6",
           surface: "#FFFBF4",
+          brun: "#884A1F",
+          doux: "#665E52",
           sable: "#F3DDB4",
           trait: "#EBDABE",
-          doux: "#876752",
-          succes: "#4C7A2C",
+          succes: "#14AA4D",
           alerte: "#95600A",
           erreur: "#A3281A",
-          // alias des anciens noms utilisés dans le code
-          primaire: "#A9431E",
-          accent: "#E3961A",
-          indigo: "#A9431E",
-          safran: "#E3961A",
+          rouille: "#A9431E",
+          terre: "#C2562A",
+          accent: "#F08300",
+          indigo: "#006B3A",
+          safran: "#F08300",
         },
       },
     },

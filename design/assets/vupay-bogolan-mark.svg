@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192 192" role="img" aria-label="Symbole Vupay Bogolan">
+<rect width="192" height="192" rx="44" fill="#FFF7E6"/>
+<path d="M26 37h35l35 75 35-75h35L96 163Z" fill="#006B3A" stroke="#884A1F" stroke-width="3" stroke-linejoin="round"/>
+<path d="m42 38 16 25 14-12 17 28-14 11 20 30 20-30 14 11 17-28 14 12 16-25" fill="none" stroke="#F08300" stroke-width="9" stroke-linejoin="round"/>
+<g fill="#FFF7E6"><circle cx="58" cy="78" r="5"/><circle cx="133" cy="78" r="5"/><circle cx="96" cy="137" r="6"/></g>
+</svg>
