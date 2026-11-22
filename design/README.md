@@ -1,26 +1,15 @@
 # Design — Vupay
 
-Ressources graphiques de Vupay. Identité **propre** : aucune reprise du nom, des couleurs, du logo
-ou des visuels de WhatsPay, ni des logos ou couleurs des réseaux sociaux (règle du cahier des charges).
+## Identité actuelle validée
+**Bogolan vert V4** : [charte](charte/BOGOLAN_VERT_V4.md) ; [48 maquettes Canva](https://www.canva.com/d/JFygNqJaw1LNavO).
 
-| Dossier | Contenu | État |
-| --- | --- | --- |
-| `maquettes/` | 22 écrans : diffuseur (9), annonceur (5), admin (8), avec icônes Bogolan | ✅ v3 (vert) |
-| `charte/` | Couleurs (base verte), typographie, composants | ✅ v3 |
-| `diagrammes/` | Parcours d'une campagne (SVG + PNG) | ✅ |
-| `logos/` | Logo définitif | À faire (après vérification du nom à l'OAPI) |
-| `icones/` | Catalogue des icônes bogolan (1000) ; icônes de l'app à dessiner | En cours |
+| Dossier | Contenu |
+| --- | --- |
+| `maquettes/` | Maquettes et planches V3 conservées pour historique |
+| `charte/` | Palettes V3 et V4 ; V4 = vert, orange/ocre, crème |
+| `icones/` | 18 icônes Vupay + Collection Bogolan de 109 |
+| `assets/` | Identité vectorielle Vupay verte |
+| `canva/` | Référence des 48 pages éditables |
+| `diagrammes/` | Parcours historique des campagnes V1 |
 
-## Visuels existants
-
-### Parcours d'une campagne — 3 acteurs, 8 étapes
-
-![Parcours d'une campagne](diagrammes/parcours-campagne.png)
-
-Source : cahier des charges, section « Acteurs et parcours ». Fichier modifiable : `diagrammes/parcours-campagne.svg`.
-
-### Maquettes v2
-
-![Diffuseur](maquettes/diffuseur/planche-diffuseur.png)
-
-Détail des 22 écrans et planches annonceur et admin : [`maquettes/README.md`](maquettes/README.md).
+Les maquettes V3 et les images existantes ne sont pas supprimées. **Les 48 pages Canva ne sont pas encore exportées en 48 fichiers PNG individuels dans ce dépôt.**

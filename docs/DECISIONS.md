@@ -17,4 +17,5 @@ Reprises du cahier des charges. À trancher avant ou pendant le lot 1.
 
 | Date | Décision | Conséquence |
 | --- | --- | --- |
-| 17/11/2026 | Couleur de base **verte** (vert feuille `#2E6B34`, encre vert-noir `#16221A`) et icônes 3D **Bogolan** (porteur de projet) | Charte v3 (`design/charte/PALETTE.md`), `vupay-ui.css`, `tailwind.config.ts`, icônes `design/icones/bogolan/vupay/`. Vert distinct du vert WhatsApp |
+| 17/11/2026 | Couleur de base **verte** et icônes 3D **Bogolan** (porteur de projet) | Remplacée le 20/11/2026 par la **charte V4 validée** (`design/charte/BOGOLAN_VERT_V4.md`) : vert profond `#006B3A`, vert vif `#14AA4D`, crème, ocre, brun. Le vert feuille `#2E6B34` proposé le 17/11 n'est plus utilisé |
+| 22/11/2026 | Icônes Bogolan de Vupay régénérées aux couleurs V4 (32 icônes, dont Accueil) | `design/icones/bogolan/vupay/` ; à valider avant de remplacer les icônes de l'app (`apps/web/public/icones/`) |

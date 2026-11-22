@@ -1,42 +1,38 @@
-# Charte visuelle v3 — Vupay (couleur de base verte)
+# Charte visuelle v3 « Bogolan » — Vupay
 
-Source : `design/maquettes/vupay-ui.css` (utilisée par toutes les maquettes) et `apps/web/tailwind.config.ts`.
+La charte part des **109 icônes Collection Bogolan** (pâte d'argile, motifs zigzag et points),
+reprises comme icônes officielles du projet (`design/icones/`). Couleurs, typographie et frise en découlent,
+pour un rendu fait main et ancré au Mali plutôt qu'un rendu d'interface générique.
 
-## Idée directrice
+Source : `design/maquettes/vupay-ui.css` (toutes les maquettes) et `apps/web/tailwind.config.ts`.
 
-**L'anneau de statut** (le cercle qui se vide en 24 h autour d'un statut ou d'une story) est la signature :
-il compose le logo, le compte à rebours des preuves et l'exemple de gains. Le **vert feuille** est la couleur de base
-(actions, liens, état actif, graphiques) ; le **safran** marque l'argent gagné et l'action principale ; l'**encre vert-noir**
-les surfaces de solde et le menu latéral. Les icônes sont les icônes 3D **Bogolan** de Vupay
-(`design/icones/bogolan/vupay/`). Décision du porteur de projet, 17/11/2026 (remplace l'indigo de la v2).
-
-## Couleurs
+## Couleurs (tirées des icônes)
 
 | Nom | Valeur | Usage |
 | --- | --- | --- |
-| Encre | `#16221A` | Textes, cartes de solde, menu latéral (vert-noir) |
-| **Vert (base)** | `#2E6B34` | Boutons secondaires, liens, onglet actif, graphiques |
-| Vert pâle | `#E6F0E3` | Fonds d'état actif, encarts d'information |
-| Safran | `#F6A609` | Bouton principal (texte encre dessus), gains, mises en avant |
-| Corail | `#EE5A3B` | Anneau de story, compte à rebours |
-| Pierre | `#F4F4EF` | Fond des écrans |
-| Surface | `#FFFFFF` | Cartes |
-| Trait | `#E3E2DA` | Bordures, séparateurs |
-| Doux | `#646B66` | Textes secondaires |
-| Succès / Alerte / Erreur | `#12825A` / `#A86400` / `#C9362C` | États : validé, en attente, refusé |
+| Brun profond | `#3D2116` | Textes, cartes de solde, menu latéral |
+| Rouille | `#A9431E` | Boutons secondaires, liens, onglet actif, graphiques, frise |
+| Ocre | `#E3961A` | Bouton principal (texte brun dessus), gains, mises en avant |
+| Terre cuite | `#C2562A` | Anneau de statut (compte à rebours 24 h) |
+| Crème | `#FBF3E4` | Fond des écrans |
+| Blanc chaud | `#FFFBF4` | Cartes |
+| Sable | `#F3DDB4` | Pastilles, fonds d'icônes |
+| Trait | `#EBDABE` | Bordures, séparateurs |
+| Brun doux | `#876752` | Textes secondaires |
+| Validé / En attente / Refusé | `#4C7A2C` / `#95600A` / `#A3281A` | États |
 
-Aucune couleur de réseau social (vert WhatsApp, dégradé Instagram, bleu Facebook, jaune Snapchat) ni de WhatsPay.
-Le vert de Vupay est un **vert feuille foncé** (`#2E6B34`) : ne jamais le remplacer par un vert vif ou un vert-bleu
-proche de WhatsApp (`#25D366`, `#128C7E`, `#075E54`). L'ancien indigo (`#3533B8`) n'est plus utilisé ; le nom `indigo`
-reste un alias du vert dans le code et la feuille de style, le temps de migrer.
+Aucune couleur de réseau social ni de WhatsPay.
 
 ## Typographie
 
-- **Bricolage Grotesque** (titres, montants) : caractère affirmé, chiffres tabulaires pour les FCFA.
-- **DM Sans** (texte, interface) : lisible en petite taille sur mobile.
-- Deux polices Google Fonts, avec repli système.
+- **Fredoka** (titres, montants) : formes arrondies qui répondent au modelé des icônes en argile.
+- **Nunito Sans** (texte, interface) : lisible en petite taille, chiffres alignés pour les FCFA.
 
-## Composants
+## Motif bogolan
 
-Boutons (safran, indigo, contour), champs, puces de filtre, pastilles d'état (point + libellé),
-carte de solde encre, anneau de compte à rebours, tableaux à chiffres alignés.
+Frise **zigzag · point · deux traits** (reprise du bas des planches Collection Bogolan), crème sur rouille :
+bas des cartes de solde, pied du menu latéral, en-tête des planches. Variable CSS `--motif`.
+
+## Logo provisoire
+
+Anneau de statut ocre et rouille + « vupay » en Fredoka, en attendant la vérification du nom et un logo définitif.
