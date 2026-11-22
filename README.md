@@ -9,6 +9,7 @@ La rémunération principale est basée sur des **actions qualifiées sur la pag
 - [Cadrage fonctionnel V2](docs/PRODUIT_V2_CLICS_QUALIFIES.md)
 - [Architecture V2 — clics et antifraude](docs/ARCHITECTURE_V2_CLICS.md)
 - [Roadmap V2](docs/ROADMAP_V2.md)
+- [Lot 1 · Socle : connexion OTP, espaces, mise en ligne](docs/SOCLE.md)
 - [Charte Bogolan verte](design/charte/BOGOLAN_VERT_V4.md)
 - [48 maquettes Canva](design/canva/README.md) — [ouvrir Canva](https://www.canva.com/d/JFygNqJaw1LNavO)
 
@@ -33,6 +34,8 @@ npm install
 npm test
 npm run typecheck
 npm run dev
+# tests de sécurité de la base (Postgres local) :
+../../supabase/tests/lancer.sh
 ```
 
 La connexion Supabase et les paiements demandent des clés et un environnement configurés; voir `apps/web/.env.example`.
