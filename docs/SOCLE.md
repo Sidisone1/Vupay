@@ -43,7 +43,15 @@ cd apps/web && npm test && npm run typecheck   # règles métier
 supabase/tests/lancer.sh                         # RLS, sur un Postgres local (variables PG* standard)
 ```
 
-## Mise en ligne (à faire, avec l'accord du porteur du projet)
+## État de la mise en ligne (22/11/2026)
+
+- ✅ Projet Supabase **vupay** créé (organisation SIKIDA WIFI, forfait gratuit, région Londres `eu-west-2`,
+  référence `exgutqybkhzmjgktreiw`). Migrations 0001, 0002 et 0003 appliquées, RLS active sur les 12 tables.
+- ⏳ Auth → Phone : à activer dans le tableau de bord Supabase (étape 2 ci-dessous).
+- ⏳ Vercel : la création du projet a été refusée (403) avec le connecteur actuel ; à faire depuis le
+  tableau de bord Vercel (étape 4).
+
+## Mise en ligne (avec l'accord du porteur du projet)
 
 1. **Projet Supabase** : créer un projet (région la plus proche de l'Afrique de l'Ouest, ex. Europe — Francfort
    ou Londres), puis appliquer dans l'ordre `0001_schema_initial.sql` et `0002_socle_comptes.sql`.
