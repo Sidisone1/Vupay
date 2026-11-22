@@ -11,6 +11,12 @@ export function Menu({ titre, liens }: { titre: string; liens: { href: string; l
           </Link>
         ))}
       </nav>
+      <div className="mt-6 flex items-center justify-between text-sm">
+        <Link href="/compte/espaces" className="font-semibold text-vupay-primaire">Changer d&apos;espace</Link>
+        <form action="/auth/deconnexion" method="post">
+          <button className="font-semibold text-vupay-doux">Se déconnecter</button>
+        </form>
+      </div>
     </main>
   );
 }
