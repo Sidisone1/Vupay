@@ -1,0 +1,2007 @@
+[
+ {
+  "n": 1,
+  "cats": [
+   "navigation"
+  ],
+  "titre": "Navigation et interface",
+  "icones": [
+   {
+    "slug": "chevron-up",
+    "nom": "Chevron haut",
+    "motif": null
+   },
+   {
+    "slug": "chevron-down",
+    "nom": "Chevron bas",
+    "motif": null
+   },
+   {
+    "slug": "chevron-left",
+    "nom": "Chevron gauche",
+    "motif": null
+   },
+   {
+    "slug": "chevron-right",
+    "nom": "Chevron droite",
+    "motif": null
+   },
+   {
+    "slug": "arrow-up",
+    "nom": "Flèche haut",
+    "motif": "konosen"
+   },
+   {
+    "slug": "arrow-down",
+    "nom": "Flèche bas",
+    "motif": "konosen"
+   },
+   {
+    "slug": "arrow-left",
+    "nom": "Flèche gauche",
+    "motif": "konosen"
+   },
+   {
+    "slug": "arrow-right",
+    "nom": "Flèche droite",
+    "motif": "konosen"
+   },
+   {
+    "slug": "arrow-up-right",
+    "nom": "Lien sortant",
+    "motif": "konosen"
+   },
+   {
+    "slug": "external-link",
+    "nom": "Ouvrir à l'extérieur",
+    "motif": null
+   },
+   {
+    "slug": "more-horizontal",
+    "nom": "Plus d'options",
+    "motif": "sogosen"
+   },
+   {
+    "slug": "more-vertical",
+    "nom": "Plus d'options",
+    "motif": "sogosen"
+   }
+  ]
+ },
+ {
+  "n": 2,
+  "cats": [
+   "navigation"
+  ],
+  "titre": "Navigation et interface",
+  "icones": [
+   {
+    "slug": "sort-asc",
+    "nom": "Tri croissant",
+    "motif": null
+   },
+   {
+    "slug": "sort-desc",
+    "nom": "Tri décroissant",
+    "motif": null
+   },
+   {
+    "slug": "grid",
+    "nom": "Vue grille",
+    "motif": "dankalan-ko"
+   },
+   {
+    "slug": "list",
+    "nom": "Vue liste",
+    "motif": null
+   },
+   {
+    "slug": "dashboard",
+    "nom": "Tableau de bord",
+    "motif": "dankalan-ko"
+   },
+   {
+    "slug": "sidebar",
+    "nom": "Panneau latéral",
+    "motif": null
+   },
+   {
+    "slug": "expand",
+    "nom": "Agrandir",
+    "motif": null
+   },
+   {
+    "slug": "collapse",
+    "nom": "Réduire",
+    "motif": null
+   },
+   {
+    "slug": "fullscreen",
+    "nom": "Plein écran",
+    "motif": null
+   },
+   {
+    "slug": "exit-fullscreen",
+    "nom": "Quitter le plein écran",
+    "motif": null
+   },
+   {
+    "slug": "maximize",
+    "nom": "Maximiser",
+    "motif": null
+   },
+   {
+    "slug": "minimize",
+    "nom": "Minimiser",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 3,
+  "cats": [
+   "navigation"
+  ],
+  "titre": "Navigation et interface",
+  "icones": [
+   {
+    "slug": "sliders",
+    "nom": "Réglages",
+    "motif": null
+   },
+   {
+    "slug": "tune",
+    "nom": "Ajuster",
+    "motif": null
+   },
+   {
+    "slug": "apps",
+    "nom": "Applications",
+    "motif": "dankalan-ko"
+   },
+   {
+    "slug": "layers",
+    "nom": "Calques",
+    "motif": null
+   },
+   {
+    "slug": "tabs",
+    "nom": "Onglets",
+    "motif": null
+   },
+   {
+    "slug": "drag-handle",
+    "nom": "Poignée de glisser",
+    "motif": "points"
+   },
+   {
+    "slug": "pin",
+    "nom": "Épingler",
+    "motif": null
+   },
+   {
+    "slug": "unpin",
+    "nom": "Désépingler",
+    "motif": null
+   },
+   {
+    "slug": "bookmark",
+    "nom": "Signet",
+    "motif": null
+   },
+   {
+    "slug": "bookmark-filled",
+    "nom": "Signet actif",
+    "motif": null
+   },
+   {
+    "slug": "help",
+    "nom": "Aide",
+    "motif": null
+   },
+   {
+    "slug": "translate",
+    "nom": "Traduire",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 4,
+  "cats": [
+   "navigation"
+  ],
+  "titre": "Navigation et interface",
+  "icones": [
+   {
+    "slug": "zoom-out",
+    "nom": "Zoom arrière",
+    "motif": null
+   },
+   {
+    "slug": "loader",
+    "nom": "Chargement",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "first-page",
+    "nom": "Première page",
+    "motif": null
+   },
+   {
+    "slug": "last-page",
+    "nom": "Dernière page",
+    "motif": null
+   },
+   {
+    "slug": "scroll-top",
+    "nom": "Remonter en haut",
+    "motif": null
+   },
+   {
+    "slug": "breadcrumb",
+    "nom": "Fil d'Ariane",
+    "motif": "sogosen"
+   },
+   {
+    "slug": "command",
+    "nom": "Commande / raccourci",
+    "motif": null
+   },
+   {
+    "slug": "keyboard",
+    "nom": "Clavier",
+    "motif": null
+   },
+   {
+    "slug": "toggle-on",
+    "nom": "Interrupteur activé",
+    "motif": null
+   },
+   {
+    "slug": "toggle-off",
+    "nom": "Interrupteur désactivé",
+    "motif": null
+   },
+   {
+    "slug": "radio-button",
+    "nom": "Bouton radio",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "checkbox",
+    "nom": "Case à cocher",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 5,
+  "cats": [
+   "navigation",
+   "actions"
+  ],
+  "titre": "Navigation et interface / Actions",
+  "icones": [
+   {
+    "slug": "checkbox-checked",
+    "nom": "Case cochée",
+    "motif": null
+   },
+   {
+    "slug": "add",
+    "nom": "Ajouter",
+    "motif": null
+   },
+   {
+    "slug": "add-circle",
+    "nom": "Ajouter",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "remove",
+    "nom": "Retirer",
+    "motif": null
+   },
+   {
+    "slug": "pencil",
+    "nom": "Crayon",
+    "motif": null
+   },
+   {
+    "slug": "trash",
+    "nom": "Corbeille",
+    "motif": null
+   },
+   {
+    "slug": "archive",
+    "nom": "Archiver",
+    "motif": null
+   },
+   {
+    "slug": "unarchive",
+    "nom": "Désarchiver",
+    "motif": null
+   },
+   {
+    "slug": "copy",
+    "nom": "Copier",
+    "motif": null
+   },
+   {
+    "slug": "paste",
+    "nom": "Coller",
+    "motif": null
+   },
+   {
+    "slug": "cut",
+    "nom": "Couper",
+    "motif": null
+   },
+   {
+    "slug": "duplicate",
+    "nom": "Dupliquer",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 6,
+  "cats": [
+   "actions"
+  ],
+  "titre": "Actions",
+  "icones": [
+   {
+    "slug": "undo",
+    "nom": "Annuler",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "redo",
+    "nom": "Rétablir",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "import",
+    "nom": "Importer",
+    "motif": null
+   },
+   {
+    "slug": "export",
+    "nom": "Exporter",
+    "motif": null
+   },
+   {
+    "slug": "send",
+    "nom": "Envoyer",
+    "motif": "konosen"
+   },
+   {
+    "slug": "print",
+    "nom": "Imprimer",
+    "motif": null
+   },
+   {
+    "slug": "scan",
+    "nom": "Scanner",
+    "motif": null
+   },
+   {
+    "slug": "qr-code",
+    "nom": "QR code",
+    "motif": "croisillon"
+   },
+   {
+    "slug": "qr-scan",
+    "nom": "Scanner un QR code",
+    "motif": null
+   },
+   {
+    "slug": "barcode",
+    "nom": "Code-barres",
+    "motif": null
+   },
+   {
+    "slug": "link",
+    "nom": "Lien",
+    "motif": null
+   },
+   {
+    "slug": "unlink",
+    "nom": "Supprimer le lien",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 7,
+  "cats": [
+   "actions"
+  ],
+  "titre": "Actions",
+  "icones": [
+   {
+    "slug": "attach",
+    "nom": "Joindre un fichier",
+    "motif": null
+   },
+   {
+    "slug": "unlock",
+    "nom": "Déverrouiller",
+    "motif": null
+   },
+   {
+    "slug": "login",
+    "nom": "Se connecter",
+    "motif": null
+   },
+   {
+    "slug": "sync",
+    "nom": "Synchroniser",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "reply",
+    "nom": "Répondre",
+    "motif": null
+   },
+   {
+    "slug": "reply-all",
+    "nom": "Répondre à tous",
+    "motif": null
+   },
+   {
+    "slug": "forward-msg",
+    "nom": "Transférer",
+    "motif": null
+   },
+   {
+    "slug": "flag",
+    "nom": "Signaler",
+    "motif": null
+   },
+   {
+    "slug": "block",
+    "nom": "Bloquer",
+    "motif": null
+   },
+   {
+    "slug": "mute",
+    "nom": "Couper le son",
+    "motif": null
+   },
+   {
+    "slug": "unmute",
+    "nom": "Rétablir le son",
+    "motif": null
+   },
+   {
+    "slug": "pause",
+    "nom": "Pause",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 8,
+  "cats": [
+   "actions",
+   "statuts"
+  ],
+  "titre": "Actions / Statuts et retours",
+  "icones": [
+   {
+    "slug": "stop",
+    "nom": "Arrêt",
+    "motif": null
+   },
+   {
+    "slug": "record",
+    "nom": "Enregistrer",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "skip-next",
+    "nom": "Suivant",
+    "motif": null
+   },
+   {
+    "slug": "skip-previous",
+    "nom": "Précédent",
+    "motif": null
+   },
+   {
+    "slug": "shuffle",
+    "nom": "Aléatoire",
+    "motif": null
+   },
+   {
+    "slug": "repeat",
+    "nom": "Répéter",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "rotate",
+    "nom": "Pivoter",
+    "motif": null
+   },
+   {
+    "slug": "crop",
+    "nom": "Recadrer",
+    "motif": null
+   },
+   {
+    "slug": "magic",
+    "nom": "Retouche automatique",
+    "motif": null
+   },
+   {
+    "slug": "select-all",
+    "nom": "Tout sélectionner",
+    "motif": null
+   },
+   {
+    "slug": "drag",
+    "nom": "Glisser-déposer",
+    "motif": null
+   },
+   {
+    "slug": "check-double",
+    "nom": "Lu / double coche",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 9,
+  "cats": [
+   "statuts"
+  ],
+  "titre": "Statuts et retours",
+  "icones": [
+   {
+    "slug": "alert-triangle",
+    "nom": "Attention",
+    "motif": "bantoron"
+   },
+   {
+    "slug": "info-circle",
+    "nom": "Info",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "help-circle",
+    "nom": "Question",
+    "motif": null
+   },
+   {
+    "slug": "clock",
+    "nom": "En attente",
+    "motif": null
+   },
+   {
+    "slug": "pending",
+    "nom": "En cours",
+    "motif": "sogosen"
+   },
+   {
+    "slug": "badge",
+    "nom": "Badge",
+    "motif": null
+   },
+   {
+    "slug": "ban",
+    "nom": "Interdit",
+    "motif": null
+   },
+   {
+    "slug": "new",
+    "nom": "Nouveau",
+    "motif": null
+   },
+   {
+    "slug": "star-filled",
+    "nom": "Favori actif",
+    "motif": "bara-feere"
+   },
+   {
+    "slug": "heart",
+    "nom": "J'aime",
+    "motif": null
+   },
+   {
+    "slug": "heart-filled",
+    "nom": "J'aime actif",
+    "motif": null
+   },
+   {
+    "slug": "sparkle",
+    "nom": "Mise en avant",
+    "motif": "bara-feere"
+   }
+  ]
+ },
+ {
+  "n": 10,
+  "cats": [
+   "statuts",
+   "social-generique"
+  ],
+  "titre": "Statuts et retours / Actions sociales génériques",
+  "icones": [
+   {
+    "slug": "fire",
+    "nom": "Tendance",
+    "motif": null
+   },
+   {
+    "slug": "trending-up",
+    "nom": "Hausse",
+    "motif": null
+   },
+   {
+    "slug": "trending-down",
+    "nom": "Baisse",
+    "motif": null
+   },
+   {
+    "slug": "empty",
+    "nom": "État vide",
+    "motif": "points"
+   },
+   {
+    "slug": "construction",
+    "nom": "En travaux",
+    "motif": null
+   },
+   {
+    "slug": "maintenance",
+    "nom": "Maintenance",
+    "motif": null
+   },
+   {
+    "slug": "like",
+    "nom": "J'aime",
+    "motif": null
+   },
+   {
+    "slug": "dislike",
+    "nom": "Je n'aime pas",
+    "motif": null
+   },
+   {
+    "slug": "comment",
+    "nom": "Commentaire",
+    "motif": null
+   },
+   {
+    "slug": "comments",
+    "nom": "Discussion",
+    "motif": null
+   },
+   {
+    "slug": "chat-bubble",
+    "nom": "Bulle de message",
+    "motif": null
+   },
+   {
+    "slug": "chat-group",
+    "nom": "Groupe de discussion",
+    "motif": "turusina"
+   }
+  ]
+ },
+ {
+  "n": 11,
+  "cats": [
+   "social-generique"
+  ],
+  "titre": "Actions sociales génériques",
+  "icones": [
+   {
+    "slug": "mention",
+    "nom": "Mention",
+    "motif": null
+   },
+   {
+    "slug": "hashtag",
+    "nom": "Hashtag",
+    "motif": "croisillon"
+   },
+   {
+    "slug": "story",
+    "nom": "Story / statut",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "status-ring",
+    "nom": "Anneau de statut qui se vide",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "reel",
+    "nom": "Vidéo courte",
+    "motif": null
+   },
+   {
+    "slug": "live",
+    "nom": "Direct",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "follow",
+    "nom": "Suivre",
+    "motif": null
+   },
+   {
+    "slug": "unfollow",
+    "nom": "Ne plus suivre",
+    "motif": null
+   },
+   {
+    "slug": "followers",
+    "nom": "Abonnés",
+    "motif": "turusina"
+   },
+   {
+    "slug": "subscribe",
+    "nom": "S'abonner",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "repost",
+    "nom": "Republier",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "quote",
+    "nom": "Citer",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 12,
+  "cats": [
+   "social-generique"
+  ],
+  "titre": "Actions sociales génériques",
+  "icones": [
+   {
+    "slug": "views",
+    "nom": "Vues",
+    "motif": null
+   },
+   {
+    "slug": "reach",
+    "nom": "Portée",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "engagement",
+    "nom": "Engagement",
+    "motif": "bara-feere"
+   },
+   {
+    "slug": "audience",
+    "nom": "Audience",
+    "motif": "turusina"
+   },
+   {
+    "slug": "influencer",
+    "nom": "Influenceur / diffuseur",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "campaign",
+    "nom": "Campagne",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "megaphone",
+    "nom": "Mégaphone / annonce",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "broadcast",
+    "nom": "Diffusion",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "post",
+    "nom": "Publication",
+    "motif": null
+   },
+   {
+    "slug": "feed",
+    "nom": "Fil d'actualité",
+    "motif": null
+   },
+   {
+    "slug": "poll",
+    "nom": "Sondage",
+    "motif": null
+   },
+   {
+    "slug": "emoji",
+    "nom": "Émoji",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 13,
+  "cats": [
+   "social-generique",
+   "paiement"
+  ],
+  "titre": "Actions sociales génériques / Paiement, argent et mobile money",
+  "icones": [
+   {
+    "slug": "sticker",
+    "nom": "Autocollant",
+    "motif": null
+   },
+   {
+    "slug": "gif",
+    "nom": "GIF",
+    "motif": null
+   },
+   {
+    "slug": "read-receipt",
+    "nom": "Accusé de lecture",
+    "motif": null
+   },
+   {
+    "slug": "typing",
+    "nom": "En train d'écrire",
+    "motif": "sogosen"
+   },
+   {
+    "slug": "community",
+    "nom": "Communauté",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "invite",
+    "nom": "Inviter",
+    "motif": "konosen"
+   },
+   {
+    "slug": "referral",
+    "nom": "Parrainage",
+    "motif": "turusina"
+   },
+   {
+    "slug": "leaderboard",
+    "nom": "Classement",
+    "motif": null
+   },
+   {
+    "slug": "wallet",
+    "nom": "Portefeuille",
+    "motif": null
+   },
+   {
+    "slug": "money",
+    "nom": "Billets FCFA",
+    "motif": null
+   },
+   {
+    "slug": "fcfa",
+    "nom": "Symbole FCFA",
+    "motif": null
+   },
+   {
+    "slug": "balance",
+    "nom": "Solde",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 14,
+  "cats": [
+   "paiement"
+  ],
+  "titre": "Paiement, argent et mobile money",
+  "icones": [
+   {
+    "slug": "earnings",
+    "nom": "Gains",
+    "motif": "bara-feere"
+   },
+   {
+    "slug": "payout",
+    "nom": "Retrait",
+    "motif": null
+   },
+   {
+    "slug": "withdraw",
+    "nom": "Retrait au guichet",
+    "motif": null
+   },
+   {
+    "slug": "deposit",
+    "nom": "Dépôt",
+    "motif": null
+   },
+   {
+    "slug": "transfer",
+    "nom": "Transfert",
+    "motif": null
+   },
+   {
+    "slug": "send-money",
+    "nom": "Envoyer de l'argent",
+    "motif": "konosen"
+   },
+   {
+    "slug": "receive-money",
+    "nom": "Recevoir de l'argent",
+    "motif": null
+   },
+   {
+    "slug": "request-money",
+    "nom": "Demander de l'argent",
+    "motif": null
+   },
+   {
+    "slug": "mobile-money",
+    "nom": "Mobile money",
+    "motif": null
+   },
+   {
+    "slug": "agent-point",
+    "nom": "Point marchand / agent",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "card-contactless",
+    "nom": "Paiement sans contact",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "bank",
+    "nom": "Banque",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 15,
+  "cats": [
+   "paiement"
+  ],
+  "titre": "Paiement, argent et mobile money",
+  "icones": [
+   {
+    "slug": "atm",
+    "nom": "Guichet automatique",
+    "motif": null
+   },
+   {
+    "slug": "invoice",
+    "nom": "Facture",
+    "motif": null
+   },
+   {
+    "slug": "bill",
+    "nom": "Note à payer",
+    "motif": null
+   },
+   {
+    "slug": "unpaid",
+    "nom": "Impayé",
+    "motif": "juru-sarabali"
+   },
+   {
+    "slug": "debt",
+    "nom": "Dette",
+    "motif": "juru-sarabali"
+   },
+   {
+    "slug": "credit",
+    "nom": "Crédit",
+    "motif": null
+   },
+   {
+    "slug": "loan",
+    "nom": "Prêt",
+    "motif": null
+   },
+   {
+    "slug": "savings",
+    "nom": "Épargne",
+    "motif": null
+   },
+   {
+    "slug": "tontine",
+    "nom": "Tontine",
+    "motif": "turusina"
+   },
+   {
+    "slug": "piggy-bank",
+    "nom": "Tirelire",
+    "motif": null
+   },
+   {
+    "slug": "calculator",
+    "nom": "Calculatrice",
+    "motif": null
+   },
+   {
+    "slug": "percent",
+    "nom": "Pourcentage / commission",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 16,
+  "cats": [
+   "paiement"
+  ],
+  "titre": "Paiement, argent et mobile money",
+  "icones": [
+   {
+    "slug": "discount",
+    "nom": "Réduction",
+    "motif": null
+   },
+   {
+    "slug": "coupon",
+    "nom": "Bon de réduction",
+    "motif": null
+   },
+   {
+    "slug": "gift-card",
+    "nom": "Carte cadeau",
+    "motif": null
+   },
+   {
+    "slug": "bonus",
+    "nom": "Bonus",
+    "motif": "bara-feere"
+   },
+   {
+    "slug": "cashback",
+    "nom": "Remboursement partiel",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "refund",
+    "nom": "Remboursement",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "exchange",
+    "nom": "Change de devises",
+    "motif": null
+   },
+   {
+    "slug": "price-tag",
+    "nom": "Prix",
+    "motif": null
+   },
+   {
+    "slug": "ledger",
+    "nom": "Grand livre / journal",
+    "motif": null
+   },
+   {
+    "slug": "escrow",
+    "nom": "Séquestre",
+    "motif": "bantoron"
+   },
+   {
+    "slug": "secure-payment",
+    "nom": "Paiement sécurisé",
+    "motif": "bantoron"
+   },
+   {
+    "slug": "pin-code",
+    "nom": "Code PIN",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 17,
+  "cats": [
+   "paiement",
+   "communication"
+  ],
+  "titre": "Paiement, argent et mobile money / Communication et appareils",
+  "icones": [
+   {
+    "slug": "chart-bar",
+    "nom": "Graphique en barres",
+    "motif": null
+   },
+   {
+    "slug": "chart-line",
+    "nom": "Courbe",
+    "motif": null
+   },
+   {
+    "slug": "chart-pie",
+    "nom": "Camembert",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "budget",
+    "nom": "Budget",
+    "motif": null
+   },
+   {
+    "slug": "phone-incoming",
+    "nom": "Appel entrant",
+    "motif": null
+   },
+   {
+    "slug": "phone-outgoing",
+    "nom": "Appel sortant",
+    "motif": null
+   },
+   {
+    "slug": "phone-missed",
+    "nom": "Appel manqué",
+    "motif": "juru-sarabali"
+   },
+   {
+    "slug": "video-call",
+    "nom": "Appel vidéo",
+    "motif": null
+   },
+   {
+    "slug": "smartphone",
+    "nom": "Smartphone",
+    "motif": null
+   },
+   {
+    "slug": "feature-phone",
+    "nom": "Téléphone à touches",
+    "motif": null
+   },
+   {
+    "slug": "sms",
+    "nom": "SMS",
+    "motif": null
+   },
+   {
+    "slug": "ussd",
+    "nom": "Code USSD",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 18,
+  "cats": [
+   "communication"
+  ],
+  "titre": "Communication et appareils",
+  "icones": [
+   {
+    "slug": "inbox",
+    "nom": "Boîte de réception",
+    "motif": null
+   },
+   {
+    "slug": "bell",
+    "nom": "Cloche",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "bell-off",
+    "nom": "Notifications coupées",
+    "motif": null
+   },
+   {
+    "slug": "contact",
+    "nom": "Contact",
+    "motif": null
+   },
+   {
+    "slug": "contacts",
+    "nom": "Répertoire",
+    "motif": null
+   },
+   {
+    "slug": "sim",
+    "nom": "Carte SIM",
+    "motif": null
+   },
+   {
+    "slug": "airtime",
+    "nom": "Crédit téléphonique / recharge",
+    "motif": null
+   },
+   {
+    "slug": "data",
+    "nom": "Forfait internet",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "wifi",
+    "nom": "Wi-Fi",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "signal",
+    "nom": "Réseau mobile",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "no-signal",
+    "nom": "Pas de réseau",
+    "motif": null
+   },
+   {
+    "slug": "bluetooth",
+    "nom": "Bluetooth",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 19,
+  "cats": [
+   "communication"
+  ],
+  "titre": "Communication et appareils",
+  "icones": [
+   {
+    "slug": "nfc",
+    "nom": "NFC",
+    "motif": null
+   },
+   {
+    "slug": "antenna",
+    "nom": "Antenne relais",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "laptop",
+    "nom": "Ordinateur portable",
+    "motif": null
+   },
+   {
+    "slug": "desktop",
+    "nom": "Ordinateur",
+    "motif": null
+   },
+   {
+    "slug": "tablet",
+    "nom": "Tablette",
+    "motif": null
+   },
+   {
+    "slug": "printer",
+    "nom": "Imprimante",
+    "motif": null
+   },
+   {
+    "slug": "camera",
+    "nom": "Appareil photo",
+    "motif": null
+   },
+   {
+    "slug": "microphone",
+    "nom": "Microphone",
+    "motif": null
+   },
+   {
+    "slug": "headphones",
+    "nom": "Écouteurs",
+    "motif": null
+   },
+   {
+    "slug": "speaker",
+    "nom": "Haut-parleur",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "charger",
+    "nom": "Chargeur",
+    "motif": null
+   },
+   {
+    "slug": "power-bank",
+    "nom": "Batterie externe",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 20,
+  "cats": [
+   "communication"
+  ],
+  "titre": "Communication et appareils",
+  "icones": [
+   {
+    "slug": "usb",
+    "nom": "USB",
+    "motif": null
+   },
+   {
+    "slug": "cloud",
+    "nom": "Nuage",
+    "motif": null
+   },
+   {
+    "slug": "cloud-upload",
+    "nom": "Envoyer vers le nuage",
+    "motif": null
+   },
+   {
+    "slug": "cloud-off",
+    "nom": "Nuage indisponible",
+    "motif": null
+   },
+   {
+    "slug": "server",
+    "nom": "Serveur",
+    "motif": null
+   },
+   {
+    "slug": "database",
+    "nom": "Base de données",
+    "motif": null
+   },
+   {
+    "slug": "code",
+    "nom": "Code",
+    "motif": null
+   },
+   {
+    "slug": "terminal",
+    "nom": "Terminal",
+    "motif": null
+   },
+   {
+    "slug": "api",
+    "nom": "API",
+    "motif": null
+   },
+   {
+    "slug": "bug",
+    "nom": "Bogue",
+    "motif": null
+   },
+   {
+    "slug": "robot",
+    "nom": "Robot / IA",
+    "motif": null
+   },
+   {
+    "slug": "sparkles-ai",
+    "nom": "Assistant IA",
+    "motif": "bara-feere"
+   }
+  ]
+ },
+ {
+  "n": 21,
+  "cats": [
+   "communication",
+   "medias"
+  ],
+  "titre": "Communication et appareils / Médias et fichiers",
+  "icones": [
+   {
+    "slug": "qr-pay",
+    "nom": "Paiement par QR",
+    "motif": null
+   },
+   {
+    "slug": "image",
+    "nom": "Image",
+    "motif": null
+   },
+   {
+    "slug": "gallery",
+    "nom": "Galerie",
+    "motif": null
+   },
+   {
+    "slug": "screenshot",
+    "nom": "Capture d'écran",
+    "motif": "bantoron"
+   },
+   {
+    "slug": "video",
+    "nom": "Vidéo",
+    "motif": null
+   },
+   {
+    "slug": "film",
+    "nom": "Film",
+    "motif": null
+   },
+   {
+    "slug": "music",
+    "nom": "Musique",
+    "motif": null
+   },
+   {
+    "slug": "audio",
+    "nom": "Audio",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "podcast",
+    "nom": "Podcast",
+    "motif": null
+   },
+   {
+    "slug": "file",
+    "nom": "Fichier",
+    "motif": null
+   },
+   {
+    "slug": "file-text",
+    "nom": "Document",
+    "motif": null
+   },
+   {
+    "slug": "file-pdf",
+    "nom": "PDF",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 22,
+  "cats": [
+   "medias"
+  ],
+  "titre": "Médias et fichiers",
+  "icones": [
+   {
+    "slug": "file-image",
+    "nom": "Fichier image",
+    "motif": null
+   },
+   {
+    "slug": "file-audio",
+    "nom": "Fichier audio",
+    "motif": null
+   },
+   {
+    "slug": "file-video",
+    "nom": "Fichier vidéo",
+    "motif": null
+   },
+   {
+    "slug": "file-zip",
+    "nom": "Archive",
+    "motif": null
+   },
+   {
+    "slug": "file-spreadsheet",
+    "nom": "Tableur",
+    "motif": null
+   },
+   {
+    "slug": "folder",
+    "nom": "Dossier",
+    "motif": null
+   },
+   {
+    "slug": "folder-open",
+    "nom": "Dossier ouvert",
+    "motif": null
+   },
+   {
+    "slug": "clipboard",
+    "nom": "Presse-papiers",
+    "motif": null
+   },
+   {
+    "slug": "note",
+    "nom": "Note",
+    "motif": null
+   },
+   {
+    "slug": "book",
+    "nom": "Livre",
+    "motif": null
+   },
+   {
+    "slug": "newspaper",
+    "nom": "Journal",
+    "motif": null
+   },
+   {
+    "slug": "proof",
+    "nom": "Preuve de publication",
+    "motif": "bantoron"
+   }
+  ]
+ },
+ {
+  "n": 23,
+  "cats": [
+   "medias",
+   "temps"
+  ],
+  "titre": "Médias et fichiers / Temps et calendrier",
+  "icones": [
+   {
+    "slug": "watermark",
+    "nom": "Filigrane",
+    "motif": null
+   },
+   {
+    "slug": "text",
+    "nom": "Texte",
+    "motif": null
+   },
+   {
+    "slug": "font",
+    "nom": "Police",
+    "motif": null
+   },
+   {
+    "slug": "bold",
+    "nom": "Gras",
+    "motif": null
+   },
+   {
+    "slug": "italic",
+    "nom": "Italique",
+    "motif": null
+   },
+   {
+    "slug": "align-left",
+    "nom": "Aligner à gauche",
+    "motif": null
+   },
+   {
+    "slug": "list-bullet",
+    "nom": "Liste à puces",
+    "motif": "sogosen"
+   },
+   {
+    "slug": "list-number",
+    "nom": "Liste numérotée",
+    "motif": null
+   },
+   {
+    "slug": "calendar",
+    "nom": "Calendrier",
+    "motif": null
+   },
+   {
+    "slug": "calendar-check",
+    "nom": "Date confirmée",
+    "motif": null
+   },
+   {
+    "slug": "calendar-add",
+    "nom": "Ajouter un événement",
+    "motif": null
+   },
+   {
+    "slug": "event",
+    "nom": "Événement",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 24,
+  "cats": [
+   "temps"
+  ],
+  "titre": "Temps et calendrier",
+  "icones": [
+   {
+    "slug": "clock-alt",
+    "nom": "Horloge",
+    "motif": null
+   },
+   {
+    "slug": "countdown",
+    "nom": "Compte à rebours",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "alarm",
+    "nom": "Réveil",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "stopwatch",
+    "nom": "Chronomètre",
+    "motif": null
+   },
+   {
+    "slug": "history-time",
+    "nom": "Historique",
+    "motif": "sa-kurulen"
+   },
+   {
+    "slug": "day",
+    "nom": "Jour",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "night",
+    "nom": "Nuit",
+    "motif": null
+   },
+   {
+    "slug": "sunrise",
+    "nom": "Lever du soleil",
+    "motif": null
+   },
+   {
+    "slug": "sunset",
+    "nom": "Coucher du soleil",
+    "motif": null
+   },
+   {
+    "slug": "week",
+    "nom": "Semaine",
+    "motif": null
+   },
+   {
+    "slug": "month",
+    "nom": "Mois",
+    "motif": null
+   },
+   {
+    "slug": "deadline",
+    "nom": "Échéance",
+    "motif": "bantoron"
+   }
+  ]
+ },
+ {
+  "n": 25,
+  "cats": [
+   "personnes"
+  ],
+  "titre": "Personnes, comptes et famille",
+  "icones": [
+   {
+    "slug": "user",
+    "nom": "Utilisateur",
+    "motif": null
+   },
+   {
+    "slug": "users",
+    "nom": "Utilisateurs",
+    "motif": "turusina"
+   },
+   {
+    "slug": "user-add",
+    "nom": "Ajouter un utilisateur",
+    "motif": null
+   },
+   {
+    "slug": "user-remove",
+    "nom": "Retirer un utilisateur",
+    "motif": null
+   },
+   {
+    "slug": "user-check",
+    "nom": "Utilisateur vérifié",
+    "motif": null
+   },
+   {
+    "slug": "user-circle",
+    "nom": "Avatar",
+    "motif": null
+   },
+   {
+    "slug": "family",
+    "nom": "Famille",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "couple",
+    "nom": "Couple",
+    "motif": null
+   },
+   {
+    "slug": "child",
+    "nom": "Enfant",
+    "motif": null
+   },
+   {
+    "slug": "elder",
+    "nom": "Ancien / sage",
+    "motif": null
+   },
+   {
+    "slug": "woman",
+    "nom": "Femme",
+    "motif": null
+   },
+   {
+    "slug": "man",
+    "nom": "Homme",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 26,
+  "cats": [
+   "personnes",
+   "securite"
+  ],
+  "titre": "Personnes, comptes et famille / Sécurité et confiance",
+  "icones": [
+   {
+    "slug": "group",
+    "nom": "Groupe",
+    "motif": "turusina"
+   },
+   {
+    "slug": "team",
+    "nom": "Équipe",
+    "motif": "turusina"
+   },
+   {
+    "slug": "admin",
+    "nom": "Administrateur",
+    "motif": "bantoron"
+   },
+   {
+    "slug": "moderator",
+    "nom": "Modérateur",
+    "motif": "dantigimari"
+   },
+   {
+    "slug": "advertiser",
+    "nom": "Annonceur",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "publisher",
+    "nom": "Diffuseur",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "agent",
+    "nom": "Agent / conseiller",
+    "motif": null
+   },
+   {
+    "slug": "wave-hand",
+    "nom": "Salutation",
+    "motif": null
+   },
+   {
+    "slug": "griot",
+    "nom": "Griot / conteur",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "chief",
+    "nom": "Chef de village",
+    "motif": null
+   },
+   {
+    "slug": "wheelchair",
+    "nom": "Fauteuil roulant",
+    "motif": null
+   },
+   {
+    "slug": "shield",
+    "nom": "Bouclier",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 27,
+  "cats": [
+   "securite"
+  ],
+  "titre": "Sécurité et confiance",
+  "icones": [
+   {
+    "slug": "shield-alert",
+    "nom": "Menace",
+    "motif": null
+   },
+   {
+    "slug": "lock-closed",
+    "nom": "Cadenas fermé",
+    "motif": null
+   },
+   {
+    "slug": "lock-open",
+    "nom": "Cadenas ouvert",
+    "motif": null
+   },
+   {
+    "slug": "key-alt",
+    "nom": "Clé d'accès",
+    "motif": null
+   },
+   {
+    "slug": "password",
+    "nom": "Mot de passe",
+    "motif": null
+   },
+   {
+    "slug": "fingerprint",
+    "nom": "Empreinte digitale",
+    "motif": null
+   },
+   {
+    "slug": "face-id",
+    "nom": "Reconnaissance faciale",
+    "motif": null
+   },
+   {
+    "slug": "two-factor",
+    "nom": "Double authentification",
+    "motif": null
+   },
+   {
+    "slug": "kyc",
+    "nom": "Vérification d'identité",
+    "motif": null
+   },
+   {
+    "slug": "fraud",
+    "nom": "Fraude",
+    "motif": "juru-sarabali"
+   },
+   {
+    "slug": "spam",
+    "nom": "Indésirable",
+    "motif": null
+   },
+   {
+    "slug": "eye-watch",
+    "nom": "Surveillance",
+    "motif": null
+   }
+  ]
+ },
+ {
+  "n": 28,
+  "cats": [
+   "securite",
+   "vupay"
+  ],
+  "titre": "Sécurité et confiance / Spécifiques Vupay",
+  "icones": [
+   {
+    "slug": "legal",
+    "nom": "Mentions légales",
+    "motif": "dantigimari"
+   },
+   {
+    "slug": "contract",
+    "nom": "Contrat",
+    "motif": null
+   },
+   {
+    "slug": "signature",
+    "nom": "Signature",
+    "motif": null
+   },
+   {
+    "slug": "stamp",
+    "nom": "Cachet / tampon",
+    "motif": null
+   },
+   {
+    "slug": "dispute",
+    "nom": "Litige",
+    "motif": "dantigimari"
+   },
+   {
+    "slug": "gavel",
+    "nom": "Décision / arbitrage",
+    "motif": "dantigimari"
+   },
+   {
+    "slug": "vupay-ring",
+    "nom": "Anneau de statut Vupay",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "proof-upload",
+    "nom": "Envoyer une preuve",
+    "motif": "bantoron"
+   },
+   {
+    "slug": "proof-pending",
+    "nom": "Preuve en vérification",
+    "motif": "sogosen"
+   },
+   {
+    "slug": "proof-approved",
+    "nom": "Preuve validée",
+    "motif": "bara-feere"
+   },
+   {
+    "slug": "proof-rejected",
+    "nom": "Preuve refusée",
+    "motif": "juru-sarabali"
+   },
+   {
+    "slug": "campaign-create",
+    "nom": "Créer une campagne",
+    "motif": "donkonkolo"
+   }
+  ]
+ },
+ {
+  "n": 29,
+  "cats": [
+   "vupay"
+  ],
+  "titre": "Spécifiques Vupay",
+  "icones": [
+   {
+    "slug": "campaign-live",
+    "nom": "Campagne active",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "campaign-ended",
+    "nom": "Campagne terminée",
+    "motif": null
+   },
+   {
+    "slug": "diffuseur",
+    "nom": "Espace diffuseur",
+    "motif": "kaana-nonkon"
+   },
+   {
+    "slug": "annonceur",
+    "nom": "Espace annonceur",
+    "motif": "donkonkolo"
+   },
+   {
+    "slug": "audience-size",
+    "nom": "Taille d'audience",
+    "motif": "turusina"
+   },
+   {
+    "slug": "views-24h",
+    "nom": "Vues sur 24 h",
+    "motif": "koli-so"
+   },
+   {
+    "slug": "gains-fcfa",
+    "nom": "Gains en FCFA",
+    "motif": "bara-feere"
+   },
+   {
+    "slug": "withdraw-mm",
+    "nom": "Retrait mobile money",
+    "motif": null
+   },
+   {
+    "slug": "moderation",
+    "nom": "Modération",
+    "motif": "dantigimari"
+   },
+   {
+    "slug": "identity-check",
+    "nom": "Vérification d'identité",
+    "motif": "bantoron"
+   },
+   {
+    "slug": "journal",
+    "nom": "Journal d'audit",
+    "motif": "croisillon"
+   }
+  ]
+ }
+]

@@ -1,5 +1,9 @@
 # Icônes — Collection Bogolan + icônes Vupay
 
+> **Nouveau (22/11/2026)** : 32 icônes Bogolan aux couleurs de la charte V4 (vert profond, vert vif, ocre, brun, crème),
+> dont les 5 onglets (accueil, campagnes, gains, retraits, profil) : [`bogolan/vupay/`](bogolan/vupay/README.md),
+> à valider avant de remplacer les icônes de l'app. Catalogue des 1000 icônes à dessiner : [`bogolan/CATALOGUE.md`](bogolan/CATALOGUE.md).
+
 Les icônes de Vupay sont de deux sources, dans le même style (tuile crème, volumes façon argile, ocre, rouille,
 brun, frise zigzag-points) :
 
