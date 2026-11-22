@@ -1,0 +1,21 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Vupay · grille des icônes</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@700&display=swap">
+<style>body{margin:0;background:#FFF7E6;color:#092E1B;font:15px/1.5 Inter,system-ui,sans-serif}#grille{max-width:1200px;margin:0 auto;padding:32px 16px}
+#grille h1{font-family:Poppins,sans-serif;margin:8px 0}.marque{font-weight:700}.doux{color:#4a5f52;font-size:13px}.planche{margin-bottom:18px}</style>
+</head><body>
+<style>
+/* Grille déplaçable des icônes V4 : composant Draggable Grid d'OriginKit (React, monté par grille.js) */
+#grille{--dg-fond:#FFF7E6}
+#grille .scene-dg{height:min(78vh,640px);border-radius:24px;overflow:hidden;background:#092E1B;position:relative;box-shadow:0 24px 50px rgba(9,46,27,.25)}
+#grille .scene-dg::after{content:"Glissez pour explorer";position:absolute;left:50%;bottom:16px;transform:translateX(-50%);background:rgba(9,46,27,.82);color:#FFF7E6;font:600 13px/1 Inter,system-ui,sans-serif;padding:10px 16px;border-radius:999px;pointer-events:none}
+#grille .dg-tuile{box-shadow:0 10px 24px rgba(0,0,0,.25)}
+#grille .dg-legende{position:absolute;left:8px;right:8px;bottom:10px;text-align:center;font:600 13px/1.2 Inter,system-ui,sans-serif;color:#092E1B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;pointer-events:none}
+</style>
+<section class="espace" id="grille">
+<header class="planche"><div><div class="marque"><i></i>vupay</div><h1>Toutes les icônes, à explorer</h1><p>Les 32 icônes Bogolan de la charte V4 dans une grille infinie que l'on fait glisser à la souris ou au doigt (composant Draggable Grid d'OriginKit).</p></div>
+<p class="doux">Charte V4 · vert Vupay #006B3A · aucun logo de réseau social</p></header>
+<div class="scene-dg" data-grille data-colonnes="12" data-items='[{"src": "../png/accueil.png", "alt": "Accueil"}, {"src": "../png/campagnes.png", "alt": "Campagnes"}, {"src": "../png/gains.png", "alt": "Gains"}, {"src": "../png/retrait.png", "alt": "Retrait"}, {"src": "../png/profil.png", "alt": "Profil"}, {"src": "../png/accepter.png", "alt": "Accepter une campagne"}, {"src": "../png/publier.png", "alt": "Publier en statut"}, {"src": "../png/preuve.png", "alt": "Envoyer la preuve"}, {"src": "../png/encaisser.png", "alt": "Encaisser"}, {"src": "../png/cadenas.png", "alt": "Sécurité"}, {"src": "../png/info.png", "alt": "Information"}, {"src": "../png/chrono.png", "alt": "Compte à rebours"}, {"src": "../png/telecharger.png", "alt": "Télécharger"}, {"src": "../png/selfie.png", "alt": "Selfie"}, {"src": "../png/piece-identite.png", "alt": "Pièce d&#39;identité"}, {"src": "../png/mobile-money.png", "alt": "Mobile Money"}, {"src": "../png/tableau-de-bord.png", "alt": "Tableau de bord"}, {"src": "../png/nouvelle-campagne.png", "alt": "Nouvelle campagne"}, {"src": "../png/portefeuille.png", "alt": "Portefeuille"}, {"src": "../png/factures.png", "alt": "Factures"}, {"src": "../png/entreprise.png", "alt": "Entreprise"}, {"src": "../png/preuves.png", "alt": "Preuves"}, {"src": "../png/identites.png", "alt": "Identités"}, {"src": "../png/moderation.png", "alt": "Modération"}, {"src": "../png/retraits.png", "alt": "Retraits"}, {"src": "../png/utilisateurs.png", "alt": "Utilisateurs"}, {"src": "../png/parametres.png", "alt": "Paramètres"}, {"src": "../png/journal.png", "alt": "Journal"}, {"src": "../png/recherche.png", "alt": "Recherche"}, {"src": "../png/audience.png", "alt": "Audience"}, {"src": "../png/vues.png", "alt": "Vues"}, {"src": "../png/fraude.png", "alt": "Alerte fraude"}]'></div>
+</section>
+<script src="grille.js"></script>
+</body></html>
