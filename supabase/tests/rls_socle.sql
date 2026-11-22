@@ -116,4 +116,10 @@ select test_verifier((select statut_kyc from profiles where id = '00000000-0000-
   'l''admin peut valider un KYC');
 select test_proprietaire();
 
+-- 7. Fonctions de trigger non appelables via l'API ------------------------------------------
+select test_verifier(not has_function_privilege('authenticated', 'preparer_profil()', 'execute'),
+  'preparer_profil n''est pas appelable par un utilisateur');
+select test_verifier(not has_function_privilege('anon', 'proteger_colonnes_profil()', 'execute'),
+  'proteger_colonnes_profil n''est pas appelable anonymement');
+
 \echo 'Tous les tests de sécurité du socle sont passés.'

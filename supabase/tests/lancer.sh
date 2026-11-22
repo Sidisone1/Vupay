@@ -8,6 +8,6 @@ createdb "$base"
 trap 'dropdb --if-exists "$base"' EXIT
 psql_() { psql -v ON_ERROR_STOP=1 -q -X -tA -d "$base" "$@"; }
 psql_ -f "$ici/stub_auth.sql"
+psql_ -f "$ici/droits_supabase.sql"
 for m in "$ici"/../migrations/*.sql; do psql_ -f "$m"; done
-psql_ -f "$ici/apres_migrations.sql"
 for t in "$ici"/rls_*.sql; do echo "== $(basename "$t")"; psql_ -f "$t"; done

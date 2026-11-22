@@ -18,8 +18,8 @@
 
 | Rôle | Fichier |
 | --- | --- |
-| Migration du socle | `supabase/migrations/0002_socle_comptes.sql` |
-| Tests de sécurité SQL (26 vérifications) | `supabase/tests/rls_socle.sql`, lancés par `supabase/tests/lancer.sh` |
+| Migrations du socle | `supabase/migrations/0002_socle_comptes.sql`, `0003_droits_fonctions.sql` |
+| Tests de sécurité SQL (28 vérifications) | `supabase/tests/rls_socle.sql`, lancés par `supabase/tests/lancer.sh` |
 | Règles métier testées | `apps/web/src/lib/telephone.ts`, `apps/web/src/lib/espaces.ts` (+ `*.test.ts`) |
 | Protection des pages | `apps/web/src/middleware.ts` |
 | Écrans | `apps/web/src/app/(auth)/connexion`, `(auth)/inscription`, `compte/espaces`, `compte/suspendu` |
@@ -33,6 +33,8 @@
   téléphone, ni son code ou son parrain. Un compte suspendu ne modifie plus son profil.
 - Seul un profil ayant ouvert l'espace entreprise (et non suspendu) crée ou modifie une entreprise.
 - Aucun utilisateur n'écrit dans `ledger_entries` ni dans `withdrawals` (clé service uniquement).
+- Les fonctions de trigger ne sont pas appelables via l'API. L'analyse de sécurité Supabase signale encore
+  `est_admin()` et `a_espace()` : c'est voulu, la RLS les appelle et elles ne révèlent que le statut de l'appelant.
 
 ## Lancer les tests
 
