@@ -34,11 +34,17 @@ export function FormulaireConnexion({ suite, espace }: { suite: string | null; e
     }
     setErreur(null);
     setEnvoi(true);
-    const { error } = await supabaseNavigateur().auth.signInWithOtp({ phone: numero.e164, options: { channel: canal } });
-    setEnvoi(false);
-    if (error) {
-      setErreur("Le code n'a pas pu être envoyé. Vérifiez le numéro ou réessayez dans une minute.");
+    try {
+      const { error } = await supabaseNavigateur().auth.signInWithOtp({ phone: numero.e164, options: { channel: canal } });
+      if (error) {
+        setErreur("Le code n'a pas pu être envoyé. Vérifiez le numéro ou réessayez dans une minute.");
+        return;
+      }
+    } catch {
+      setErreur("La connexion est interrompue. Vérifiez votre accès Internet et réessayez.");
       return;
+    } finally {
+      setEnvoi(false);
     }
     setTelephone(numero.e164);
     setCode("");
@@ -54,11 +60,17 @@ export function FormulaireConnexion({ suite, espace }: { suite: string | null; e
     }
     setErreur(null);
     setEnvoi(true);
-    const { error } = await supabaseNavigateur().auth.verifyOtp({ phone: telephone, token: code.trim(), type: "sms" });
-    setEnvoi(false);
-    if (error) {
-      setErreur("Code incorrect ou expiré.");
+    try {
+      const { error } = await supabaseNavigateur().auth.verifyOtp({ phone: telephone, token: code.trim(), type: "sms" });
+      if (error) {
+        setErreur("Code incorrect ou expiré.");
+        return;
+      }
+    } catch {
+      setErreur("La connexion est interrompue. Vous pouvez réessayer avec le même code.");
       return;
+    } finally {
+      setEnvoi(false);
     }
     const params = new URLSearchParams();
     if (suite) params.set("suite", suite);
@@ -94,7 +106,7 @@ export function FormulaireConnexion({ suite, espace }: { suite: string | null; e
           {envoi ? "Vérification…" : "Valider"}
         </button>
         <div className="mt-4 flex justify-between text-sm">
-          <button type="button" className="font-bold text-vupay-primaire" onClick={() => setEtape("numero")}>
+          <button type="button" className="font-bold text-vupay-primaire" disabled={envoi} onClick={() => { setErreur(null); setEtape("numero"); }}>
             Changer de numéro
           </button>
           <button type="button" className="font-bold text-vupay-primaire disabled:text-vupay-doux" disabled={attente > 0 || envoi} onClick={() => demanderCode()}>

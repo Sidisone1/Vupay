@@ -28,8 +28,12 @@ async function obtenirJeton(forcer = false): Promise<string> {
   });
   if (!reponse.ok) throw new Error(`Jeton Orange refusé (${reponse.status})`);
   const donnees = await reponse.json();
-  // Le jeton vaut une heure ; on le renouvelle une minute avant.
-  jeton = { valeur: donnees.access_token, expire: Date.now() + (Number(donnees.expires_in ?? 3600) - 60) * 1000 };
+  const duree = Number(donnees.expires_in ?? 3600);
+  if (typeof donnees.access_token !== "string" || !donnees.access_token.trim() || !Number.isFinite(duree) || duree <= 0) {
+    throw new Error("Réponse de jeton Orange invalide");
+  }
+  // Le jeton est renouvelé une minute avant son expiration.
+  jeton = { valeur: donnees.access_token, expire: Date.now() + Math.max(0, duree - 60) * 1000 };
   return jeton.valeur;
 }
 
@@ -73,13 +77,13 @@ Deno.serve(async (req) => {
     const reponse = await envoyer(telephone, code);
     if (!reponse.ok) {
       // Sans recopier le numéro ni le code dans les journaux.
-      console.error("Envoi Orange refusé", reponse.status, await reponse.text());
+      console.error("Envoi Orange refusé", reponse.status);
       return erreur(502, "Le SMS n'a pas pu être envoyé. Réessayez dans un instant.");
     }
     return new Response(JSON.stringify({}), { status: 200, headers: { "Content-Type": "application/json" } });
   } catch (e) {
     const message = e instanceof Error ? e.message : "Erreur inconnue";
-    console.error("Envoi SMS impossible :", message);
+    console.error("Envoi SMS impossible");
     return erreur(message.startsWith("Pays non couvert") ? 400 : 500, message.startsWith("Pays non couvert")
       ? "La connexion par SMS n'est pas encore ouverte dans votre pays."
       : "Le SMS n'a pas pu être envoyé. Réessayez dans un instant.");

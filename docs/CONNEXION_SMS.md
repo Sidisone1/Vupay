@@ -55,3 +55,10 @@ Ouvrez la page de connexion du site, entrez votre numéro malien, choisissez **P
 ## Pour les essais avant d'avoir le compte Orange
 
 Dans **Authentication → Sign In / Providers → Phone**, la rubrique **Test Phone Numbers and OTPs** permet de déclarer des numéros fictifs avec un code fixe, par exemple `22370000001=123456`. Ces numéros se connectent sans envoi de SMS.
+
+## Recette de connexion en environnement de test
+
+1. D’abord utiliser un numéro fictif déclaré dans Supabase. Vérifier que le code correct ouvre le bon espace et qu’un code erroné laisse le formulaire utilisable.
+2. Couper puis rétablir la connexion Internet à l’étape de l’envoi et à celle de la vérification. Le bouton doit redevenir disponible et la saisie rester en place.
+3. Avec un compte Orange configuré, demander un seul code depuis un numéro malien de recette sous votre contrôle. Après réception, vérifier le délai de renvoi et la connexion à l’espace prévu.
+4. En cas de rejet Orange, noter l’heure et le statut HTTP. La fonction journalise le statut sans recopier le corps de la réponse du prestataire.
