@@ -61,6 +61,7 @@ const PAGES_ADMIN: [RegExp, PermissionAdmin][] = [
   [/^\/admin\/campagnes(\/|$)/, "moderer_campagnes"],
   [/^\/admin\/preuves(\/|$)/, "moderer_campagnes"],
   [/^\/admin\/kyc(\/|$)/, "valider_kyc"],
+  [/^\/admin\/entreprises(\/|$)/, "verifier_entreprises"],
   [/^\/admin\/retraits(\/|$)/, "gerer_retraits"],
   [/^\/admin\/journal(\/|$)/, "voir_journal"],
   [/^\/admin\/parametres(\/|$)/, "modifier_parametres"],
