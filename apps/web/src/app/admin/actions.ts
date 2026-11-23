@@ -120,3 +120,22 @@ export async function basculerPause(form: FormData) {
   revalidatePath("/admin/campagnes");
   redirect(`/admin/campagnes?${data?.length ? (pause ? "fait=pause" : "fait=relance") : "erreur=base"}`);
 }
+
+/** Vérification humaine d'une action « en attente » : la retenir ou la refuser (motif ajouté). */
+export async function deciderAction(form: FormData) {
+  const { client } = await exigerAdmin("moderer_campagnes");
+  const id = texte(form.get("id"));
+  const decision = texte(form.get("decision"));
+  if (!/^\d{1,18}$/.test(id) || (decision !== "valide" && decision !== "refuse")) redirect("/admin/actions?erreur=base");
+  const motif = decision === "refuse" ? motifValide(texte(form.get("motif_libre")) || texte(form.get("motif"))) : null;
+  if (decision === "refuse" && !motif) redirect("/admin/actions?erreur=motif");
+  const { data: actuelle } = await client.from("contact_actions").select("motifs").eq("id", id).maybeSingle();
+  const { data } = await client
+    .from("contact_actions")
+    .update({ statut: decision === "valide" ? "validee" : "refusee", ...(motif && { motifs: [...((actuelle?.motifs as string[]) ?? []), motif] }) })
+    .eq("id", id)
+    .eq("statut", "en_attente")
+    .select("id");
+  revalidatePath("/admin/actions");
+  redirect(`/admin/actions?${data?.length ? `fait=${decision}` : "erreur=base"}`);
+}

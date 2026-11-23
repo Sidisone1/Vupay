@@ -7,7 +7,7 @@
 | Projet | **vupay-v2** (organisation SIKIDA WIFI, offre gratuite) |
 | Région | Paris (`eu-west-3`) |
 | Adresse de l'API | `https://pwubrzwwbbmwagehdzfq.supabase.co` |
-| Migrations appliquées | `0001` à `0005` du dépôt, identiques au caractère près aux fichiers |
+| Migrations appliquées | `0001` à `0006` du dépôt, identiques au caractère près aux fichiers |
 | Règles d'accès | 30 règles ; aucune table sans RLS |
 | Compartiments de fichiers | `kyc` (privé), `entreprises` (privé), `produits` (public) |
 
@@ -28,6 +28,6 @@ Supabase demande une confirmation manuelle pour toute commande d'effacement, mê
 1. **Vercel** (le connecteur n'a pas le droit de créer un site : erreur 403)
    - vercel.com → Add New → Project → importer le dépôt `Sidisone1/Vupay`.
    - Root Directory : `apps/web`.
-   - Variables d'environnement : `NEXT_PUBLIC_SUPABASE_URL` = l'adresse ci-dessus ; `NEXT_PUBLIC_SUPABASE_ANON_KEY` = la clé « publishable » du projet (Supabase → Project Settings → API Keys) ; `NEXT_PUBLIC_APP_URL` = l'adresse du site.
+   - Variables d'environnement : `NEXT_PUBLIC_SUPABASE_URL` = l'adresse ci-dessus ; `NEXT_PUBLIC_SUPABASE_ANON_KEY` = la clé « publishable » du projet (Supabase → Project Settings → API Keys) ; `NEXT_PUBLIC_APP_URL` = l'adresse du site ; `SUPABASE_SERVICE_ROLE_KEY` = la clé **secret** du projet (Supabase → Project Settings → API Keys) ; `SEL_HACHAGE_IP` = 32 caractères aléatoires ou plus.
 2. **Connexion par SMS avec Orange** : la fonction d'envoi est installée ; il reste à créer le compte Orange Developer et à brancher le crochet dans Supabase. Guide pas à pas : `docs/CONNEXION_SMS.md`.
 3. **Premier super admin** : après votre première connexion, me donner le feu vert ; je l'attribue depuis la base.

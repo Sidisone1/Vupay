@@ -11,6 +11,7 @@ export const LIENS_ADMIN: LienAdmin[] = [
   { href: "/admin/kyc", libelle: "Vérifications d'identité", permission: "valider_kyc" },
   { href: "/admin/entreprises", libelle: "Vérifications d'entreprise", permission: "verifier_entreprises" },
   { href: "/admin/campagnes", libelle: "Modération des campagnes", permission: "moderer_campagnes" },
+  { href: "/admin/actions", libelle: "Actions à vérifier (antifraude)", permission: "moderer_campagnes" },
   { href: "/admin/utilisateurs", libelle: "Utilisateurs", permission: null },
   { href: "/admin/retraits", libelle: "Retraits", permission: "gerer_retraits" },
   { href: "/admin/journal", libelle: "Journal financier", permission: "voir_journal" },
@@ -44,6 +45,12 @@ export const MOTIFS_CAMPAGNE = [
   "Produit ou service interdit à la publicité",
   "Bouton de contact qui ne mène pas à l'annonceur",
   "Prix incohérent ou manquant alors qu'il est annoncé",
+] as const;
+
+export const MOTIFS_REFUS_ACTION = [
+  "Clics répétés depuis le même appareil",
+  "Trafic suspect sur ce lien",
+  "Diffuseur ou annonceur lié à l'action",
 ] as const;
 
 /** Un refus doit être motivé clairement : 5 à 300 caractères. Renvoie le motif nettoyé ou null. */

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { FicheProduit } from "@/components/FicheProduit";
+import { TableauActions } from "@/components/TableauActions";
+import { resumer, type StatutAction } from "@/lib/statistiques";
 import { champsManquants, estModifiable, STATUTS } from "@/lib/campagnes";
 import type { ActionContact } from "@/lib/contacts";
 import { supabaseServeur } from "@/lib/supabase/server";
@@ -59,6 +61,15 @@ export default async function Campagne({ params, searchParams }: { params: { id:
   const message = MESSAGES[searchParams.fait ?? searchParams.erreur ?? ""];
   const etat = STATUTS[c.statut];
   const adressePublique = `${process.env.NEXT_PUBLIC_APP_URL ?? ""}/p/${c.slug}`;
+  const publiee = c.statut === "active" || c.statut === "en_pause" || c.statut === "terminee";
+  const [{ data: visites }, { data: actions }, { count: nbDiffuseurs }] = publiee
+    ? await Promise.all([
+        client.from("page_visits").select("robot").eq("campagne_id", c.id),
+        client.from("contact_actions").select("type, statut").eq("campagne_id", c.id),
+        client.from("assignments").select("id", { count: "exact", head: true }).eq("campagne_id", c.id),
+      ])
+    : [{ data: [] }, { data: [] }, { count: 0 }];
+  const resume = resumer((visites ?? []) as { robot: boolean }[], (actions ?? []) as { type: ActionContact; statut: StatutAction }[]);
 
   return (
     <main className="mx-auto min-h-screen max-w-lg bg-vupay-fond px-5 py-6 text-vupay-encre">
@@ -131,6 +142,16 @@ export default async function Campagne({ params, searchParams }: { params: { id:
             Retirer de la modération pour modifier
           </button>
         </form>
+      )}
+
+      {publiee && (
+        <>
+          <h2 className="mt-8 text-lg font-black">Résultats</h2>
+          <p className="text-xs text-vupay-doux">{nbDiffuseurs ?? 0} lien(s) de diffuseurs actif(s).</p>
+          <div className="mt-2">
+            <TableauActions resume={resume} />
+          </div>
+        </>
       )}
 
       <h2 className="mt-8 text-lg font-black">Aperçu de la fiche</h2>
