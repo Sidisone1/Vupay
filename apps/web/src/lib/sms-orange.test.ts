@@ -6,6 +6,7 @@ describe("SMS de connexion par Orange", () => {
     expect(expediteurPour("+22370123456")).toBe("2230000");
     expect(expediteurPour("+2250701020304")).toBe("2250000");
     expect(expediteurPour("221771234567")).toBe("2210000");
+    expect(expediteurPour("+224621234567")).toBe("2240000");
   });
   it("refuse les pays non couverts par Orange et les numéros invalides", () => {
     expect(expediteurPour("+22997000000")).toBeNull(); // Bénin

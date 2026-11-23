@@ -5,6 +5,9 @@
 ## Nouvelle règle produit (20/11/2026)
 La rémunération principale est basée sur des **actions qualifiées sur la page Vupay**, et non sur les vues ni les simples visites. Actions enregistrées séparément : numéro WhatsApp, catalogue WhatsApp, envoyer un message et acheter. L'ouverture d'un lien ne prouve pas un message envoyé ni une vente. Les tarifs ne sont **pas encore validés**.
 
+## Reprendre le projet
+Commencer par **[l'état du projet](docs/ETAT_DU_PROJET.md)**, puis les consignes communes aux IA et développeurs : [AGENTS.md](AGENTS.md).
+
 ## Documentation V2
 - [Cadrage fonctionnel V2](docs/PRODUIT_V2_CLICS_QUALIFIES.md)
 - [Architecture V2 — clics et antifraude](docs/ARCHITECTURE_V2_CLICS.md)

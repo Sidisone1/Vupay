@@ -12,6 +12,7 @@ export const EXPEDITEURS_ORANGE: Record<string, { pays: string; numero: string }
   "221": { pays: "Sénégal", numero: "2210000" },
   "226": { pays: "Burkina Faso", numero: "2260000" },
   "245": { pays: "Guinée-Bissau", numero: "2450000" },
+  "224": { pays: "Guinée", numero: "2240000" },
 };
 
 /** Expéditeur Orange pour un numéro au format +XXX…, ou null si le pays n'est pas couvert. */
