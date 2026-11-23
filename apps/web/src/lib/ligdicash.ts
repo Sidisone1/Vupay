@@ -10,7 +10,7 @@ export function etatLigdiCash(statut: unknown): EtatLigdiCash {
   switch (statut.toLowerCase()) {
     case "completed": return "reussi";
     case "pending": return "en_attente";
-    case "failed": case "cancelled": case "canceled": return "echoue";
+    case "notcompleted": case "failed": case "cancelled": case "canceled": return "echoue";
     default: return "inconnu";
   }
 }
