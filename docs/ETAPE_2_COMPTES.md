@@ -52,7 +52,7 @@ PGHOST=localhost PGUSER=postgres supabase/tests/lancer.sh   # droits dans la bas
 
 ## Mise en service (à faire par le porteur du projet)
 
-1. Créer le projet Supabase et appliquer les migrations `0001`, `0002` puis `0003`.
+1. Projet Supabase **vupay-v2** créé et migrations `0001` à `0005` appliquées (voir `docs/MISE_EN_SERVICE.md`).
 2. Activer la connexion par téléphone (Authentication → Providers → Phone) avec un fournisseur SMS ou WhatsApp, d'abord en mode test.
 3. Renseigner `NEXT_PUBLIC_SUPABASE_URL` et `NEXT_PUBLIC_SUPABASE_ANON_KEY` dans Vercel (jamais dans le code).
 4. Nommer le premier super admin depuis l'éditeur SQL de Supabase, une fois son compte créé :

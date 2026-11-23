@@ -134,6 +134,7 @@ select tests.refuse($$update profiles set statut_kyc = 'valide' where id = auth.
 select tests.refuse($$update profiles set role_admin = 'support' where id = auth.uid()$$, 'un utilisateur ne se donne pas de rôle admin');
 select tests.refuse($$update profiles set telephone = '+22370000002' where id = auth.uid()$$, 'un utilisateur ne change pas son numéro vérifié');
 select tests.refuse($$update profiles set niveau = 'or' where id = auth.uid()$$, 'un utilisateur ne change pas son niveau');
+select tests.refuse($$update profiles set role = 'admin' where id = auth.uid()$$, 'l''ancienne colonne de rôle (V1) ne se modifie plus');
 select tests.invisible($$update profiles set ville = 'X' where id = '33333333-3333-3333-3333-333333333333'$$,
   'un utilisateur ne modifie pas le profil d''un autre');
 select tests.ok((select count(*) from profiles) = 1, 'un utilisateur ne lit que son propre profil');

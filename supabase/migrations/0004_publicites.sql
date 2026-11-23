@@ -17,10 +17,9 @@ alter table campaigns
   alter column debut drop not null,
   alter column fin drop not null,
   alter column reseaux set default '{whatsapp}',
-  drop constraint campaigns_budget_check,
-  add constraint campagne_budget_positif check (budget is null or budget > 0),
+  -- Le contrôle V1 « budget >= 25000 » reste : il laisse passer un budget vide (brouillon).
   add constraint campagne_sans_vues check (objectif = 'clics'),
-  add column slug text not null unique default encode(gen_random_bytes(6), 'hex'),
+  add column slug text not null unique default substr(replace(gen_random_uuid()::text, '-', ''), 1, 12),
   add column prix bigint check (prix is null or prix >= 0),          -- prix communiqué, entier FCFA
   add column modere_par uuid references profiles (id),
   add column modere_le timestamptz,
@@ -34,7 +33,7 @@ create type action_contact as enum ('numero_whatsapp', 'catalogue_whatsapp', 'en
 -- HTTPS, sans identifiant, sans port, ni adresse IP ni localhost ; WhatsApp pour les trois
 -- actions de contact ; 500 caractères maximum.
 create or replace function destination_valide(p_type action_contact, p_url text) returns boolean
-language sql immutable as $$
+language sql immutable set search_path = public as $$
   select p_url is not null and length(p_url) <= 500
     and p_url ~ '^https://[a-z0-9.-]+(/[^\s]*)?$'
     and p_url !~ '^https://[^/]*@'
@@ -74,18 +73,15 @@ create policy destination_retrait on campaign_destinations for delete using (a_r
 
 -- 3. Modération ---------------------------------------------------------------------------------
 -- Les visiteurs ne lisent plus la table : ils passent par fiche_publique().
-drop policy campagne_lecture on campaigns;
-create policy campagne_lecture on campaigns for select using (
+alter policy campagne_lecture on campaigns using (
   (statut = 'active' and auth.uid() is not null) or est_admin() or
   annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()));
 
-drop policy campagne_creation on campaigns;
-create policy campagne_creation on campaigns for insert with check (
+alter policy campagne_creation on campaigns with check (
   a_role('annonceur') and statut = 'brouillon' and
   annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()));
 
-drop policy campagne_maj on campaigns;
-create policy campagne_maj on campaigns for update
+alter policy campagne_maj on campaigns
   using (a_role('annonceur') and annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()))
   with check (
     annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()) and
@@ -166,7 +162,7 @@ language plpgsql security definer set search_path = public as $$
 begin
   if auth.uid() is not null and not admin_peut('moderer_campagnes') then
     new.modere_par := null; new.modere_le := null; new.motif_refus := null;
-    new.slug := encode(gen_random_bytes(6), 'hex');
+    new.slug := substr(replace(gen_random_uuid()::text, '-', ''), 1, 12);
   end if;
   if new.chemin_creatif is not null and new.chemin_creatif not like
      (select proprietaire_id::text from advertisers where id = new.annonceur_id) || '/%' then
@@ -189,7 +185,7 @@ create trigger campagne_photo before update on campaigns for each row execute fu
 
 -- 4. Accès public ------------------------------------------------------------------------------
 create or replace function campagne_diffusable(c campaigns) returns boolean
-language sql stable as $$
+language sql stable set search_path = public as $$
   select c.statut = 'active' and (c.debut is null or c.debut <= current_date) and (c.fin is null or c.fin >= current_date);
 $$;
 

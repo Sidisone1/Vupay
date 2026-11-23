@@ -44,9 +44,11 @@ language sql stable security definer set search_path = public as $$
     where p.id = auth.uid() and not p.suspendu);
 $$;
 
--- Le rôle unique de la V1 est remplacé par profile_roles.
-drop policy profil_creation on profiles;
-alter table profiles drop column role;
+-- Le rôle unique de la V1 est remplacé par profile_roles. La colonne profiles.role reste
+-- (rien n'est effacé) mais ne sert plus à rien et ne peut plus être modifiée.
+-- Les profils se créent uniquement par creer_mon_profil() : insertion directe fermée.
+alter policy profil_creation on profiles with check (false);
+comment on column profiles.role is 'Obsolète depuis 0002 : les rôles sont dans profile_roles.';
 
 -- 3. Profil ----------------------------------------------------------------------
 -- Colonnes sensibles : chacune exige une permission précise. Les mises à jour faites par
@@ -57,7 +59,8 @@ begin
   if auth.uid() is null or pg_trigger_depth() > 1 then
     return new;
   end if;
-  if (new.role_admin is distinct from old.role_admin or new.niveau is distinct from old.niveau or
+  if (new.role is distinct from old.role or
+      new.role_admin is distinct from old.role_admin or new.niveau is distinct from old.niveau or
       new.telephone is distinct from old.telephone or new.id is distinct from old.id)
      and not admin_peut('gerer_admins') then
     raise exception 'Modification non autorisée';
@@ -71,8 +74,7 @@ begin
   return new;
 end $$;
 
-drop policy profil_maj on profiles;
-create policy profil_maj on profiles for update
+alter policy profil_maj on profiles
   using (id = auth.uid() or est_admin())
   with check (id = auth.uid() or est_admin());
 
@@ -107,16 +109,14 @@ create policy roles_ajout on profile_roles for insert with check (
 create policy roles_retrait on profile_roles for delete using (admin_peut('gerer_admins'));
 
 -- Paramètres : modification réservée au super admin.
-drop policy parametres_admin on settings;
-create policy parametres_admin on settings for all
+alter policy parametres_admin on settings
   using (admin_peut('modifier_parametres')) with check (admin_peut('modifier_parametres'));
 
 -- 4a. Vérification d'identité (KYC) -----------------------------------------------
 -- Un seul dossier actif (en attente ou validé) par personne.
 create unique index kyc_un_dossier_actif on kyc_documents (profil_id) where statut in ('en_attente', 'valide');
 
-drop policy kyc_depot on kyc_documents;
-create policy kyc_depot on kyc_documents for insert with check (
+alter policy kyc_depot on kyc_documents with check (
   profil_id = auth.uid() and statut = 'en_attente' and traite_par is null and motif_refus is null and
   chemin_piece like auth.uid()::text || '/%' and chemin_selfie like auth.uid()::text || '/%' and
   exists (select 1 from profiles where id = auth.uid() and not suspendu));
@@ -166,11 +166,9 @@ alter table advertisers
   add column verifie_par uuid references profiles (id),
   add column verifie_le timestamptz;
 
-drop policy annonceur_creation on advertisers;
-create policy annonceur_creation on advertisers for insert with check (
+alter policy annonceur_creation on advertisers with check (
   proprietaire_id = auth.uid() and a_role('annonceur'));
-drop policy annonceur_maj on advertisers;
-create policy annonceur_maj on advertisers for update
+alter policy annonceur_maj on advertisers
   using (proprietaire_id = auth.uid() or admin_peut('verifier_entreprises'))
   with check (proprietaire_id = auth.uid() or admin_peut('verifier_entreprises'));
 
@@ -231,13 +229,11 @@ $$;
 
 -- Campagnes : le brouillon est libre ; la soumission à la modération exige le rôle annonceur
 -- et une entreprise vérifiée.
-drop policy campagne_creation on campaigns;
-create policy campagne_creation on campaigns for insert with check (
+alter policy campagne_creation on campaigns with check (
   a_role('annonceur') and
   annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()) and
   (statut = 'brouillon' or (statut = 'en_moderation' and entreprise_verifiee(annonceur_id))));
-drop policy campagne_maj on campaigns;
-create policy campagne_maj on campaigns for update using (
+alter policy campagne_maj on campaigns using (
   statut in ('brouillon', 'en_moderation') and a_role('annonceur') and
   annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()))
   with check (
