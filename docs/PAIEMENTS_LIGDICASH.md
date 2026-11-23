@@ -26,3 +26,26 @@ L'obtention de l'API passe par contrat, KYC et identifiants temporaires d'intég
 3. Valider signature/provenance des callbacks selon la documentation du compte.
 4. Développer le journal SQL atomique, idempotence, RLS, anti-double débit et tests de concurrence.
 5. Tester le parcours réel dans les conditions approuvées par LigdiCash, puis obtenir autorisation explicite pour la production.
+
+## Choix produit VUPAY validés à partir de l'index officiel
+
+Index de documentation : https://developers.ligdicash.com/llms.txt
+
+| Fonction VUPAY | Méthode | Endpoint documenté |
+| --- | --- | --- |
+| Recharge campagne (MVP) | Payin avec redirection | `POST /pay/v01/redirect/checkout-invoice/create` |
+| Confirmation recharge | Vérification payin | `GET /pay/v01/redirect/checkout-invoice/confirm` |
+| Recharge native (ultérieure) | Payin sans redirection | `POST /pay/v01/straight/checkout-invoice/create` |
+| Retrait Mobile Money diffuseur | Payout Marchand | `POST /pay/v01/straight/payout` |
+| Retrait wallet LigdiCash (optionnel) | Payout Client | `POST /pay/v01/withdrawal/create` |
+| Vérification retrait | Confirmation payout | `GET /pay/v01/withdrawal/confirm` |
+
+**Important** : la documentation officielle indique les statuts `pending`, `completed`, `notcompleted`. Le code normalise `notcompleted` comme échec. Une transaction `pending` ne crédite jamais de solde.
+
+**Important** : https://developers.ligdicash.com/concepts/environnements.md confirme l'absence de sandbox. Les essais d'intégration utilisent un compte réel temporaire fourni par LigdiCash. Aucun essai payant ne doit être lancé sans accord préalable.
+
+**Callbacks** : https://developers.ligdicash.com/api-paiement/callback/idempotence.md indique que LigdiCash envoie deux POST par événement. Il faut une contrainte d'idempotence persistante et vérifier le statut à distance avant crédit.
+
+**Traçabilité** : créer et persister un `transaction_id` VUPAY avant chaque appel ; conserver le token LigdiCash pour les confirmations et les callbacks. Le retour navigateur n'est jamais une preuve de paiement.
+
+**Couverture** : la documentation officielle liste Orange Money Mali en payin sans redirection, mais la disponibilité exacte des opérateurs et du payout doit être confirmée sur le compte marchand.
