@@ -7,13 +7,16 @@ Suivi : issue GitHub #9. Critère d'acceptation : **les droits de chaque rôle s
 | Partie | Fichier |
 | --- | --- |
 | Migration de la base (rôles multiples, permissions admin, KYC, entreprise, stockage privé) | `supabase/migrations/0002_comptes_permissions.sql` |
-| Tests des droits sur une vraie base Postgres (73 vérifications) | `supabase/tests/10_comptes_permissions.sql` |
+| Tests des droits sur une vraie base Postgres (81 vérifications) | `supabase/tests/10_comptes_permissions.sql` |
 | Règles côté application (accès aux pages, permissions admin) | `apps/web/src/lib/permissions.ts` |
 | Numéros UEMOA et code OTP | `apps/web/src/lib/telephone.ts` |
 | Contrôle d'accès à chaque page | `apps/web/src/middleware.ts` |
 | Connexion par code (SMS ou WhatsApp) | `apps/web/src/app/(auth)/connexion/` |
 | Création du compte, ouverture du second espace | `apps/web/src/app/bienvenue/` |
 | Compte suspendu, déconnexion | `apps/web/src/app/suspendu/`, `apps/web/src/app/deconnexion/` |
+| Dépôt KYC du diffuseur (pièce + selfie) | `apps/web/src/app/diffuseur/kyc/` |
+| Vérification d'entreprise de l'annonceur (fiche + justificatif) | `apps/web/src/app/annonceur/entreprise/` |
+| Règles des pièces (formats, taille, chemins, états) | `apps/web/src/lib/pieces.ts` |
 
 ## Règles de droits
 
@@ -59,8 +62,13 @@ update profiles set role_admin = 'super_admin' where id = '<id du compte>';
 
 Sans configuration Supabase, les pages publiques restent visibles et les espaces protégés renvoient vers la connexion.
 
+## Écrans de dépôt
+
+- Les photos sont réduites dans le navigateur (1600 px, JPEG) avant l'envoi : environ 300 Ko au lieu de plusieurs Mo, adapté à la 3G.
+- Formats : photo JPG/PNG/WebP pour l'identité (8 Mo max) ; photo ou PDF pour l'entreprise (10 Mo max).
+- Après un refus, le motif s'affiche et un nouveau dépôt est proposé.
+
 ## Reste à faire pour clore l'étape
 
-- Écrans de dépôt KYC (diffuseur) et de vérification d'entreprise (annonceur), avec envoi des fichiers.
 - Écrans admin : file des KYC et des entreprises à vérifier, gestion des utilisateurs et des admins.
 - Test de bout en bout sur un vrai projet Supabase en mode test (connexion OTP réelle).
