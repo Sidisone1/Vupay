@@ -12,7 +12,7 @@ declare
   v_intent public.payment_intents%rowtype;
 begin
   -- Jamais d'appel direct depuis un utilisateur authentifié.
-  if current_user <> 'service_role' then
+  if coalesce(auth.role(), '') <> 'service_role' then
     raise exception 'Opération réservée au service role';
   end if;
   if p_event_key is null or length(p_event_key) < 8 then
