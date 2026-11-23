@@ -1,4 +1,4 @@
-# Bibliothèque d'icônes Bogolan (5 155 icônes)
+# Bibliothèque d'icônes Bogolan (17 095 icônes)
 
 Grande réserve d'icônes au style **Collection Bogolan**, pour tous les projets en cours et à venir
 (Vupay, Tchi TELIMAN, SS DROPSHIP…). Quand un projet a besoin d'une icône, on la cherche ici et on
@@ -7,7 +7,12 @@ l'**adapte seulement à la charte** du projet : la forme et le style existent d�
 - **Source des formes** : jeux d'icônes libres, téléchargés par l'API Iconify puis convertis automatiquement :
   - Material Design Icons (Apache-2.0) : 3 643 icônes pleines, classées en 57 catégories (versions « outline » et
     logos de marque écartés) ;
-  - Phosphor Icons, graisse « fill » (MIT) : 1 512 icônes, dans `svg/usage-general/` (suffixe `-2` quand le nom existe déjà dans MDI).
+  - Phosphor Icons, graisse « fill » (MIT) : 1 512 icônes, dans `svg/usage-general/` (suffixe `-2` quand le nom existe déjà dans MDI) ;
+  - deuxième lot (23/11/2026), sans doublon de forme ni logo de marque : reste de MDI (icônes non classées, lettres,
+    chiffres, emojis), Tabler Icons (MIT), Lucide (ISC), Material Symbols (Apache-2.0, style de base) et Fluent UI (MIT, 24 px plein).
+    Les icônes au trait (Tabler, Lucide) deviennent des « boudins » de pâte à modeler.
+- **Catégories** : celles de MDI et de Material Symbols ; pour les autres jeux, la catégorie est devinée d'après les
+  mots du nom (à vérifier au besoin). Les icônes sans indice sont dans `svg/divers/`.
 - **Style Bogolan** (`scripts/bogolan.py`) : objet en relief « pâte à modeler » (ombrage et reflet SVG), bande bogolan
   brun rouille avec zigzag et points, ombre portée douce, tuile crème aux coins arrondis, 256 × 256.
 
@@ -18,7 +23,7 @@ l'**adapte seulement à la charte** du projet : la forme et le style existent d�
 | `svg/<catégorie>/<nom>.svg` | les 5 155 icônes, vectorielles |
 | `index.json` | nom, catégorie, source et licence de chaque icône |
 | `palettes.json` | chartes prêtes : `bogolan`, `ss-dropship`, `vupay-v4`, `tchi-teliman` |
-| `planches/` | une planche JPG par catégorie pour feuilleter (66 planches) |
+| `planches/` | planches JPG par catégorie pour feuilleter (240 icônes par planche) |
 | `apercu/index.html` | page de recherche (français ou anglais), filtre par catégorie, changement de charte, téléchargement |
 | `scripts/` | téléchargement, génération, adaptation à une charte, export PNG, planches |
 
@@ -43,5 +48,5 @@ Chaque SVG utilise cinq variables CSS, avec la palette Bogolan comme valeur de r
 
 ## Refaire ou étendre la bibliothèque
 
-`python3 scripts/telecharger.py` (dans un dossier de travail : produit `traces.json`), puis
+`python3 scripts/telecharger.py` puis `python3 scripts/telecharger2.py` (dans un dossier de travail : produisent `traces.json` et `traces2.json`), puis
 `python3 scripts/generer.py <sortie>` et `node scripts/planches.js <sortie>`.
