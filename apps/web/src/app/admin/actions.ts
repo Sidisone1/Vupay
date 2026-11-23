@@ -89,3 +89,34 @@ export async function changerRoleAdmin(form: FormData) {
   revalidatePath("/admin/utilisateurs");
   retourUtilisateurs(form, echec ? "erreur" : "role");
 }
+
+/** Modération : publier (« valide ») ou refuser avec motif une campagne en attente. */
+export async function deciderCampagne(form: FormData) {
+  const { client } = await exigerAdmin("moderer_campagnes");
+  const d = lireDecision(form);
+  if (!d) redirect("/admin/campagnes?erreur=motif");
+  const { data } = await client
+    .from("campaigns")
+    .update({ statut: d.statut === "valide" ? "active" : "refusee", motif_refus: d.motif })
+    .eq("id", d.id)
+    .eq("statut", "en_moderation")
+    .select("id");
+  revalidatePath("/admin/campagnes");
+  redirect(`/admin/campagnes?${data?.length ? `fait=${d.statut}` : "erreur=base"}`);
+}
+
+/** Met en pause ou relance une campagne publiée (par exemple après un signalement). */
+export async function basculerPause(form: FormData) {
+  const { client } = await exigerAdmin("moderer_campagnes");
+  const id = texte(form.get("id"));
+  const pause = texte(form.get("pause")) === "oui";
+  if (!UUID.test(id)) redirect("/admin/campagnes?erreur=base");
+  const { data } = await client
+    .from("campaigns")
+    .update({ statut: pause ? "en_pause" : "active" })
+    .eq("id", id)
+    .eq("statut", pause ? "active" : "en_pause")
+    .select("id");
+  revalidatePath("/admin/campagnes");
+  redirect(`/admin/campagnes?${data?.length ? (pause ? "fait=pause" : "fait=relance") : "erreur=base"}`);
+}

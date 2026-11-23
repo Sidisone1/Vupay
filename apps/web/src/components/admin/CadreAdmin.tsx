@@ -27,17 +27,19 @@ export function FormulaireDecision({
   action,
   id,
   motifs,
+  libelleValider = "Valider",
 }: {
   action: (form: FormData) => Promise<void>;
   id: string;
   motifs: readonly string[];
+  libelleValider?: string;
 }) {
   return (
     <div className="mt-3 grid gap-2">
       <form action={action}>
         <input type="hidden" name="id" value={id} />
         <input type="hidden" name="decision" value="valide" />
-        <button className="min-h-12 w-full rounded-xl bg-vupay-primaire px-4 font-bold text-white">Valider</button>
+        <button className="min-h-12 w-full rounded-xl bg-vupay-primaire px-4 font-bold text-white">{libelleValider}</button>
       </form>
       <details className="rounded-xl border-2 border-vupay-erreur bg-white">
         <summary className="flex min-h-12 cursor-pointer items-center justify-center px-4 font-bold text-vupay-erreur">Refuser…</summary>

@@ -3,11 +3,12 @@
 // de son propriétaire, et un dossier traité n'est jamais modifié.
 import type { StatutKyc } from "./types";
 
-export type TypePiece = "piece" | "selfie" | "entreprise";
+export type TypePiece = "piece" | "selfie" | "entreprise" | "produit";
 
 export const PIECES_ACCEPTEES: Record<TypePiece, { types: readonly string[]; tailleMax: number; libelle: string }> = {
   piece: { types: ["image/jpeg", "image/png", "image/webp"], tailleMax: 8_000_000, libelle: "Photo de la pièce d'identité" },
   selfie: { types: ["image/jpeg", "image/png", "image/webp"], tailleMax: 8_000_000, libelle: "Selfie avec la pièce" },
+  produit: { types: ["image/jpeg", "image/png", "image/webp"], tailleMax: 8_000_000, libelle: "Photo du produit" },
   entreprise: {
     types: ["image/jpeg", "image/png", "image/webp", "application/pdf"],
     tailleMax: 10_000_000,

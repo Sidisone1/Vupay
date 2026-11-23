@@ -4,7 +4,7 @@ import { cheminPiece, type TypePiece } from "../pieces";
 /** Envoie une pièce dans le compartiment privé ; renvoie son chemin, à enregistrer ensuite en base. */
 export async function deposerPiece(
   client: SupabaseClient,
-  compartiment: "kyc" | "entreprises",
+  compartiment: "kyc" | "entreprises" | "produits",
   utilisateurId: string,
   type: TypePiece,
   fichier: Blob,
