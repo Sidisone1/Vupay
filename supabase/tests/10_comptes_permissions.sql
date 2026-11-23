@@ -265,6 +265,34 @@ select tests.ok((select count(*) from storage.objects) = 0, 'l''admin finance ne
 select set_config('request.jwt.claim.sub', :moderateur, false);
 select tests.ok((select count(*) from storage.objects) = 1, 'le modérateur lit les pièces KYC à vérifier');
 
+-- Nouveau dépôt après un refus (parcours des écrans de dépôt) ---------------------------------
+select set_config('request.jwt.claim.sub', :autre, false);
+insert into kyc_documents (profil_id, chemin_piece, chemin_selfie)
+  values (:autre, :autre || '/piece-1.jpg', :autre || '/selfie-1.jpg');
+select set_config('request.jwt.claim.sub', :moderateur, false);
+update kyc_documents set statut = 'refuse', motif_refus = 'Photo floue' where profil_id = :autre;
+select set_config('request.jwt.claim.sub', :autre, false);
+select tests.ok((select statut_kyc from profiles where id = auth.uid()) = 'refuse', 'le diffuseur voit que son KYC est refusé');
+select tests.ok((select motif_refus from kyc_documents where profil_id = auth.uid()) = 'Photo floue', 'il lit le motif du refus');
+select tests.ok(tests.lignes($$insert into kyc_documents (profil_id, chemin_piece, chemin_selfie)
+  values (auth.uid(), auth.uid() || '/piece-2.jpg', auth.uid() || '/selfie-2.jpg')$$) = 1, 'après un refus, il dépose un nouveau dossier');
+select tests.ok((select statut_kyc from profiles where id = auth.uid()) = 'en_attente', 'son profil repasse « en attente »');
+
+select set_config('request.jwt.claim.sub', :diffuseur, false);
+insert into advertisers (id, proprietaire_id, raison_sociale, pays, rccm, chemin_document, statut_verification)
+  values ('bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb', :diffuseur, 'Atelier Bogolan', 'ML', 'MA.BKO.2026.A.1', :diffuseur || '/entreprise-1.pdf', 'en_attente');
+select tests.ok(tests.lignes($$insert into storage.objects (bucket_id, name) values ('entreprises', auth.uid() || '/entreprise-1.pdf')$$) = 1,
+  'l''annonceur envoie son justificatif dans le compartiment entreprises');
+select set_config('request.jwt.claim.sub', :moderateur, false);
+update advertisers set statut_verification = 'refuse', motif_refus = 'RCCM illisible' where id = 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb';
+select tests.ok((select count(*) from storage.objects where bucket_id = 'entreprises') = 1, 'le modérateur lit le justificatif d''entreprise');
+select set_config('request.jwt.claim.sub', :diffuseur, false);
+select tests.ok(tests.lignes($$update advertisers set rccm = 'MA.BKO.2026.A.2', chemin_document = auth.uid() || '/entreprise-2.pdf',
+  statut_verification = 'en_attente' where id = 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb'$$) = 1,
+  'après un refus, l''annonceur renvoie un justificatif corrigé');
+select tests.refuse($$update advertisers set motif_refus = null where id = 'bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb'$$,
+  'l''annonceur n''efface pas le motif du refus');
+
 -- Bilan ----------------------------------------------------------------------------------------
 reset role;
 do $$ begin raise notice 'TOUS LES TESTS PASSENT : % vérifications', (select n from tests.compteur); end $$;
