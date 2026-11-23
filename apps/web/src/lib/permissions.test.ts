@@ -78,6 +78,8 @@ describe("accès aux pages", () => {
     expect(accesPage(admin("finance"), "/admin/retraits")).toEqual({ autorise: true });
     expect(accesPage(admin("finance"), "/admin/kyc")).toEqual({ autorise: false, redirection: "/admin" });
     expect(accesPage(admin("moderateur"), "/admin/kyc")).toEqual({ autorise: true });
+    expect(accesPage(admin("moderateur"), "/admin/entreprises")).toEqual({ autorise: true });
+    expect(accesPage(admin("finance"), "/admin/entreprises")).toEqual({ autorise: false, redirection: "/admin" });
     expect(accesPage(admin("moderateur"), "/admin/parametres")).toEqual({ autorise: false, redirection: "/admin" });
     expect(accesPage(admin("support"), "/admin/utilisateurs")).toEqual({ autorise: true });
   });
