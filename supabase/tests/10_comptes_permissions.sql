@@ -213,7 +213,7 @@ select tests.refuse($$insert into campaigns (annonceur_id, titre, objectif, chem
   values ('aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'Promo', 'clics', 'c.jpg', 'Publicité', 'https://wa.me/22370000002', '{whatsapp}', 25000,
   current_date, current_date + 7, 'en_moderation')$$, 'pas de campagne en modération sans entreprise vérifiée');
 select tests.ok(tests.lignes($$insert into campaigns (id, annonceur_id, titre, objectif, chemin_creatif, texte, lien_cible, reseaux, budget, debut, fin)
-  values ('cccccccc-cccc-cccc-cccc-cccccccccccc', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'Promo', 'clics', 'c.jpg', 'Publicité',
+  values ('cccccccc-cccc-cccc-cccc-cccccccccccc', 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa', 'Promo', 'clics', '22222222-2222-2222-2222-222222222222/c.jpg', 'Publicité',
   'https://wa.me/22370000002', '{whatsapp}', 25000, current_date, current_date + 7)$$) = 1,
   'un brouillon de campagne reste possible avant vérification');
 
@@ -232,6 +232,8 @@ select tests.ok((select verifie_par from advertisers) = auth.uid(), 'la vérific
 select tests.ok(exists (select 1 from audit_logs where action = 'entreprise_valide'), 'la vérification est inscrite au journal d''audit');
 
 select set_config('request.jwt.claim.sub', :annonceur, false);
+insert into campaign_destinations (campagne_id, type, url, libelle)
+  values ('cccccccc-cccc-cccc-cccc-cccccccccccc', 'numero_whatsapp', 'https://wa.me/22370000002', 'Écrire sur WhatsApp');
 select tests.ok(tests.lignes($$update campaigns set statut = 'en_moderation'$$) = 1,
   'une fois l''entreprise vérifiée, la campagne part en modération');
 update advertisers set raison_sociale = 'Kanaga Distribution';

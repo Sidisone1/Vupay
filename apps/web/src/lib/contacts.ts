@@ -20,9 +20,13 @@ export type DestinationContact = {
 const HOSTS_WHATSAPP = new Set(["wa.me", "api.whatsapp.com", "web.whatsapp.com", "www.whatsapp.com"]);
 const HOSTS_BLOQUES = new Set(["localhost", "127.0.0.1", "::1"]);
 
-/** Contrôle défensif de base; une liste d'origines approuvées doit aussi être tenue côté serveur. */
+/** Forme exacte exigée aussi par la base (destination_valide, migration 0004) : hôte en minuscules, sans espace. */
+const FORME_URL = /^https:\/\/[a-z0-9.-]+(\/[^\s]*)?$/;
+
+/** Mêmes règles que la contrainte destination_controlee en base. */
 export function destinationAutorisee(d: DestinationContact): boolean {
   if (!ACTIONS_CONTACT.includes(d.type) || !d.libelle.trim()) return false;
+  if (d.url.length > 500 || !FORME_URL.test(d.url)) return false;
   try {
     const u = new URL(d.url);
     if (u.protocol !== "https:" || u.username || u.password || u.port) return false;

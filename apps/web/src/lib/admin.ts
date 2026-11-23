@@ -38,6 +38,14 @@ export const MOTIFS_ENTREPRISE = [
   "Justificatif expiré ou non officiel",
 ] as const;
 
+export const MOTIFS_CAMPAGNE = [
+  "Photo floue ou sans rapport avec le produit",
+  "Description trompeuse ou promesse non vérifiable",
+  "Produit ou service interdit à la publicité",
+  "Bouton de contact qui ne mène pas à l'annonceur",
+  "Prix incohérent ou manquant alors qu'il est annoncé",
+] as const;
+
 /** Un refus doit être motivé clairement : 5 à 300 caractères. Renvoie le motif nettoyé ou null. */
 export function motifValide(motif: string): string | null {
   const propre = motif.replace(/\s+/g, " ").trim();
