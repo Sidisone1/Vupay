@@ -6,7 +6,7 @@ const ok = () => new Response(JSON.stringify({ response_code: "00", token: "exem
 
 describe("LigdiCash : client HTTP contrôlé", () => {
   it("bloque tout appel réel par défaut", async () => {
-    const transport = vi.fn(async () => ok());
+    const transport = vi.fn(async (_url: string, _init: RequestInit) => ok());
     const client = new ClientLigdiCash(config, transport);
     await expect(client.creerFacture({})).rejects.toThrow("désactivés");
     expect(transport).not.toHaveBeenCalled();
@@ -16,7 +16,7 @@ describe("LigdiCash : client HTTP contrôlé", () => {
     expect(() => new ClientLigdiCash({ ...config, apiKey: "" })).toThrow();
   });
   it("utilise les endpoints officiels avec transport simulé", async () => {
-    const transport = vi.fn(async () => ok());
+    const transport = vi.fn(async (_url: string, _init: RequestInit) => ok());
     const client = new ClientLigdiCash({ ...config, appelsReelsAutorises: true }, transport);
     await client.creerFacture({ montant: 1000 });
     await client.confirmerFacture("token-1");
