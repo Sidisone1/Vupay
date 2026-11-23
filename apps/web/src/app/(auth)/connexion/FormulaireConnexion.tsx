@@ -5,14 +5,12 @@ import { supabaseNavigateur } from "@/lib/supabase/client";
 import { codeOtpValide, masquerTelephone, normaliserTelephone, NUMEROTATION } from "@/lib/telephone";
 import type { Pays } from "@/lib/types";
 
-type Canal = "whatsapp" | "sms";
 const DELAI_RENVOI = 60; // secondes avant de pouvoir redemander un code
 
 export function FormulaireConnexion({ suite, espace }: { suite: string | null; espace?: "diffuseur" | "annonceur" }) {
   const [etape, setEtape] = useState<"numero" | "code">("numero");
   const [pays, setPays] = useState<Pays>("ML");
   const [saisie, setSaisie] = useState("");
-  const [canal, setCanal] = useState<Canal>("sms");
   const [telephone, setTelephone] = useState("");
   const [code, setCode] = useState("");
   const [erreur, setErreur] = useState<string | null>(null);
@@ -34,7 +32,7 @@ export function FormulaireConnexion({ suite, espace }: { suite: string | null; e
     }
     setErreur(null);
     setEnvoi(true);
-    const { error } = await supabaseNavigateur().auth.signInWithOtp({ phone: numero.e164, options: { channel: canal } });
+    const { error } = await supabaseNavigateur().auth.signInWithOtp({ phone: numero.e164, options: { channel: "sms" } });
     setEnvoi(false);
     if (error) {
       setErreur("Le code n'a pas pu être envoyé. Vérifiez le numéro ou réessayez dans une minute.");
@@ -74,7 +72,7 @@ export function FormulaireConnexion({ suite, espace }: { suite: string | null; e
     return (
       <form onSubmit={verifierCode} className="mt-6">
         <p className="text-sm">
-          Code envoyé {canal === "whatsapp" ? "sur WhatsApp" : "par SMS"} au <strong>{masquerTelephone(telephone)}</strong>.
+          Code envoyé par SMS au <strong>{masquerTelephone(telephone)}</strong>.
         </p>
         <label className="mt-4 block text-sm font-bold" htmlFor="code">
           Code à 6 chiffres
@@ -130,17 +128,6 @@ export function FormulaireConnexion({ suite, espace }: { suite: string | null; e
         value={saisie}
         onChange={(e) => setSaisie(e.target.value)}
       />
-      <fieldset className="mt-4">
-        <legend className="text-sm font-bold">Recevoir le code</legend>
-        <div className="mt-1 grid grid-cols-2 gap-2">
-          {(["sms", "whatsapp"] as Canal[]).map((c) => (
-            <label key={c} className={`flex min-h-12 items-center justify-center rounded-xl border-2 px-2 text-center font-bold ${canal === c ? "border-vupay-primaire bg-white" : "border-vupay-trait"}`}>
-              <input type="radio" name="canal" value={c} checked={canal === c} onChange={() => setCanal(c)} className="sr-only" />
-              {c === "sms" ? "Par SMS" : "Sur WhatsApp"}
-            </label>
-          ))}
-        </div>
-      </fieldset>
       {erreur && <p role="alert" className="mt-3 text-sm font-bold text-vupay-erreur">{erreur}</p>}
       <button type="submit" disabled={envoi} className={bouton}>
         {envoi ? "Envoi…" : "Recevoir mon code"}

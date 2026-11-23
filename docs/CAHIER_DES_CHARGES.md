@@ -256,3 +256,12 @@ V2 après le pilote : niveaux et badges, parrainage, apps stores, rapports PDF, 
 - Interface en français, mobile d'abord, pages légères pour la 3G.
 - Identité visuelle propre à Vupay : aucune reprise des couleurs, logo ou visuels de WhatsPay.
 
+## Annexe — Mises à jour du 23 novembre 2026
+
+Cette annexe complète le cahier des charges initial ; le cadrage V2 (`docs/PRODUIT_V2_CLICS_QUALIFIES.md`) prévaut sur les passages qui rémunèrent les vues.
+
+**Mesure des vues des statuts WhatsApp.** Recherche faite le 23/11/2026 : aucune API officielle ne permet de lire les vues d'un statut WhatsApp (la Cloud API de Meta ne gère pas le Statut). Les services non officiels (GREEN-API, Maytapi, Whapi.Cloud, WAHA…) exigent de relier le WhatsApp personnel du diffuseur à un robot, avec un risque de blocage du compte et un problème de vie privée. Décision : les vues ne sont pas rémunérées ; une capture « Vu par » lue par une IA de vision peut servir de preuve d'appoint et de signal antifraude. Détail : `docs/MESURE_VUES_WHATSAPP.md`.
+
+**Connexion par SMS selon les pays.** Orange (API SMS, tous opérateurs du pays) pour le Mali, la Côte d'Ivoire, le Sénégal, le Burkina Faso, la Guinée-Bissau et la Guinée ; un agrégateur (Ikoddi, e-MC…) pour le Togo, le Bénin et le Niger. Détail : `docs/CONNEXION_SMS.md`.
+
+**État d'avancement.** Voir `docs/ETAT_DU_PROJET.md`.

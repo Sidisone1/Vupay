@@ -7,10 +7,10 @@ const liens = (u: Utilisateur) => menuAdmin(u).map((l) => l.href);
 
 describe("menu admin", () => {
   it("le super admin voit tout", () => {
-    expect(liens(admin("super_admin"))).toHaveLength(7);
+    expect(liens(admin("super_admin"))).toHaveLength(8);
   });
   it("chaque rôle ne voit que ses écrans", () => {
-    expect(liens(admin("moderateur"))).toEqual(["/admin/kyc", "/admin/entreprises", "/admin/campagnes", "/admin/utilisateurs"]);
+    expect(liens(admin("moderateur"))).toEqual(["/admin/kyc", "/admin/entreprises", "/admin/campagnes", "/admin/actions", "/admin/utilisateurs"]);
     expect(liens(admin("finance"))).toEqual(["/admin/utilisateurs", "/admin/retraits", "/admin/journal"]);
     expect(liens(admin("support"))).toEqual(["/admin/utilisateurs"]);
   });

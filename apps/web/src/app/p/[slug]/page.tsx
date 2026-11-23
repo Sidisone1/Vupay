@@ -5,6 +5,7 @@ import { FicheProduit, type DonneesFiche } from "@/components/FicheProduit";
 import { supabaseServeur } from "@/lib/supabase/server";
 import { urlPhotoProduit } from "@/lib/supabase/photos";
 import { supabaseConfigure } from "@/lib/supabase/utilisateur";
+import { codeLienValide } from "@/lib/tracabilite";
 
 // Fiche produit publique : adresse stable vupay.app/p/<slug>, ouverte sans compte.
 const FORME_SLUG = /^[0-9a-f]{12}$/;
@@ -29,9 +30,17 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   };
 }
 
-export default async function PageFiche({ params, searchParams }: { params: { slug: string }; searchParams: { indisponible?: string } }) {
+export default async function PageFiche({
+  params,
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams: { indisponible?: string; via?: string };
+}) {
   const fiche = await chargerFiche(params.slug);
   if (!fiche) notFound();
+  // Arrivée par le lien d'un diffuseur : les boutons passent par son lien pour attribuer l'action.
+  const via = searchParams.via && codeLienValide(searchParams.via) ? searchParams.via : null;
   return (
     <main className="mx-auto min-h-screen max-w-lg bg-vupay-fond px-4 py-5 text-vupay-encre">
       {searchParams.indisponible && (
@@ -39,7 +48,7 @@ export default async function PageFiche({ params, searchParams }: { params: { sl
           Ce bouton n&apos;est pas disponible. Essayez un autre moyen de contact.
         </p>
       )}
-      <FicheProduit fiche={fiche} lien={(type) => `/p/${params.slug}/vers/${type}`} />
+      <FicheProduit fiche={fiche} lien={(type) => (via ? `/c/${via}/vers/${type}` : `/p/${params.slug}/vers/${type}`)} />
       <p className="mt-4 text-center text-xs text-vupay-doux">
         Publié avec <strong className="text-vupay-primaire">Vupay</strong>
       </p>
