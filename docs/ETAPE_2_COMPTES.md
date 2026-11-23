@@ -1,0 +1,66 @@
+# Étape 2 — Comptes et permissions
+
+Suivi : issue GitHub #9. Critère d'acceptation : **les droits de chaque rôle sont prouvés par des tests**.
+
+## Ce qui est en place
+
+| Partie | Fichier |
+| --- | --- |
+| Migration de la base (rôles multiples, permissions admin, KYC, entreprise, stockage privé) | `supabase/migrations/0002_comptes_permissions.sql` |
+| Tests des droits sur une vraie base Postgres (73 vérifications) | `supabase/tests/10_comptes_permissions.sql` |
+| Règles côté application (accès aux pages, permissions admin) | `apps/web/src/lib/permissions.ts` |
+| Numéros UEMOA et code OTP | `apps/web/src/lib/telephone.ts` |
+| Contrôle d'accès à chaque page | `apps/web/src/middleware.ts` |
+| Connexion par code (SMS ou WhatsApp) | `apps/web/src/app/(auth)/connexion/` |
+| Création du compte, ouverture du second espace | `apps/web/src/app/bienvenue/` |
+| Compte suspendu, déconnexion | `apps/web/src/app/suspendu/`, `apps/web/src/app/deconnexion/` |
+
+## Règles de droits
+
+- **Rôles multiples** : une même personne peut être diffuseur et annonceur (table `profile_roles`). Elle ouvre elle-même ces deux espaces ; l'espace admin n'est donné que par un super admin.
+- **Rôles d'administration** :
+
+| Permission | Super admin | Modérateur | Finance | Support |
+| --- | :---: | :---: | :---: | :---: |
+| Modérer les campagnes | ✅ | ✅ | | |
+| Valider les KYC | ✅ | ✅ | | |
+| Vérifier les entreprises | ✅ | ✅ | | |
+| Gérer les retraits | ✅ | | ✅ | |
+| Voir le journal financier | ✅ | | ✅ | |
+| Suspendre un compte | ✅ | | | ✅ |
+| Modifier les paramètres | ✅ | | | |
+| Nommer les admins | ✅ | | | |
+
+- **Profil** : créé par la fonction `creer_mon_profil`. Le téléphone est celui vérifié par OTP, jamais une saisie libre. Suspension, KYC, niveau, téléphone et rôle admin ne sont modifiables que par l'admin habilité.
+- **KYC** : un seul dossier actif ; pièces rangées dans le dossier de la personne ; pièces non modifiables après dépôt ; refus toujours motivé ; décision inscrite au journal d'audit.
+- **Entreprise** : vérification avec justificatif (RCCM, NIF) ; une entreprise vérifiée qui change de nom, de numéro ou de pays repasse en vérification ; une campagne ne part en modération que si l'entreprise est vérifiée.
+- **Stockage** : compartiments privés `kyc` et `entreprises` ; chacun dépose dans son dossier ; seuls les admins habilités relisent ; aucune suppression.
+
+## Lancer les tests
+
+```bash
+cd apps/web && npm test                       # règles côté application
+PGHOST=localhost PGUSER=postgres supabase/tests/lancer.sh   # droits dans la base
+```
+
+`lancer.sh` crée une base neuve, simule les éléments de Supabase (rôles, `auth.uid()`, stockage), rejoue toutes les migrations et joue chaque scénario avec l'identité de l'utilisateur concerné.
+
+## Mise en service (à faire par le porteur du projet)
+
+1. Créer le projet Supabase et appliquer les migrations `0001` puis `0002`.
+2. Activer la connexion par téléphone (Authentication → Providers → Phone) avec un fournisseur SMS ou WhatsApp, d'abord en mode test.
+3. Renseigner `NEXT_PUBLIC_SUPABASE_URL` et `NEXT_PUBLIC_SUPABASE_ANON_KEY` dans Vercel (jamais dans le code).
+4. Nommer le premier super admin depuis l'éditeur SQL de Supabase, une fois son compte créé :
+
+```sql
+insert into profile_roles (profil_id, role) values ('<id du compte>', 'admin');
+update profiles set role_admin = 'super_admin' where id = '<id du compte>';
+```
+
+Sans configuration Supabase, les pages publiques restent visibles et les espaces protégés renvoient vers la connexion.
+
+## Reste à faire pour clore l'étape
+
+- Écrans de dépôt KYC (diffuseur) et de vérification d'entreprise (annonceur), avec envoi des fichiers.
+- Écrans admin : file des KYC et des entreprises à vérifier, gestion des utilisateurs et des admins.
+- Test de bout en bout sur un vrai projet Supabase en mode test (connexion OTP réelle).
