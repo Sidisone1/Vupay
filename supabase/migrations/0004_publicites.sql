@@ -17,8 +17,7 @@ alter table campaigns
   alter column debut drop not null,
   alter column fin drop not null,
   alter column reseaux set default '{whatsapp}',
-  drop constraint campaigns_budget_check,
-  add constraint campagne_budget_positif check (budget is null or budget > 0),
+  -- Le contrôle V1 « budget >= 25000 » reste : il laisse passer un budget vide (brouillon).
   add constraint campagne_sans_vues check (objectif = 'clics'),
   add column slug text not null unique default substr(replace(gen_random_uuid()::text, '-', ''), 1, 12),
   add column prix bigint check (prix is null or prix >= 0),          -- prix communiqué, entier FCFA
@@ -74,18 +73,15 @@ create policy destination_retrait on campaign_destinations for delete using (a_r
 
 -- 3. Modération ---------------------------------------------------------------------------------
 -- Les visiteurs ne lisent plus la table : ils passent par fiche_publique().
-drop policy campagne_lecture on campaigns;
-create policy campagne_lecture on campaigns for select using (
+alter policy campagne_lecture on campaigns using (
   (statut = 'active' and auth.uid() is not null) or est_admin() or
   annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()));
 
-drop policy campagne_creation on campaigns;
-create policy campagne_creation on campaigns for insert with check (
+alter policy campagne_creation on campaigns with check (
   a_role('annonceur') and statut = 'brouillon' and
   annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()));
 
-drop policy campagne_maj on campaigns;
-create policy campagne_maj on campaigns for update
+alter policy campagne_maj on campaigns
   using (a_role('annonceur') and annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()))
   with check (
     annonceur_id in (select id from advertisers where proprietaire_id = auth.uid()) and
