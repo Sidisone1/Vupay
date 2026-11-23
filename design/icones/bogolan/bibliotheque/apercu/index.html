@@ -1,0 +1,123 @@
+<title>Bibliothèque Bogolan</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+<style>
+/* Bibliothèque d'icônes Bogolan : 5 155 icônes générées depuis des jeux libres (MDI, Phosphor), recolorables par variables CSS. */
+:root{--fond:#FBF6EE;--carte:#FFFFFF;--texte:#2E1A10;--doux:#7A5C48;--ligne:#EADBC6;--accent:#B04A26;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--fond:#1C130E;--carte:#2A1D15;--texte:#F6E7CC;--doux:#C7AE95;--ligne:#3E2C20;--accent:#E8A93A;color-scheme:dark}}
+:root[data-theme="dark"]{--fond:#1C130E;--carte:#2A1D15;--texte:#F6E7CC;--doux:#C7AE95;--ligne:#3E2C20;--accent:#E8A93A;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fond);color:var(--texte);font:15px/1.5 Inter,system-ui,sans-serif}
+header{position:sticky;top:0;z-index:5;background:var(--fond);border-bottom:1px solid var(--ligne)}
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px}
+.tete{padding:18px 0 10px}
+.eyb{font-weight:700;letter-spacing:.12em;font-size:11px;text-transform:uppercase;color:var(--accent);margin:0}
+h1{font-size:clamp(22px,4vw,32px);letter-spacing:-.02em;margin:4px 0 2px}
+.ld{color:var(--doux);margin:0;font-size:14px;max-width:80ch}
+.barre{display:flex;flex-wrap:wrap;gap:10px;align-items:center;padding:10px 0 14px}
+input[type=search],select{font:inherit;color:var(--texte);background:var(--carte);border:1.5px solid var(--ligne);border-radius:12px;padding:9px 12px;min-width:0}
+input[type=search]{flex:1 1 240px}
+select{flex:0 1 220px}
+.pal{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.pal button{font:600 13px Inter,sans-serif;border:1.5px solid var(--ligne);background:var(--carte);color:var(--texte);border-radius:999px;padding:7px 12px;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.pal button[aria-pressed=true]{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent) inset}
+.pal i{width:14px;height:14px;border-radius:50%;display:inline-block}
+.perso{display:none;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--doux)}
+.perso.vu{display:flex}
+.perso label{display:inline-flex;gap:4px;align-items:center}
+.perso input{width:34px;height:28px;border:0;background:none;padding:0}
+.compte{font-size:13px;color:var(--doux);font-variant-numeric:tabular-nums}
+main{padding:18px 0 40px}
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.ic{background:var(--carte);border:1px solid var(--ligne);border-radius:16px;padding:8px 6px 6px;text-align:center;cursor:pointer;transition:transform .12s, box-shadow .2s}
+.ic:hover,.ic:focus-visible{transform:translateY(-2px);box-shadow:0 8px 18px rgba(46,26,16,.12);outline:none;border-color:var(--accent)}
+.ic svg{width:88px;height:88px;display:block;margin:0 auto}
+.ic span{display:block;font-size:11.5px;color:var(--doux);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:2px}
+.plus[hidden],.vide[hidden]{display:none}
+.plus{display:block;margin:20px auto 0;font:700 14px Inter,sans-serif;background:var(--accent);color:#fff;border:0;border-radius:12px;padding:11px 20px;cursor:pointer}
+dialog{border:0;border-radius:24px;padding:24px;max-width:380px;width:calc(100% - 32px);background:var(--carte);color:var(--texte);box-shadow:0 30px 60px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(28,19,14,.55)}
+dialog .grand svg{width:220px;height:220px;display:block;margin:0 auto}
+dialog h2{margin:8px 0 2px;font-size:20px;text-align:center}
+dialog p{margin:0 0 14px;text-align:center;color:var(--doux);font-size:13px}
+dialog .act{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+dialog button{font:700 13px Inter,sans-serif;border-radius:12px;padding:10px 14px;cursor:pointer;border:1.5px solid var(--ligne);background:var(--carte);color:var(--texte)}
+dialog button.p{background:var(--accent);border-color:var(--accent);color:#fff}
+.vide{color:var(--doux);text-align:center;padding:40px 0}
+</style>
+<header><div class="wrap">
+  <div class="tete">
+    <p class="eyb">Collection Bogolan · bibliothèque</p>
+    <h1>5 155 icônes prêtes à adapter</h1>
+    <p class="ld">Icônes libres (Material Design Icons, Apache-2.0 ; Phosphor, MIT) converties au style Bogolan : relief pâte à modeler, bande zigzag et points, tuile arrondie. Choisissez la charte de votre projet, cherchez, cliquez pour télécharger le SVG déjà recoloré.</p>
+  </div>
+  <div class="barre">
+    <input type="search" id="q" placeholder="Rechercher : panier, moto, argent, maison, cart…" aria-label="Rechercher une icône">
+    <select id="cat" aria-label="Catégorie"><option value="">Toutes les catégories</option></select>
+    <div class="pal" role="group" aria-label="Charte" id="pal"></div>
+    <span class="compte" id="compte"></span>
+  </div>
+  <div class="perso" id="perso"></div>
+</div></header>
+<main class="wrap"><div class="grille" id="grille"></div><button class="plus" id="plus" type="button">Afficher plus</button><p class="vide" id="vide" hidden>Aucune icône. Essayez un mot anglais (les noms viennent des jeux d'origine).</p></main>
+<dialog id="dlg"><div class="grand" id="grand"></div><h2 id="dnom"></h2><p id="dinfo"></p><div class="act"><button class="p" id="dl" type="button">Télécharger le SVG</button><button id="dlpng" type="button">PNG 512</button><button id="fermer" type="button">Fermer</button></div></dialog>
+<script src="icones.js"></script>
+<script>
+(function(){
+  var PAL={bogolan:{nom:'Bogolan',tuile:'#FBF1E2',objet:'#E8A93A',bande:'#B04A26',motif:'#F6E7CC',ombre:'#4A2A1C'},
+    'ss-dropship':{nom:'SS DROPSHIP',tuile:'#F2F6FB',objet:'#0077C8',bande:'#6B3E26',motif:'#F6E7CC',ombre:'#10213D'},
+    'vupay-v4':{nom:'Vupay V4',tuile:'#FFF7E6',objet:'#006B3A',bande:'#884A1F',motif:'#FFF7E6',ombre:'#092E1B'},
+    'tchi-teliman':{nom:'Tchi TELIMAN',tuile:'#FBF1E2',objet:'#E8A93A',bande:'#B04A26',motif:'#F6E7CC',ombre:'#4A2A1C'},
+    perso:{nom:'Ma charte',tuile:'#FFFFFF',objet:'#7C3AED',bande:'#4C1D95',motif:'#EDE9FE',ombre:'#1E1B4B'}};
+  var CLES=['tuile','objet','bande','motif','ombre'],LIB={tuile:'Tuile',objet:'Objet',bande:'Bande',motif:'Motif',ombre:'Ombre'};
+  // dictionnaire français -> anglais pour la recherche (les noms viennent des jeux d'origine)
+  var FR={panier:'cart basket',maison:'home house',accueil:'home',argent:'cash money currency',monnaie:'cash coin currency',portefeuille:'wallet',carte:'card map',banque:'bank',paiement:'credit-card cash payment',moto:'motorbike motorcycle moped scooter',voiture:'car',camion:'truck',bus:'bus',avion:'airplane',bateau:'ferry boat ship',velo:'bicycle bike',taxi:'taxi car',livraison:'truck-delivery package',colis:'package box',boite:'box package',entrepot:'warehouse',utilisateur:'account user',personne:'account user person',famille:'family human',enfant:'baby child',telephone:'phone cellphone',appel:'phone call',message:'message chat',discussion:'chat forum',email:'email mail',courriel:'email mail',cloche:'bell',notification:'bell notification',reglages:'cog settings',parametres:'cog settings tune',recherche:'magnify search',loupe:'magnify',calendrier:'calendar',horloge:'clock',heure:'clock time',alarme:'alarm',photo:'camera image',image:'image',video:'video',musique:'music',micro:'microphone',casque:'headphones',ecran:'monitor',ordinateur:'laptop desktop computer',tablette:'tablet',imprimante:'printer',fichier:'file',dossier:'folder',document:'file-document',facture:'receipt invoice',recu:'receipt',cadenas:'lock',securite:'shield lock',cle:'key',coeur:'heart',etoile:'star',favori:'star heart',partager:'share',lien:'link',telecharger:'download',envoyer:'send',ajouter:'plus add',supprimer:'delete trash',modifier:'pencil edit',fleche:'arrow',retour:'arrow-left',meteo:'weather',soleil:'sun white-balance-sunny',pluie:'rain weather-pouring',nuage:'cloud',arbre:'tree',fleur:'flower',feuille:'leaf',animal:'paw dog cat',chien:'dog',chat:'cat chat',vache:'cow',poule:'chicken bird',poisson:'fish',nourriture:'food',repas:'food silverware',cafe:'coffee',the:'tea',eau:'water',pain:'bread',fruit:'fruit food-apple',hopital:'hospital',medecin:'doctor stethoscope',medicament:'pill medication',sante:'medical heart-pulse',ecole:'school',livre:'book',carte_geo:'map',lieu:'map-marker place',position:'map-marker crosshairs-gps',boutique:'store shop storefront',magasin:'store',sac:'bag shopping',promotion:'sale percent tag',etiquette:'tag label',cadeau:'gift',fete:'party gift cake',sport:'soccer basketball run',football:'soccer',jeu:'gamepad controller',outil:'tools hammer wrench',marteau:'hammer',agriculture:'tractor sprout',tracteur:'tractor',graine:'seed sprout',vetement:'tshirt hanger',chaussure:'shoe',religion:'church mosque',mosquee:'mosque',eglise:'church',lumiere:'lightbulb',ampoule:'lightbulb',batterie:'battery',wifi:'wifi',reseau:'network wifi',cloud:'cloud',donnees:'database chart',graphique:'chart',statistiques:'chart poll',verifier:'check',valider:'check',fermer:'close',alerte:'alert',erreur:'alert-circle',info:'information',aide:'help lifebuoy',question:'help-circle',qr:'qrcode',scanner:'scan qrcode-scan barcode'};
+  var data=window.ICONES,etat={q:'',cat:'',pal:'bogolan',n:240};
+  try{var s=JSON.parse(localStorage.getItem('bogolan-biblio')||'{}');if(s.pal)etat.pal=s.pal;if(s.perso)PAL.perso=Object.assign(PAL.perso,s.perso);}catch(e){}
+  function svg(it,uid,p){
+    var w=it[2],h=it[3],k=150/Math.max(w,h),ox=(256-w*k)/2,oy=(256-h*k)/2-6,tr='translate('+ox.toFixed(2)+' '+oy.toFixed(2)+') scale('+k.toFixed(4)+')';
+    function v(n){return 'var(--bg-'+n+','+p[n]+')';}
+    return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256"><defs>'+
+    '<pattern id="m'+uid+'" width="24" height="34" patternUnits="userSpaceOnUse" y="112"><path d="M0 11 6 5 12 11 18 5 24 11" fill="none" style="stroke:'+v('motif')+'" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="6" cy="22" r="2" style="fill:'+v('motif')+'"/><circle cx="18" cy="22" r="2" style="fill:'+v('motif')+'"/><path d="M0 29 H24" style="stroke:'+v('motif')+'" stroke-width="1.4" stroke-dasharray="3 3"/></pattern>'+
+    '<mask id="f'+uid+'" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256"><g transform="'+tr+'" fill="#fff" stroke="#fff">'+it[4]+'</g></mask>'+
+    '<filter id="a'+uid+'" filterUnits="userSpaceOnUse" x="0" y="0" width="256" height="256"><feGaussianBlur in="SourceAlpha" stdDeviation="5" result="b"/><feDiffuseLighting in="b" surfaceScale="7" diffuseConstant="1.05" lighting-color="#fff" result="l"><feDistantLight azimuth="235" elevation="48"/></feDiffuseLighting><feComposite in="l" in2="SourceAlpha" operator="in" result="lc"/><feBlend in="SourceGraphic" in2="lc" mode="multiply" result="m"/><feSpecularLighting in="b" surfaceScale="6" specularConstant="0.55" specularExponent="34" lighting-color="#fff" result="s"><feDistantLight azimuth="235" elevation="58"/></feSpecularLighting><feComposite in="s" in2="SourceAlpha" operator="in" result="sc"/><feComposite in="m" in2="sc" operator="arithmetic" k2="1" k3="0.38"/></filter>'+
+    '<filter id="o'+uid+'" filterUnits="userSpaceOnUse" x="-20" y="-20" width="296" height="296"><feGaussianBlur stdDeviation="7"/></filter>'+
+    '<linearGradient id="t'+uid+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>'+
+    '<rect x="4" y="4" width="248" height="248" rx="54" style="fill:'+v('tuile')+'"/><rect x="4" y="4" width="248" height="248" rx="54" fill="url(#t'+uid+')"/>'+
+    '<g transform="translate(4 9)" opacity=".32" filter="url(#o'+uid+')"><g mask="url(#f'+uid+')"><rect width="256" height="256" style="fill:'+v('ombre')+'"/></g></g>'+
+    '<g filter="url(#a'+uid+')"><g mask="url(#f'+uid+')"><rect width="256" height="256" style="fill:'+v('objet')+'"/><rect y="112" width="256" height="34" style="fill:'+v('bande')+'"/><rect y="112" width="256" height="34" fill="url(#m'+uid+')"/></g></g></svg>';
+  }
+  var cats={};data.forEach(function(it){cats[it[1]]=(cats[it[1]]||0)+1;});
+  var sel=document.getElementById('cat');Object.keys(cats).sort().forEach(function(c){var o=document.createElement('option');o.value=c;o.textContent=c.replace(/-/g,' ')+' ('+cats[c]+')';sel.appendChild(o);});
+  var palEl=document.getElementById('pal');Object.keys(PAL).forEach(function(k){var b=document.createElement('button');b.type='button';b.dataset.p=k;b.innerHTML='<i style="background:'+PAL[k].objet+'"></i>'+PAL[k].nom;palEl.appendChild(b);});
+  var perso=document.getElementById('perso');
+  CLES.forEach(function(k){var l=document.createElement('label');l.innerHTML=LIB[k]+' <input type="color" data-k="'+k+'" value="'+PAL.perso[k]+'">';perso.appendChild(l);});
+  perso.addEventListener('input',function(e){var k=e.target.dataset.k;if(!k)return;PAL.perso[k]=e.target.value;sauver();appliquer();});
+  function sauver(){try{localStorage.setItem('bogolan-biblio',JSON.stringify({pal:etat.pal,perso:PAL.perso}));}catch(e){}}
+  function appliquer(){var p=PAL[etat.pal],r=document.documentElement.style;CLES.forEach(function(k){r.setProperty('--bg-'+k,p[k]);});
+    palEl.querySelectorAll('button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.p===etat.pal);});perso.classList.toggle('vu',etat.pal==='perso');}
+  function termes(q){q=q.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim();if(!q)return[];var t=[q];q.split(/\s+/).forEach(function(m){if(FR[m])t=t.concat(FR[m].split(' '));});return t;}
+  function filtre(){var t=termes(etat.q);return data.filter(function(it){if(etat.cat&&it[1]!==etat.cat)return false;if(!t.length)return true;return t.some(function(x){return it[0].indexOf(x)>=0||it[1].indexOf(x)>=0;});});}
+  var grille=document.getElementById('grille'),liste=[];
+  function rendre(){liste=filtre();var h='';liste.slice(0,etat.n).forEach(function(it,i){h+='<div class="ic" tabindex="0" role="button" data-i="'+data.indexOf(it)+'" aria-label="'+it[0]+'">'+svg(it,'g'+i,PAL.bogolan).replace('width="256" height="256"','')+'<span>'+it[0]+'</span></div>';});
+    grille.innerHTML=h;document.getElementById('compte').textContent=liste.length.toLocaleString('fr-FR')+' icônes';document.getElementById('plus').hidden=liste.length<=etat.n;document.getElementById('vide').hidden=liste.length>0;}
+  var tq;document.getElementById('q').addEventListener('input',function(e){clearTimeout(tq);tq=setTimeout(function(){etat.q=e.target.value;etat.n=240;rendre();},180);});
+  sel.addEventListener('change',function(){etat.cat=sel.value;etat.n=240;rendre();});
+  palEl.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;etat.pal=b.dataset.p;sauver();appliquer();});
+  document.getElementById('plus').addEventListener('click',function(){etat.n+=240;rendre();});
+  var dlg=document.getElementById('dlg'),cur=null;
+  function ouvrir(el){cur=data[+el.dataset.i];document.getElementById('grand').innerHTML=svg(cur,'d',PAL.bogolan).replace('width="256" height="256"','');document.getElementById('dnom').textContent=cur[0];document.getElementById('dinfo').textContent='Catégorie : '+cur[1].replace(/-/g,' ')+' · charte : '+PAL[etat.pal].nom;dlg.showModal();}
+  grille.addEventListener('click',function(e){var el=e.target.closest('.ic');if(el)ouvrir(el);});
+  grille.addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('ic')){e.preventDefault();ouvrir(e.target);}});
+  document.getElementById('fermer').addEventListener('click',function(){dlg.close();});
+  // Téléchargement via la capacité « downloads » de la page publiée (le lecteur confirme chaque fichier)
+  var dls=null;
+  document.getElementById('dl').hidden=document.getElementById('dlpng').hidden=true;
+  if(window.claude&&claude.use)claude.use('downloads').then(function(d){dls=d;if(d){document.getElementById('dl').hidden=document.getElementById('dlpng').hidden=false;}});
+  function fichier(nom,blob){if(!dls)return;dls.save({filename:nom,data:blob}).catch(function(e){if(e&&e.code==='rate_limited')document.getElementById('dinfo').textContent='Un téléchargement est déjà en attente de confirmation.';});}
+  document.getElementById('dl').addEventListener('click',function(){var s=svg(cur,'x',PAL[etat.pal]);fichier(cur[0]+'-'+etat.pal+'.svg',new Blob([s],{type:'image/svg+xml'}));});
+  document.getElementById('dlpng').addEventListener('click',function(){var s=svg(cur,'x',PAL[etat.pal]).replace('width="256" height="256"','width="512" height="512"');var img=new Image();
+    img.onload=function(){var c=document.createElement('canvas');c.width=c.height=512;c.getContext('2d').drawImage(img,0,0);c.toBlob(function(b){fichier(cur[0]+'-'+etat.pal+'.png',b);},'image/png');};
+    img.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(s);});
+  appliquer();rendre();
+})();
+</script>
