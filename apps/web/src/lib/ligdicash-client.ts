@@ -1,4 +1,4 @@
-import "server-only";
+// Importer uniquement depuis des modules serveur Next.js (route handlers / server actions).
 import { montantLigdiCash } from "./ligdicash";
 
 /**
