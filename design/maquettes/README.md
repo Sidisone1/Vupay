@@ -52,3 +52,7 @@ Données d'exemple uniquement. Aucun logo de réseau social : nom écrit seuleme
 
 Charte v3 Bogolan (crème, ocre, rouille, brun), logo provisoire (anneau + « vupay ») en attendant la vérification du nom,
 frais de retrait affichés à titre d'exemple (décision ouverte dans `docs/DECISIONS.md`).
+
+## Site web et application sur 3 appareils
+
+`site-et-application/` : site public et application diffuseur, interactifs, sur téléphone, tablette et ordinateur (voir son README).
