@@ -49,3 +49,13 @@ Index de documentation : https://developers.ligdicash.com/llms.txt
 **Traçabilité** : créer et persister un `transaction_id` VUPAY avant chaque appel ; conserver le token LigdiCash pour les confirmations et les callbacks. Le retour navigateur n'est jamais une preuve de paiement.
 
 **Couverture** : la documentation officielle liste Orange Money Mali en payin sans redirection, mais la disponibilité exacte des opérateurs et du payout doit être confirmée sur le compte marchand.
+
+## Adaptateur serveur ajouté
+
+`apps/web/src/lib/ligdicash-client.ts` expose les quatre opérations HTTP (création/confirmation de facture, création/confirmation de retrait) et accepte un transport injecté pour les tests. `ligdicash-client.test.ts` simule les réponses sans envoyer de fonds.
+
+**Statut : intégration partielle, non exploitable en production.** L'adaptateur est désactivé par défaut ; aucun route handler Next.js, aucun formulaire, aucun mapping de payload marchand vérifié, aucune écriture comptable ou callback n'est encore relié. Les appels ne doivent pas être autorisés avant revue de la référence API complète, en particulier les paramètres des endpoints de confirmation, le schéma exact de création de facture et celui du payout.
+
+Documentation des endpoints : https://developers.ligdicash.com/reference/endpoints/payin-redirect-create.md et https://developers.ligdicash.com/reference/endpoints/straight-payout.md
+
+**Tests** : fichiers Vitest ajoutés, résultat d'exécution CI non encore confirmé.
