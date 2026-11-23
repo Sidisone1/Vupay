@@ -7,6 +7,7 @@ describe("LigdiCash : validation locale sans réseau", () => {
   it("reconnaît les statuts documentés", () => {
     expect(etatLigdiCash("completed")).toBe("reussi");
     expect(etatLigdiCash("pending")).toBe("en_attente");
+    expect(etatLigdiCash("notcompleted")).toBe("echoue");
     expect(etatLigdiCash("unknown")).toBe("inconnu");
   });
   it("refuse les montants invalides", () => {
