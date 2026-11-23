@@ -23,6 +23,7 @@ alter table public.payment_intents enable row level security;
 create policy payment_intents_owner_read on public.payment_intents
   for select to authenticated using (owner_id = (select auth.uid()));
 revoke all on public.payment_intents from anon, authenticated;
+grant select on public.payment_intents to authenticated;
 
 create table if not exists public.payment_events (
   id bigint generated always as identity primary key,
