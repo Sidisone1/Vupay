@@ -29,7 +29,5 @@ Supabase demande une confirmation manuelle pour toute commande d'effacement, mê
    - vercel.com → Add New → Project → importer le dépôt `Sidisone1/Vupay`.
    - Root Directory : `apps/web`.
    - Variables d'environnement : `NEXT_PUBLIC_SUPABASE_URL` = l'adresse ci-dessus ; `NEXT_PUBLIC_SUPABASE_ANON_KEY` = la clé « publishable » du projet (Supabase → Project Settings → API Keys) ; `NEXT_PUBLIC_APP_URL` = l'adresse du site.
-2. **Connexion par téléphone** (Supabase → Authentication → Sign In / Providers → Phone)
-   - Activer « Phone » et choisir un fournisseur d'envoi de SMS (Twilio, Vonage, MessageBird…) avec ses identifiants.
-   - Pour les essais sans envoi réel : renseigner des « numéros de test » avec un code fixe (par exemple `22370000001=123456`).
+2. **Connexion par SMS avec Orange** : la fonction d'envoi est installée ; il reste à créer le compte Orange Developer et à brancher le crochet dans Supabase. Guide pas à pas : `docs/CONNEXION_SMS.md`.
 3. **Premier super admin** : après votre première connexion, me donner le feu vert ; je l'attribue depuis la base.
