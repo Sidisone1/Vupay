@@ -3,6 +3,7 @@
 Ce dossier prépare un **dépôt d'icônes réutilisable** pour tous les projets : la liste complète des icônes
 à dessiner dans le style bogolan, les règles de dessin, la structure du dépôt et les sources libres de droits.
 
+- [`bibliotheque/`](bibliotheque/) : **5 155 icônes déjà converties au style Bogolan** (formes des jeux libres MDI et Phosphor), recolorables par 5 variables CSS pour suivre la charte d'un projet (voir son README).
 - [`CATALOGUE.md`](CATALOGUE.md) : **1000 icônes** dans 32 catégories : **917 à créer**, 83 déjà présentes dans la Collection Bogolan (marquées ✅).
 - [`motifs/`](motifs/) : les 16 motifs bogolan en SVG (esquisses au trait).
 - [`apercu/catalogue.html`](apercu/catalogue.html) : page à ouvrir dans un navigateur pour parcourir et filtrer le catalogue.

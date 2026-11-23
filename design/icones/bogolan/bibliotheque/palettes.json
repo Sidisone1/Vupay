@@ -1,0 +1,30 @@
+{
+  "bogolan": {
+    "tuile": "#FBF1E2",
+    "objet": "#E8A93A",
+    "bande": "#B04A26",
+    "motif": "#F6E7CC",
+    "ombre": "#4A2A1C"
+  },
+  "ss-dropship": {
+    "tuile": "#F2F6FB",
+    "objet": "#0077C8",
+    "bande": "#6B3E26",
+    "motif": "#F6E7CC",
+    "ombre": "#10213D"
+  },
+  "vupay-v4": {
+    "tuile": "#FFF7E6",
+    "objet": "#006B3A",
+    "bande": "#884A1F",
+    "motif": "#FFF7E6",
+    "ombre": "#092E1B"
+  },
+  "tchi-teliman": {
+    "tuile": "#FBF1E2",
+    "objet": "#E8A93A",
+    "bande": "#B04A26",
+    "motif": "#F6E7CC",
+    "ombre": "#4A2A1C"
+  }
+}
