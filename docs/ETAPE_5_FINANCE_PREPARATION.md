@@ -1,9 +1,13 @@
 # Étape 5 — Finance V2 : préparation technique (23/11/2026)
 
-## Livré dans ce commit
+## Préparation technique disponible
 - `apps/web/src/lib/finance.ts` : simulation pure de répartition en FCFA entiers.
 - `apps/web/src/lib/finance.test.ts` : cas de tests Vitest, à exécuter dans l'environnement du projet.
 - Aucune activation de paiement, aucun tarif commercial présumé, aucune migration SQL.
+
+## Aperçu du budget d'une campagne
+
+`simulerBudgetCampagne` calcule à partir des tarifs fournis et des actions déjà validées le coût annonceur, la rémunération diffuseur, la marge et le budget restant ou manquant. Un doublon identique est ignoré. Une clé répétée avec un statut différent ou un autre type est rejetée. Les visites sont exclues de l'entrée du calcul.
 
 ## Invariants
 1. Une action refusée ou en attente ne produit aucun montant simulé.
@@ -22,4 +26,4 @@
 - Tester en base les accès RLS, doubles callbacks, courses concurrentes et insuffisance de solde.
 - Ne déployer aucun paiement sans revue de sécurité et accord explicite.
 
-**État :** préparation du code de calcul uniquement ; aucun paiement actif. Les tests de ce commit n'ont pas été exécutés par cette opération GitHub.
+**État :** préparation du code de calcul uniquement ; aucun paiement actif.
