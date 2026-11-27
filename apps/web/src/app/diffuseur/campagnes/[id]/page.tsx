@@ -62,12 +62,12 @@ export default async function DetailCampagne({ params, searchParams }: { params:
         ))}
       </div>
       {fiche.disponible && reseauxRestants.length > 0 && (
-        <form action={obtenirLien} className="mt-3 flex gap-2">
+        <form action={obtenirLien} className="mt-3 grid gap-2 min-[400px]:grid-cols-[minmax(0,1fr)_auto]">
           <input type="hidden" name="campagne" value={params.id} />
           <label htmlFor="reseau" className="sr-only">
             Réseau
           </label>
-          <select id="reseau" name="reseau" className="min-h-12 min-w-0 flex-1 rounded-xl border border-vupay-trait bg-white px-2">
+          <select id="reseau" name="reseau" className="min-h-12 w-full min-w-0 rounded-xl border border-vupay-trait bg-white px-2">
             {reseauxRestants.map((r) => (
               <option key={r} value={r}>
                 {RESEAUX[r]}
