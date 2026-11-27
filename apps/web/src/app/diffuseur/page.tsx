@@ -6,10 +6,9 @@ export default function EspaceDiffuseur() {
       titre="Mon espace diffuseur"
       liens={[
         { href: "/diffuseur/campagnes", libelle: "Campagnes disponibles" },
-        { href: "/diffuseur/preuves", libelle: "Envoyer mes preuves" },
         { href: "/diffuseur/gains", libelle: "Tableau de bord et gains" },
-        { href: "/diffuseur/retraits", libelle: "Retirer mon argent" },
-        { href: "/diffuseur/profil", libelle: "Profil et réseaux reliés" },
+        { href: "/diffuseur/retraits", libelle: "Suivi de mes retraits" },
+        { href: "/diffuseur/profil", libelle: "Mon profil" },
         { href: "/diffuseur/kyc", libelle: "Vérification d'identité" },
       ]}
     />

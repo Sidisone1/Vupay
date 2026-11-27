@@ -2,8 +2,18 @@ import { ACTIONS_CONTACT, libelleAction } from "@/lib/contacts";
 import { tauxAction, type Resume } from "@/lib/statistiques";
 
 /** Visites (jamais payées) puis actions par type et par statut. */
-export function TableauActions({ resume }: { resume: Resume }) {
+export function TableauActions({ resume, campagneId }: { resume: Resume; campagneId: string }) {
   const taux = tauxAction(resume);
+  const csv = [
+    "Indicateur;Total",
+    `Visites humaines;${resume.visites}`,
+    "",
+    "Bouton;Validées;En vérification;Refusées",
+    ...ACTIONS_CONTACT.map(type => {
+      const valeurs = resume.parType[type];
+      return [libelleAction(type), valeurs.validee, valeurs.en_attente, valeurs.refusee].join(";");
+    }),
+  ].join("\r\n");
   return (
     <div className="rounded-2xl bg-white p-4">
       <div className="grid grid-cols-3 gap-2 text-center">
@@ -32,6 +42,8 @@ export function TableauActions({ resume }: { resume: Resume }) {
           ))}
         </tbody>
       </table>
+      <a className="mt-3 inline-block font-bold text-vupay-primaire" download={`vupay-${campagneId}.csv`}
+        href={`data:text/csv;charset=utf-8,%EF%BB%BF${encodeURIComponent(csv)}`}>Exporter les résultats (CSV)</a>
       <p className="mt-3 text-xs text-vupay-doux">
         {taux === null ? "Pas encore de visite." : `${taux} action(s) validée(s) pour 100 visites.`} Une même personne ne compte
         qu&apos;une fois par bouton. Les visites seules ne sont jamais rémunérées.

@@ -1,5 +1,5 @@
-import { EcranAVenir } from "@/components/EcranAVenir";
+import { Portefeuille } from "@/components/Portefeuille";
 
-export default function Portefeuille() {
-  return <EcranAVenir titre="Portefeuille" lot="Lot 4 · Argent" retour="/annonceur" fonctions={["Rechargement par Mobile Money ou carte (agrégateur)", "Factures PDF", "Budget non consommé : conservé ou remboursé sur demande"]} />;
+export default function Page({ searchParams }: { searchParams: { avant?: string } }) {
+  return <Portefeuille espace="annonceur" avant={searchParams.avant} />;
 }

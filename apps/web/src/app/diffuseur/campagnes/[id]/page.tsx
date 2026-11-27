@@ -3,7 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import { FicheProduit, type DonneesFiche } from "@/components/FicheProduit";
 import { TableauActions } from "@/components/TableauActions";
 import type { ActionContact } from "@/lib/contacts";
-import { resumer, type StatutAction } from "@/lib/statistiques";
+import type { Resume } from "@/lib/statistiques";
 import { supabaseServeur } from "@/lib/supabase/server";
 import { urlPhotoProduit } from "@/lib/supabase/photos";
 import { obtenirLien } from "./actions";
@@ -32,14 +32,10 @@ export default async function DetailCampagne({ params, searchParams }: { params:
   const fiche = { ...brute, photo: urlPhotoProduit(brute.photo) } as DonneesFiche;
   const mesLiens = (liens ?? []) as { id: string; reseau: Reseau; code_lien: string }[];
 
-  const ids = mesLiens.map((l) => l.id);
-  const [{ data: visites }, { data: actions }] = ids.length
-    ? await Promise.all([
-        client.from("page_visits").select("robot").in("assignment_id", ids),
-        client.from("contact_actions").select("type, statut").in("assignment_id", ids),
-      ])
-    : [{ data: [] }, { data: [] }];
-  const resume = resumer((visites ?? []) as { robot: boolean }[], (actions ?? []) as { type: ActionContact; statut: StatutAction }[]);
+  const resultats = mesLiens.length > 0
+    ? await client.rpc("resultats_campagne", { p_campagne: params.id, p_diffuseur: true })
+    : null;
+  const resume: (Resume & { liens: number }) | null = resultats?.data ?? null;
   const base = process.env.NEXT_PUBLIC_APP_URL ?? "https://vupay.app";
   const reseauxRestants = (Object.keys(RESEAUX) as Reseau[]).filter((r) => !mesLiens.some((l) => l.reseau === r));
 
@@ -82,7 +78,7 @@ export default async function DetailCampagne({ params, searchParams }: { params:
         <>
           <h2 className="mt-8 text-lg font-black">Mes résultats</h2>
           <div className="mt-2">
-            <TableauActions resume={resume} />
+            {resume ? <TableauActions resume={resume} campagneId={params.id} /> : <p role="alert">Les statistiques sont momentanément indisponibles.</p>}
           </div>
           <p className="mt-2 text-xs text-vupay-doux">
             La rémunération des actions validées sera calculée à l&apos;étape « Finance » (tarifs en cours de définition).

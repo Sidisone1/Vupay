@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { FicheProduit } from "@/components/FicheProduit";
 import { TableauActions } from "@/components/TableauActions";
-import { resumer, type StatutAction } from "@/lib/statistiques";
+import type { Resume } from "@/lib/statistiques";
 import { champsManquants, estModifiable, STATUTS } from "@/lib/campagnes";
 import type { ActionContact } from "@/lib/contacts";
 import { supabaseServeur } from "@/lib/supabase/server";
@@ -19,6 +19,7 @@ type Campagne = {
   titre: string;
   texte: string | null;
   prix: number | null;
+  budget: string | null;
   chemin_creatif: string | null;
   debut: string | null;
   fin: string | null;
@@ -45,7 +46,7 @@ export default async function Campagne({ params, searchParams }: { params: { id:
   const [{ data }, { data: destinations }] = await Promise.all([
     client
       .from("campaigns")
-      .select("id, titre, texte, prix, chemin_creatif, debut, fin, statut, motif_refus, slug, advertisers!inner(raison_sociale, statut_verification, pays, proprietaire_id)")
+      .select("id, titre, texte, prix, budget::text, chemin_creatif, debut, fin, statut, motif_refus, slug, advertisers!inner(raison_sociale, statut_verification, pays, proprietaire_id)")
       .eq("id", params.id)
       .eq("advertisers.proprietaire_id", user.id)
       .maybeSingle(),
@@ -62,14 +63,10 @@ export default async function Campagne({ params, searchParams }: { params: { id:
   const etat = STATUTS[c.statut];
   const adressePublique = `${process.env.NEXT_PUBLIC_APP_URL ?? ""}/p/${c.slug}`;
   const publiee = c.statut === "active" || c.statut === "en_pause" || c.statut === "terminee";
-  const [{ data: visites }, { data: actions }, { count: nbDiffuseurs }] = publiee
-    ? await Promise.all([
-        client.from("page_visits").select("robot").eq("campagne_id", c.id),
-        client.from("contact_actions").select("type, statut").eq("campagne_id", c.id),
-        client.from("assignments").select("id", { count: "exact", head: true }).eq("campagne_id", c.id),
-      ])
-    : [{ data: [] }, { data: [] }, { count: 0 }];
-  const resume = resumer((visites ?? []) as { robot: boolean }[], (actions ?? []) as { type: ActionContact; statut: StatutAction }[]);
+  const resultats = publiee
+    ? await client.rpc("resultats_campagne", { p_campagne: params.id, p_diffuseur: false })
+    : null;
+  const resume: (Resume & { liens: number }) | null = resultats?.data ?? null;
 
   return (
     <main className="mx-auto min-h-screen max-w-lg bg-vupay-fond px-5 py-6 text-vupay-encre">
@@ -106,7 +103,7 @@ export default async function Campagne({ params, searchParams }: { params: { id:
           <h2 className="mt-6 text-lg font-black">1. La fiche produit</h2>
           <FormulaireCampagne
             utilisateurId={user.id}
-            campagne={{ id: c.id, titre: c.titre, texte: c.texte ?? "", prix: c.prix, photo: c.chemin_creatif, photoUrl: urlPhotoProduit(c.chemin_creatif), debut: c.debut ?? "", fin: c.fin ?? "" }}
+            campagne={{ id: c.id, titre: c.titre, texte: c.texte ?? "", prix: c.prix, budget: c.budget, photo: c.chemin_creatif, photoUrl: urlPhotoProduit(c.chemin_creatif), debut: c.debut ?? "", fin: c.fin ?? "" }}
           />
           <h2 className="mt-8 text-lg font-black">2. Les boutons de contact</h2>
           <FormulaireDestinations campagneId={c.id} pays={c.advertisers.pays} existantes={dest} />
@@ -147,9 +144,9 @@ export default async function Campagne({ params, searchParams }: { params: { id:
       {publiee && (
         <>
           <h2 className="mt-8 text-lg font-black">Résultats</h2>
-          <p className="text-xs text-vupay-doux">{nbDiffuseurs ?? 0} lien(s) de diffuseurs actif(s).</p>
+          {resume && <p className="text-xs text-vupay-doux">{resume.liens} lien(s) de diffusion.</p>}
           <div className="mt-2">
-            <TableauActions resume={resume} />
+            {resume ? <TableauActions resume={resume} campagneId={params.id} /> : <p role="alert">Les statistiques sont momentanément indisponibles.</p>}
           </div>
         </>
       )}

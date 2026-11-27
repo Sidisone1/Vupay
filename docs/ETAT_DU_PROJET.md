@@ -1,4 +1,4 @@
-# État du projet Vupay — 23 novembre 2026
+# État du projet Vupay — 27 novembre 2026
 
 Document de reprise : toute personne ou toute IA qui reprend le projet commence ici, puis lit `AGENTS.md`.
 
@@ -11,14 +11,23 @@ Vupay met en relation des **annonceurs** (entreprises d'Afrique de l'Ouest) et d
 | Étape | État | Détail |
 | --- | --- | --- |
 | 0. Reprise et cadrage | Fait | `docs/PRODUIT_V2_CLICS_QUALIFIES.md` |
-| 1. Design | Maquettes faites, validation visuelle à terminer | `design/` |
+| 1. Design | En-têtes des 48 maquettes enregistrés, correction mobile intégrée par la PR #25. Recette globale à terminer | `design/` |
 | 2. Comptes et permissions | Construit et testé ; essai réel à faire | `docs/ETAPE_2_COMPTES.md` |
 | 3. Publicités | Construit et testé ; essai réel à faire | `docs/ETAPE_3_PUBLICITES.md` |
 | 4. Traçabilité | Construit et testé ; essai réel à faire | `docs/ETAPE_4_TRACABILITE.md` |
-| 5. Finance | Bloqué : tarifs, marge, seuils et agrégateur de paiement **non décidés** | — |
-| 6. Pilotage | À faire | — |
+| 5. Finance | Version de travail testée en local : portefeuilles, barèmes versionnés, règlement atomique par action et contrôle du budget. Intégration opérateur à faire | [Recette financière](ETAPE_5_FINANCE_PREPARATION.md) |
+| 6. Pilotage | Version de travail : statistiques agrégées et export CSV par campagne, journal financier et suivi des retraits | Recette avec les trois rôles à faire |
 | 7. Pilote Bamako | À planifier | — |
 | 8. Expansion | Plus tard | — |
+
+## Ordre de mise en service
+
+| Ordre | Travail restant | Preuve attendue |
+| --- | --- | --- |
+| 1 | Revoir et intégrer la branche finance. Appliquer les migrations 0007 à 0009 sur une base de recette avant le déploiement web correspondant. | Numéros des migrations, version web, connexion de chaque rôle et vérification des écrans. |
+| 2 | Valider le barème par action, les seuils, les frais, les règles de litige et le prestataire. Le minimum historique de 25 000 FCFA du schéma de campagne est distinct du minimum de recharge à décider. | Décision du porteur et versions des tarifs dans la base de recette. |
+| 3 | Raccorder les recharges, le traitement des actions, les retraits et la réconciliation à l’opérateur retenu. | Références de test, double notification sans double crédit, rejet et remboursement vérifiés, rapprochement du journal. |
+| 4 | Configurer l’hébergement, Orange SMS et la supervision. Effectuer le parcours sur téléphone à Bamako avec annonceur, diffuseur et administrateur. | URL et version testées, OTP reçu, résultats et incidents du pilote, décision de lancement. |
 
 ## Infrastructure
 
@@ -32,7 +41,7 @@ Vupay met en relation des **annonceurs** (entreprises d'Afrique de l'Ouest) et d
 
 ## Tests
 
-- `cd apps/web && npm test` : règles côté application (Vitest), 78 tests.
+- `cd apps/web && npm test` : règles côté application (Vitest), 88 tests.
 - `PGHOST=… PGUSER=postgres supabase/tests/lancer.sh` : droits et règles en base sur un Postgres local, 198 vérifications (`10_comptes_permissions`, `20_administration`, `30_publicites`, `40_tracabilite`).
 - `cd apps/web && npm run typecheck && npm run build`.
 

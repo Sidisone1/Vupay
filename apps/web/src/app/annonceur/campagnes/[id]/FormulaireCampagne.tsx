@@ -12,6 +12,7 @@ interface Campagne {
   titre: string;
   texte: string;
   prix: number | null;
+  budget: string | null;
   photo: string | null;
   photoUrl: string | null;
   debut: string;
@@ -23,6 +24,7 @@ export function FormulaireCampagne({ utilisateurId, campagne }: { utilisateurId:
   const [titre, setTitre] = useState(campagne.titre);
   const [texte, setTexte] = useState(campagne.texte);
   const [prix, setPrix] = useState(campagne.prix?.toString() ?? "");
+  const [budget, setBudget] = useState(campagne.budget ?? "");
   const [debut, setDebut] = useState(campagne.debut);
   const [fin, setFin] = useState(campagne.fin);
   const [photo, setPhoto] = useState<Blob | null>(null);
@@ -34,6 +36,10 @@ export function FormulaireCampagne({ utilisateurId, campagne }: { utilisateurId:
     const p = lirePrix(prix);
     if (titre.trim().length < 3) return setEtat({ type: "erreur", texte: "Le nom doit faire au moins 3 caractères." });
     if (!p.ok) return setEtat({ type: "erreur", texte: "Prix invalide : un nombre entier en FCFA, sans virgule." });
+    const plafond = budget.replace(/\s/g, "");
+    if (plafond && (!/^\d{1,19}$/.test(plafond) || BigInt(plafond) < 25000n || BigInt(plafond) > 9223372036854775807n)) {
+      return setEtat({ type: "erreur", texte: "Le budget doit être un entier d’au moins 25 000 FCFA, ou rester vide." });
+    }
     if (debut && fin && fin < debut) return setEtat({ type: "erreur", texte: "La date de fin doit suivre la date de début." });
     setEnvoi(true);
     setEtat(null);
@@ -42,8 +48,8 @@ export function FormulaireCampagne({ utilisateurId, campagne }: { utilisateurId:
       const chemin_creatif = photo ? await deposerPiece(client, "produits", utilisateurId, "produit", photo) : campagne.photo;
       const { error } = await client
         .from("campaigns")
-        .update({ titre: titre.trim(), texte: texte.trim() || null, prix: p.prix, debut: debut || null, fin: fin || null, chemin_creatif })
-        .eq("id", campagne.id);
+        .update({ titre: titre.trim(), texte: texte.trim() || null, prix: p.prix, budget: plafond || null, debut: debut || null, fin: fin || null, chemin_creatif })
+        .eq("id", campagne.id).select("id").single();
       if (error) throw error;
       setEtat({ type: "ok", texte: "Fiche enregistrée." });
       setPhoto(null);
@@ -74,6 +80,9 @@ export function FormulaireCampagne({ utilisateurId, campagne }: { utilisateurId:
       </label>
       <input id="prix" className={champ} inputMode="numeric" value={prix} onChange={(e) => setPrix(e.target.value)} placeholder="15 000" />
 
+      <label htmlFor="budget" className="mt-4 block text-sm font-bold">Budget maximal de diffusion (FCFA)</label>
+      <input id="budget" className={champ} inputMode="numeric" value={budget} onChange={e => setBudget(e.target.value)} />
+      <p className="mt-1 text-xs">Facultatif en brouillon. Le plafond protège le budget de la campagne lors du règlement des actions.</p>
       <div className="mt-4 grid grid-cols-2 gap-2">
         <div>
           <label htmlFor="debut" className="block text-sm font-bold">
