@@ -30,10 +30,10 @@ export function PartageLien({ reseau, adresse, titre }: { reseau: string; adress
   }
 
   return (
-    <div className="rounded-2xl border-2 border-vupay-succes bg-white p-4">
+    <div className="min-w-0 rounded-2xl border-2 border-vupay-succes bg-white p-4">
       <p className="text-sm font-bold">{reseau}</p>
       <p className="mt-1 break-all rounded-lg bg-vupay-fond p-2 font-mono text-sm">{adresse}</p>
-      <div className="mt-3 grid grid-cols-2 gap-2">
+      <div className="mt-3 grid gap-2 min-[360px]:grid-cols-2">
         <button type="button" onClick={copier} className="min-h-11 rounded-xl border-2 border-vupay-primaire text-sm font-bold text-vupay-primaire">
           {copie ? "Copié ✓" : "Copier le lien"}
         </button>
